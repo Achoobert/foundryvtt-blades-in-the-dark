@@ -18,6 +18,21 @@
   overflow-y: auto;
   padding-right: 8px;
 
+  .item-group {
+    header {
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 0.75em;
+      padding-bottom: 0.15em;
+      border-bottom: 1px solid currentColor;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
   input[type="radio"],
   input[type="checkbox"] {
     display: none;

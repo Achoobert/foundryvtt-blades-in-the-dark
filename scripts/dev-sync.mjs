@@ -7,7 +7,19 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const TARGET = path.join(os.homedir(), 'foundrydata', 'Data', 'systems', 'blades68');
 
-const ENTRIES_TO_SYNC = ['system.json', 'module', 'templates', 'styles', 'lang', 'assets', 'packs', 'rule_books'];
+const ENTRIES_TO_SYNC = [
+  'system.json',
+  'template.json',
+  'module',
+  'templates',
+  'styles',
+  'lang',
+  'images',
+  'themes',
+  'assets',
+  'packs',
+  'rule_books',
+];
 
 await mkdir(TARGET, { recursive: true });
 

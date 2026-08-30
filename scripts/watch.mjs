@@ -11,9 +11,12 @@ const WATCH_PATHS = [
   'module',
   'templates',
   'lang',
+  'images',
+  'themes',
   'assets',
   'packs-source',
   'system.json',
+  'template.json',
   'tests/quench',
 ];
 
@@ -50,6 +53,14 @@ function schedule(filePath) {
   timer = setTimeout(flush, DEBOUNCE_MS);
 }
 
+async function runSafe(script) {
+  try {
+    await run(script);
+  } catch (err) {
+    console.error(err.message);
+  }
+}
+
 async function flush() {
   if (running) {
     timer = setTimeout(flush, DEBOUNCE_MS);
@@ -61,16 +72,19 @@ async function flush() {
   if (!job.packs && !job.quench && !job.sync) return;
 
   running = true;
-  try {
-    if (job.packs) await run('packs:pack');
-    if (job.sync) await run('dev:sync');
-    if (job.quench) await run('test:quench:sync');
-  } catch (err) {
-    console.error(err.message);
-  } finally {
-    running = false;
-  }
+  // Each step runs independently: a failure in one (e.g. packs:pack with no
+  // packs-source/ yet) must not skip the others, or dev:sync silently stops
+  // pushing changes to the Foundry data dir.
+  if (job.packs) await runSafe('packs:pack');
+  if (job.sync) await runSafe('dev:sync');
+  if (job.quench) await runSafe('test:quench:sync');
+  running = false;
 }
+
+console.log('Running initial build + sync...');
+await run('build:css');
+pending = { packs: existsSync(path.join(ROOT, 'packs-source')), quench: true, sync: true };
+await flush();
 
 const sass = spawn('npm', ['run', 'watch:css'], {
   cwd: ROOT,

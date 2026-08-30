@@ -39,6 +39,17 @@ Hooks.once("init", async function() {
 
   game.system.traumas = [ "cold", "haunted", "obsessed", "paranoid", "reckless", "soft", "unstable", "vicious" ];
 
+  // Blades '68 personality Keys (see lang/en.json BITD.Key*/BITD.Key*Drift entries).
+  game.system.blades68Keys = [
+    "Arrogant", "Bitter", "Blunt", "Bold", "Brooding", "Calculating", "Charismatic", "Cold", "Comical",
+    "Commanding", "Confident", "Cool", "Curious", "Cynical", "Dedicated", "Defiant", "Determined",
+    "Disciplined", "Distant", "Eccentric", "Enigmatic", "Enthusiastic", "Erratic", "Fearless", "Flamboyant",
+    "Haunted", "Hopeful", "Idealistic", "Insecure", "Kind", "Laidback", "Lonely", "Loyal", "Meticulous",
+    "Openminded", "Passionate", "Playful", "Professional", "Protective", "Rational", "Reckless", "Romantic",
+    "Sad", "Sardonic", "Sharp", "Shy", "Soft", "Sophisticated", "Spiritual", "Stubborn", "Suspicious",
+    "Talkative", "Tired", "Violent", "Witty"
+  ].map(name => ({ id: name, label: `BITD.Key${name}`, drift: `BITD.Key${name}Drift` }));
+
   CONFIG.Item.documentClass = BladesItem;
   CONFIG.Actor.documentClass = BladesActor;
   CONFIG.ActiveEffect.documentClass = BladesActiveEffect;

@@ -1905,6 +1905,17 @@
   overflow-y: auto;
   padding-right: 8px;
 }
+.add-items-list .item-group header {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.75em;
+  padding-bottom: 0.15em;
+  border-bottom: 1px solid currentColor;
+}
+.add-items-list .item-group header:first-child {
+  margin-top: 0;
+}
 .add-items-list input[type=radio],
 .add-items-list input[type=checkbox] {
   display: none;

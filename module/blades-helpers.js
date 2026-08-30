@@ -334,6 +334,76 @@ export class BladesHelpers {
     return true;
   }
 
+  static async addKeyPopup(actor) {
+    const keyOptions = game.system.blades68Keys || [];
+    const options_html = keyOptions.map(opt => `
+      <div class="item-block">
+        <input id="select-key-${opt.id}" type="checkbox" name="select_keys" value="${opt.id}">
+        <label for="select-key-${opt.id}" title="${game.i18n.localize(opt.drift)}">${game.i18n.localize(opt.label)}</label>
+      </div>`).join("");
+
+    const dialogContent = `
+      <form class="items-to-add">
+        <div class="form-group">
+          <label>${game.i18n.localize('BITD.CustomKey')}:</label>
+          <input type="text" name="custom_key">
+        </div>
+        <div class="items-list add-items-list">
+          <div class="item-group">
+            ${options_html}
+          </div>
+        </div>
+      </form>
+    `;
+
+    const result = await openFormDialog({
+      title: game.i18n.localize('BITD.AddKey'),
+      content: dialogContent,
+      okLabel: game.i18n.localize('Add'),
+      cancelLabel: game.i18n.localize('Cancel'),
+      defaultButton: "ok",
+    });
+
+    if (!result) {
+      return false;
+    }
+
+    let chosen = [];
+    if (result.select_keys) {
+      chosen = Array.isArray(result.select_keys) ? result.select_keys : [result.select_keys];
+    }
+    const customKey = String(result.custom_key ?? "").trim();
+    if (customKey) {
+      chosen.push(customKey);
+    }
+
+    if (!chosen.length) {
+      return false;
+    }
+
+    const keysList = foundry.utils.deepClone(actor.system.keys?.list || []);
+    const emptySlotIndexes = keysList
+      .map((slot, idx) => (slot.key ? null : idx))
+      .filter(idx => idx !== null);
+
+    if (!emptySlotIndexes.length) {
+      ui.notifications?.warn?.("No empty Key slots are available.");
+      return false;
+    }
+
+    if (chosen.length > emptySlotIndexes.length) {
+      ui.notifications?.warn?.(`Only ${emptySlotIndexes.length} Key slot(s) available; extra selections were ignored.`);
+      chosen = chosen.slice(0, emptySlotIndexes.length);
+    }
+
+    chosen.forEach((key, i) => {
+      keysList[emptySlotIndexes[i]].key = key;
+    });
+
+    await actor.update({ "system.keys.list": keysList });
+    return true;
+  }
+
   static async getSourcedItemsByType(item_type) {
     const limited_items = await this.getAllItemsByType(item_type);
     return limited_items;

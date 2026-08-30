@@ -174,6 +174,11 @@ export class BladesActorSheet extends BladesSheet {
             BladesHelpers.addCustomContact(this.actor);
         });
 
+        // Add a Key
+        html.find('.add-key-popup').click(() => {
+            BladesHelpers.addKeyPopup(this.actor);
+        });
+
     }
 
 }

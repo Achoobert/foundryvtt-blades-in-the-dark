@@ -228,7 +228,10 @@
 
     {{#if blades68}}
     <div id="character-{{_id}}-keys-container" class="keys-container">
-      <div class="black-label">{{localize "BITD.Keys"}}</div>
+      <div class="black-label" style="display:flex; align-items:center; justify-content:center; gap:6px;">
+        <span>{{localize "BITD.Keys"}}</span>
+        <a class="add-key-popup" data-tooltip="{{localize 'BITD.AddKey'}}"><i class="fas fa-plus"></i></a>
+      </div>
       {{#each system.keys.list as |slot i|}}
       <div class="key-slot">
         <select name="system.keys.list.{{i}}.key" data-dtype="String">
@@ -247,8 +250,6 @@
           <label class="radio-toggle" for="character-{{../_id}}-keys-{{i}}-marks-1"></label>
           <input type="radio" id="character-{{../_id}}-keys-{{i}}-marks-2" name="system.keys.list.{{i}}.marks" value="2" {{#if (eq slot.marks 2)}}checked{{/if}}>
           <label class="radio-toggle" for="character-{{../_id}}-keys-{{i}}-marks-2"></label>
-          <input type="radio" id="character-{{../_id}}-keys-{{i}}-marks-3" name="system.keys.list.{{i}}.marks" value="3" {{#if (eq slot.marks 3)}}checked{{/if}}>
-          <label class="radio-toggle" for="character-{{../_id}}-keys-{{i}}-marks-3"></label>
         </span>
         <label class="key-boom">
           <input type="checkbox" data-dtype="Boolean" name="system.keys.list.{{i}}.boomed" {{checked slot.boomed}}>
