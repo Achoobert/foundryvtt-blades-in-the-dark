@@ -1,0 +1,101 @@
+# Builds a rolling "latest" GitHub Release on every push to the default
+# branch, auto-bumping the minor version in system.json (patch reset to 0).
+#
+# This complements main.yml (which packages a specific, manually-published
+# GitHub Release). This workflow instead gives players a stable
+# "Install Module" URL that always points at the newest build off the
+# default branch:
+#   https://github.com/<repo>/releases/latest/download/system.json
+#
+# The version-bump commit this workflow pushes back includes "[skip ci]",
+# which GitHub Actions natively honors to skip re-triggering push-based
+# workflows -- this prevents an infinite loop.
+
+name: Build Rolling Latest Release
+
+on:
+  push:
+    branches:
+      - master
+
+concurrency:
+  group: release-latest
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Bump the minor version segment of system.json (e.g. 6.1.2 -> 6.2.0).
+      - name: Compute Next Version
+        id: bump_version
+        run: |
+          current=$(jq -r '.version' system.json)
+          IFS='.' read -r major minor patch <<< "$current"
+          next="${major}.$((minor + 1)).0"
+          echo "Bumping version: ${current} -> ${next}"
+          echo "current=${current}" >> "$GITHUB_OUTPUT"
+          echo "next=${next}" >> "$GITHUB_OUTPUT"
+
+      # Write the new version and stamp the static "latest" manifest/download
+      # URLs so Foundry's Install Module dialog can find updates.
+      - name: Update system.json
+        run: |
+          jq --arg version "${{ steps.bump_version.outputs.next }}" \
+             --arg manifest "https://github.com/${{ github.repository }}/releases/latest/download/system.json" \
+             --arg download "https://github.com/${{ github.repository }}/releases/latest/download/system.zip" \
+             '.version = $version | .manifest = $manifest | .download = $download' \
+             system.json > system.json.tmp
+          mv system.json.tmp system.json
+
+      - name: Commit Version Bump
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add system.json
+          git commit -m "chore: bump version to ${{ steps.bump_version.outputs.next }} [skip ci]"
+          git push
+
+      - name: Get Bump Commit SHA
+        id: sha
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      # Note that `zip` will only emit warnings when a file or directory
+      # doesn't exist, it will not fail.
+      - name: Create Module Archive
+        run: |
+          zip                                    \
+            --recurse-paths                      \
+            ./system.zip                         \
+            system.json                          \
+            template.json                        \
+            README.md                            \
+            LICENSE.txt                          \
+            CHANGELOG.txt                        \
+            templates/                           \
+            module/                              \
+            styles/                              \
+            packs/                               \
+            themes/                              \
+            scss/                                \
+            images/                              \
+            lang/
+
+      - name: Update Rolling "latest" Release
+        uses: ncipollo/release-action@v1
+        with:
+          allowUpdates: true
+          replacesArtifacts: true
+          makeLatest: true
+          tag: latest
+          commit: ${{ steps.sha.outputs.sha }}
+          name: "Latest (v${{ steps.bump_version.outputs.next }})"
+          body: "Automated rolling build from ${{ github.repository }}@${{ steps.sha.outputs.sha }}."
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifacts: './system.json, ./system.zip'
