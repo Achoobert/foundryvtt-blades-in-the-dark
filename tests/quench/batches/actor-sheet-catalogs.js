@@ -1,10 +1,22 @@
 /* global Actor, Item, foundry, game */
 import { createdDocsTracker, requireSystemActive } from '../helpers.js';
 
-async function fireChange(checkbox) {
+/**
+ * Fire a change event and poll `until` (if given) rather than trusting a fixed delay — the
+ * listener's createEmbeddedDocuments/deleteEmbeddedDocuments round-trips through the same
+ * socket as everything else in the world, so a flat sleep occasionally isn't long enough
+ * under load. Always waits at least one tick even without an `until` predicate.
+ */
+async function fireChange(checkbox, until) {
   checkbox.dispatchEvent(new Event('change', { bubbles: true }));
-  // Let the sheet's async createEmbeddedDocuments/deleteEmbeddedDocuments listener settle.
-  await new Promise((resolve) => setTimeout(resolve, 300));
+  if (!until) {
+    await new Promise((resolve) => setTimeout(resolve, 300));
+    return;
+  }
+  for (let attempt = 0; attempt < 20; attempt++) {
+    await new Promise((resolve) => setTimeout(resolve, 150));
+    if (until()) return;
+  }
 }
 
 export default function register(quench) {
@@ -56,15 +68,17 @@ export default function register(quench) {
             assert.isOk(checkbox, 'the ability checkbox should be rendered');
             assert.isFalse(checkbox.checked);
 
+            const ownsAbility = () => actor.items.some((i) => i.type === 'ability' && i.name === abilitySource.name);
+
             checkbox.checked = true;
-            await fireChange(checkbox);
+            await fireChange(checkbox, ownsAbility);
             assert.isTrue(
               actor.items.some((i) => i.type === 'ability' && i.name === abilitySource.name),
               'checking the box should create the owned ability item'
             );
 
             checkbox.checked = false;
-            await fireChange(checkbox);
+            await fireChange(checkbox, () => !ownsAbility());
             assert.isFalse(
               actor.items.some((i) => i.type === 'ability' && i.name === abilitySource.name),
               'unchecking the box should remove the owned ability item'
@@ -137,9 +151,11 @@ export default function register(quench) {
               'should render 2 slot checkboxes for num_available: 2'
             );
 
+            const ownedBandoliers = () => actor.items.filter((i) => i.type === 'item' && i.name === 'Test Bandolier');
+
             let checkbox = slotCheckbox(1);
             checkbox.checked = true;
-            await fireChange(checkbox);
+            await fireChange(checkbox, () => ownedBandoliers().length === 1);
             assert.lengthOf(
               actor.items.filter((i) => i.type === 'item' && i.name === 'Test Bandolier'),
               1,
@@ -148,7 +164,7 @@ export default function register(quench) {
 
             checkbox = slotCheckbox(2);
             checkbox.checked = true;
-            await fireChange(checkbox);
+            await fireChange(checkbox, () => ownedBandoliers().length === 2);
             assert.lengthOf(
               actor.items.filter((i) => i.type === 'item' && i.name === 'Test Bandolier'),
               2,
@@ -157,7 +173,7 @@ export default function register(quench) {
 
             checkbox = slotCheckbox(2);
             checkbox.checked = false;
-            await fireChange(checkbox);
+            await fireChange(checkbox, () => ownedBandoliers().length === 1);
             assert.lengthOf(
               actor.items.filter((i) => i.type === 'item' && i.name === 'Test Bandolier'),
               1,
@@ -170,6 +186,57 @@ export default function register(quench) {
       });
 
       describe('Keys & Deadlocks', function () {
+        it('pads a fresh actor to 5 empty Key slots (no leftover "example" placeholder)', async function () {
+          requireSystemActive();
+          const actor = tracker.track(await Actor.create({ name: 'Quench Keys Padding PC', type: 'character' }));
+          const keys = actor.getComputedKeys();
+          assert.lengthOf(keys, 5);
+          assert.isTrue(keys.every((slot) => slot.key === ''), 'every slot should start empty and addable');
+        });
+
+        it('Add Key succeeds on a fresh actor and fills an empty slot', async function () {
+          this.timeout(10000);
+          requireSystemActive();
+
+          const actor = tracker.track(await Actor.create({ name: 'Quench Add Key PC', type: 'character' }));
+          const sheet = actor.sheet;
+          await sheet._render(true);
+          try {
+            sheet.element.find('.add-key-popup').click();
+            // Wait for the Add Key DialogV2 to render.
+            let dialogEl;
+            for (let attempt = 0; attempt < 20 && !dialogEl; attempt++) {
+              await new Promise((resolve) => setTimeout(resolve, 150));
+              dialogEl = document.querySelector('dialog[open]');
+            }
+            assert.isOk(dialogEl, 'the Add Key dialog should open');
+
+            const checkbox = dialogEl.querySelector('input[name="select_keys"]');
+            assert.isOk(checkbox, 'at least one Key checkbox should be offered');
+            checkbox.checked = true;
+            checkbox.dispatchEvent(new Event('change', { bubbles: true }));
+
+            const okButton = dialogEl.querySelector('button[data-action="ok"]');
+            assert.isOk(okButton, 'the dialog should have an Add button');
+            okButton.click();
+
+            // Let the dialog's callback resolve and the actor update settle.
+            await new Promise((resolve) => setTimeout(resolve, 300));
+
+            const keysList = actor.system.keys.list;
+            assert.isTrue(
+              keysList.some((slot) => slot.key === checkbox.value),
+              'the chosen Key should be saved into a slot (this is the "no empty Key slots" bug: it used to warn and fail here)'
+            );
+            assert.isTrue(
+              keysList.some((slot) => slot.key === ''),
+              'other slots should remain empty and still addable'
+            );
+          } finally {
+            await sheet.close();
+          }
+        });
+
         it('falls back to a plain option for a custom Key name that has no catalog entry', async function () {
           this.timeout(10000);
           requireSystemActive();

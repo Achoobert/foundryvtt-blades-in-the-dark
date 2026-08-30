@@ -437,4 +437,20 @@ export class BladesActor extends Actor {
     }
     return current_healing;
   }
+
+  /**
+   * Keys/Deadlocks self-heal: older actors (and the pre-fix template default) only ever
+   * seeded a single, non-empty "example" slot, which left no empty slot for Add Key to fill
+   * and only rendered 1 of the intended 5 rows. Pad the list up to system.keys.max with empty
+   * slots and normalize any leftover "example" placeholder to an empty, addable slot.
+   */
+  getComputedKeys() {
+    const max = this.system.keys?.max ?? 5;
+    const list = foundry.utils.deepClone(this.system.keys?.list ?? []);
+    const normalized = list.map((slot) => (slot?.key === "example" ? { ...slot, key: "" } : slot));
+    while (normalized.length < max) {
+      normalized.push({ key: "", marks: 0, boomed: false });
+    }
+    return normalized;
+  }
 }

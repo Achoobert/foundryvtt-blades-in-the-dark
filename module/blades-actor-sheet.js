@@ -108,6 +108,7 @@ export class BladesActorSheet extends BladesSheet {
 
         sheetData.blades68 = game.settings.get('blades68', 'Blades68Mode');
         sheetData.blades68Keys = game.system.blades68Keys;
+        sheetData.system.keys.list = this.actor.getComputedKeys();
 
         // Special Abilities & Loadout: the full catalog of the equipped class's abilities/items
         // (checkbox lists), plus anything the actor owns that falls outside that catalog

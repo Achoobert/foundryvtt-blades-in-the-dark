@@ -85,6 +85,15 @@ export class BladesHelpers {
 
    }
    **/
+  /**
+   * Maps a base item type to its Blades '68-specific compendium pack name, for types that have
+   * a parallel Blades '68 catalog alongside the vanilla Blades in the Dark one (e.g. "ability" ->
+   * "blades68_abilities"). Types without a Blades '68 counterpart return undefined.
+   */
+  static getBlades68PackName(item_type) {
+    return { class: "blades68_classes", ability: "blades68_abilities", item: "blades68_items" }[item_type];
+  }
+
   static async getAllItemsByType(item_type) {
 
     let list_of_items = [];
@@ -102,7 +111,14 @@ export class BladesHelpers {
     }
 
     if (item_type != "crew") {
-      let packs = game.packs.filter(e => e.metadata.name === item_type);
+      // In Blades68Mode, pull from the Blades '68 compendium instead of the vanilla Blades in
+      // the Dark one (some playbook names collide between the two rulesets, e.g. "Hound", so
+      // this must replace rather than merge with the base pack).
+      const blades68PackName = this.getBlades68PackName(item_type);
+      const packName = (blades68PackName && game.settings.get("blades68", "Blades68Mode"))
+        ? blades68PackName
+        : item_type;
+      let packs = game.packs.filter(e => e.metadata.name === packName);
       let compendium_contents = await Promise.all(packs.map(pack => pack.getDocuments()));
       for(const compendium_content of compendium_contents) {
         compendium_items = compendium_items.concat(compendium_content)
@@ -381,7 +397,9 @@ export class BladesHelpers {
       return false;
     }
 
-    const keysList = foundry.utils.deepClone(actor.system.keys?.list || []);
+    // Use the self-healing, max-padded list (actor.system.keys.list alone may be short a
+    // slot, or still carry the legacy "example" placeholder, on actors created before this fix).
+    const keysList = actor.getComputedKeys();
     const emptySlotIndexes = keysList
       .map((slot, idx) => (slot.key ? null : idx))
       .filter(idx => idx !== null);

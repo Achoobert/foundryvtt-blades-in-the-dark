@@ -51,7 +51,8 @@
 }
 @font-face {
   font-family: "Crimson Text";
-  src: url("assets/fonts/CrimsonText/CrimsonText-Regular.ttf") format("truetype"); /* Safari, Android, iOS */
+  src: url("assets/fonts/CrimsonText/CrimsonText-Regular.ttf")
+    format("truetype"); /* Safari, Android, iOS */
   font-weight: normal;
   font-style: normal;
 }
@@ -63,7 +64,8 @@
 }
 @font-face {
   font-family: "Crimson Text";
-  src: url("assets/fonts/CrimsonText/CrimsonText-BoldItalic.ttf") format("truetype"); /* Safari, Android, iOS */
+  src: url("assets/fonts/CrimsonText/CrimsonText-BoldItalic.ttf")
+    format("truetype"); /* Safari, Android, iOS */
   font-weight: bold;
   font-style: italic;
 }
@@ -75,13 +77,15 @@
 }
 @font-face {
   font-family: "Crimson Text";
-  src: url("assets/fonts/CrimsonText/CrimsonText-SemiBold.ttf") format("truetype"); /* Safari, Android, iOS */
+  src: url("assets/fonts/CrimsonText/CrimsonText-SemiBold.ttf")
+    format("truetype"); /* Safari, Android, iOS */
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Crimson Text";
-  src: url("assets/fonts/CrimsonText/CrimsonText-SemiBoldItalic.ttf") format("truetype"); /* Safari, Android, iOS */
+  src: url("assets/fonts/CrimsonText/CrimsonText-SemiBoldItalic.ttf")
+    format("truetype"); /* Safari, Android, iOS */
   font-weight: 600;
   font-style: italic;
 }
@@ -143,7 +147,7 @@
 }
 .blades68 .black-label {
   background-color: #191813;
-  color: #EEEFFF;
+  color: #eeefff;
   font-size: 21px;
   text-align: center;
   padding: 0px 5px;
@@ -164,7 +168,7 @@
 .blades68 .label-stripe {
   text-transform: uppercase;
   background-color: #191813;
-  color: #EEEFFF;
+  color: #eeefff;
   margin-bottom: 10px;
   position: relative;
   padding-left: 10px;
@@ -205,7 +209,8 @@
   box-shadow: none;
   border: none;
   cursor: pointer;
-  background: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") no-repeat right;
+  background: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>")
+    no-repeat right;
   padding: 0 20px 0 0;
   margin: 0.1em -6px 0 0;
   background-color: #191813;
@@ -222,14 +227,20 @@
 .blades68 .loadout select:hover {
   color: red;
 }
-.blades68 .abilities .item-name, .blades68 .loadout .item-name, .blades68 .faction-items .item-name {
+.blades68 .abilities .item-name,
+.blades68 .loadout .item-name,
+.blades68 .faction-items .item-name {
   width: 100px;
   margin-left: 10px;
 }
-.blades68 .abilities .item-body, .blades68 .loadout .item-body, .blades68 .faction-items .item-body {
+.blades68 .abilities .item-body,
+.blades68 .loadout .item-body,
+.blades68 .faction-items .item-body {
   width: auto;
 }
-.blades68 .abilities .item-description, .blades68 .loadout .item-description, .blades68 .faction-items .item-description {
+.blades68 .abilities .item-description,
+.blades68 .loadout .item-description,
+.blades68 .faction-items .item-description {
   width: 260px;
 }
 .blades68 td {
@@ -549,7 +560,7 @@
 .blades68.crew.sheet .coins label {
   height: 15px;
   width: 15px;
-  background-color: #DAA520;
+  background-color: #daa520;
   vertical-align: middle;
   border: 1px solid #191813;
 }
@@ -571,10 +582,10 @@
   display: none;
 }
 .blades68.crew.sheet .coins input:checked ~ label {
-  background-color: #EEEFFF;
+  background-color: #eeefff;
 }
 .blades68.crew.sheet .coins input:checked + label {
-  background-color: #DAA520;
+  background-color: #daa520;
 }
 .blades68.crew.sheet .coins {
   flex-wrap: wrap;
@@ -642,7 +653,7 @@
 .blades68.crew.sheet .crew-coins label {
   height: 15px;
   width: 15px;
-  background-color: #DAA520;
+  background-color: #daa520;
   vertical-align: middle;
   border: 1px solid #191813;
 }
@@ -664,10 +675,10 @@
   display: none;
 }
 .blades68.crew.sheet .crew-coins input:checked ~ label {
-  background-color: #EEEFFF;
+  background-color: #eeefff;
 }
 .blades68.crew.sheet .crew-coins input:checked + label {
-  background-color: #DAA520;
+  background-color: #daa520;
 }
 .blades68.crew.sheet .crew-coins {
   flex-wrap: wrap;
@@ -696,7 +707,7 @@
   width: auto;
   height: auto;
   background-image: none !important;
-  color: #EEEFFF;
+  color: #eeefff;
 }
 .blades68.crew.sheet .crew-reputation label[for$="-0"] i {
   margin-top: 4px;
@@ -760,7 +771,10 @@
   margin: 20px;
   flex-grow: initial;
 }
-.blades68.crew.sheet .turf-list.section-non-editable .turf-block.turf-selected .connector {
+.blades68.crew.sheet
+  .turf-list.section-non-editable
+  .turf-block.turf-selected
+  .connector {
   background-color: #999;
   z-index: 1;
 }
@@ -769,32 +783,58 @@
   display: block;
   background-color: #bbb;
 }
-.blades68.crew.sheet .turf-list.section-non-editable .turf-block .connector.right, .blades68.crew.sheet .turf-list.section-non-editable .turf-block .connector.left {
+.blades68.crew.sheet
+  .turf-list.section-non-editable
+  .turf-block
+  .connector.right,
+.blades68.crew.sheet
+  .turf-list.section-non-editable
+  .turf-block
+  .connector.left {
   width: 40px;
   height: 20px;
   top: 40px;
 }
-.blades68.crew.sheet .turf-list.section-non-editable .turf-block .connector.left {
+.blades68.crew.sheet
+  .turf-list.section-non-editable
+  .turf-block
+  .connector.left {
   left: -40px;
 }
-.blades68.crew.sheet .turf-list.section-non-editable .turf-block .connector.right {
+.blades68.crew.sheet
+  .turf-list.section-non-editable
+  .turf-block
+  .connector.right {
   left: 130px;
 }
-.blades68.crew.sheet .turf-list.section-non-editable .turf-block .connector.top, .blades68.crew.sheet .turf-list.section-non-editable .turf-block .connector.bottom {
+.blades68.crew.sheet .turf-list.section-non-editable .turf-block .connector.top,
+.blades68.crew.sheet
+  .turf-list.section-non-editable
+  .turf-block
+  .connector.bottom {
   height: 40px;
   width: 20px;
   left: 55px;
 }
-.blades68.crew.sheet .turf-list.section-non-editable .turf-block .connector.top {
+.blades68.crew.sheet
+  .turf-list.section-non-editable
+  .turf-block
+  .connector.top {
   top: -40px;
 }
-.blades68.crew.sheet .turf-list.section-non-editable .turf-block .connector.bottom {
+.blades68.crew.sheet
+  .turf-list.section-non-editable
+  .turf-block
+  .connector.bottom {
   top: 100px;
 }
 .blades68.crew.sheet .turf-list.section-non-editable .turf-block.turf-selected {
   background-color: #999;
 }
-.blades68.crew.sheet .turf-list.section-non-editable .turf-block .turf-description {
+.blades68.crew.sheet
+  .turf-list.section-non-editable
+  .turf-block
+  .turf-description {
   border: none;
   background: none;
   resize: none;
@@ -809,10 +849,16 @@
   text-align: center;
   font-weight: bold;
 }
-.blades68.crew.sheet .turf-list.section-non-editable .turf-block input[type=checkbox] {
+.blades68.crew.sheet
+  .turf-list.section-non-editable
+  .turf-block
+  input[type="checkbox"] {
   transform: scale(1);
 }
-.blades68.crew.sheet .turf-list.section-non-editable .turf-block .turf-control.turf-select {
+.blades68.crew.sheet
+  .turf-list.section-non-editable
+  .turf-block
+  .turf-control.turf-select {
   position: absolute;
   top: -7px;
   left: -7px;
@@ -833,7 +879,10 @@
   margin: 20px;
   flex-grow: initial;
 }
-.blades68.crew.sheet .turf-list.section-editable .turf-block.turf-selected .connector {
+.blades68.crew.sheet
+  .turf-list.section-editable
+  .turf-block.turf-selected
+  .connector {
   background-color: #999;
   z-index: 1;
 }
@@ -842,7 +891,8 @@
   display: block;
   background-color: #bbb;
 }
-.blades68.crew.sheet .turf-list.section-editable .turf-block .connector.right, .blades68.crew.sheet .turf-list.section-editable .turf-block .connector.left {
+.blades68.crew.sheet .turf-list.section-editable .turf-block .connector.right,
+.blades68.crew.sheet .turf-list.section-editable .turf-block .connector.left {
   width: 40px;
   height: 25px;
   top: 50px;
@@ -853,7 +903,8 @@
 .blades68.crew.sheet .turf-list.section-editable .turf-block .connector.right {
   left: 130px;
 }
-.blades68.crew.sheet .turf-list.section-editable .turf-block .connector.top, .blades68.crew.sheet .turf-list.section-editable .turf-block .connector.bottom {
+.blades68.crew.sheet .turf-list.section-editable .turf-block .connector.top,
+.blades68.crew.sheet .turf-list.section-editable .turf-block .connector.bottom {
   height: 40px;
   width: 25px;
   left: 52.5px;
@@ -882,10 +933,16 @@
   text-align: center;
   font-weight: bold;
 }
-.blades68.crew.sheet .turf-list.section-editable .turf-block input[type=checkbox] {
+.blades68.crew.sheet
+  .turf-list.section-editable
+  .turf-block
+  input[type="checkbox"] {
   transform: scale(1);
 }
-.blades68.crew.sheet .turf-list.section-editable .turf-block .turf-control.turf-select {
+.blades68.crew.sheet
+  .turf-list.section-editable
+  .turf-block
+  .turf-control.turf-select {
   position: absolute;
   top: -7px;
   left: -7px;
@@ -958,7 +1015,7 @@
 }
 .blades68.crew.sheet .crew-tier input:checked ~ label:not([for$="-0"]) {
   border-color: gray;
-  background-color: #EEEFFF;
+  background-color: #eeefff;
 }
 .blades68.crew.sheet .crew-tier input:checked + label:not([for$="-0"]) {
   background-color: #191813;
@@ -1022,11 +1079,15 @@
 .blades68.crew.sheet .cohorts .cohort-block-harm {
   justify-content: space-around;
 }
-.blades68.crew.sheet .cohorts .cohort-block-harm input[type=radio] {
+.blades68.crew.sheet .cohorts .cohort-block-harm input[type="radio"] {
   display: none;
 }
-.blades68.crew.sheet .cohorts .cohort-block-harm input[type=radio]:checked + label {
-  color: #EEEFFF;
+.blades68.crew.sheet
+  .cohorts
+  .cohort-block-harm
+  input[type="radio"]:checked
+  + label {
+  color: #eeefff;
   font-weight: bold;
   background-color: #191813;
 }
@@ -1093,7 +1154,7 @@
   width: auto;
   height: auto;
   background-image: none !important;
-  color: #EEEFFF;
+  color: #eeefff;
 }
 .blades68.crew.sheet .big-teeth-section .big-teeth label[for$="-0"] i {
   margin-top: 4px;
@@ -1121,10 +1182,17 @@
 .blades68.crew.sheet .big-teeth-section {
   /* Trauma */
 }
-.blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap {
+.blades68.crew.sheet
+  .big-teeth-section
+  .small-teeth-container
+  .small-teeth-wrap {
   display: flex;
 }
-.blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap label {
+.blades68.crew.sheet
+  .big-teeth-section
+  .small-teeth-container
+  .small-teeth-wrap
+  label {
   height: 50px;
   width: 17px;
   background-image: url("assets/teeth/shorttooth-red.png");
@@ -1132,37 +1200,78 @@
   background-size: contain;
   margin-right: 5px;
 }
-.blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap label:last-of-type {
+.blades68.crew.sheet
+  .big-teeth-section
+  .small-teeth-container
+  .small-teeth-wrap
+  label:last-of-type {
   margin-right: 0px;
 }
-.blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap label[for$="-0"] {
+.blades68.crew.sheet
+  .big-teeth-section
+  .small-teeth-container
+  .small-teeth-wrap
+  label[for$="-0"] {
   width: auto;
   height: auto;
   background-image: none !important;
-  color: #EEEFFF;
+  color: #eeefff;
 }
-.blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap label[for$="-0"] i {
+.blades68.crew.sheet
+  .big-teeth-section
+  .small-teeth-container
+  .small-teeth-wrap
+  label[for$="-0"]
+  i {
   margin-top: 4px;
 }
-.blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap label {
+.blades68.crew.sheet
+  .big-teeth-section
+  .small-teeth-container
+  .small-teeth-wrap
+  label {
   cursor: not-allowed;
 }
-.blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap {
+.blades68.crew.sheet
+  .big-teeth-section
+  .small-teeth-container
+  .small-teeth-wrap {
   /* Hide the browser's default checkbox */
 }
-.blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap input {
+.blades68.crew.sheet
+  .big-teeth-section
+  .small-teeth-container
+  .small-teeth-wrap
+  input {
   display: none;
 }
-.blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap input:checked ~ label {
+.blades68.crew.sheet
+  .big-teeth-section
+  .small-teeth-container
+  .small-teeth-wrap
+  input:checked
+  ~ label {
   background-image: url("assets/teeth/shorttooth-grey.png");
 }
-.blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap input:checked + label {
+.blades68.crew.sheet
+  .big-teeth-section
+  .small-teeth-container
+  .small-teeth-wrap
+  input:checked
+  + label {
   background-image: url("assets/teeth/shorttooth-red.png");
 }
-.blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap {
+.blades68.crew.sheet
+  .big-teeth-section
+  .small-teeth-container
+  .small-teeth-wrap {
   flex-direction: column;
 }
-.blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap .small-teeth {
+.blades68.crew.sheet
+  .big-teeth-section
+  .small-teeth-container
+  .small-teeth-wrap
+  .small-teeth {
   display: flex;
   flex-direction: row;
 }
@@ -1191,7 +1300,12 @@
 .blades68.crew.sheet .big-teeth-section .trauma-list label input {
   display: none;
 }
-.blades68.crew.sheet .big-teeth-section .trauma-list label input:checked ~ .checkmark {
+.blades68.crew.sheet
+  .big-teeth-section
+  .trauma-list
+  label
+  input:checked
+  ~ .checkmark {
   color: red;
 }
 .blades68.crew.sheet .big-teeth-section .trauma-list label .checkmark {
@@ -1288,7 +1402,7 @@
   width: auto;
   height: auto;
   background-image: none !important;
-  color: #EEEFFF;
+  color: #eeefff;
 }
 .blades68.actor.pc * .big-teeth-section .big-teeth label[for$="-0"] i {
   margin-top: 4px;
@@ -1316,10 +1430,19 @@
 .blades68.actor.pc * .big-teeth-section {
   /* Trauma */
 }
-.blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap {
+.blades68.actor.pc
+  *
+  .big-teeth-section
+  .small-teeth-container
+  .small-teeth-wrap {
   display: flex;
 }
-.blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap label {
+.blades68.actor.pc
+  *
+  .big-teeth-section
+  .small-teeth-container
+  .small-teeth-wrap
+  label {
   height: 50px;
   width: 17px;
   background-image: url("assets/teeth/shorttooth-red.png");
@@ -1327,37 +1450,88 @@
   background-size: contain;
   margin-right: 5px;
 }
-.blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap label:last-of-type {
+.blades68.actor.pc
+  *
+  .big-teeth-section
+  .small-teeth-container
+  .small-teeth-wrap
+  label:last-of-type {
   margin-right: 0px;
 }
-.blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap label[for$="-0"] {
+.blades68.actor.pc
+  *
+  .big-teeth-section
+  .small-teeth-container
+  .small-teeth-wrap
+  label[for$="-0"] {
   width: auto;
   height: auto;
   background-image: none !important;
-  color: #EEEFFF;
+  color: #eeefff;
 }
-.blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap label[for$="-0"] i {
+.blades68.actor.pc
+  *
+  .big-teeth-section
+  .small-teeth-container
+  .small-teeth-wrap
+  label[for$="-0"]
+  i {
   margin-top: 4px;
 }
-.blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap label {
+.blades68.actor.pc
+  *
+  .big-teeth-section
+  .small-teeth-container
+  .small-teeth-wrap
+  label {
   cursor: not-allowed;
 }
-.blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap {
+.blades68.actor.pc
+  *
+  .big-teeth-section
+  .small-teeth-container
+  .small-teeth-wrap {
   /* Hide the browser's default checkbox */
 }
-.blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap input {
+.blades68.actor.pc
+  *
+  .big-teeth-section
+  .small-teeth-container
+  .small-teeth-wrap
+  input {
   display: none;
 }
-.blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap input:checked ~ label {
+.blades68.actor.pc
+  *
+  .big-teeth-section
+  .small-teeth-container
+  .small-teeth-wrap
+  input:checked
+  ~ label {
   background-image: url("assets/teeth/shorttooth-grey.png");
 }
-.blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap input:checked + label {
+.blades68.actor.pc
+  *
+  .big-teeth-section
+  .small-teeth-container
+  .small-teeth-wrap
+  input:checked
+  + label {
   background-image: url("assets/teeth/shorttooth-red.png");
 }
-.blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap {
+.blades68.actor.pc
+  *
+  .big-teeth-section
+  .small-teeth-container
+  .small-teeth-wrap {
   flex-direction: column;
 }
-.blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap .small-teeth {
+.blades68.actor.pc
+  *
+  .big-teeth-section
+  .small-teeth-container
+  .small-teeth-wrap
+  .small-teeth {
   display: flex;
   flex-direction: row;
 }
@@ -1386,7 +1560,13 @@
 .blades68.actor.pc * .big-teeth-section .trauma-list label input {
   display: none;
 }
-.blades68.actor.pc * .big-teeth-section .trauma-list label input:checked ~ .checkmark {
+.blades68.actor.pc
+  *
+  .big-teeth-section
+  .trauma-list
+  label
+  input:checked
+  ~ .checkmark {
   color: red;
 }
 .blades68.actor.pc * .big-teeth-section .trauma-list label .checkmark {
@@ -1400,13 +1580,16 @@
 .blades68.actor.pc * .character-stress label[for$="-0"] {
   margin-right: 0px;
 }
-.blades68.actor.pc * .abilities .item-name, .blades68.actor.pc * .loadout .item-name {
+.blades68.actor.pc * .abilities .item-name,
+.blades68.actor.pc * .loadout .item-name {
   width: 100px;
 }
-.blades68.actor.pc * .abilities .item-body, .blades68.actor.pc * .loadout .item-body {
+.blades68.actor.pc * .abilities .item-body,
+.blades68.actor.pc * .loadout .item-body {
   width: auto;
 }
-.blades68.actor.pc * .abilities .item-description, .blades68.actor.pc * .loadout .item-description {
+.blades68.actor.pc * .abilities .item-description,
+.blades68.actor.pc * .loadout .item-description {
   width: 260px;
 }
 .blades68.actor.pc * .abilities .label-stripe p:first-child {
@@ -1433,7 +1616,7 @@
   width: auto;
   height: auto;
   background-image: none !important;
-  color: #EEEFFF;
+  color: #eeefff;
 }
 .blades68.actor.pc * .teeth-experience label[for$="-0"] i {
   margin-top: 4px;
@@ -1474,9 +1657,9 @@
 }
 .blades68.actor.pc * .harm-armor .character-harm table th {
   background-color: #191813;
-  color: #EEEFFF;
+  color: #eeefff;
 }
-.blades68.actor.pc * .harm-armor .character-harm table input[type=text] {
+.blades68.actor.pc * .harm-armor .character-harm table input[type="text"] {
   width: 100%;
 }
 .blades68.actor.pc * .harm-armor .character-health-clock {
@@ -1504,7 +1687,12 @@
   transition: filter 0.1s;
   cursor: pointer;
 }
-.blades68.actor.pc * .harm-armor .character-health-clock .blades-clock label:hover {
+.blades68.actor.pc
+  *
+  .harm-armor
+  .character-health-clock
+  .blades-clock
+  label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
@@ -1512,19 +1700,44 @@
   position: absolute;
   display: none;
 }
-.blades68.actor.pc * .harm-armor .character-health-clock .blades-clock input[value="0"] {
+.blades68.actor.pc
+  *
+  .harm-armor
+  .character-health-clock
+  .blades-clock
+  input[value="0"] {
   display: none;
 }
-.blades68.actor.pc * .harm-armor .character-health-clock .blades-clock *:nth-child(3) {
+.blades68.actor.pc
+  *
+  .harm-armor
+  .character-health-clock
+  .blades-clock
+  *:nth-child(3) {
   transform: rotate(0deg) skewY(180deg);
 }
-.blades68.actor.pc * .harm-armor .character-health-clock .blades-clock *:nth-child(5) {
+.blades68.actor.pc
+  *
+  .harm-armor
+  .character-health-clock
+  .blades-clock
+  *:nth-child(5) {
   transform: rotate(90deg) skewY(180deg);
 }
-.blades68.actor.pc * .harm-armor .character-health-clock .blades-clock *:nth-child(7) {
+.blades68.actor.pc
+  *
+  .harm-armor
+  .character-health-clock
+  .blades-clock
+  *:nth-child(7) {
   transform: rotate(180deg) skewY(180deg);
 }
-.blades68.actor.pc * .harm-armor .character-health-clock .blades-clock *:nth-child(9) {
+.blades68.actor.pc
+  *
+  .harm-armor
+  .character-health-clock
+  .blades-clock
+  *:nth-child(9) {
   transform: rotate(270deg) skewY(180deg);
 }
 .blades68.actor.pc * .harm-armor .character-armor-uses div {
@@ -1539,7 +1752,7 @@
 }
 .blades68.actor.pc * .attributes .stripe {
   background-color: #191813;
-  color: #EEEFFF;
+  color: #eeefff;
   font-size: 17px;
   padding-left: 5px;
 }
@@ -1566,23 +1779,44 @@
   background-size: contain;
   margin-right: 5px;
 }
-.blades68.actor.pc * .attributes .attributes-exp .stripe-tooth-body label:last-of-type {
+.blades68.actor.pc
+  *
+  .attributes
+  .attributes-exp
+  .stripe-tooth-body
+  label:last-of-type {
   margin-right: 0px;
 }
-.blades68.actor.pc * .attributes .attributes-exp .stripe-tooth-body label[for$="-0"] {
+.blades68.actor.pc
+  *
+  .attributes
+  .attributes-exp
+  .stripe-tooth-body
+  label[for$="-0"] {
   width: auto;
   height: auto;
   background-image: none !important;
-  color: #EEEFFF;
+  color: #eeefff;
 }
-.blades68.actor.pc * .attributes .attributes-exp .stripe-tooth-body label[for$="-0"] i {
+.blades68.actor.pc
+  *
+  .attributes
+  .attributes-exp
+  .stripe-tooth-body
+  label[for$="-0"]
+  i {
   margin-top: 4px;
 }
 .blades68.actor.pc * .attributes .attributes-exp .stripe-tooth-body label {
   transition: filter 0.1s;
   cursor: pointer;
 }
-.blades68.actor.pc * .attributes .attributes-exp .stripe-tooth-body label:hover {
+.blades68.actor.pc
+  *
+  .attributes
+  .attributes-exp
+  .stripe-tooth-body
+  label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
@@ -1592,10 +1826,22 @@
 .blades68.actor.pc * .attributes .attributes-exp .stripe-tooth-body input {
   display: none;
 }
-.blades68.actor.pc * .attributes .attributes-exp .stripe-tooth-body input:checked ~ label {
+.blades68.actor.pc
+  *
+  .attributes
+  .attributes-exp
+  .stripe-tooth-body
+  input:checked
+  ~ label {
   background-image: url("assets/teeth/xptooth-white.png");
 }
-.blades68.actor.pc * .attributes .attributes-exp .stripe-tooth-body input:checked + label {
+.blades68.actor.pc
+  *
+  .attributes
+  .attributes-exp
+  .stripe-tooth-body
+  input:checked
+  + label {
   background-image: url("assets/teeth/xptooth-red.png");
 }
 .blades68.actor.pc * .attributes .attributes-exp .stripe-tooth-body {
@@ -1639,13 +1885,18 @@
   display: none;
 }
 .blades68.actor.pc * .attributes .attributes-container input:checked ~ label {
-  background-color: #EEEFFF;
+  background-color: #eeefff;
 }
 .blades68.actor.pc * .attributes .attributes-container input:checked + label {
   transition: filter 0.1s;
   cursor: pointer;
 }
-.blades68.actor.pc * .attributes .attributes-container input:checked + label:hover {
+.blades68.actor.pc
+  *
+  .attributes
+  .attributes-container
+  input:checked
+  + label:hover {
   filter: brightness(0.7);
   opacity: 0.7;
 }
@@ -1692,7 +1943,7 @@
 .blades68.actor.pc * .coins label {
   height: 15px;
   width: 15px;
-  background-color: #DAA520;
+  background-color: #daa520;
   vertical-align: middle;
   border: 1px solid #191813;
 }
@@ -1714,10 +1965,10 @@
   display: none;
 }
 .blades68.actor.pc * .coins input:checked ~ label {
-  background-color: #EEEFFF;
+  background-color: #eeefff;
 }
 .blades68.actor.pc * .coins input:checked + label {
-  background-color: #DAA520;
+  background-color: #daa520;
 }
 .blades68.actor.pc * .coins {
   flex-wrap: wrap;
@@ -1817,8 +2068,8 @@
 .blades68.blades68-theme .rollable-text:hover {
   color: #ffb703;
 }
-.blades68.blades68-theme input[type=text],
-.blades68.blades68-theme input[type=number],
+.blades68.blades68-theme input[type="text"],
+.blades68.blades68-theme input[type="number"],
 .blades68.blades68-theme textarea,
 .blades68.blades68-theme select {
   background-color: #ffffff;
@@ -1835,7 +2086,7 @@
 .chat-label {
   background-color: #191813;
   font-family: Kirsty, serif;
-  color: #EEEFFF;
+  color: #eeefff;
   font-size: 21px;
   text-align: center;
   padding: 0px 5px;
@@ -1855,7 +2106,7 @@
 .label-stripe-chat {
   text-transform: uppercase;
   background-color: #191813;
-  color: #EEEFFF;
+  color: #eeefff;
   margin-bottom: 10px;
   position: relative;
   padding-top: 3px;
@@ -1905,19 +2156,19 @@
   overflow-y: auto;
   padding-right: 8px;
 }
-.add-items-list input[type=radio],
-.add-items-list input[type=checkbox] {
+.add-items-list input[type="radio"],
+.add-items-list input[type="checkbox"] {
   display: none;
 }
-.add-items-list input[type=radio]:checked + label,
-.add-items-list input[type=checkbox]:checked + label {
+.add-items-list input[type="radio"]:checked + label,
+.add-items-list input[type="checkbox"]:checked + label {
   font-weight: bold;
 }
 .add-items-list .tooltip .tooltiptext {
   visibility: hidden;
   width: 200px;
   background-color: #191813;
-  color: #EEEFFF;
+  color: #eeefff;
   text-align: center;
   padding: 5px;
   border-radius: 6px;

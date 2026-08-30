@@ -1894,16 +1894,21 @@
   background: linear-gradient(to right, #191813 0%, #191813 68%, #DAA520 68%, #DAA520 100%);
 }
 .blades68.actor.pc * .keys-container .keys-header .keys-side {
-  flex-grow: 1;
   padding: 4px 8px;
+  white-space: nowrap;
 }
 .blades68.actor.pc * .keys-container .keys-header a.add-key-popup {
   color: #EEEFFF;
   padding: 0 6px;
+  cursor: pointer;
+}
+.blades68.actor.pc * .keys-container .keys-header .header-spacer {
+  flex-grow: 1;
 }
 .blades68.actor.pc * .keys-container .keys-header .deadlocks-side {
   padding: 4px 8px;
   text-align: right;
+  white-space: nowrap;
 }
 .blades68.actor.pc * .keys-container .key-slot {
   display: flex;

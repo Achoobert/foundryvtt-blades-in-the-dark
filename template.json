@@ -44,7 +44,13 @@
       },
       "keys": {
         "max": 5,
-        "list": [{ "key": "example", "marks": 0, "boomed": false }]
+        "list": [
+          { "key": "", "marks": 0, "boomed": false },
+          { "key": "", "marks": 0, "boomed": false },
+          { "key": "", "marks": 0, "boomed": false },
+          { "key": "", "marks": 0, "boomed": false },
+          { "key": "", "marks": 0, "boomed": false }
+        ]
       },
       "healing-clock": [0],
       "healing_clock": {
