@@ -64,11 +64,15 @@ export default function register(quench) {
             assert.equal(data.abilityCatalog[0].name, 'Test Ability');
             assert.equal(data.abilityCatalog[0].ownedCount, 0);
 
-            const checkbox = sheet.element.find('.special-abilities-panel .catalog-toggle').get(0);
+            // A checkbox's change handler is bound at the render that produced it; toggling
+            // ownership re-renders the sheet (fresh DOM, freshly-bound listeners), so each step
+            // re-queries the live element instead of reusing a reference from a prior render.
+            const abilityCheckbox = () => sheet.element.find('.special-abilities-panel .catalog-toggle').get(0);
+            const ownsAbility = () => actor.items.some((i) => i.type === 'ability' && i.name === abilitySource.name);
+
+            let checkbox = abilityCheckbox();
             assert.isOk(checkbox, 'the ability checkbox should be rendered');
             assert.isFalse(checkbox.checked);
-
-            const ownsAbility = () => actor.items.some((i) => i.type === 'ability' && i.name === abilitySource.name);
 
             checkbox.checked = true;
             await fireChange(checkbox, ownsAbility);
@@ -77,6 +81,7 @@ export default function register(quench) {
               'checking the box should create the owned ability item'
             );
 
+            checkbox = abilityCheckbox();
             checkbox.checked = false;
             await fireChange(checkbox, () => !ownsAbility());
             assert.isFalse(
@@ -186,6 +191,32 @@ export default function register(quench) {
       });
 
       describe('Keys & Deadlocks', function () {
+        it('normalizes a keys.list that Foundry stored as an index-keyed object instead of an array', async function () {
+          // Partial dot-notation updates (e.g. "system.keys.list.0.key", which is exactly what
+          // the per-slot <select>/<input> names on the sheet produce) can leave Foundry's merge
+          // with {"0": {...}, "1": {...}} instead of a real array. getComputedKeys() — and thus
+          // the whole sheet render — must not crash on that shape; this reproduces a live actor
+          // hitting "list.map is not a function" during getData().
+          requireSystemActive();
+          const actor = tracker.track(await Actor.create({ name: 'Quench Keys Object-Shape PC', type: 'character' }));
+          await actor.update({
+            'system.keys.list': { 0: { key: 'Defiant', marks: 1, boomed: false } }
+          });
+          assert.isFalse(Array.isArray(actor.system.keys.list), 'setup should reproduce the object-shaped list');
+
+          const keys = actor.getComputedKeys();
+          assert.lengthOf(keys, 5, 'should still pad to 5 slots');
+          assert.equal(keys[0].key, 'Defiant', 'the existing slot should be preserved, not dropped');
+
+          const sheet = actor.sheet;
+          await sheet._render(true);
+          try {
+            assert.isTrue(sheet.rendered, 'the sheet should render without throwing on the object-shaped list');
+          } finally {
+            await sheet.close();
+          }
+        });
+
         it('pads a fresh actor to 5 empty Key slots (no leftover "example" placeholder)', async function () {
           requireSystemActive();
           const actor = tracker.track(await Actor.create({ name: 'Quench Keys Padding PC', type: 'character' }));
@@ -197,6 +228,12 @@ export default function register(quench) {
         it('Add Key succeeds on a fresh actor and fills an empty slot', async function () {
           this.timeout(10000);
           requireSystemActive();
+
+          // The Keys/Deadlocks block (and its Add Key button) only renders when Blades68Mode
+          // is on; toggle it for the duration of this test rather than assuming the world
+          // already has it set, and restore whatever the world had configured.
+          const priorMode = game.settings.get('blades68', 'Blades68Mode');
+          await game.settings.set('blades68', 'Blades68Mode', true);
 
           const actor = tracker.track(await Actor.create({ name: 'Quench Add Key PC', type: 'character' }));
           const sheet = actor.sheet;
@@ -234,6 +271,8 @@ export default function register(quench) {
             );
           } finally {
             await sheet.close();
+            await game.settings.set('blades68', 'Blades68Mode', priorMode);
+            await new Promise((resolve) => setTimeout(resolve, 200));
           }
         });
 

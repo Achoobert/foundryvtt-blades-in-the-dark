@@ -446,7 +446,12 @@ export class BladesActor extends Actor {
    */
   getComputedKeys() {
     const max = this.system.keys?.max ?? 5;
-    const list = foundry.utils.deepClone(this.system.keys?.list ?? []);
+    const rawList = this.system.keys?.list ?? [];
+    // Partial dot-notation updates (e.g. "system.keys.list.0.key") can leave Foundry's merge
+    // with a plain object keyed by index ({"0": {...}, "1": {...}}) instead of a real array;
+    // normalize either shape back into an array before working with it.
+    const asArray = Array.isArray(rawList) ? rawList : Object.values(rawList);
+    const list = foundry.utils.deepClone(asArray);
     const normalized = list.map((slot) => (slot?.key === "example" ? { ...slot, key: "" } : slot));
     while (normalized.length < max) {
       normalized.push({ key: "", marks: 0, boomed: false });

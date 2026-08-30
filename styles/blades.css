@@ -2001,60 +2001,59 @@
 }
 .blades68.blades68-theme {
   /*
-   * Blades '68 bright theme.
+   * Blades '68 theme.
    * Applied only when the sheet root also carries .blades68-theme
    * (toggled via the "Blades68Mode" world setting, see module/blades-sheet.js).
-   * Overrides the base noir near-black/parchment palette with a brighter,
-   * higher-saturation "future Doskvol" look.
+   * Palette matches the reference build's CSS custom properties (--b68-*).
    */
 }
 .blades68.blades68-theme {
-  background-color: #eef6ff;
-  color: #101425;
+  background-color: #e9e4ce;
+  color: #220e10;
 }
 .blades68.blades68-theme .window-content {
-  background-color: #eef6ff;
+  background-color: #e9e4ce;
 }
 .blades68.blades68-theme .black-label,
 .blades68.blades68-theme .label-stripe,
 .blades68.blades68-theme .label-stripe-chat {
-  background-color: #7b2ff7;
-  color: #ffffff;
+  background-color: #4c372a;
+  color: #e9e4ce;
 }
 .blades68.blades68-theme .gray-label,
 .blades68.blades68-theme .label-stripe-gray,
 .blades68.blades68-theme .label-stripe-chat-small {
-  background-color: #00d1c1;
-  color: #101425;
+  background-color: #dad1bc;
+  color: #220e10;
 }
 .blades68.blades68-theme a.item-add-popup,
 .blades68.blades68-theme .rollable-text {
-  color: #ff5da2;
+  color: #eb5000;
 }
 .blades68.blades68-theme .rollable-text:hover {
-  color: #ffb703;
+  color: #e8c05b;
 }
 .blades68.blades68-theme input[type=text],
 .blades68.blades68-theme input[type=number],
 .blades68.blades68-theme textarea,
 .blades68.blades68-theme select {
-  background-color: #ffffff;
-  color: #101425;
-  border-color: #7b2ff7;
+  background-color: #ddd7be;
+  color: #220e10;
+  border-color: #795c4a;
 }
 .blades68.blades68-theme .section-header {
-  background-color: #7b2ff7;
-  color: #ffffff;
+  background-color: #4c372a;
+  color: #e9e4ce;
 }
 .blades68.blades68-theme .keys-container .keys-header {
-  background: linear-gradient(to right, #7b2ff7 0%, #7b2ff7 68%, #ff5da2 68%, #ff5da2 100%);
-  color: #ffffff;
+  background: linear-gradient(to right, #4c372a 0%, #4c372a 68%, #eb5000 68%, #eb5000 100%);
+  color: #e9e4ce;
 }
 .blades68.blades68-theme .keys-container .key-drift {
-  color: #7b2ff7;
+  color: #4c372a;
 }
 .blades68.blades68-theme .keys-container .key-boom input:checked + i {
-  color: #ff5da2;
+  color: #eb5000;
 }
 
 .chat-label {

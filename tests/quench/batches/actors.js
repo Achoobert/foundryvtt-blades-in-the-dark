@@ -18,7 +18,8 @@ export default function register(quench) {
           const actor = tracker.track(await Actor.create({ name: 'Quench PC', type: 'character' }));
 
           assert.equal(actor.system.keys.max, 5);
-          assert.lengthOf(actor.system.keys.list, 1);
+          assert.lengthOf(actor.system.keys.list, 5);
+          assert.isTrue(actor.system.keys.list.every((slot) => slot.key === ''), 'every slot should start empty and addable');
           assert.equal(actor.system.keys.list[0].marks, 0);
           assert.equal(actor.system.keys.list[0].boomed, false);
 
