@@ -7,7 +7,7 @@ const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const DEBOUNCE_MS = 250;
 
 const WATCH_PATHS = [
-  'css',
+  'styles',
   'module',
   'templates',
   'lang',

@@ -1,16 +1,22 @@
 // Add Items modal styling.
+// Note: DialogV2 wraps our content in its own <form class="dialog-form">,
+// so the <form class="items-to-add"> emitted alongside .add-items-list gets
+// dropped by the browser (nested forms aren't allowed) and never appears
+// as an ancestor in the rendered DOM. Rules below target .add-items-list
+// directly so they still apply regardless of whether items-to-add survives.
+// (Scoped to .add-items-list rather than the generic .items-list class,
+// which is also used by the unrelated active-effects table.)
 .items-to-add {
-
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
+}
 
-  .items-list {
-    max-height: 60vh;
-    overflow-y: auto;
-    padding-right: 8px;
-  }
+.add-items-list {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 8px;
 
   input[type="radio"],
   input[type="checkbox"] {

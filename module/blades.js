@@ -47,7 +47,7 @@ Hooks.once("init", async function() {
   registerSystemSettings();
 
 
-  if (game.settings.get('blades-in-the-dark', "PublicClocks")) {
+  if (game.settings.get('blades68', "PublicClocks")) {
 	Hooks.on("preCreateActor", (actor, createData, options, userId) => {
 		if (actor.type === "\uD83D\uDD5B clock") {
 			actor.updateSource({
@@ -311,7 +311,7 @@ Hooks.once("init", async function() {
   
   // check for game settings
   Handlebars.registerHelper('getSetting', function( string ) {
-	  return (game.settings.get('blades-in-the-dark', string));
+	  return (game.settings.get('blades68', string));
 
   });
 });

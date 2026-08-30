@@ -1899,20 +1899,21 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.items-to-add .items-list {
+
+.add-items-list {
   max-height: 60vh;
   overflow-y: auto;
   padding-right: 8px;
 }
-.items-to-add input[type=radio],
-.items-to-add input[type=checkbox] {
+.add-items-list input[type=radio],
+.add-items-list input[type=checkbox] {
   display: none;
 }
-.items-to-add input[type=radio]:checked + label,
-.items-to-add input[type=checkbox]:checked + label {
+.add-items-list input[type=radio]:checked + label,
+.add-items-list input[type=checkbox]:checked + label {
   font-weight: bold;
 }
-.items-to-add .tooltip .tooltiptext {
+.add-items-list .tooltip .tooltiptext {
   visibility: hidden;
   width: 200px;
   background-color: #191813;
@@ -1923,8 +1924,6 @@
   position: absolute;
   z-index: 9999;
 }
-.items-to-add .tooltip:hover .tooltiptext {
+.add-items-list .tooltip:hover .tooltiptext {
   visibility: visible;
 }
-
-/*# sourceMappingURL=blades.css.map */

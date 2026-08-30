@@ -252,6 +252,13 @@
       "system": "blades68",
       "path": "./packs/blades68_factions.db",
       "type": "Item"
+    },
+    {
+      "name": "blades68_macros",
+      "label": "Blades '68 Macros",
+      "system": "blades68",
+      "path": "./packs/blades68_macros.db",
+      "type": "Macro"
     }
   ],
   "packFolders": [
@@ -278,7 +285,7 @@
     {
       "name": "Blades '68 Content",
       "sorting": "m",
-      "packs": ["blades68_classes", "blades68_abilities", "blades68_items", "blades68_crew_types", "blades68_crew_abilities", "blades68_crew_upgrades", "blades68_factions"]
+      "packs": ["blades68_classes", "blades68_abilities", "blades68_items", "blades68_crew_types", "blades68_crew_abilities", "blades68_crew_upgrades", "blades68_factions", "blades68_macros"]
 	}
   ]
 }
