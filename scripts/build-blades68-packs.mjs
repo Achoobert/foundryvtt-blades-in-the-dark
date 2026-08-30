@@ -25,9 +25,22 @@ const sheetdata = JSON.parse(fs.readFileSync(path.join(ROOT, "reference/blades68
 
 const ACTIONS = ["hunt", "study", "survey", "tinker", "finesse", "prowl", "skirmish", "wreck", "attune", "command", "consort", "sway"];
 
+// A playbook's "base" object embeds its frame-feature slugs as self-referencing
+// key:value pairs (e.g. Hull's "Choose two frame features" options). These are
+// class-restricted, not universal gear, even though they have "<key>_description"
+// companions like ordinary gear does.
+const FRAME_FEATURE_KEYS = [
+  "advanced_visual_sensors",
+  "hidden_compartment",
+  "jet_propulsion",
+  "life_like_appearance",
+  "smokescreen_emitter",
+  "surveillance_hardware"
+];
+
 // Known translation.json keys that coincidentally have a "<key>_description"
-// companion but are not gear (sheet-worker labels, not items).
-const GEAR_EXCLUDE = new Set(["+heavy", "crew", "frame", "hack", "hunting_grounds", "playbook"]);
+// companion but are not universal gear (sheet-worker labels, frame features).
+const GEAR_EXCLUDE = new Set(["+heavy", "crew", "frame", "hack", "hunting_grounds", "playbook", ...FRAME_FEATURE_KEYS]);
 
 const FACTION_CATEGORY_BY_GROUP = {
   factions1: "Underworld",
@@ -296,6 +309,28 @@ function buildPlaybookItems() {
   return docs;
 }
 
+// Modeled as class-restricted 0-load items, tagged additional_info="frame_feature"
+// so consumers (e.g. the playbook-assign macro) can offer them as a pick rather
+// than auto-granting all of them like ordinary loadout gear.
+function buildFrameFeatures() {
+  const docs = [];
+  for (const [slug, pb] of Object.entries(sheetdata.playbook)) {
+    const title = titleCase(slug);
+    const base = pb.base || {};
+    for (const key of FRAME_FEATURE_KEYS) {
+      if (base[key] !== key) continue;
+      const system = {
+        description: tr(`${key}_description`),
+        class: title,
+        load: "0",
+        additional_info: "frame_feature"
+      };
+      docs.push(makeDoc("item", tr(key), system));
+    }
+  }
+  return docs;
+}
+
 // ---------------------------------------------------------------------------
 // Factions
 // ---------------------------------------------------------------------------
@@ -351,7 +386,7 @@ const abilities = buildAbilities();
 const crewTypes = buildCrewTypes();
 const crewAbilities = buildCrewAbilities();
 const crewUpgrades = buildCrewUpgrades();
-const items = [...buildUniversalGear(), ...buildPlaybookItems()];
+const items = [...buildUniversalGear(), ...buildPlaybookItems(), ...buildFrameFeatures()];
 const factions = buildFactions();
 
 writePack("blades68_classes.db", classes);

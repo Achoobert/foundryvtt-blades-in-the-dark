@@ -47,6 +47,7 @@
 
   </section>
 
+  <div class="header_subline">
   {{!-- Trait line: Heritage - Background - Vice - Class - Crew, spanning the full header width --}}
   <div id="character-{{_id}}-traits" class="trait-line flex-horizontal">
 
@@ -144,9 +145,92 @@
       {{/each}}
 
     </div>
-
   </div>
 
+<!-- stress -->
+{{!-- Stress and Trauma --}}
+<div id="character-{{_id}}-stress-trauma" class="section big-teeth-section float-right">
+  <div id="character-{{_id}}-stress" class="big-teeth character-stress">
+    {{#multiboxes system.stress.value}}
+
+    <input type="radio" id="character-{{_id}}-stress-0" name="system.stress.value" value="0" dtype="Radio">
+    <!--<label class="black-label" for="character-{{_id}}-stress-0">{{localize system.stress.name}}</label>-->
+    <div class="black-label">{{localize system.stress.name}}</div>
+
+    {{#times_from 1 system.stress.max}}
+    <input type="radio" id="character-{{../_id}}-stress-{{this}}" name="system.stress.value" value="{{this}}" dtype="Radio">
+    <label class="radio-toggle" for="character-{{../_id}}-stress-{{this}}"></label>
+    {{/times_from}}
+
+    {{/multiboxes}}
+
+  </div>
+  {{#unless blades68}}
+  <div id="character-{{_id}}-trauma-container" class="small-teeth-container">
+    {{#traumacounter system.trauma.list}}
+    <div id="character-{{_id}}-trauma" class="small-teeth-wrap">
+      <!--<label class="black-label" for="character-{{_id}}-trauma-counter-0">{{localize system.trauma.name}}</label>-->
+      <div class="black-label">{{localize system.trauma.name}}</div>
+      <div id="character-{{_id}}-trauma-teeth" class="small-teeth">
+        <input type="radio" id="character-{{_id}}-trauma-counter-0" name="system.trauma.value" value="0">
+
+        {{#times_from 1 system.trauma.max}}
+        <input type="radio" id="character-{{../_id}}-trauma-counter-{{this}}" name="system.trauma.value" value="{{this}}"
+          disabled>
+        <label for="character-{{../_id}}-trauma-counter-{{this}}"></label>
+        {{/times_from}}
+        </div>
+        </div>
+        {{/traumacounter}}
+        </div>
+
+  <div id="character-{{_id}}-trauma-list" class="trauma-list">
+    <label>
+      <input type="checkbox" data-dType="Boolean" name="system.trauma.list.cold" value="cold" {{checked
+        system.trauma.list.cold}}>
+      <span class="checkmark">{{localize system.trauma.options.[0]}}</span>
+      </label>
+      <label>
+      <input type="checkbox" data-dType="Boolean" name="system.trauma.list.haunted" value="haunted" {{checked
+        system.trauma.list.haunted}}>
+      <span class="checkmark">{{localize system.trauma.options.[1]}}</span>
+      </label>
+      <label>
+      <input type="checkbox" data-dType="Boolean" name="system.trauma.list.obsessed" value="obsessed" {{checked
+        system.trauma.list.obsessed}}>
+      <span class="checkmark">{{localize system.trauma.options.[2]}}</span>
+      </label>
+      <label>
+      <input type="checkbox" data-dType="Boolean" name="system.trauma.list.paranoid" value="paranoid" {{checked
+        system.trauma.list.paranoid}}>
+      <span class="checkmark">{{localize system.trauma.options.[3]}}</span>
+      </label>
+      <label>
+      <input type="checkbox" data-dType="Boolean" name="system.trauma.list.reckless" value="reckless" {{checked
+        system.trauma.list.reckless}}>
+      <span class="checkmark">{{localize system.trauma.options.[4]}}</span>
+      </label>
+      <label>
+      <input type="checkbox" data-dType="Boolean" name="system.trauma.list.soft" value="soft" {{checked
+        system.trauma.list.soft}}>
+      <span class="checkmark">{{localize system.trauma.options.[5]}}</span>
+      </label>
+      <label>
+      <input type="checkbox" data-dType="Boolean" name="system.trauma.list.unstable" value="unstable" {{checked
+        system.trauma.list.unstable}}>
+      <span class="checkmark">{{localize system.trauma.options.[6]}}</span>
+      </label>
+      <label>
+      <input type="checkbox" data-dType="Boolean" name="system.trauma.list.vicious" value="vicious" {{checked
+        system.trauma.list.vicious}}>
+      <span class="checkmark">{{localize system.trauma.options.[7]}}</span>
+      </label>
+      </div>
+      {{/unless}}
+      </div>
+
+  </div>
+  
   {{!-- Experience --}}
   <section class="flex-horizontal experience">
     {{#if (getSetting 'ClockXP')}}
@@ -155,104 +239,36 @@
       <a class="up-exp-clock" data-tooltip="{{localize 'BITD.AddXP'}}"><i class="fas fa-caret-up"></i></a>
       <a class="down-exp-clock" data-tooltip="{{localize 'BITD.MinusXP'}}"><i class="fas fa-caret-down"></i></a>
     </div>
-	<img src="systems/blades68/themes/{{system.exp_clock.color}}/{{system.exp_clock.size}}clock_{{system.exp_clock.value}}.svg" height="45" width="45" style="border-style: none"/>
+    <img
+      src="systems/blades68/themes/{{system.exp_clock.color}}/{{system.exp_clock.size}}clock_{{system.exp_clock.value}}.svg"
+      height="45" width="45" style="border-style: none" />
     <!--
-    <img src="systems/blades68/styles/assets/progressclocks-svg/Progress Clock {{system.exp_clock.size}}-{{system.exp_clock.value}}.svg" height="45" width="45" style="border-style: none"/>
-	-->
+                <img src="systems/blades68/styles/assets/progressclocks-svg/Progress Clock {{system.exp_clock.size}}-{{system.exp_clock.value}}.svg" height="45" width="45" style="border-style: none"/>
+            	-->
     {{#if (gteq system.exp_clock.number 1)}}
     <div class="flex-vertical" style="font-size: 16px">
-      <a class="add-exp-clock" data-tooltip="{{localize 'BITD.MinusXPClock'}}" style="visibility:hidden"><i class="fas fa-angles-up"></i></a>
+      <a class="add-exp-clock" data-tooltip="{{localize 'BITD.MinusXPClock'}}" style="visibility:hidden"><i
+          class="fas fa-angles-up"></i></a>
       <a class="minus-exp-clock" data-tooltip="{{localize 'BITD.MinusXPClock'}}"><i class="fas fa-angles-down"></i></a>
     </div>
     {{#if (lteq system.exp_clock.number 10)}}
     {{#times_from 1 system.exp_clock.number}}
-    <img src="systems/blades68/styles/assets/progressclocks-svg/Progress Clock 6-6.svg" height="45" width="45" style="border-style: none"/>
+    <img src="systems/blades68/styles/assets/progressclocks-svg/Progress Clock 6-6.svg" height="45" width="45"
+      style="border-style: none" />
     {{/times_from}}
     {{else}}
-    <img src="systems/blades68/styles/assets/progressclocks-svg/Progress Clock 6-6.svg" height="45" width="45" style="border-style: none"/>
+    <img src="systems/blades68/styles/assets/progressclocks-svg/Progress Clock 6-6.svg" height="45" width="45"
+      style="border-style: none" />
     <p style="font-family: Kirsty, serif; font-size: 24px">x {{system.exp_clock.number}}</p>
     {{/if}}
     {{/if}}
     {{/if}}
   </section>
-
+  
   {{!-- Attributes --}}
   <section class="attributes-row">
     {{> "systems/blades68/templates/parts/attributes.html" actor=actor}}
   </section>
-
-  {{!-- Stress and Trauma --}}
-  <div id="character-{{_id}}-stress-trauma" class="section big-teeth-section">
-    <div id="character-{{_id}}-stress" class="big-teeth character-stress">
-      {{#multiboxes system.stress.value}}
-
-      <input type="radio" id="character-{{_id}}-stress-0" name="system.stress.value" value="0" dtype="Radio">
-      <!--<label class="black-label" for="character-{{_id}}-stress-0">{{localize system.stress.name}}</label>-->
-      <div class="black-label">{{localize system.stress.name}}</div>
-
-      {{#times_from 1 system.stress.max}}
-      <input type="radio" id="character-{{../_id}}-stress-{{this}}" name="system.stress.value" value="{{this}}"
-             dtype="Radio">
-      <label class="radio-toggle" for="character-{{../_id}}-stress-{{this}}"></label>
-      {{/times_from}}
-
-      {{/multiboxes}}
-
-    </div>
-    {{#unless blades68}}
-    <div id="character-{{_id}}-trauma-container" class="small-teeth-container">
-      {{#traumacounter system.trauma.list}}
-      <div id="character-{{_id}}-trauma" class="small-teeth-wrap">
-        <!--<label class="black-label" for="character-{{_id}}-trauma-counter-0">{{localize system.trauma.name}}</label>-->
-        <div class="black-label">{{localize system.trauma.name}}</div>
-        <div id="character-{{_id}}-trauma-teeth" class="small-teeth">
-          <input type="radio" id="character-{{_id}}-trauma-counter-0" name="system.trauma.value" value="0">
-
-          {{#times_from 1 system.trauma.max}}
-          <input type="radio" id="character-{{../_id}}-trauma-counter-{{this}}" name="system.trauma.value" value="{{this}}" disabled>
-          <label for="character-{{../_id}}-trauma-counter-{{this}}"></label>
-          {{/times_from}}
-        </div>
-      </div>
-      {{/traumacounter}}
-    </div>
-
-    <div id="character-{{_id}}-trauma-list" class="trauma-list">
-      <label>
-        <input type="checkbox" data-dType="Boolean" name="system.trauma.list.cold" value="cold" {{checked system.trauma.list.cold}}>
-        <span class="checkmark">{{localize system.trauma.options.[0]}}</span>
-      </label>
-      <label>
-        <input type="checkbox" data-dType="Boolean" name="system.trauma.list.haunted" value="haunted" {{checked system.trauma.list.haunted}}>
-        <span class="checkmark">{{localize system.trauma.options.[1]}}</span>
-      </label>
-      <label>
-        <input type="checkbox" data-dType="Boolean" name="system.trauma.list.obsessed" value="obsessed" {{checked system.trauma.list.obsessed}}>
-        <span class="checkmark">{{localize system.trauma.options.[2]}}</span>
-      </label>
-      <label>
-        <input type="checkbox" data-dType="Boolean" name="system.trauma.list.paranoid" value="paranoid" {{checked system.trauma.list.paranoid}}>
-        <span class="checkmark">{{localize system.trauma.options.[3]}}</span>
-      </label>
-      <label>
-        <input type="checkbox" data-dType="Boolean" name="system.trauma.list.reckless" value="reckless" {{checked system.trauma.list.reckless}}>
-        <span class="checkmark">{{localize system.trauma.options.[4]}}</span>
-      </label>
-      <label>
-        <input type="checkbox" data-dType="Boolean" name="system.trauma.list.soft" value="soft" {{checked system.trauma.list.soft}}>
-        <span class="checkmark">{{localize system.trauma.options.[5]}}</span>
-      </label>
-      <label>
-        <input type="checkbox" data-dType="Boolean" name="system.trauma.list.unstable" value="unstable" {{checked system.trauma.list.unstable}}>
-        <span class="checkmark">{{localize system.trauma.options.[6]}}</span>
-      </label>
-      <label>
-        <input type="checkbox" data-dType="Boolean" name="system.trauma.list.vicious" value="vicious" {{checked system.trauma.list.vicious}}>
-        <span class="checkmark">{{localize system.trauma.options.[7]}}</span>
-      </label>
-    </div>
-    {{/unless}}
-  </div>
 
   {{!-- Harm, Healing and Armor --}}
   <section id="character-{{_id}}-harm-armor" class="flex harm-armor">

@@ -2182,4 +2182,17 @@
   visibility: visible;
 }
 
+.header_subline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.flex-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+}
 /*# sourceMappingURL=style.css.map */

@@ -1,8 +1,10 @@
 // Assign Blades '68 Playbook
 // Turns a blank character actor into a fully-loaded playbook character:
 // sets the playbook, applies base skill pips, adds the first playbook
-// ability, adds all playbook loadout items, and creates the playbook's
-// "Shady Friends" contacts as NPC actors linked to the character.
+// ability, adds all playbook loadout items plus the universal gear list
+// (prompting for a pick among any frame features, e.g. Hull's "choose two"),
+// and creates the playbook's "Shady Friends" contacts as NPC actors linked
+// to the character.
 (async () => {
   const SYSTEM_ID = "blades68";
 
@@ -86,7 +88,39 @@
 
   const itemPackItems = await itemPack.getDocuments();
   const loadoutItems = itemPackItems.filter(i => i.system.class === chosen);
-  for (const item of loadoutItems) itemsToCreate.push(item.toObject());
+  const frameFeatureItems = loadoutItems.filter(i => i.system.additional_info === "frame_feature");
+  const gearItems = loadoutItems.filter(i => i.system.additional_info !== "frame_feature");
+  const universalItems = itemPackItems.filter(i => i.system.class === "");
+  for (const item of [...gearItems, ...universalItems]) itemsToCreate.push(item.toObject());
+
+  // Frame features (e.g. Hull's "choose two") aren't auto-granted like gear -
+  // prompt for a pick among the class's available options instead.
+  if (frameFeatureItems.length) {
+    const featureOptions = frameFeatureItems
+      .map(i => `
+        <div class="form-group">
+          <label><input type="checkbox" name="frameFeature" value="${i.name}"> ${i.name}</label>
+        </div>
+      `)
+      .join("");
+    const featureResult = await openFormDialog({
+      title: `${chosen} Frame Features`,
+      content: `
+        <form>
+          <p>Choose two frame features.</p>
+          ${featureOptions}
+        </form>
+      `,
+      okLabel: "Add Features",
+      cancelLabel: "Skip",
+    });
+    const picked = featureResult?.frameFeature
+      ? [].concat(featureResult.frameFeature)
+      : [];
+    for (const item of frameFeatureItems.filter(i => picked.includes(i.name))) {
+      itemsToCreate.push(item.toObject());
+    }
+  }
 
   if (itemsToCreate.length) await actor.createEmbeddedDocuments("Item", itemsToCreate);
 
