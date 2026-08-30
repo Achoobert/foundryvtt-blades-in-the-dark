@@ -13,7 +13,7 @@ export const registerSystemSettings = function() {
   
   if (foundry.utils.isNewerVersion(game.version, 12)) {
 
-    game.settings.register('blades-in-the-dark', 'ActionRoll', {
+    game.settings.register('blades68', 'ActionRoll', {
 	name: game.i18n.localize('BITD.Settings.Action.Name'),
 	hint: game.i18n.localize('BITD.Settings.Action.Hint'),
 	config: true,
@@ -23,7 +23,7 @@ export const registerSystemSettings = function() {
 	requiresReload: true
   });
 	
-	game.settings.register('blades-in-the-dark', 'ThreatRoll', {
+	game.settings.register('blades68', 'ThreatRoll', {
 	name: game.i18n.localize('BITD.Settings.Threat.Name'),
 	hint: game.i18n.localize('BITD.Settings.Threat.Hint'),
 	config: true,
@@ -32,7 +32,7 @@ export const registerSystemSettings = function() {
 	requiresReload: true
   });
   
-  game.settings.register('blades-in-the-dark', 'PushYourself', {
+  game.settings.register('blades68', 'PushYourself', {
 	name: game.i18n.localize('BITD.Settings.Push.Name'),
 	hint: game.i18n.localize('BITD.Settings.Push.Hint'),
 	config: true,
@@ -41,7 +41,7 @@ export const registerSystemSettings = function() {
 	requiresReload: true
   });
   
-    game.settings.register('blades-in-the-dark', 'DeepCutLoad', {
+    game.settings.register('blades68', 'DeepCutLoad', {
 	name: game.i18n.localize('BITD.Settings.Load.Name'),
 	hint: game.i18n.localize('BITD.Settings.Load.Hint'),
 	config: true,
@@ -50,7 +50,7 @@ export const registerSystemSettings = function() {
 	requiresReload: true
   });
   
-    game.settings.register('blades-in-the-dark', 'ClockXP', {
+    game.settings.register('blades68', 'ClockXP', {
 	name: game.i18n.localize('BITD.Settings.ClockXP.Name'),
 	hint: game.i18n.localize('BITD.Settings.ClockXP.Hint'),
 	config: true,
@@ -59,7 +59,7 @@ export const registerSystemSettings = function() {
 	requiresReload: true
   });
   
-    game.settings.register('blades-in-the-dark', 'Edge', {
+    game.settings.register('blades68', 'Edge', {
 	name: game.i18n.localize('BITD.Settings.Edge.Name'),
 	hint: game.i18n.localize('BITD.Settings.Edge.Hint'),
 	config: true,
@@ -68,7 +68,7 @@ export const registerSystemSettings = function() {
 	requiresReload: true
   });
   
-  	game.settings.register('blades-in-the-dark', 'PublicClocks', {
+  	game.settings.register('blades68', 'PublicClocks', {
 	name: game.i18n.localize('BITD.Settings.PublicClocks.Name'),
 	hint: game.i18n.localize('BITD.Settings.PublicClocks.Hint'),
 	config: true,
@@ -76,7 +76,17 @@ export const registerSystemSettings = function() {
 	type: new foundry.data.fields.BooleanField(),
 	requiresReload: true
   });
-  
+
+  	game.settings.register('blades68', 'Blades68Mode', {
+	name: game.i18n.localize('BITD.Settings.Blades68.Name'),
+	hint: game.i18n.localize('BITD.Settings.Blades68.Hint'),
+	config: true,
+	default: false,
+	scope: 'world',
+	type: new foundry.data.fields.BooleanField(),
+	requiresReload: true
+  });
+
   } //end if for game.version >12
   else {
 	  
@@ -87,12 +97,13 @@ export const registerSystemSettings = function() {
     ['DeepCutLoad','Load', false],
     ['ClockXP','ClockXP', false],
     ['Edge','Edge', false],
-    ['PublicClocks','PublicClocks', false]
+    ['PublicClocks','PublicClocks', false],
+    ['Blades68Mode','Blades68', false]
   ];
  
   for (let i=0; i<set_array.length; i++) {
 	  
-	game.settings.register('blades-in-the-dark', set_array[i][0], {
+	game.settings.register('blades68', set_array[i][0], {
 		name: game.i18n.localize('BITD.Settings.'+set_array[i][1]+'.Name'),
 		hint: game.i18n.localize('BITD.Settings.'+set_array[i][1]+'.Hint'),
 		config: true,

@@ -6,6 +6,12 @@
   flex-wrap: wrap;
   justify-content: space-around;
 
+  .items-list {
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 8px;
+  }
+
   input[type="radio"],
   input[type="checkbox"] {
     display: none;

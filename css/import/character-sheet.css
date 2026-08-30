@@ -1,0 +1,551 @@
+/*
+*  Elements that can be changed will hint this by dimming and fading a little on hover
+*/
+/*
+ * Toothradio. Some (eg trauma) are not changeable, hence the option.
+ */
+/*
+ * Custom Radio
+ */
+/*
+ * Custom Radio Squared
+ */
+/*
+ * Checkboxes underscored.
+ */
+/*
+ * Create Clock
+ */
+/*
+ * Turf Block
+ */
+/*
+ * Toothradio single elements
+ */
+/*
+ * Custom Radio Round
+ */
+/*
+ * General Styles
+ * Cleaned out things that don't appear to apply to the character sheet, and exist in other, separated SCSS files.
+ * Some things *might* be missing, but at a glance, everything looks to be in order.
+ */
+& * .name-alias img.portrait {
+  max-width: 200px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+}
+& * .tab[data-tab] {
+  display: none;
+}
+& * .tab[data-tab].active {
+  display: block;
+}
+& * form.actor-sheet {
+  padding: 20px;
+}
+& * .big-teeth-section {
+  border-top: 3px solid #191813;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+& * .big-teeth-section > * {
+  margin-right: 10px;
+}
+& * .big-teeth-section > *:last-child {
+  margin-right: 0px;
+}
+& * .big-teeth-section:last-child {
+  margin-right: 0px;
+}
+& * .big-teeth-section .big-teeth {
+  display: flex;
+}
+& * .big-teeth-section .big-teeth label {
+  height: 50px;
+  width: 17px;
+  background-image: url("assets/teeth/stresstooth-red.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 5px;
+}
+& * .big-teeth-section .big-teeth label:last-of-type {
+  margin-right: 0px;
+}
+& * .big-teeth-section .big-teeth label[for$="-0"] {
+  width: auto;
+  height: auto;
+  background-image: none !important;
+  color: #EEEFFF;
+}
+& * .big-teeth-section .big-teeth label[for$="-0"] i {
+  margin-top: 4px;
+}
+& * .big-teeth-section .big-teeth label {
+  transition: filter 0.1s;
+  cursor: pointer;
+}
+& * .big-teeth-section .big-teeth label:hover {
+  filter: brightness(0.8);
+  opacity: 0.9;
+}
+& * .big-teeth-section .big-teeth {
+  /* Hide the browser's default checkbox */
+}
+& * .big-teeth-section .big-teeth input {
+  display: none;
+}
+& * .big-teeth-section .big-teeth input:checked ~ label {
+  background-image: url("assets/teeth/stresstooth-halfgrey.png");
+}
+& * .big-teeth-section .big-teeth input:checked + label {
+  background-image: url("assets/teeth/stresstooth-red.png");
+}
+& * .big-teeth-section {
+  /* Trauma */
+}
+& * .big-teeth-section .small-teeth-container .small-teeth-wrap {
+  display: flex;
+}
+& * .big-teeth-section .small-teeth-container .small-teeth-wrap label {
+  height: 50px;
+  width: 17px;
+  background-image: url("assets/teeth/shorttooth-red.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 5px;
+}
+& * .big-teeth-section .small-teeth-container .small-teeth-wrap label:last-of-type {
+  margin-right: 0px;
+}
+& * .big-teeth-section .small-teeth-container .small-teeth-wrap label[for$="-0"] {
+  width: auto;
+  height: auto;
+  background-image: none !important;
+  color: #EEEFFF;
+}
+& * .big-teeth-section .small-teeth-container .small-teeth-wrap label[for$="-0"] i {
+  margin-top: 4px;
+}
+& * .big-teeth-section .small-teeth-container .small-teeth-wrap label {
+  cursor: not-allowed;
+}
+& * .big-teeth-section .small-teeth-container .small-teeth-wrap {
+  /* Hide the browser's default checkbox */
+}
+& * .big-teeth-section .small-teeth-container .small-teeth-wrap input {
+  display: none;
+}
+& * .big-teeth-section .small-teeth-container .small-teeth-wrap input:checked ~ label {
+  background-image: url("assets/teeth/shorttooth-grey.png");
+}
+& * .big-teeth-section .small-teeth-container .small-teeth-wrap input:checked + label {
+  background-image: url("assets/teeth/shorttooth-red.png");
+}
+& * .big-teeth-section .small-teeth-container .small-teeth-wrap {
+  flex-direction: column;
+}
+& * .big-teeth-section .small-teeth-container .small-teeth-wrap .small-teeth {
+  display: flex;
+  flex-direction: row;
+}
+& * .big-teeth-section .trauma-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+& * .big-teeth-section .trauma-list label {
+  cursor: pointer;
+  font-size: 19px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 10px;
+  transition: filter 0.1s;
+  cursor: pointer;
+}
+& * .big-teeth-section .trauma-list label:hover {
+  filter: brightness(0.8);
+  opacity: 0.9;
+}
+& * .big-teeth-section .trauma-list label {
+  /* Hide the browser's default checkbox */
+}
+& * .big-teeth-section .trauma-list label input {
+  display: none;
+}
+& * .big-teeth-section .trauma-list label input:checked ~ .checkmark {
+  color: red;
+}
+& * .big-teeth-section .trauma-list label .checkmark {
+  text-decoration: none;
+  font-weight: bold;
+}
+& * .big-teeth-section .trauma-list {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+& * .character-stress label[for$="-0"] {
+  margin-right: 0px;
+}
+& * .abilities .item-name, & * .loadout .item-name {
+  width: 100px;
+}
+& * .abilities .item-body, & * .loadout .item-body {
+  width: auto;
+}
+& * .abilities .item-description, & * .loadout .item-description {
+  width: 260px;
+}
+& * .abilities .label-stripe p:first-child {
+  margin-right: 10px;
+}
+& * .loadout .item-add-popup {
+  margin-left: 10px;
+}
+& * .teeth-experience {
+  display: flex;
+}
+& * .teeth-experience label {
+  height: 30px;
+  width: 10px;
+  background-image: url("assets/teeth/stresstooth-red.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 5px;
+}
+& * .teeth-experience label:last-of-type {
+  margin-right: 0px;
+}
+& * .teeth-experience label[for$="-0"] {
+  width: auto;
+  height: auto;
+  background-image: none !important;
+  color: #EEEFFF;
+}
+& * .teeth-experience label[for$="-0"] i {
+  margin-top: 4px;
+}
+& * .teeth-experience label {
+  transition: filter 0.1s;
+  cursor: pointer;
+}
+& * .teeth-experience label:hover {
+  filter: brightness(0.8);
+  opacity: 0.9;
+}
+& * .teeth-experience {
+  /* Hide the browser's default checkbox */
+}
+& * .teeth-experience input {
+  display: none;
+}
+& * .teeth-experience input:checked ~ label {
+  background-image: url("assets/teeth/stresstooth-halfgrey.png");
+}
+& * .teeth-experience input:checked + label {
+  background-image: url("assets/teeth/stresstooth-red.png");
+}
+& * .teeth-experience {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+}
+& * .harm-armor {
+  display: flex;
+}
+& * .harm-armor .character-harm {
+  width: 100%;
+}
+& * .harm-armor .character-harm table {
+  width: 100%;
+}
+& * .harm-armor .character-harm table th {
+  background-color: #191813;
+  color: #EEEFFF;
+}
+& * .harm-armor .character-harm table input[type=text] {
+  width: 100%;
+}
+& * .harm-armor .character-health-clock {
+  margin: 0 auto;
+  position: relative;
+}
+& * .harm-armor .character-health-clock .blades-clock {
+  position: relative;
+  padding: 0;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  list-style: none;
+  overflow: hidden;
+  background-size: cover;
+}
+& * .harm-armor .character-health-clock .blades-clock label {
+  overflow: hidden;
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  transform-origin: 0% 100%;
+  transition: filter 0.1s;
+  cursor: pointer;
+}
+& * .harm-armor .character-health-clock .blades-clock label:hover {
+  filter: brightness(0.8);
+  opacity: 0.9;
+}
+& * .harm-armor .character-health-clock .blades-clock input {
+  position: absolute;
+  display: none;
+}
+& * .harm-armor .character-health-clock .blades-clock input[value="0"] {
+  display: none;
+}
+& * .harm-armor .character-health-clock .blades-clock *:nth-child(3) {
+  transform: rotate(0deg) skewY(180deg);
+}
+& * .harm-armor .character-health-clock .blades-clock *:nth-child(5) {
+  transform: rotate(90deg) skewY(180deg);
+}
+& * .harm-armor .character-health-clock .blades-clock *:nth-child(7) {
+  transform: rotate(180deg) skewY(180deg);
+}
+& * .harm-armor .character-health-clock .blades-clock *:nth-child(9) {
+  transform: rotate(270deg) skewY(180deg);
+}
+& * .harm-armor .character-armor-uses div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+& * .attributes {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+& * .attributes .stripe {
+  background-color: #191813;
+  color: #EEEFFF;
+  font-size: 17px;
+  padding-left: 5px;
+}
+& * .attributes .attribute-label,
+& * .attributes .attribute-skill-label {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+& * .attributes .attribute-skill-label {
+  letter-spacing: 1px;
+}
+& * .attributes .attributes-exp {
+  position: relative;
+  margin-bottom: 10px;
+}
+& * .attributes .attributes-exp .stripe-tooth-body {
+  display: flex;
+}
+& * .attributes .attributes-exp .stripe-tooth-body label {
+  height: 30px;
+  width: 10px;
+  background-image: url("assets/teeth/xptooth-red.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 5px;
+}
+& * .attributes .attributes-exp .stripe-tooth-body label:last-of-type {
+  margin-right: 0px;
+}
+& * .attributes .attributes-exp .stripe-tooth-body label[for$="-0"] {
+  width: auto;
+  height: auto;
+  background-image: none !important;
+  color: #EEEFFF;
+}
+& * .attributes .attributes-exp .stripe-tooth-body label[for$="-0"] i {
+  margin-top: 4px;
+}
+& * .attributes .attributes-exp .stripe-tooth-body label {
+  transition: filter 0.1s;
+  cursor: pointer;
+}
+& * .attributes .attributes-exp .stripe-tooth-body label:hover {
+  filter: brightness(0.8);
+  opacity: 0.9;
+}
+& * .attributes .attributes-exp .stripe-tooth-body {
+  /* Hide the browser's default checkbox */
+}
+& * .attributes .attributes-exp .stripe-tooth-body input {
+  display: none;
+}
+& * .attributes .attributes-exp .stripe-tooth-body input:checked ~ label {
+  background-image: url("assets/teeth/xptooth-white.png");
+}
+& * .attributes .attributes-exp .stripe-tooth-body input:checked + label {
+  background-image: url("assets/teeth/xptooth-red.png");
+}
+& * .attributes .attributes-exp .stripe-tooth-body {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+& * .attributes .attributes-container {
+  display: flex;
+  margin: 3px 0px;
+  display: flex;
+}
+& * .attributes .attributes-container label {
+  height: 15px;
+  width: 15px;
+  background-color: #191813;
+  vertical-align: middle;
+  border: 2px solid #191813;
+  border-radius: 24px;
+}
+& * .attributes .attributes-container label[for$="-0"] {
+  height: 5px;
+  width: 5px;
+  border-radius: 24px;
+  background-image: none !important;
+  background-color: red !important;
+  margin-right: 0px;
+}
+& * .attributes .attributes-container label {
+  transition: filter 0.1s;
+  cursor: pointer;
+}
+& * .attributes .attributes-container label:hover {
+  filter: brightness(0.7);
+  opacity: 0.7;
+}
+& * .attributes .attributes-container {
+  /* Hide the browser's default checkbox */
+}
+& * .attributes .attributes-container input {
+  display: none;
+}
+& * .attributes .attributes-container input:checked ~ label {
+  background-color: #EEEFFF;
+}
+& * .attributes .attributes-container input:checked + label {
+  transition: filter 0.1s;
+  cursor: pointer;
+}
+& * .attributes .attributes-container input:checked + label:hover {
+  filter: brightness(0.7);
+  opacity: 0.7;
+}
+& * .attributes .attributes-container input:checked + label {
+  background-color: #191813;
+}
+& * .attributes .attributes-container * {
+  margin-right: 5px;
+}
+& * .item {
+  justify-content: space-between;
+}
+& * .item .item-body {
+  margin-bottom: 10px;
+}
+& * .item .item-body * {
+  margin-right: 10px;
+}
+& * .item .item-body .item-description {
+  font-style: italic;
+  text-align: justify;
+}
+& * .item div {
+  flex-grow: 2;
+}
+& * .item .item-control {
+  flex-grow: 1;
+}
+& * .item .item-body,
+& * .item .item-class-label {
+  width: 100px;
+}
+& * .item-class-label {
+  margin-bottom: 10px;
+}
+& * .name,
+& * .lair,
+& * .alias {
+  margin-bottom: 10px;
+}
+& * .coins {
+  display: flex;
+}
+& * .coins label {
+  height: 15px;
+  width: 15px;
+  background-color: #DAA520;
+  vertical-align: middle;
+  border: 1px solid #191813;
+}
+& * .coins label[for$="-0"] {
+  margin-right: 0px;
+}
+& * .coins label {
+  transition: filter 0.1s;
+  cursor: pointer;
+}
+& * .coins label:hover {
+  filter: brightness(0.8);
+  opacity: 0.9;
+}
+& * .coins {
+  /* Hide the browser's default checkbox */
+}
+& * .coins input {
+  display: none;
+}
+& * .coins input:checked ~ label {
+  background-color: #EEEFFF;
+}
+& * .coins input:checked + label {
+  background-color: #DAA520;
+}
+& * .coins {
+  flex-wrap: wrap;
+}
+& * .coins input ~ label {
+  margin-right: 3px;
+  margin-bottom: 3px;
+}
+& * .coins input ~ label[for$="0"] {
+  border-width: 2px;
+}
+& * .coins input ~ label {
+  transition: filter 0.2s;
+  cursor: pointer;
+}
+& * .coins input ~ label:hover {
+  filter: brightness(0.8);
+  opacity: 0.9;
+}
+& * .coins.coins-hands {
+  width: 36px;
+}
+& * .coins.coins-stashed {
+  width: 190px;
+}
+& * .keys-container .key-slot {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+& * .keys-container .key-slot select {
+  flex-grow: 1;
+}
+& * .keys-container .key-slot .key-drift {
+  font-style: italic;
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=character-sheet.css.map */

@@ -268,8 +268,23 @@ $hover-brightness: 0.8;
 
   @import "coins.scss";
 
+  .keys-container {
+    .key-slot {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
 
+      select {
+        flex-grow: 1;
+      }
 
+      .key-drift {
+        font-style: italic;
+        font-size: 12px;
+      }
+    }
+  }
 
 
 

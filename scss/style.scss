@@ -23,7 +23,7 @@ $hover-brightness: 0.8;
 @import 'fonts.scss';
 
 //namespacing to avoid conflicts with other modules
-.blades-in-the-dark{
+.blades68{
   font-family: "Crimson Text", serif;
 
   @import 'import/general-styles.scss';
@@ -42,6 +42,10 @@ $hover-brightness: 0.8;
 
   &.item.sheet{
     @import 'import/item-sheet.scss';
+  }
+
+  &.blades68-theme{
+    @import 'import/blades68-theme.scss';
   }
 }
 

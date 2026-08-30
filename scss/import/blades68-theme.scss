@@ -1,0 +1,66 @@
+/*
+ * Blades '68 bright theme.
+ * Applied only when the sheet root also carries .blades68-theme
+ * (toggled via the "Blades68Mode" world setting, see module/blades-sheet.js).
+ * Overrides the base noir near-black/parchment palette with a brighter,
+ * higher-saturation "future Doskvol" look.
+ */
+
+$b68-bg: #eef6ff;
+$b68-bg-alt: #ffffff;
+$b68-ink: #101425;
+$b68-header: #7b2ff7;
+$b68-header-text: #ffffff;
+$b68-accent: #ff5da2;
+$b68-accent-2: #00d1c1;
+$b68-gold: #ffb703;
+
+& {
+  background-color: $b68-bg;
+  color: $b68-ink;
+
+  .window-content {
+    background-color: $b68-bg;
+  }
+
+  .black-label,
+  .label-stripe,
+  .label-stripe-chat {
+    background-color: $b68-header;
+    color: $b68-header-text;
+  }
+
+  .gray-label,
+  .label-stripe-gray,
+  .label-stripe-chat-small {
+    background-color: $b68-accent-2;
+    color: $b68-ink;
+  }
+
+  a.item-add-popup,
+  .rollable-text {
+    color: $b68-accent;
+  }
+  .rollable-text:hover {
+    color: $b68-gold;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  select {
+    background-color: $b68-bg-alt;
+    color: $b68-ink;
+    border-color: $b68-header;
+  }
+
+  .keys-container {
+    .black-label {
+      background-color: $b68-accent;
+    }
+
+    .key-drift {
+      color: $b68-header;
+    }
+  }
+}

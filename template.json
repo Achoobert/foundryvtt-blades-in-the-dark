@@ -33,6 +33,16 @@
       "options": ["BITD.TraumaCold", "BITD.TraumaHaunted", "BITD.TraumaObsessed", "BITD.TraumaParanoid", "BITD.TraumaReckless", "BITD.TraumaSoft", "BITD.TraumaUnstable", "BITD.TraumaVicious"],
       "list": []
     },
+    "keys": {
+      "max": 5,
+      "list": [
+        { "key": "", "marks": 0, "boomed": false },
+        { "key": "", "marks": 0, "boomed": false },
+        { "key": "", "marks": 0, "boomed": false },
+        { "key": "", "marks": 0, "boomed": false },
+        { "key": "", "marks": 0, "boomed": false }
+      ]
+    },
     "healing-clock": [0],
     "healing_clock": {
       "value": [0],
@@ -357,7 +367,8 @@
       "command": [0],
       "consort": [0],
       "sway": [0]
-    }
+    },
+    "special_resource": ""
   },
   "ability": {
     "templates": ["ability", "logic", "activatedEffect"]

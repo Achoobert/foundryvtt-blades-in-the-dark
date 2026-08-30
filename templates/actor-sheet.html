@@ -106,7 +106,7 @@
         <input type="text" id="character-{{_id}}-alias" class="alias" name="system.alias" value="{{system.alias}}">
       </div>
 
-      {{> "systems/blades-in-the-dark/templates/parts/coins.html" actor=actor}}
+      {{> "systems/blades68/templates/parts/coins.html" actor=actor}}
 
       {{#if (getSetting 'Edge')}}
       <div class="attributes" style="padding: 10px">
@@ -134,9 +134,9 @@
       <a class="up-exp-clock" data-tooltip="{{localize 'BITD.AddXP'}}"><i class="fas fa-caret-up"></i></a>
       <a class="down-exp-clock" data-tooltip="{{localize 'BITD.MinusXP'}}"><i class="fas fa-caret-down"></i></a>
     </div>
-	<img src="systems/blades-in-the-dark/themes/{{system.exp_clock.color}}/{{system.exp_clock.size}}clock_{{system.exp_clock.value}}.svg" height="45" width="45" style="border-style: none"/>
+	<img src="systems/blades68/themes/{{system.exp_clock.color}}/{{system.exp_clock.size}}clock_{{system.exp_clock.value}}.svg" height="45" width="45" style="border-style: none"/>
     <!--
-    <img src="systems/blades-in-the-dark/styles/assets/progressclocks-svg/Progress Clock {{system.exp_clock.size}}-{{system.exp_clock.value}}.svg" height="45" width="45" style="border-style: none"/>
+    <img src="systems/blades68/styles/assets/progressclocks-svg/Progress Clock {{system.exp_clock.size}}-{{system.exp_clock.value}}.svg" height="45" width="45" style="border-style: none"/>
 	-->
     {{#if (gteq system.exp_clock.number 1)}}
     <div class="flex-vertical" style="font-size: 16px">
@@ -145,10 +145,10 @@
     </div>
     {{#if (lteq system.exp_clock.number 10)}}
     {{#times_from 1 system.exp_clock.number}}
-    <img src="systems/blades-in-the-dark/styles/assets/progressclocks-svg/Progress Clock 6-6.svg" height="45" width="45" style="border-style: none"/>
+    <img src="systems/blades68/styles/assets/progressclocks-svg/Progress Clock 6-6.svg" height="45" width="45" style="border-style: none"/>
     {{/times_from}}
     {{else}}
-    <img src="systems/blades-in-the-dark/styles/assets/progressclocks-svg/Progress Clock 6-6.svg" height="45" width="45" style="border-style: none"/>
+    <img src="systems/blades68/styles/assets/progressclocks-svg/Progress Clock 6-6.svg" height="45" width="45" style="border-style: none"/>
     <p style="font-family: Kirsty, serif; font-size: 24px">x {{system.exp_clock.number}}</p>
     {{/if}}
     {{/if}}
@@ -172,6 +172,7 @@
       {{/multiboxes}}
 
     </div>
+    {{#unless blades68}}
     <div id="character-{{_id}}-trauma-container" class="small-teeth-container">
       {{#traumacounter system.trauma.list}}
       <div id="character-{{_id}}-trauma" class="small-teeth-wrap">
@@ -223,6 +224,40 @@
         <span class="checkmark">{{localize system.trauma.options.[7]}}</span>
       </label>
     </div>
+    {{/unless}}
+
+    {{#if blades68}}
+    <div id="character-{{_id}}-keys-container" class="keys-container">
+      <div class="black-label">{{localize "BITD.Keys"}}</div>
+      {{#each system.keys.list as |slot i|}}
+      <div class="key-slot">
+        <select name="system.keys.list.{{i}}.key" data-dtype="String">
+          <option value=""></option>
+          {{#each ../blades68Keys as |opt|}}
+          <option value="{{opt.id}}" {{#if (eq opt.id slot.key)}}selected{{/if}}>{{localize opt.label}}</option>
+          {{/each}}
+        </select>
+        <span class="key-drift">
+          {{#each ../blades68Keys as |opt|}}{{#if (eq opt.id slot.key)}}{{localize opt.drift}}{{/if}}{{/each}}
+        </span>
+        <span class="key-marks">
+          <input type="radio" id="character-{{../_id}}-keys-{{i}}-marks-0" name="system.keys.list.{{i}}.marks" value="0" {{#if (eq slot.marks 0)}}checked{{/if}}>
+          <label class="radio-toggle" for="character-{{../_id}}-keys-{{i}}-marks-0"></label>
+          <input type="radio" id="character-{{../_id}}-keys-{{i}}-marks-1" name="system.keys.list.{{i}}.marks" value="1" {{#if (eq slot.marks 1)}}checked{{/if}}>
+          <label class="radio-toggle" for="character-{{../_id}}-keys-{{i}}-marks-1"></label>
+          <input type="radio" id="character-{{../_id}}-keys-{{i}}-marks-2" name="system.keys.list.{{i}}.marks" value="2" {{#if (eq slot.marks 2)}}checked{{/if}}>
+          <label class="radio-toggle" for="character-{{../_id}}-keys-{{i}}-marks-2"></label>
+          <input type="radio" id="character-{{../_id}}-keys-{{i}}-marks-3" name="system.keys.list.{{i}}.marks" value="3" {{#if (eq slot.marks 3)}}checked{{/if}}>
+          <label class="radio-toggle" for="character-{{../_id}}-keys-{{i}}-marks-3"></label>
+        </span>
+        <label class="key-boom">
+          <input type="checkbox" data-dtype="Boolean" name="system.keys.list.{{i}}.boomed" {{checked slot.boomed}}>
+          {{localize "BITD.Deadlocks"}}
+        </label>
+      </div>
+      {{/each}}
+    </div>
+    {{/if}}
 
   </div>
 
@@ -416,7 +451,7 @@
         <div class="label-stripe">
           <p>{{localize "BITD.Effects"}}</p>
         </div>
-        {{> "systems/blades-in-the-dark/templates/parts/active-effects.html"}}
+        {{> "systems/blades68/templates/parts/active-effects.html"}}
       </div>
 
       {{!-- Full Item List --}}
@@ -438,7 +473,7 @@
 
     </div>
     {{!-- Attributes --}}
-    {{> "systems/blades-in-the-dark/templates/parts/attributes.html" actor=actor}}
+    {{> "systems/blades68/templates/parts/attributes.html" actor=actor}}
   </section>
 
 </form>
