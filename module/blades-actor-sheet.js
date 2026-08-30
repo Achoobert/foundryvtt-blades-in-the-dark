@@ -127,7 +127,12 @@ export class BladesActorSheet extends BladesSheet {
 
         const itemResult = await this._buildCatalog("item", selectedClass, { slotsField: "num_available" });
         sheetData.itemCatalog = itemResult.catalog;
-        sheetData.otherItems = itemResult.other;
+        sheetData.otherItems = itemResult.other.map(i => ({
+            _id: i.id,
+            name: i.name,
+            system: i.system,
+            description: BladesHelpers.stripHtml(i.system?.description || "")
+        }));
 
         return sheetData;
     }
@@ -277,6 +282,22 @@ export class BladesActorSheet extends BladesSheet {
                 const toDelete = owned.slice(0, -diff).map(i => i.id);
                 await this.actor.deleteEmbeddedDocuments("Item", toDelete);
             }
+        });
+
+        // Owned items outside the class catalog (Veteran picks, homebrew additions): a plain
+        // checkbox marking whether the item is carried/in-use, persisted on system.equipped.
+        html.find('.item-equipped-toggle').change(async (ev) => {
+            const itemId = ev.currentTarget.dataset.itemId;
+            const item = this.actor.items.get(itemId);
+            if (!item) return;
+            await item.update({ "system.equipped": ev.currentTarget.checked });
+        });
+
+        // Remove an owned item that falls outside the class catalog.
+        html.find('.other-item-delete').click(async (ev) => {
+            const row = ev.currentTarget.closest('.other-item');
+            if (!row) return;
+            await this.actor.deleteEmbeddedDocuments("Item", [row.dataset.itemId]);
         });
 
     }

@@ -440,6 +440,22 @@ $hover-brightness: 0.8;
         }
       }
     }
+
+    .other-items {
+      .item-catalog-item {
+        label {
+          flex-grow: 1;
+        }
+
+        .other-item-delete {
+          opacity: 0.6;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
   }
 
   // Compact freeform item rows (Other Abilities / Other Items): smaller icon buttons

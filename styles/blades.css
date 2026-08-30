@@ -1876,6 +1876,15 @@
 .blades68.actor.pc * .items-panel .item-catalog .item-catalog-item label {
   font-size: 13px;
 }
+.blades68.actor.pc * .items-panel .other-items .item-catalog-item label {
+  flex-grow: 1;
+}
+.blades68.actor.pc * .items-panel .other-items .item-catalog-item .other-item-delete {
+  opacity: 0.6;
+}
+.blades68.actor.pc * .items-panel .other-items .item-catalog-item .other-item-delete:hover {
+  opacity: 1;
+}
 .blades68.actor.pc * .item.compact .item-body img {
   width: 20px;
   height: 20px;
