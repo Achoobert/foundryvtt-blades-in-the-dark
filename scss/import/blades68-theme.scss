@@ -54,13 +54,23 @@ $b68-gold: #ffb703;
     border-color: $b68-header;
   }
 
+  .section-header {
+    background-color: $b68-header;
+    color: $b68-header-text;
+  }
+
   .keys-container {
-    .black-label {
-      background-color: $b68-accent;
+    .keys-header {
+      background: linear-gradient(to right, $b68-header 0%, $b68-header 68%, $b68-accent 68%, $b68-accent 100%);
+      color: $b68-header-text;
     }
 
     .key-drift {
       color: $b68-header;
+    }
+
+    .key-boom input:checked + i {
+      color: $b68-accent;
     }
   }
 }

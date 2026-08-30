@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 *  Elements that can be changed will hint this by dimming and fading a little on hover
 */
@@ -1743,6 +1744,167 @@
 .blades68.actor.pc * .coins.coins-stashed {
   width: 190px;
 }
+.blades68.actor.pc * .trait-line {
+  flex-wrap: wrap;
+  align-items: baseline;
+  border-bottom: 1px solid #191813;
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+  justify-content: flex-start;
+}
+.blades68.actor.pc * .trait-line .item-block {
+  align-items: baseline;
+  margin-right: 0;
+}
+.blades68.actor.pc * .trait-line .item-block:not(:last-child)::after {
+  content: "•";
+  margin: 0 6px;
+  color: #999;
+}
+.blades68.actor.pc * .trait-line .item-block .item-class-label {
+  margin-bottom: 0;
+}
+.blades68.actor.pc * .look-line {
+  margin-bottom: 4px;
+}
+.blades68.actor.pc * .look-line input {
+  width: 100%;
+  font-style: italic;
+  border: 0;
+  background: none;
+}
+.blades68.actor.pc * .ability-short-list {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.blades68.actor.pc * .attributes-row .attributes {
+  flex-direction: row;
+  width: auto;
+  gap: 10px;
+}
+.blades68.actor.pc * .attributes-row .attributes .attribute {
+  flex: 1;
+}
+.blades68.actor.pc * .section-block {
+  margin-bottom: 10px;
+}
+.blades68.actor.pc * .section-block .section-header {
+  text-transform: uppercase;
+  background-color: #191813;
+  color: #EEEFFF;
+  position: relative;
+  padding: 4px 10px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.blades68.actor.pc * .section-block .section-header span:first-child {
+  flex-grow: 1;
+}
+.blades68.actor.pc * .section-block .section-header a {
+  color: #EEEFFF;
+}
+.blades68.actor.pc * .section-block .section-body {
+  padding: 4px 2px;
+}
+.blades68.actor.pc * .playbook-columns {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 10px;
+  align-items: start;
+  margin-top: 10px;
+}
+.blades68.actor.pc * .playbook-columns .col-abilities,
+.blades68.actor.pc * .playbook-columns .col-notes {
+  display: flex;
+  flex-direction: column;
+}
+.blades68.actor.pc * .special-abilities-panel .hint {
+  font-style: italic;
+  color: #999;
+}
+.blades68.actor.pc * .special-abilities-panel .ability-catalog {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.blades68.actor.pc * .special-abilities-panel .ability-catalog .ability-catalog-item {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+.blades68.actor.pc * .special-abilities-panel .ability-catalog .ability-catalog-item input[type=checkbox] {
+  flex-shrink: 0;
+  position: relative;
+  top: 2px;
+}
+.blades68.actor.pc * .special-abilities-panel .ability-catalog .ability-catalog-item .ability-name {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 4px;
+}
+.blades68.actor.pc * .special-abilities-panel .ability-catalog .ability-catalog-item .ability-description {
+  font-size: 13px;
+}
+.blades68.actor.pc * .special-abilities-panel .other-abilities {
+  margin-top: 10px;
+}
+.blades68.actor.pc * .items-panel .section-header .load-fraction {
+  white-space: nowrap;
+}
+.blades68.actor.pc * .items-panel .item-catalog {
+  list-style: none;
+  margin: 0 0 6px 0;
+  padding: 0;
+}
+.blades68.actor.pc * .items-panel .item-catalog .item-catalog-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 3px;
+}
+.blades68.actor.pc * .items-panel .item-catalog .item-catalog-item .item-slots {
+  display: flex;
+  gap: 2px;
+}
+.blades68.actor.pc * .items-panel .item-catalog .item-catalog-item .item-slots input[type=checkbox] {
+  margin: 0;
+}
+.blades68.actor.pc * .items-panel .item-catalog .item-catalog-item label {
+  font-size: 13px;
+}
+.blades68.actor.pc * .item.compact .item-body img {
+  width: 20px;
+  height: 20px;
+}
+.blades68.actor.pc * .item.compact .item-control {
+  font-size: 11px;
+  margin-left: 4px;
+}
+.blades68.actor.pc * .keys-container .keys-header {
+  display: flex;
+  align-items: center;
+  color: #EEEFFF;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  background: linear-gradient(to right, #191813 0%, #191813 68%, #DAA520 68%, #DAA520 100%);
+}
+.blades68.actor.pc * .keys-container .keys-header .keys-side {
+  flex-grow: 1;
+  padding: 4px 8px;
+}
+.blades68.actor.pc * .keys-container .keys-header a.add-key-popup {
+  color: #EEEFFF;
+  padding: 0 6px;
+}
+.blades68.actor.pc * .keys-container .keys-header .deadlocks-side {
+  padding: 4px 8px;
+  text-align: right;
+}
 .blades68.actor.pc * .keys-container .key-slot {
   display: flex;
   align-items: center;
@@ -1755,6 +1917,56 @@
 .blades68.actor.pc * .keys-container .key-slot .key-drift {
   font-style: italic;
   font-size: 12px;
+  flex-grow: 1;
+}
+.blades68.actor.pc * .keys-container .key-slot .key-marks {
+  display: flex;
+  display: flex;
+}
+.blades68.actor.pc * .keys-container .key-slot .key-marks label {
+  height: 16px;
+  width: 16px;
+  background-color: #DAA520;
+  vertical-align: middle;
+  border: 1px solid #191813;
+}
+.blades68.actor.pc * .keys-container .key-slot .key-marks label[for$="-0"] {
+  margin-right: 0px;
+}
+.blades68.actor.pc * .keys-container .key-slot .key-marks label {
+  transition: filter 0.1s;
+  cursor: pointer;
+}
+.blades68.actor.pc * .keys-container .key-slot .key-marks label:hover {
+  filter: brightness(0.8);
+  opacity: 0.9;
+}
+.blades68.actor.pc * .keys-container .key-slot .key-marks {
+  /* Hide the browser's default checkbox */
+}
+.blades68.actor.pc * .keys-container .key-slot .key-marks input {
+  display: none;
+}
+.blades68.actor.pc * .keys-container .key-slot .key-marks input:checked ~ label {
+  background-color: #EEEFFF;
+}
+.blades68.actor.pc * .keys-container .key-slot .key-marks input:checked + label {
+  background-color: #DAA520;
+}
+.blades68.actor.pc * .keys-container .key-slot .key-boom {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.blades68.actor.pc * .keys-container .key-slot .key-boom input {
+  display: none;
+}
+.blades68.actor.pc * .keys-container .key-slot .key-boom i {
+  color: #CCC;
+  font-size: 16px;
+}
+.blades68.actor.pc * .keys-container .key-slot .key-boom input:checked + i {
+  color: #DAA520;
 }
 .blades68.item.sheet .item {
   justify-content: space-between;
@@ -1825,11 +2037,19 @@
   color: #101425;
   border-color: #7b2ff7;
 }
-.blades68.blades68-theme .keys-container .black-label {
-  background-color: #ff5da2;
+.blades68.blades68-theme .section-header {
+  background-color: #7b2ff7;
+  color: #ffffff;
+}
+.blades68.blades68-theme .keys-container .keys-header {
+  background: linear-gradient(to right, #7b2ff7 0%, #7b2ff7 68%, #ff5da2 68%, #ff5da2 100%);
+  color: #ffffff;
 }
 .blades68.blades68-theme .keys-container .key-drift {
   color: #7b2ff7;
+}
+.blades68.blades68-theme .keys-container .key-boom input:checked + i {
+  color: #ff5da2;
 }
 
 .chat-label {

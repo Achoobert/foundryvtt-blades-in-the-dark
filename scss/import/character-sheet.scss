@@ -268,7 +268,222 @@ $hover-brightness: 0.8;
 
   @import "coins.scss";
 
+  // Trait line: Heritage - Background - Vice - Class - Crew, shown as one
+  // bullet-separated underlined line instead of stacked blocks.
+  .trait-line {
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-bottom: 1px solid $almost_black;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+    justify-content: flex-start;
+
+    .item-block {
+      align-items: baseline;
+      margin-right: 0;
+
+      &:not(:last-child)::after {
+        content: "\2022";
+        margin: 0 6px;
+        color: $gray;
+      }
+
+      .item-class-label {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .look-line {
+    margin-bottom: 4px;
+
+    input {
+      width: 100%;
+      font-style: italic;
+      border: 0;
+      background: none;
+    }
+  }
+
+  .ability-short-list {
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+
+  // Attributes: a horizontal row of the three Insight/Prowess/Resolve blocks
+  // (instead of the narrow single-column sidebar layout).
+  .attributes-row {
+    .attributes {
+      flex-direction: row;
+      width: auto;
+      gap: 10px;
+
+      .attribute {
+        flex: 1;
+      }
+    }
+  }
+
+  // Section headers shared by the Special Abilities / Items / Clever Friends / XP panels
+  .section-block {
+    margin-bottom: 10px;
+
+    .section-header {
+      text-transform: uppercase;
+      background-color: $almost_black;
+      color: $almost_white;
+      position: relative;
+      padding: 4px 10px;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      gap: 8px;
+      margin-bottom: 4px;
+
+      span:first-child {
+        flex-grow: 1;
+      }
+
+      a {
+        color: $almost_white;
+      }
+    }
+
+    .section-body {
+      padding: 4px 2px;
+    }
+  }
+
+  .playbook-columns {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 10px;
+    align-items: start;
+    margin-top: 10px;
+
+    .col-abilities,
+    .col-notes {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .special-abilities-panel {
+    .hint {
+      font-style: italic;
+      color: $gray;
+    }
+
+    .ability-catalog {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      .ability-catalog-item {
+        display: flex;
+        align-items: baseline;
+        gap: 6px;
+        margin-bottom: 6px;
+
+        input[type="checkbox"] {
+          flex-shrink: 0;
+          position: relative;
+          top: 2px;
+        }
+
+        .ability-name {
+          font-weight: bold;
+          text-transform: uppercase;
+          margin-right: 4px;
+        }
+
+        .ability-description {
+          font-size: 13px;
+        }
+      }
+    }
+
+    .other-abilities {
+      margin-top: 10px;
+    }
+  }
+
+  .items-panel {
+    .section-header {
+      .load-fraction {
+        white-space: nowrap;
+      }
+    }
+
+    .item-catalog {
+      list-style: none;
+      margin: 0 0 6px 0;
+      padding: 0;
+
+      .item-catalog-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 3px;
+
+        .item-slots {
+          display: flex;
+          gap: 2px;
+
+          input[type="checkbox"] {
+            margin: 0;
+          }
+        }
+
+        label {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  // Compact freeform item rows (Other Abilities / Other Items): smaller icon buttons
+  // so the delete/chat controls don't dominate the row.
+  .item.compact {
+    .item-body img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .item-control {
+      font-size: 11px;
+      margin-left: 4px;
+    }
+  }
+
+  // Keys / Deadlocks
   .keys-container {
+
+    .keys-header {
+      display: flex;
+      align-items: center;
+      color: $almost_white;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      background: linear-gradient(to right, $almost_black 0%, $almost_black 68%, $gold 68%, $gold 100%);
+
+      .keys-side {
+        flex-grow: 1;
+        padding: 4px 8px;
+      }
+
+      a.add-key-popup {
+        color: $almost_white;
+        padding: 0 6px;
+      }
+
+      .deadlocks-side {
+        padding: 4px 8px;
+        text-align: right;
+      }
+    }
+
     .key-slot {
       display: flex;
       align-items: center;
@@ -282,10 +497,33 @@ $hover-brightness: 0.8;
       .key-drift {
         font-style: italic;
         font-size: 12px;
+        flex-grow: 1;
+      }
+
+      .key-marks {
+        display: flex;
+        @include custom_radio_square(16px);
+      }
+
+      .key-boom {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        input {
+          display: none;
+        }
+
+        i {
+          color: $lightgray;
+          font-size: 16px;
+        }
+
+        input:checked + i {
+          color: $gold;
+        }
       }
     }
   }
-
-
 
 }

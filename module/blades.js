@@ -144,6 +144,12 @@ Hooks.once("init", async function() {
     return (a - 1);
   });
 
+  // True if one of the given Key options has this id (used to fall back to a plain
+  // <option> for custom Key text that doesn't match a catalog entry).
+  Handlebars.registerHelper('keyOptionExists', (options, key) => {
+    return (options || []).some(opt => opt.id === key);
+  });
+
 	//Reputation and Turf Bar on Crew Sheet
     Handlebars.registerHelper('repturf', (_id, turfs_amount, max_rep, options) => {
 

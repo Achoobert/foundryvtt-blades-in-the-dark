@@ -258,6 +258,9 @@
   "BITD.MinusXPClock": "Minus XP Clock",
   "BITD.CrewExpClue1": "At the end of each session, for each item below, mark 1 xp (or instead mark 2xp if that item occurred multiple times).",
   "BITD.SpecialAbilities": "Special Abilities",
+  "BITD.OtherAbilities": "Other Abilities",
+  "BITD.OtherItems": "Other Items",
+  "BITD.NoClassSelected": "Drop a \"Class\" item onto the sheet to see its Special Abilities here.",
   "BITD.Claimed": "Claimed",
 
   "BITD.Gang": "Gang",
