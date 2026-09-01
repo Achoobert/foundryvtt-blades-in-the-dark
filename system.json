@@ -2,7 +2,7 @@
   "id": "blades68",
   "title": "Blades '68 (test build)",
   "description": "Blades '68 support built on the Blades in the Dark game system (test build).",
-  "version": "6.3.0",
+  "version": "6.4.0",
   "compatibility": {
     "minimum": 11,
     "verified": "14.362"
