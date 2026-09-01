@@ -144,7 +144,7 @@
       {{/each}}
     </div>
 
-    <div class="item-block flex-horizontal">
+    <div class="item-block">
       {{#unless system.crew.length}}
       <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="crew"><b>{{localize "BITD.CrewName"}}</b></a></div>
       {{/unless}}
@@ -283,7 +283,7 @@
         {{#each system.keys.list as |slot i|}}
         <div class="key-slot" data-slot-index="{{i}}">
           {{#if slot.deadlocked}}
-          <select name="system.keys.list.{{i}}.deadlocked_to" data-dtype="String" class="deadlocked-to-select">
+          <select class="deadlocked-to-select" data-dtype="String">
             <option value=""></option>
             {{#each slot.deadlockOptions as |opt|}}
             <option value="{{opt}}" {{#if (eq opt slot.deadlocked_to)}}selected{{/if}}>{{opt}}</option>
@@ -296,7 +296,7 @@
           </select>
           <span class="key-drift key-source" data-tooltip="{{slot.key}}">{{slot.key}}</span>
           {{else}}
-          <select name="system.keys.list.{{i}}.key" data-dtype="String">
+          <select class="key-select" data-dtype="String">
             <option value=""></option>
             {{#each ../blades68Keys as |opt|}}
             <option value="{{opt.id}}" {{#if (eq opt.id slot.key)}}selected{{/if}}>{{localize opt.label}}</option>
@@ -311,14 +311,24 @@
             {{#each ../blades68Keys as |opt|}}{{#if (eq opt.id slot.key)}}{{localize opt.drift}}{{/if}}{{/each}}
           </span>
           {{/if}}
-          <span class="key-marks{{#if slot.deadlocked}} is-disabled{{/if}}">
-            <input type="radio" id="character-{{../_id}}-keys-{{i}}-xp-0" name="system.keys.list.{{i}}.experience" value="0" {{#if (eq slot.experience 0)}}checked{{/if}} {{#if slot.deadlocked}}disabled{{/if}}>
+          {{!--
+          Key fields intentionally omit system.* names. Foundry form submit replaces arrays
+          wholesale, which was wiping sibling Key slots when any one field changed.
+          Radio `name` is only for in-row exclusivity; stripped in _getSubmitData.
+          --}}
+          <!-- todo -->
+          <span class="key-marks  {{#if slot.deadlocked}} is-disabled{{/if}}">
+            <input type="radio" id="character-{{../_id}}-keys-{{i}}-xp-0" name="key-xp-{{../_id}}-{{i}}" value="0" {{#if (eq
+              slot.experience 0)}}checked{{/if}} {{#if slot.deadlocked}}disabled{{/if}}>
             <label class="radio-toggle" for="character-{{../_id}}-keys-{{i}}-xp-0"></label>
-            <input type="radio" id="character-{{../_id}}-keys-{{i}}-xp-1" name="system.keys.list.{{i}}.experience" value="1" {{#if (eq slot.experience 1)}}checked{{/if}} {{#if slot.deadlocked}}disabled{{/if}}>
+            <input type="radio" id="character-{{../_id}}-keys-{{i}}-xp-1" name="key-xp-{{../_id}}-{{i}}" value="1" {{#if (eq
+              slot.experience 1)}}checked{{/if}} {{#if slot.deadlocked}}disabled{{/if}}>
             <label class="radio-toggle" for="character-{{../_id}}-keys-{{i}}-xp-1"></label>
-            <input type="radio" id="character-{{../_id}}-keys-{{i}}-xp-2" name="system.keys.list.{{i}}.experience" value="2" {{#if (eq slot.experience 2)}}checked{{/if}} {{#if slot.deadlocked}}disabled{{/if}}>
+            <input type="radio" id="character-{{../_id}}-keys-{{i}}-xp-2" name="key-xp-{{../_id}}-{{i}}" value="2" {{#if (eq
+              slot.experience 2)}}checked{{/if}} {{#if slot.deadlocked}}disabled{{/if}}>
             <label class="radio-toggle" for="character-{{../_id}}-keys-{{i}}-xp-2"></label>
-            <input type="radio" id="character-{{../_id}}-keys-{{i}}-xp-3" name="system.keys.list.{{i}}.experience" value="3" {{#if (eq slot.experience 3)}}checked{{/if}} {{#if slot.deadlocked}}disabled{{/if}}>
+            <input type="radio" id="character-{{../_id}}-keys-{{i}}-xp-3" name="key-xp-{{../_id}}-{{i}}" value="3" {{#if (eq
+              slot.experience 3)}}checked{{/if}} {{#if slot.deadlocked}}disabled{{/if}}>
             <label class="radio-toggle" for="character-{{../_id}}-keys-{{i}}-xp-3"></label>
           </span>
           <label class="key-boom" data-tooltip="{{localize 'BITD.Deadlocks'}}">

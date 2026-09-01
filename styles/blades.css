@@ -688,9 +688,9 @@
 .blades68.crew.sheet .crew-reputation label {
   height: 50px;
   width: 17px;
-  background-image: url("assets/teeth/stresstooth-red.png");
+  background-image: url("assets/blades68/stresspill_filled.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 100%;
   margin-right: 5px;
 }
 .blades68.crew.sheet .crew-reputation label:last-of-type {
@@ -720,13 +720,13 @@
   display: none;
 }
 .blades68.crew.sheet .crew-reputation input:checked ~ label {
-  background-image: url("assets/teeth/stresstooth-halfgrey.png");
+  background-image: url("assets/blades68/stresspill_empty.png");
 }
 .blades68.crew.sheet .crew-reputation input:checked + label {
-  background-image: url("assets/teeth/stresstooth-red.png");
+  background-image: url("assets/blades68/stresspill_filled.png");
 }
 .blades68.crew.sheet .crew-reputation input:disabled + label {
-  background-image: url(assets/teeth/stresstooth-black.png);
+  background-image: url(assets/blades68/stresspill_filled.png);
 }
 .blades68.crew.sheet .turf-container {
   overflow-x: scroll;
@@ -909,7 +909,7 @@
 .blades68.crew.sheet .crew-hold label {
   height: 50px;
   width: 17px;
-  background-image: url("assets/teeth/stresstooth-halfgrey.png");
+  background-image: url("assets/blades68/stresspill_empty.png");
   background-repeat: no-repeat;
   background-size: contain;
   margin-right: 5px;
@@ -924,7 +924,7 @@
   display: none;
 }
 .blades68.crew.sheet .crew-hold input:checked + label {
-  background-image: url("assets/teeth/stresstooth-red.png");
+  background-image: url("assets/blades68/stresspill_filled.png");
 }
 .blades68.crew.sheet .crew-hold {
   width: 221px;
@@ -1085,9 +1085,9 @@
 .blades68.crew.sheet .big-teeth-section .big-teeth label {
   height: 50px;
   width: 17px;
-  background-image: url("assets/teeth/stresstooth-red.png");
+  background-image: url("assets/blades68/stresspill_filled.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 100%;
   margin-right: 5px;
 }
 .blades68.crew.sheet .big-teeth-section .big-teeth label:last-of-type {
@@ -1117,10 +1117,10 @@
   display: none;
 }
 .blades68.crew.sheet .big-teeth-section .big-teeth input:checked ~ label {
-  background-image: url("assets/teeth/stresstooth-halfgrey.png");
+  background-image: url("assets/blades68/stresspill_empty.png");
 }
 .blades68.crew.sheet .big-teeth-section .big-teeth input:checked + label {
-  background-image: url("assets/teeth/stresstooth-red.png");
+  background-image: url("assets/blades68/stresspill_filled.png");
 }
 .blades68.crew.sheet .big-teeth-section {
   /* Trauma */
@@ -1131,9 +1131,9 @@
 .blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap label {
   height: 50px;
   width: 17px;
-  background-image: url("assets/teeth/shorttooth-red.png");
+  background-image: url("assets/blades68/stresspill_filled.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 100%;
   margin-right: 5px;
 }
 .blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap label:last-of-type {
@@ -1158,10 +1158,10 @@
   display: none;
 }
 .blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap input:checked ~ label {
-  background-image: url("assets/teeth/shorttooth-grey.png");
+  background-image: url("assets/blades68/stresspill_empty.png");
 }
 .blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap input:checked + label {
-  background-image: url("assets/teeth/shorttooth-red.png");
+  background-image: url("assets/blades68/stresspill_filled.png");
 }
 .blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap {
   flex-direction: column;
@@ -1278,11 +1278,11 @@
   display: flex;
 }
 .blades68.actor.pc * .big-teeth-section .big-teeth label {
-  height: 50px;
+  height: 40px;
   width: 17px;
-  background-image: url("assets/teeth/stresstooth-red.png");
+  background-image: url("assets/blades68/stresspill_filled.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 100%;
   margin-right: 5px;
 }
 .blades68.actor.pc * .big-teeth-section .big-teeth label:last-of-type {
@@ -1312,10 +1312,10 @@
   display: none;
 }
 .blades68.actor.pc * .big-teeth-section .big-teeth input:checked ~ label {
-  background-image: url("assets/teeth/stresstooth-halfgrey.png");
+  background-image: url("assets/blades68/stresspill_empty.png");
 }
 .blades68.actor.pc * .big-teeth-section .big-teeth input:checked + label {
-  background-image: url("assets/teeth/stresstooth-red.png");
+  background-image: url("assets/blades68/stresspill_filled.png");
 }
 .blades68.actor.pc * .big-teeth-section {
   /* Trauma */
@@ -1324,11 +1324,11 @@
   display: flex;
 }
 .blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap label {
-  height: 50px;
+  height: 40px;
   width: 17px;
-  background-image: url("assets/teeth/shorttooth-red.png");
+  background-image: url("assets/blades68/stresspill_empty.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 100%;
   margin-right: 5px;
 }
 .blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap label:last-of-type {
@@ -1353,10 +1353,10 @@
   display: none;
 }
 .blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap input:checked ~ label {
-  background-image: url("assets/teeth/shorttooth-grey.png");
+  background-image: url("assets/blades68/stresspill_empty.png");
 }
 .blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap input:checked + label {
-  background-image: url("assets/teeth/shorttooth-red.png");
+  background-image: url("assets/blades68/stresspill_empty.png");
 }
 .blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap {
   flex-direction: column;
@@ -1418,16 +1418,18 @@
 }
 .blades68.actor.pc * .loadout .item-add-popup {
   margin-left: 10px;
+  cursor: pointer;
+  display: flex;
 }
 .blades68.actor.pc * .teeth-experience {
   display: flex;
 }
 .blades68.actor.pc * .teeth-experience label {
-  height: 30px;
-  width: 10px;
-  background-image: url("assets/teeth/stresstooth-red.png");
+  height: 25px;
+  width: 15px;
+  background-image: url("assets/blades68/stresspill_filled.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 100%;
   margin-right: 5px;
 }
 .blades68.actor.pc * .teeth-experience label:last-of-type {
@@ -1457,10 +1459,10 @@
   display: none;
 }
 .blades68.actor.pc * .teeth-experience input:checked ~ label {
-  background-image: url("assets/teeth/stresstooth-halfgrey.png");
+  background-image: url("assets/blades68/stresspill_empty.png");
 }
 .blades68.actor.pc * .teeth-experience input:checked + label {
-  background-image: url("assets/teeth/stresstooth-red.png");
+  background-image: url("assets/blades68/stresspill_filled.png");
 }
 .blades68.actor.pc * .teeth-experience {
   position: absolute;
@@ -1563,11 +1565,11 @@
   display: flex;
 }
 .blades68.actor.pc * .attributes .attributes-exp .stripe-tooth-body label {
-  height: 30px;
-  width: 10px;
-  background-image: url("assets/teeth/xptooth-red.png");
+  height: 26px;
+  width: 15px;
+  background-image: url("assets/blades68/stresspill_filled.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 100%;
   margin-right: 5px;
 }
 .blades68.actor.pc * .attributes .attributes-exp .stripe-tooth-body label:last-of-type {
@@ -1597,15 +1599,15 @@
   display: none;
 }
 .blades68.actor.pc * .attributes .attributes-exp .stripe-tooth-body input:checked ~ label {
-  background-image: url("assets/teeth/xptooth-white.png");
+  background-image: url("assets/blades68/stresspill_empty.png");
 }
 .blades68.actor.pc * .attributes .attributes-exp .stripe-tooth-body input:checked + label {
-  background-image: url("assets/teeth/xptooth-red.png");
+  background-image: url("assets/blades68/stresspill_filled.png");
 }
 .blades68.actor.pc * .attributes .attributes-exp .stripe-tooth-body {
   position: absolute;
   top: 0px;
-  right: 0px;
+  right: 1px;
 }
 .blades68.actor.pc * .attributes .attributes-container {
   display: flex;
@@ -1904,6 +1906,7 @@
   text-transform: uppercase;
   margin-bottom: 6px;
   background: #DAA520;
+  outline: 1px solid black;
 }
 .blades68.actor.pc * .keys-container .keys-header .keys-side {
   padding: 4px 8px;
@@ -1949,14 +1952,24 @@
   display: flex;
 }
 .blades68.actor.pc * .keys-container .key-slot .key-marks label {
-  height: 16px;
-  width: 16px;
-  background-color: #DAA520;
-  vertical-align: middle;
-  border: 1px solid #191813;
+  height: 25px;
+  width: 15px;
+  background-image: url("assets/blades68/stresspill_filled.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-right: 5px;
+}
+.blades68.actor.pc * .keys-container .key-slot .key-marks label:last-of-type {
+  margin-right: 0px;
 }
 .blades68.actor.pc * .keys-container .key-slot .key-marks label[for$="-0"] {
-  margin-right: 0px;
+  width: auto;
+  height: auto;
+  background-image: none !important;
+  color: #EEEFFF;
+}
+.blades68.actor.pc * .keys-container .key-slot .key-marks label[for$="-0"] i {
+  margin-top: 4px;
 }
 .blades68.actor.pc * .keys-container .key-slot .key-marks label {
   transition: filter 0.1s;
@@ -1973,10 +1986,10 @@
   display: none;
 }
 .blades68.actor.pc * .keys-container .key-slot .key-marks input:checked ~ label {
-  background-color: #EEEFFF;
+  background-image: url("assets/blades68/stresspill_empty.png");
 }
 .blades68.actor.pc * .keys-container .key-slot .key-marks input:checked + label {
-  background-color: #DAA520;
+  background-image: url("assets/blades68/stresspill_filled.png");
 }
 .blades68.actor.pc * .keys-container .key-slot .key-marks.is-disabled {
   opacity: 0.45;
@@ -1995,7 +2008,8 @@
   font-size: 16px;
 }
 .blades68.actor.pc * .keys-container .key-slot .key-boom input:checked + i {
-  color: #DAA520;
+  color: red;
+  outline: 1px solid black;
 }
 .blades68.item.sheet .item {
   justify-content: space-between;
@@ -2186,3 +2200,5 @@
 .add-items-list .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
+/*# sourceMappingURL=blades.css.map */

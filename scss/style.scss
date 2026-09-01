@@ -271,14 +271,14 @@ $hover-brightness: 0.8;
 //
 //    // Stress
 //    .big-teeth {
-//      @include toothradio(17px, 50px, "assets/teeth/stresstooth-halfgrey.png", "assets/teeth/stresstooth-red.png");
+//      @include toothradio(17px, 50px, "assets/blades68/stresspill_empty.png", "assets/blades68/stresspill_filled.png");
 //    }
 //
 //    /* Trauma */
 //    .small-teeth-container {
 //
 //      .small-teeth-wrap {
-//        @include toothradio(17px, 50px, "assets/teeth/shorttooth-grey.png", "assets/teeth/shorttooth-red.png", false);
+//        @include toothradio(17px, 50px, "assets/blades68/stresspill_empty.png", "assets/blades68/stresspill_filled.png", false);
 //        flex-direction: column;
 //
 //        .small-teeth {
@@ -335,7 +335,7 @@ $hover-brightness: 0.8;
 //
 //  // Experience teeth
 //  .teeth-experience {
-//    @include toothradio(10px, 30px, "assets/teeth/stresstooth-halfgrey.png", "assets/teeth/stresstooth-red.png");
+//    @include toothradio(10px, 30px, "assets/blades68/stresspill_empty.png", "assets/blades68/stresspill_filled.png");
 //    position: absolute;
 //    top: 0px;
 //    right: 10px;
@@ -408,7 +408,7 @@ $hover-brightness: 0.8;
 //      margin-bottom: 10px;
 //
 //      .stripe-tooth-body {
-//        @include toothradio(10px, 30px, "assets/teeth/xptooth-white.png", "assets/teeth/xptooth-red.png");
+//        @include toothradio(10px, 30px, "assets/blades68/stresspill_empty.png", "assets/blades68/stresspill_filled.png");
 //        position: absolute;
 //        top: 0px;
 //        right: 0px;
@@ -510,10 +510,10 @@ $hover-brightness: 0.8;
 //  // Reputation
 //  #crew-reputation {
 //    border-top: 3px solid $almost_black;
-//    @include toothradio(17px, 50px, "assets/teeth/stresstooth-halfgrey.png", "assets/teeth/stresstooth-red.png");
+//    @include toothradio(17px, 50px, "assets/blades68/stresspill_empty.png", "assets/blades68/stresspill_filled.png");
 //
 //    input[disabled="disabled"] + label {
-//      background-image: url(assets/teeth/stresstooth-black.png);
+//      background-image: url(assets/blades68/stresspill_filled.png);
 //    }
 //  }
 //
@@ -558,7 +558,7 @@ $hover-brightness: 0.8;
 //
 //  #crew-hold {
 //    border-top: 3px solid $almost_black;
-//    @include toothradio_single(17px, 50px, "assets/teeth/stresstooth-halfgrey.png", "assets/teeth/stresstooth-red.png");
+//    @include toothradio_single(17px, 50px, "assets/blades68/stresspill_empty.png", "assets/blades68/stresspill_filled.png");
 //    width: 221px;
 //  }
 //

@@ -67,7 +67,7 @@
 & * .big-teeth-section .big-teeth label {
   height: 50px;
   width: 17px;
-  background-image: url("assets/teeth/stresstooth-red.png");
+  background-image: url("assets/blades68/stresspill_filled.png");
   background-repeat: no-repeat;
   background-size: contain;
   margin-right: 5px;
@@ -99,10 +99,10 @@
   display: none;
 }
 & * .big-teeth-section .big-teeth input:checked ~ label {
-  background-image: url("assets/teeth/stresstooth-halfgrey.png");
+  background-image: url("assets/blades68/stresspill_empty.png");
 }
 & * .big-teeth-section .big-teeth input:checked + label {
-  background-image: url("assets/teeth/stresstooth-red.png");
+  background-image: url("assets/blades68/stresspill_filled.png");
 }
 & * .big-teeth-section {
   /* Trauma */
@@ -113,7 +113,7 @@
 & * .big-teeth-section .small-teeth-container .small-teeth-wrap label {
   height: 50px;
   width: 17px;
-  background-image: url("assets/teeth/shorttooth-red.png");
+  background-image: url("assets/blades68/stresspill_filled.png");
   background-repeat: no-repeat;
   background-size: contain;
   margin-right: 5px;
@@ -140,10 +140,10 @@
   display: none;
 }
 & * .big-teeth-section .small-teeth-container .small-teeth-wrap input:checked ~ label {
-  background-image: url("assets/teeth/shorttooth-grey.png");
+  background-image: url("assets/blades68/stresspill_empty.png");
 }
 & * .big-teeth-section .small-teeth-container .small-teeth-wrap input:checked + label {
-  background-image: url("assets/teeth/shorttooth-red.png");
+  background-image: url("assets/blades68/stresspill_filled.png");
 }
 & * .big-teeth-section .small-teeth-container .small-teeth-wrap {
   flex-direction: column;
@@ -212,7 +212,7 @@
 & * .teeth-experience label {
   height: 30px;
   width: 10px;
-  background-image: url("assets/teeth/stresstooth-red.png");
+  background-image: url("assets/blades68/stresspill_filled.png");
   background-repeat: no-repeat;
   background-size: contain;
   margin-right: 5px;
@@ -244,10 +244,10 @@
   display: none;
 }
 & * .teeth-experience input:checked ~ label {
-  background-image: url("assets/teeth/stresstooth-halfgrey.png");
+  background-image: url("assets/blades68/stresspill_empty.png");
 }
 & * .teeth-experience input:checked + label {
-  background-image: url("assets/teeth/stresstooth-red.png");
+  background-image: url("assets/blades68/stresspill_filled.png");
 }
 & * .teeth-experience {
   position: absolute;
@@ -352,7 +352,7 @@
 & * .attributes .attributes-exp .stripe-tooth-body label {
   height: 30px;
   width: 10px;
-  background-image: url("assets/teeth/xptooth-red.png");
+  background-image: url("assets/blades68/stresspill_filled.png");
   background-repeat: no-repeat;
   background-size: contain;
   margin-right: 5px;
@@ -384,10 +384,10 @@
   display: none;
 }
 & * .attributes .attributes-exp .stripe-tooth-body input:checked ~ label {
-  background-image: url("assets/teeth/xptooth-white.png");
+  background-image: url("assets/blades68/stresspill_empty.png");
 }
 & * .attributes .attributes-exp .stripe-tooth-body input:checked + label {
-  background-image: url("assets/teeth/xptooth-red.png");
+  background-image: url("assets/blades68/stresspill_filled.png");
 }
 & * .attributes .attributes-exp .stripe-tooth-body {
   position: absolute;

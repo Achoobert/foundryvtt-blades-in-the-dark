@@ -69,10 +69,10 @@ nav{
 // Reputation
 .crew-reputation {
   border-top: 3px solid $almost_black;
-  @include toothradio(17px, 50px, "assets/teeth/stresstooth-halfgrey.png", "assets/teeth/stresstooth-red.png");
+  @include toothradio(17px, 50px, "assets/blades68/stresspill_empty.png", "assets/blades68/stresspill_filled.png");
 
   input:disabled + label {
-    background-image: url(assets/teeth/stresstooth-black.png);
+    background-image: url(assets/blades68/stresspill_filled.png);
   }
 }
 
@@ -117,7 +117,7 @@ nav{
 
 .crew-hold {
   border-top: 3px solid $almost_black;
-  @include toothradio_single(17px, 50px, "assets/teeth/stresstooth-halfgrey.png", "assets/teeth/stresstooth-red.png");
+  @include toothradio_single(17px, 50px, "assets/blades68/stresspill_empty.png", "assets/blades68/stresspill_filled.png");
   width: 221px;
 }
 
@@ -290,14 +290,14 @@ nav{
 
   // Stress
   .big-teeth {
-    @include toothradio(17px, 50px, "assets/teeth/stresstooth-halfgrey.png", "assets/teeth/stresstooth-red.png");
+    @include toothradio(17px, 50px, "assets/blades68/stresspill_empty.png", "assets/blades68/stresspill_filled.png");
   }
 
   /* Trauma */
   .small-teeth-container {
 
     .small-teeth-wrap {
-      @include toothradio(17px, 50px, "assets/teeth/shorttooth-grey.png", "assets/teeth/shorttooth-red.png", false);
+      @include toothradio(17px, 50px, "assets/blades68/stresspill_empty.png", "assets/blades68/stresspill_filled.png", false);
       flex-direction: column;
 
       .small-teeth {

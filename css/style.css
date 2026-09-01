@@ -27,124 +27,158 @@
  */
 @font-face {
   font-family: "Kirsty";
-  src: url("assets/fonts/Kirsty/Kirsty.ttf") format("truetype"); /* Safari, Android, iOS */
+  src: url("assets/fonts/Kirsty/Kirsty.ttf") format("truetype");
+    /* Safari, Android, iOS */
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Kirsty";
-  src: url("assets/fonts/Kirsty/KirstyBold.ttf") format("truetype"); /* Safari, Android, iOS */
+  src: url("assets/fonts/Kirsty/KirstyBold.ttf") format("truetype");
+    /* Safari, Android, iOS */
   font-weight: bold;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Kirsty";
-  src: url("assets/fonts/Kirsty/KirstyBoldItalic.ttf") format("truetype"); /* Safari, Android, iOS */
+  src: url("assets/fonts/Kirsty/KirstyBoldItalic.ttf") format("truetype");
+    /* Safari, Android, iOS */
   font-weight: bold;
   font-style: italic;
 }
+
 @font-face {
   font-family: "Kirsty";
-  src: url("assets/fonts/Kirsty/KirstyItalic.ttf") format("truetype"); /* Safari, Android, iOS */
+  src: url("assets/fonts/Kirsty/KirstyItalic.ttf") format("truetype");
+    /* Safari, Android, iOS */
   font-weight: normal;
   font-style: italic;
 }
+
 @font-face {
   font-family: "Crimson Text";
-  src: url("assets/fonts/CrimsonText/CrimsonText-Regular.ttf")
-    format("truetype"); /* Safari, Android, iOS */
+  src: url("assets/fonts/CrimsonText/CrimsonText-Regular.ttf") format("truetype");
+    /* Safari, Android, iOS */
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Crimson Text";
-  src: url("assets/fonts/CrimsonText/CrimsonText-Bold.ttf") format("truetype"); /* Safari, Android, iOS */
+  src: url("assets/fonts/CrimsonText/CrimsonText-Bold.ttf") format("truetype");
+    /* Safari, Android, iOS */
   font-weight: bold;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Crimson Text";
-  src: url("assets/fonts/CrimsonText/CrimsonText-BoldItalic.ttf")
-    format("truetype"); /* Safari, Android, iOS */
+  src: url("assets/fonts/CrimsonText/CrimsonText-BoldItalic.ttf") format("truetype");
+    /* Safari, Android, iOS */
   font-weight: bold;
   font-style: italic;
 }
+
 @font-face {
   font-family: "Crimson Text";
-  src: url("assets/fonts/CrimsonText/CrimsonText-Italic.ttf") format("truetype"); /* Safari, Android, iOS */
+  src: url("assets/fonts/CrimsonText/CrimsonText-Italic.ttf") format("truetype");
+    /* Safari, Android, iOS */
   font-weight: normal;
   font-style: italic;
 }
+
 @font-face {
   font-family: "Crimson Text";
-  src: url("assets/fonts/CrimsonText/CrimsonText-SemiBold.ttf")
-    format("truetype"); /* Safari, Android, iOS */
+  src: url("assets/fonts/CrimsonText/CrimsonText-SemiBold.ttf") format("truetype");
+    /* Safari, Android, iOS */
   font-weight: 600;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Crimson Text";
-  src: url("assets/fonts/CrimsonText/CrimsonText-SemiBoldItalic.ttf")
-    format("truetype"); /* Safari, Android, iOS */
+  src: url("assets/fonts/CrimsonText/CrimsonText-SemiBoldItalic.ttf") format("truetype");
+    /* Safari, Android, iOS */
   font-weight: 600;
   font-style: italic;
 }
+
 .blades68 {
   font-family: "Crimson Text", serif;
 }
+
 .blades68 textarea {
   margin-top: 10px;
   margin-bottom: 20px;
 }
+
 .blades68 .debug-toggle {
   opacity: 0.1;
 }
+
 .blades68 .debug-toggle.on {
   opacity: 0.75;
 }
+
 .blades68 .rollable-text {
   transition: color 0.2s;
 }
+
 .blades68 .rollable-text:hover {
   cursor: pointer;
   color: red;
 }
+
 .blades68 section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.blades68 section > *:not(.label-stripe) {
+.blades68 section>*:not(.label-stripe) {
   margin-right: 10px;
 }
-.blades68 section > *:not(.label-stripe):last-child {
+.blades68 section>*:not(.label-stripe):last-child {
   margin-right: 0px;
 }
+
 .blades68 section .grow-one {
   flex-grow: 1;
 }
+
 .blades68 section .grow-two {
   flex-grow: 2;
 }
+
 .blades68 section.experience {
   margin-bottom: 0px;
   justify-content: center;
 }
+
 .blades68 .flex-horizontal {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 .blades68 .flex-vertical {
   display: flex;
   flex-direction: column;
 }
+
+.blades68 .flex-npc {
+  display: flex;
+  flex-direction: row;
+}
 .blades68 .tab[data-tab] {
   display: none;
 }
+
 .blades68 .tab[data-tab].active {
   display: block;
 }
+
 .blades68 .black-label {
   background-color: #191813;
   color: #eeefff;
@@ -155,6 +189,7 @@
   text-transform: capitalize;
   font-family: Kirsty, serif;
 }
+
 .blades68 .gray-label {
   background-color: #999;
   color: #191813;
@@ -165,6 +200,7 @@
   text-transform: capitalize;
   font-family: Kirsty, serif;
 }
+
 .blades68 .label-stripe {
   text-transform: uppercase;
   background-color: #191813;
@@ -176,6 +212,7 @@
   display: flex;
   font-weight: bold;
 }
+
 .blades68 .label-stripe-gray {
   text-transform: uppercase;
   background-color: #999;
@@ -186,22 +223,27 @@
   display: flex;
   font-weight: bold;
 }
+
 .blades68 .editor,
 .blades68 .editor-content {
   min-height: 150px;
 }
+
 .blades68 .description {
   font-style: italic;
 }
+
 .blades68 i.nullifier {
   transition: filter 0.2s;
   cursor: pointer;
 }
+
 .blades68 i.nullifier:hover {
   filter: brightness(0.8);
   opacity: 0.9;
   color: red;
 }
+
 .blades68 .loadout select {
   appearance: none;
   -webkit-appearance: none;
@@ -209,8 +251,7 @@
   box-shadow: none;
   border: none;
   cursor: pointer;
-  background: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>")
-    no-repeat right;
+  background: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") no-repeat right;
   padding: 0 20px 0 0;
   margin: 0.1em -6px 0 0;
   background-color: #191813;
@@ -221,41 +262,51 @@
   color: white;
   text-align: right;
 }
+
 .blades68 .loadout select option {
   color: white;
 }
+
 .blades68 .loadout select:hover {
   color: red;
 }
+
 .blades68 .abilities .item-name,
 .blades68 .loadout .item-name,
 .blades68 .faction-items .item-name {
   width: 100px;
   margin-left: 10px;
 }
+
 .blades68 .abilities .item-body,
 .blades68 .loadout .item-body,
 .blades68 .faction-items .item-body {
   width: auto;
 }
+
 .blades68 .abilities .item-description,
 .blades68 .loadout .item-description,
 .blades68 .faction-items .item-description {
   width: 260px;
 }
+
 .blades68 td {
   padding: 5px;
 }
+
 .blades68 {
   min-width: 420px;
   min-height: 320px;
 }
+
 .blades68 .clock-zero-label {
   color: #191813;
 }
+
 .blades68 .clocks.clocks-4 {
   position: relative;
 }
+
 .blades68 .clocks.clocks-4 .blades-clock {
   position: relative;
   padding: 0;
@@ -266,6 +317,7 @@
   overflow: hidden;
   background-size: cover;
 }
+
 .blades68 .clocks.clocks-4 .blades-clock label {
   overflow: hidden;
   position: absolute;
@@ -277,32 +329,41 @@
   transition: filter 0.1s;
   cursor: pointer;
 }
+
 .blades68 .clocks.clocks-4 .blades-clock label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
+
 .blades68 .clocks.clocks-4 .blades-clock input {
   position: absolute;
   display: none;
 }
+
 .blades68 .clocks.clocks-4 .blades-clock input[value="0"] {
   display: none;
 }
+
 .blades68 .clocks.clocks-4 .blades-clock *:nth-child(3) {
   transform: rotate(0deg) skewY(180deg);
 }
+
 .blades68 .clocks.clocks-4 .blades-clock *:nth-child(5) {
   transform: rotate(90deg) skewY(180deg);
 }
+
 .blades68 .clocks.clocks-4 .blades-clock *:nth-child(7) {
   transform: rotate(180deg) skewY(180deg);
 }
+
 .blades68 .clocks.clocks-4 .blades-clock *:nth-child(9) {
   transform: rotate(270deg) skewY(180deg);
 }
+
 .blades68 .clocks.clocks-6 {
   position: relative;
 }
+
 .blades68 .clocks.clocks-6 .blades-clock {
   position: relative;
   padding: 0;
@@ -313,6 +374,7 @@
   overflow: hidden;
   background-size: cover;
 }
+
 .blades68 .clocks.clocks-6 .blades-clock label {
   overflow: hidden;
   position: absolute;
@@ -324,38 +386,49 @@
   transition: filter 0.1s;
   cursor: pointer;
 }
+
 .blades68 .clocks.clocks-6 .blades-clock label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
+
 .blades68 .clocks.clocks-6 .blades-clock input {
   position: absolute;
   display: none;
 }
+
 .blades68 .clocks.clocks-6 .blades-clock input[value="0"] {
   display: none;
 }
+
 .blades68 .clocks.clocks-6 .blades-clock *:nth-child(3) {
   transform: rotate(0deg) skewY(150deg);
 }
+
 .blades68 .clocks.clocks-6 .blades-clock *:nth-child(5) {
   transform: rotate(60deg) skewY(150deg);
 }
+
 .blades68 .clocks.clocks-6 .blades-clock *:nth-child(7) {
   transform: rotate(120deg) skewY(150deg);
 }
+
 .blades68 .clocks.clocks-6 .blades-clock *:nth-child(9) {
   transform: rotate(180deg) skewY(150deg);
 }
+
 .blades68 .clocks.clocks-6 .blades-clock *:nth-child(11) {
   transform: rotate(240deg) skewY(150deg);
 }
+
 .blades68 .clocks.clocks-6 .blades-clock *:nth-child(13) {
   transform: rotate(300deg) skewY(150deg);
 }
+
 .blades68 .clocks.clocks-8 {
   position: relative;
 }
+
 .blades68 .clocks.clocks-8 .blades-clock {
   position: relative;
   padding: 0;
@@ -366,6 +439,7 @@
   overflow: hidden;
   background-size: cover;
 }
+
 .blades68 .clocks.clocks-8 .blades-clock label {
   overflow: hidden;
   position: absolute;
@@ -377,44 +451,57 @@
   transition: filter 0.1s;
   cursor: pointer;
 }
+
 .blades68 .clocks.clocks-8 .blades-clock label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
+
 .blades68 .clocks.clocks-8 .blades-clock input {
   position: absolute;
   display: none;
 }
+
 .blades68 .clocks.clocks-8 .blades-clock input[value="0"] {
   display: none;
 }
+
 .blades68 .clocks.clocks-8 .blades-clock *:nth-child(3) {
   transform: rotate(0deg) skewY(135deg);
 }
+
 .blades68 .clocks.clocks-8 .blades-clock *:nth-child(5) {
   transform: rotate(45deg) skewY(135deg);
 }
+
 .blades68 .clocks.clocks-8 .blades-clock *:nth-child(7) {
   transform: rotate(90deg) skewY(135deg);
 }
+
 .blades68 .clocks.clocks-8 .blades-clock *:nth-child(9) {
   transform: rotate(135deg) skewY(135deg);
 }
+
 .blades68 .clocks.clocks-8 .blades-clock *:nth-child(11) {
   transform: rotate(180deg) skewY(135deg);
 }
+
 .blades68 .clocks.clocks-8 .blades-clock *:nth-child(13) {
   transform: rotate(225deg) skewY(135deg);
 }
+
 .blades68 .clocks.clocks-8 .blades-clock *:nth-child(15) {
   transform: rotate(270deg) skewY(135deg);
 }
+
 .blades68 .clocks.clocks-8 .blades-clock *:nth-child(17) {
   transform: rotate(315deg) skewY(135deg);
 }
+
 .blades68 .clocks.clocks-10 {
   position: relative;
 }
+
 .blades68 .clocks.clocks-10 .blades-clock {
   position: relative;
   padding: 0;
@@ -425,6 +512,7 @@
   overflow: hidden;
   background-size: cover;
 }
+
 .blades68 .clocks.clocks-10 .blades-clock label {
   overflow: hidden;
   position: absolute;
@@ -436,50 +524,65 @@
   transition: filter 0.1s;
   cursor: pointer;
 }
+
 .blades68 .clocks.clocks-10 .blades-clock label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
+
 .blades68 .clocks.clocks-10 .blades-clock input {
   position: absolute;
   display: none;
 }
+
 .blades68 .clocks.clocks-10 .blades-clock input[value="0"] {
   display: none;
 }
+
 .blades68 .clocks.clocks-10 .blades-clock *:nth-child(3) {
   transform: rotate(0deg) skewY(126deg);
 }
+
 .blades68 .clocks.clocks-10 .blades-clock *:nth-child(5) {
   transform: rotate(36deg) skewY(126deg);
 }
+
 .blades68 .clocks.clocks-10 .blades-clock *:nth-child(7) {
   transform: rotate(72deg) skewY(126deg);
 }
+
 .blades68 .clocks.clocks-10 .blades-clock *:nth-child(9) {
   transform: rotate(108deg) skewY(126deg);
 }
+
 .blades68 .clocks.clocks-10 .blades-clock *:nth-child(11) {
   transform: rotate(144deg) skewY(126deg);
 }
+
 .blades68 .clocks.clocks-10 .blades-clock *:nth-child(13) {
   transform: rotate(180deg) skewY(126deg);
 }
+
 .blades68 .clocks.clocks-10 .blades-clock *:nth-child(15) {
   transform: rotate(216deg) skewY(126deg);
 }
+
 .blades68 .clocks.clocks-10 .blades-clock *:nth-child(17) {
   transform: rotate(252deg) skewY(126deg);
 }
+
 .blades68 .clocks.clocks-10 .blades-clock *:nth-child(19) {
   transform: rotate(288deg) skewY(126deg);
 }
+
 .blades68 .clocks.clocks-10 .blades-clock *:nth-child(21) {
   transform: rotate(324deg) skewY(126deg);
 }
+
 .blades68 .clocks.clocks-12 {
   position: relative;
 }
+
 .blades68 .clocks.clocks-12 .blades-clock {
   position: relative;
   padding: 0;
@@ -490,6 +593,7 @@
   overflow: hidden;
   background-size: cover;
 }
+
 .blades68 .clocks.clocks-12 .blades-clock label {
   overflow: hidden;
   position: absolute;
@@ -501,62 +605,80 @@
   transition: filter 0.1s;
   cursor: pointer;
 }
+
 .blades68 .clocks.clocks-12 .blades-clock label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
+
 .blades68 .clocks.clocks-12 .blades-clock input {
   position: absolute;
   display: none;
 }
+
 .blades68 .clocks.clocks-12 .blades-clock input[value="0"] {
   display: none;
 }
+
 .blades68 .clocks.clocks-12 .blades-clock *:nth-child(3) {
   transform: rotate(0deg) skewY(120deg);
 }
+
 .blades68 .clocks.clocks-12 .blades-clock *:nth-child(5) {
   transform: rotate(30deg) skewY(120deg);
 }
+
 .blades68 .clocks.clocks-12 .blades-clock *:nth-child(7) {
   transform: rotate(60deg) skewY(120deg);
 }
+
 .blades68 .clocks.clocks-12 .blades-clock *:nth-child(9) {
   transform: rotate(90deg) skewY(120deg);
 }
+
 .blades68 .clocks.clocks-12 .blades-clock *:nth-child(11) {
   transform: rotate(120deg) skewY(120deg);
 }
+
 .blades68 .clocks.clocks-12 .blades-clock *:nth-child(13) {
   transform: rotate(150deg) skewY(120deg);
 }
+
 .blades68 .clocks.clocks-12 .blades-clock *:nth-child(15) {
   transform: rotate(180deg) skewY(120deg);
 }
+
 .blades68 .clocks.clocks-12 .blades-clock *:nth-child(17) {
   transform: rotate(210deg) skewY(120deg);
 }
+
 .blades68 .clocks.clocks-12 .blades-clock *:nth-child(19) {
   transform: rotate(240deg) skewY(120deg);
 }
+
 .blades68 .clocks.clocks-12 .blades-clock *:nth-child(21) {
   transform: rotate(270deg) skewY(120deg);
 }
+
 .blades68 .clocks.clocks-12 .blades-clock *:nth-child(23) {
   transform: rotate(300deg) skewY(120deg);
 }
+
 .blades68 .clocks.clocks-12 .blades-clock *:nth-child(25) {
   transform: rotate(330deg) skewY(120deg);
 }
-.blades68 .blades-clock-name-type > * {
+.blades68 .blades-clock-name-type>* {
   margin-bottom: 10px;
 }
+
 .blades68 .blades-clock-name-type .blades-clock {
   margin: 10px auto;
 }
+
 .blades68.crew.sheet .coins {
   display: flex;
 }
+
 .blades68.crew.sheet .coins label {
   height: 15px;
   width: 15px;
@@ -564,92 +686,113 @@
   vertical-align: middle;
   border: 1px solid #191813;
 }
+
 .blades68.crew.sheet .coins label[for$="-0"] {
   margin-right: 0px;
 }
+
 .blades68.crew.sheet .coins label {
   transition: filter 0.1s;
   cursor: pointer;
 }
+
 .blades68.crew.sheet .coins label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
+
 .blades68.crew.sheet .coins {
   /* Hide the browser's default checkbox */
 }
+
 .blades68.crew.sheet .coins input {
   display: none;
 }
-.blades68.crew.sheet .coins input:checked ~ label {
+.blades68.crew.sheet .coins input:checked~label {
   background-color: #eeefff;
 }
-.blades68.crew.sheet .coins input:checked + label {
+.blades68.crew.sheet .coins input:checked+label {
   background-color: #daa520;
 }
+
 .blades68.crew.sheet .coins {
   flex-wrap: wrap;
 }
-.blades68.crew.sheet .coins input ~ label {
+.blades68.crew.sheet .coins input~label {
   margin-right: 3px;
   margin-bottom: 3px;
 }
-.blades68.crew.sheet .coins input ~ label[for$="0"] {
+.blades68.crew.sheet .coins input~label[for$="0"] {
   border-width: 2px;
 }
-.blades68.crew.sheet .coins input ~ label {
+.blades68.crew.sheet .coins input~label {
   transition: filter 0.2s;
   cursor: pointer;
 }
-.blades68.crew.sheet .coins input ~ label:hover {
+.blades68.crew.sheet .coins input~label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
+
 .blades68.crew.sheet .coins.coins-hands {
   width: 36px;
 }
+
 .blades68.crew.sheet .coins.coins-stashed {
   width: 190px;
 }
+
 .blades68.crew.sheet .item {
   justify-content: space-between;
 }
+
 .blades68.crew.sheet .item .item-body {
   margin-bottom: 10px;
 }
+
 .blades68.crew.sheet .item .item-body * {
   margin-right: 10px;
 }
+
 .blades68.crew.sheet .item .item-body .item-description {
   font-style: italic;
   text-align: justify;
 }
+
 .blades68.crew.sheet .item div {
   flex-grow: 2;
 }
+
 .blades68.crew.sheet .item .item-control {
   flex-grow: 1;
 }
+
 .blades68.crew.sheet .item .item-body,
 .blades68.crew.sheet .item .item-class-label {
   width: 100px;
 }
+
 .blades68.crew.sheet .item-class-label {
   margin-bottom: 10px;
 }
+
 .blades68.crew.sheet .name,
 .blades68.crew.sheet .lair {
   margin-bottom: 10px;
 }
+
 .blades68.crew.sheet form.actor-sheet {
   padding: 20px;
 }
+
 .blades68.crew.sheet nav {
   padding-bottom: 10px;
 }
+
 .blades68.crew.sheet .crew-coins {
   display: flex;
 }
+
 .blades68.crew.sheet .crew-coins label {
   height: 15px;
   width: 15px;
@@ -657,112 +800,136 @@
   vertical-align: middle;
   border: 1px solid #191813;
 }
+
 .blades68.crew.sheet .crew-coins label[for$="-0"] {
   margin-right: 0px;
 }
+
 .blades68.crew.sheet .crew-coins label {
   transition: filter 0.1s;
   cursor: pointer;
 }
+
 .blades68.crew.sheet .crew-coins label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
+
 .blades68.crew.sheet .crew-coins {
   /* Hide the browser's default checkbox */
 }
+
 .blades68.crew.sheet .crew-coins input {
   display: none;
 }
-.blades68.crew.sheet .crew-coins input:checked ~ label {
+.blades68.crew.sheet .crew-coins input:checked~label {
   background-color: #eeefff;
 }
-.blades68.crew.sheet .crew-coins input:checked + label {
+.blades68.crew.sheet .crew-coins input:checked+label {
   background-color: #daa520;
 }
+
 .blades68.crew.sheet .crew-coins {
   flex-wrap: wrap;
   max-width: 72px;
 }
+
 .blades68.crew.sheet .crew-coins label {
   margin-right: 3px;
   margin-bottom: 3px;
 }
+
 .blades68.crew.sheet .crew-reputation {
   border-top: 3px solid #191813;
   display: flex;
 }
+
 .blades68.crew.sheet .crew-reputation label {
   height: 50px;
   width: 17px;
-  background-image: url("assets/teeth/stresstooth-red.png");
+  background-image: url("assets/blades68/stresspill_filled.png");
   background-repeat: no-repeat;
   background-size: contain;
   margin-right: 5px;
 }
+
 .blades68.crew.sheet .crew-reputation label:last-of-type {
   margin-right: 0px;
 }
+
 .blades68.crew.sheet .crew-reputation label[for$="-0"] {
   width: auto;
   height: auto;
   background-image: none !important;
   color: #eeefff;
 }
+
 .blades68.crew.sheet .crew-reputation label[for$="-0"] i {
   margin-top: 4px;
 }
+
 .blades68.crew.sheet .crew-reputation label {
   transition: filter 0.1s;
   cursor: pointer;
 }
+
 .blades68.crew.sheet .crew-reputation label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
+
 .blades68.crew.sheet .crew-reputation {
   /* Hide the browser's default checkbox */
 }
+
 .blades68.crew.sheet .crew-reputation input {
   display: none;
 }
-.blades68.crew.sheet .crew-reputation input:checked ~ label {
-  background-image: url("assets/teeth/stresstooth-halfgrey.png");
+.blades68.crew.sheet .crew-reputation input:checked~label {
+  background-image: url("assets/blades68/stresspill_empty.png");
 }
-.blades68.crew.sheet .crew-reputation input:checked + label {
-  background-image: url("assets/teeth/stresstooth-red.png");
+.blades68.crew.sheet .crew-reputation input:checked+label {
+  background-image: url("assets/blades68/stresspill_filled.png");
 }
-.blades68.crew.sheet .crew-reputation input:disabled + label {
-  background-image: url(assets/teeth/stresstooth-black.png);
+.blades68.crew.sheet .crew-reputation input:disabled+label {
+  background-image: url(assets/blades68/stresspill_filled.png);
 }
+
 .blades68.crew.sheet .turf-container {
   overflow-x: scroll;
   overflow-y: clip;
 }
+
 .blades68.crew.sheet .turf-list {
   display: flex;
   flex-direction: column;
   width: 855px;
 }
+
 .blades68.crew.sheet .turf-list .turf-row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
+
 .blades68.crew.sheet .turf-list .turf-row *:first-child {
   margin-left: 0px;
 }
+
 .blades68.crew.sheet .turf-list .turf-row *:last-child {
   margin-right: 0px;
 }
+
 .blades68.crew.sheet .turf-list.section-non-editable .turf-block {
   transition: filter 0.1s;
   cursor: pointer;
 }
+
 .blades68.crew.sheet .turf-list.section-non-editable .turf-block:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
+
 .blades68.crew.sheet .turf-list.section-non-editable .turf-block {
   width: 130px;
   height: 100px;
@@ -771,70 +938,46 @@
   margin: 20px;
   flex-grow: initial;
 }
-.blades68.crew.sheet
-  .turf-list.section-non-editable
-  .turf-block.turf-selected
-  .connector {
+.blades68.crew.sheet .turf-list.section-non-editable .turf-block.turf-selected .connector {
   background-color: #999;
   z-index: 1;
 }
+
 .blades68.crew.sheet .turf-list.section-non-editable .turf-block .connector {
   position: absolute;
   display: block;
   background-color: #bbb;
 }
-.blades68.crew.sheet
-  .turf-list.section-non-editable
-  .turf-block
-  .connector.right,
-.blades68.crew.sheet
-  .turf-list.section-non-editable
-  .turf-block
-  .connector.left {
+.blades68.crew.sheet .turf-list.section-non-editable .turf-block .connector.right,
+.blades68.crew.sheet .turf-list.section-non-editable .turf-block .connector.left {
   width: 40px;
   height: 20px;
   top: 40px;
 }
-.blades68.crew.sheet
-  .turf-list.section-non-editable
-  .turf-block
-  .connector.left {
+.blades68.crew.sheet .turf-list.section-non-editable .turf-block .connector.left {
   left: -40px;
 }
-.blades68.crew.sheet
-  .turf-list.section-non-editable
-  .turf-block
-  .connector.right {
+.blades68.crew.sheet .turf-list.section-non-editable .turf-block .connector.right {
   left: 130px;
 }
+
 .blades68.crew.sheet .turf-list.section-non-editable .turf-block .connector.top,
-.blades68.crew.sheet
-  .turf-list.section-non-editable
-  .turf-block
-  .connector.bottom {
+.blades68.crew.sheet .turf-list.section-non-editable .turf-block .connector.bottom {
   height: 40px;
   width: 20px;
   left: 55px;
 }
-.blades68.crew.sheet
-  .turf-list.section-non-editable
-  .turf-block
-  .connector.top {
+.blades68.crew.sheet .turf-list.section-non-editable .turf-block .connector.top {
   top: -40px;
 }
-.blades68.crew.sheet
-  .turf-list.section-non-editable
-  .turf-block
-  .connector.bottom {
+.blades68.crew.sheet .turf-list.section-non-editable .turf-block .connector.bottom {
   top: 100px;
 }
+
 .blades68.crew.sheet .turf-list.section-non-editable .turf-block.turf-selected {
   background-color: #999;
 }
-.blades68.crew.sheet
-  .turf-list.section-non-editable
-  .turf-block
-  .turf-description {
+.blades68.crew.sheet .turf-list.section-non-editable .turf-block .turf-description {
   border: none;
   background: none;
   resize: none;
@@ -843,34 +986,32 @@
   min-height: auto;
   font-size: 12px;
 }
+
 .blades68.crew.sheet .turf-list.section-non-editable .turf-block .turf-name {
   border: none;
   border-radius: 0px;
   text-align: center;
   font-weight: bold;
 }
-.blades68.crew.sheet
-  .turf-list.section-non-editable
-  .turf-block
-  input[type="checkbox"] {
+.blades68.crew.sheet .turf-list.section-non-editable .turf-block input[type="checkbox"] {
   transform: scale(1);
 }
-.blades68.crew.sheet
-  .turf-list.section-non-editable
-  .turf-block
-  .turf-control.turf-select {
+.blades68.crew.sheet .turf-list.section-non-editable .turf-block .turf-control.turf-select {
   position: absolute;
   top: -7px;
   left: -7px;
 }
+
 .blades68.crew.sheet .turf-list.section-editable .turf-block {
   transition: filter 0.1s;
   cursor: pointer;
 }
+
 .blades68.crew.sheet .turf-list.section-editable .turf-block:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
+
 .blades68.crew.sheet .turf-list.section-editable .turf-block {
   width: 130px;
   height: 125px;
@@ -879,45 +1020,51 @@
   margin: 20px;
   flex-grow: initial;
 }
-.blades68.crew.sheet
-  .turf-list.section-editable
-  .turf-block.turf-selected
-  .connector {
+.blades68.crew.sheet .turf-list.section-editable .turf-block.turf-selected .connector {
   background-color: #999;
   z-index: 1;
 }
+
 .blades68.crew.sheet .turf-list.section-editable .turf-block .connector {
   position: absolute;
   display: block;
   background-color: #bbb;
 }
+
 .blades68.crew.sheet .turf-list.section-editable .turf-block .connector.right,
 .blades68.crew.sheet .turf-list.section-editable .turf-block .connector.left {
   width: 40px;
   height: 25px;
   top: 50px;
 }
+
 .blades68.crew.sheet .turf-list.section-editable .turf-block .connector.left {
   left: -40px;
 }
+
 .blades68.crew.sheet .turf-list.section-editable .turf-block .connector.right {
   left: 130px;
 }
+
 .blades68.crew.sheet .turf-list.section-editable .turf-block .connector.top,
 .blades68.crew.sheet .turf-list.section-editable .turf-block .connector.bottom {
   height: 40px;
   width: 25px;
   left: 52.5px;
 }
+
 .blades68.crew.sheet .turf-list.section-editable .turf-block .connector.top {
   top: -40px;
 }
+
 .blades68.crew.sheet .turf-list.section-editable .turf-block .connector.bottom {
   top: 125px;
 }
+
 .blades68.crew.sheet .turf-list.section-editable .turf-block.turf-selected {
   background-color: #999;
 }
+
 .blades68.crew.sheet .turf-list.section-editable .turf-block .turf-description {
   border: none;
   background: none;
@@ -927,61 +1074,65 @@
   min-height: auto;
   font-size: 12px;
 }
+
 .blades68.crew.sheet .turf-list.section-editable .turf-block .turf-name {
   border: none;
   border-radius: 0px;
   text-align: center;
   font-weight: bold;
 }
-.blades68.crew.sheet
-  .turf-list.section-editable
-  .turf-block
-  input[type="checkbox"] {
+.blades68.crew.sheet .turf-list.section-editable .turf-block input[type="checkbox"] {
   transform: scale(1);
 }
-.blades68.crew.sheet
-  .turf-list.section-editable
-  .turf-block
-  .turf-control.turf-select {
+.blades68.crew.sheet .turf-list.section-editable .turf-block .turf-control.turf-select {
   position: absolute;
   top: -7px;
   left: -7px;
 }
+
 .blades68.crew.sheet .crew-hold {
   border-top: 3px solid #191813;
   display: flex;
 }
+
 .blades68.crew.sheet .crew-hold label {
   transition: filter 0.1s;
   cursor: pointer;
 }
+
 .blades68.crew.sheet .crew-hold label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
+
 .blades68.crew.sheet .crew-hold label {
   height: 50px;
   width: 17px;
-  background-image: url("assets/teeth/stresstooth-halfgrey.png");
+  background-image: url("assets/blades68/stresspill_empty.png");
   background-repeat: no-repeat;
   background-size: contain;
   margin-right: 5px;
 }
+
 .blades68.crew.sheet .crew-hold label:last-of-type {
   margin-right: 0px;
 }
+
 .blades68.crew.sheet .crew-hold {
   /* Hide the browser's default checkbox */
 }
+
 .blades68.crew.sheet .crew-hold input {
   display: none;
 }
-.blades68.crew.sheet .crew-hold input:checked + label {
-  background-image: url("assets/teeth/stresstooth-red.png");
+.blades68.crew.sheet .crew-hold input:checked+label {
+  background-image: url("assets/blades68/stresspill_filled.png");
 }
+
 .blades68.crew.sheet .crew-hold {
   width: 221px;
 }
+
 .blades68.crew.sheet .crew-tier {
   background-color: #999;
   height: 33px;
@@ -991,14 +1142,17 @@
   border-top: 3px solid #191813;
   display: flex;
 }
+
 .blades68.crew.sheet .crew-tier label {
   transition: filter 0.1s;
   cursor: pointer;
 }
+
 .blades68.crew.sheet .crew-tier label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
+
 .blades68.crew.sheet .crew-tier label:not([for$="-0"]) {
   height: 18px;
   width: 18px;
@@ -1007,56 +1161,68 @@
   border: 2px solid #191813;
   border-radius: 9px;
 }
+
 .blades68.crew.sheet .crew-tier {
   /* Hide the browser's default checkbox */
 }
+
 .blades68.crew.sheet .crew-tier input {
   display: none;
 }
-.blades68.crew.sheet .crew-tier input:checked ~ label:not([for$="-0"]) {
+.blades68.crew.sheet .crew-tier input:checked~label:not([for$="-0"]) {
   border-color: gray;
   background-color: #eeefff;
 }
-.blades68.crew.sheet .crew-tier input:checked + label:not([for$="-0"]) {
+.blades68.crew.sheet .crew-tier input:checked+label:not([for$="-0"]) {
   background-color: #191813;
   border-color: #191813;
 }
-.blades68.crew.sheet .crew-tier > * {
+.blades68.crew.sheet .crew-tier>* {
   margin-right: 5px;
 }
+
 .blades68.crew.sheet .heat-wanted .small-teeth {
   height: 20px;
 }
+
 .blades68.crew.sheet .heat-wanted .small-teeth label {
   height: 100%;
   width: 100%;
   cursor: default;
 }
+
 .blades68.crew.sheet .experience-clues-container {
   width: 340px;
   font-size: 12px;
 }
+
 .blades68.crew.sheet .experience-clues-container .experience-clues-description {
   font-weight: bold;
 }
+
 .blades68.crew.sheet .experience-clues-container .experience-clues {
   font-style: italic;
 }
+
 .blades68.crew.sheet .edgeflaw input {
   display: none;
 }
-.blades68.crew.sheet .edgeflaw input:checked + label {
+.blades68.crew.sheet .edgeflaw input:checked+label {
   color: red;
 }
+
 .blades68.crew.sheet .gang-expert-type-selector .gang-type-boxes {
   flex-wrap: wrap;
 }
+
 .blades68.crew.sheet .cohorts {
   flex-wrap: wrap;
 }
+
 .blades68.crew.sheet .cohorts .cohort-block-wrapper {
   width: 400px;
 }
+
 .blades68.crew.sheet .cohorts .label-stripe {
   align-items: center;
   cursor: pointer;
@@ -1064,33 +1230,34 @@
   padding-top: 2px;
   padding-bottom: 2px;
 }
+
 .blades68.crew.sheet .cohorts .item-control {
   flex-grow: 0;
 }
+
 .blades68.crew.sheet .cohorts .cohort-body img {
   border: 2px solid #191813;
   width: 1.75rem;
   height: 1.75rem;
   border-top: none;
 }
-.blades68.crew.sheet .cohorts .cohort-body > div {
+.blades68.crew.sheet .cohorts .cohort-body>div {
   margin-bottom: 10px;
 }
+
 .blades68.crew.sheet .cohorts .cohort-block-harm {
   justify-content: space-around;
 }
+
 .blades68.crew.sheet .cohorts .cohort-block-harm input[type="radio"] {
   display: none;
 }
-.blades68.crew.sheet
-  .cohorts
-  .cohort-block-harm
-  input[type="radio"]:checked
-  + label {
+.blades68.crew.sheet .cohorts .cohort-block-harm input[type="radio"]:checked+label {
   color: #eeefff;
   font-weight: bold;
   background-color: #191813;
 }
+
 .blades68.crew.sheet .cohorts .cohort-block-harm label {
   display: flex;
   align-items: center;
@@ -1102,6 +1269,7 @@
   padding: 0 5px;
   text-align: center;
 }
+
 .blades68.crew.sheet .class-name {
   width: 512px;
   height: 120px;
@@ -1112,173 +1280,141 @@
   text-transform: uppercase;
   border: 3px solid #191813;
 }
+
 .blades68.crew.sheet .class-name .big-name {
   font-weight: bold;
   font-family: Kirsty, serif;
 }
+
 .blades68.crew.sheet .class-name .big-description {
   font-size: 20px;
   font-family: "Crimson Text", serif;
   color: #191813;
 }
+
 .blades68.crew.sheet .big-teeth-section {
   border-top: 3px solid #191813;
   display: flex;
   flex-direction: row;
   margin-bottom: 0px;
 }
-.blades68.crew.sheet .big-teeth-section > * {
+.blades68.crew.sheet .big-teeth-section>* {
   margin-right: 10px;
 }
-.blades68.crew.sheet .big-teeth-section > *:last-child {
+.blades68.crew.sheet .big-teeth-section>*:last-child {
   margin-right: 0px;
 }
+
 .blades68.crew.sheet .big-teeth-section:last-child {
   margin-right: 0px;
 }
+
 .blades68.crew.sheet .big-teeth-section .big-teeth {
   display: flex;
 }
+
 .blades68.crew.sheet .big-teeth-section .big-teeth label {
-  height: 50px;
+  height: 40px;
   width: 17px;
-  background-image: url("assets/teeth/stresstooth-red.png");
+  background-image: url("assets/blades68/stresspill_filled.png");
   background-repeat: no-repeat;
   background-size: contain;
   margin-right: 5px;
 }
+
 .blades68.crew.sheet .big-teeth-section .big-teeth label:last-of-type {
   margin-right: 0px;
 }
+
 .blades68.crew.sheet .big-teeth-section .big-teeth label[for$="-0"] {
   width: auto;
   height: auto;
   background-image: none !important;
   color: #eeefff;
 }
+
 .blades68.crew.sheet .big-teeth-section .big-teeth label[for$="-0"] i {
   margin-top: 4px;
 }
+
 .blades68.crew.sheet .big-teeth-section .big-teeth label {
   transition: filter 0.1s;
   cursor: pointer;
 }
+
 .blades68.crew.sheet .big-teeth-section .big-teeth label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
+
 .blades68.crew.sheet .big-teeth-section .big-teeth {
   /* Hide the browser's default checkbox */
 }
+
 .blades68.crew.sheet .big-teeth-section .big-teeth input {
   display: none;
 }
-.blades68.crew.sheet .big-teeth-section .big-teeth input:checked ~ label {
-  background-image: url("assets/teeth/stresstooth-halfgrey.png");
+.blades68.crew.sheet .big-teeth-section .big-teeth input:checked~label {
+  background-image: url("assets/blades68/stresspill_empty.png");
 }
-.blades68.crew.sheet .big-teeth-section .big-teeth input:checked + label {
-  background-image: url("assets/teeth/stresstooth-red.png");
+.blades68.crew.sheet .big-teeth-section .big-teeth input:checked+label {
+  background-image: url("assets/blades68/stresspill_filled.png");
 }
+
 .blades68.crew.sheet .big-teeth-section {
   /* Trauma */
 }
-.blades68.crew.sheet
-  .big-teeth-section
-  .small-teeth-container
-  .small-teeth-wrap {
+.blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap {
   display: flex;
 }
-.blades68.crew.sheet
-  .big-teeth-section
-  .small-teeth-container
-  .small-teeth-wrap
-  label {
+.blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap label {
   height: 50px;
   width: 17px;
-  background-image: url("assets/teeth/shorttooth-red.png");
+  background-image: url("assets/blades68/stresspill_filled.png");
   background-repeat: no-repeat;
   background-size: contain;
   margin-right: 5px;
 }
-.blades68.crew.sheet
-  .big-teeth-section
-  .small-teeth-container
-  .small-teeth-wrap
-  label:last-of-type {
+.blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap label:last-of-type {
   margin-right: 0px;
 }
-.blades68.crew.sheet
-  .big-teeth-section
-  .small-teeth-container
-  .small-teeth-wrap
-  label[for$="-0"] {
+.blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap label[for$="-0"] {
   width: auto;
   height: auto;
   background-image: none !important;
   color: #eeefff;
 }
-.blades68.crew.sheet
-  .big-teeth-section
-  .small-teeth-container
-  .small-teeth-wrap
-  label[for$="-0"]
-  i {
+.blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap label[for$="-0"] i {
   margin-top: 4px;
 }
-.blades68.crew.sheet
-  .big-teeth-section
-  .small-teeth-container
-  .small-teeth-wrap
-  label {
+.blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap label {
   cursor: not-allowed;
 }
-.blades68.crew.sheet
-  .big-teeth-section
-  .small-teeth-container
-  .small-teeth-wrap {
+.blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap {
   /* Hide the browser's default checkbox */
 }
-.blades68.crew.sheet
-  .big-teeth-section
-  .small-teeth-container
-  .small-teeth-wrap
-  input {
+.blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap input {
   display: none;
 }
-.blades68.crew.sheet
-  .big-teeth-section
-  .small-teeth-container
-  .small-teeth-wrap
-  input:checked
-  ~ label {
-  background-image: url("assets/teeth/shorttooth-grey.png");
+.blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap input:checked~label {
+  background-image: url("assets/blades68/stresspill_empty.png");
 }
-.blades68.crew.sheet
-  .big-teeth-section
-  .small-teeth-container
-  .small-teeth-wrap
-  input:checked
-  + label {
-  background-image: url("assets/teeth/shorttooth-red.png");
+.blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap input:checked+label {
+  background-image: url("assets/blades68/stresspill_filled.png");
 }
-.blades68.crew.sheet
-  .big-teeth-section
-  .small-teeth-container
-  .small-teeth-wrap {
+.blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap {
   flex-direction: column;
 }
-.blades68.crew.sheet
-  .big-teeth-section
-  .small-teeth-container
-  .small-teeth-wrap
-  .small-teeth {
+.blades68.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap .small-teeth {
   display: flex;
   flex-direction: row;
 }
+
 .blades68.crew.sheet .big-teeth-section .trauma-list {
   display: flex;
   flex-wrap: wrap;
 }
+
 .blades68.crew.sheet .big-teeth-section .trauma-list label {
   cursor: pointer;
   font-size: 19px;
@@ -1290,35 +1426,37 @@
   transition: filter 0.1s;
   cursor: pointer;
 }
+
 .blades68.crew.sheet .big-teeth-section .trauma-list label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
+
 .blades68.crew.sheet .big-teeth-section .trauma-list label {
   /* Hide the browser's default checkbox */
 }
+
 .blades68.crew.sheet .big-teeth-section .trauma-list label input {
   display: none;
 }
-.blades68.crew.sheet
-  .big-teeth-section
-  .trauma-list
-  label
-  input:checked
-  ~ .checkmark {
+.blades68.crew.sheet .big-teeth-section .trauma-list label input:checked~.checkmark {
   color: red;
 }
+
 .blades68.crew.sheet .big-teeth-section .trauma-list label .checkmark {
   text-decoration: none;
   font-weight: bold;
 }
+
 .blades68.crew.sheet .big-teeth-section .trauma-list {
   justify-content: space-between;
   align-items: flex-start;
 }
+
 .blades68.crew.sheet header {
   margin-bottom: 10px;
 }
+
 .blades68.actor.pc {
   /*
   *  Elements that can be changed will hint this by dimming and fading a little on hover
@@ -1353,21 +1491,26 @@
    * Some things *might* be missing, but at a glance, everything looks to be in order.
    */
 }
+
 .blades68.actor.pc * .name-alias img.portrait {
   max-width: 200px;
   max-height: 200px;
   width: auto;
   height: auto;
 }
+
 .blades68.actor.pc * .tab[data-tab] {
   display: none;
 }
+
 .blades68.actor.pc * .tab[data-tab].active {
   display: block;
 }
+
 .blades68.actor.pc * form.actor-sheet {
   padding: 20px;
 }
+
 .blades68.actor.pc * .big-teeth-section {
   border-top: 3px solid #191813;
   display: flex;
@@ -1375,170 +1518,123 @@
   margin-bottom: 0px;
   margin-top: 10px;
 }
-.blades68.actor.pc * .big-teeth-section > * {
+.blades68.actor.pc * .big-teeth-section>* {
   margin-right: 10px;
 }
-.blades68.actor.pc * .big-teeth-section > *:last-child {
+.blades68.actor.pc * .big-teeth-section>*:last-child {
   margin-right: 0px;
 }
+
 .blades68.actor.pc * .big-teeth-section:last-child {
   margin-right: 0px;
 }
+
 .blades68.actor.pc * .big-teeth-section .big-teeth {
   display: flex;
 }
+
 .blades68.actor.pc * .big-teeth-section .big-teeth label {
   height: 50px;
   width: 17px;
-  background-image: url("assets/teeth/stresstooth-red.png");
+  background-image: url("assets/blades68/stresspill_filled.png");
   background-repeat: no-repeat;
   background-size: contain;
   margin-right: 5px;
 }
+
 .blades68.actor.pc * .big-teeth-section .big-teeth label:last-of-type {
   margin-right: 0px;
 }
+
 .blades68.actor.pc * .big-teeth-section .big-teeth label[for$="-0"] {
   width: auto;
   height: auto;
   background-image: none !important;
   color: #eeefff;
 }
+
 .blades68.actor.pc * .big-teeth-section .big-teeth label[for$="-0"] i {
   margin-top: 4px;
 }
+
 .blades68.actor.pc * .big-teeth-section .big-teeth label {
   transition: filter 0.1s;
   cursor: pointer;
 }
+
 .blades68.actor.pc * .big-teeth-section .big-teeth label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
+
 .blades68.actor.pc * .big-teeth-section .big-teeth {
   /* Hide the browser's default checkbox */
 }
+
 .blades68.actor.pc * .big-teeth-section .big-teeth input {
   display: none;
 }
-.blades68.actor.pc * .big-teeth-section .big-teeth input:checked ~ label {
-  background-image: url("assets/teeth/stresstooth-halfgrey.png");
+.blades68.actor.pc * .big-teeth-section .big-teeth input:checked~label {
+  background-image: url("assets/blades68/stresspill_empty.png");
 }
-.blades68.actor.pc * .big-teeth-section .big-teeth input:checked + label {
-  background-image: url("assets/teeth/stresstooth-red.png");
+.blades68.actor.pc * .big-teeth-section .big-teeth input:checked+label {
+  background-image: url("assets/blades68/stresspill_filled.png");
 }
+
 .blades68.actor.pc * .big-teeth-section {
   /* Trauma */
 }
-.blades68.actor.pc
-  *
-  .big-teeth-section
-  .small-teeth-container
-  .small-teeth-wrap {
+.blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap {
   display: flex;
 }
-.blades68.actor.pc
-  *
-  .big-teeth-section
-  .small-teeth-container
-  .small-teeth-wrap
-  label {
+.blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap label {
   height: 50px;
   width: 17px;
-  background-image: url("assets/teeth/shorttooth-red.png");
+  background-image: url("assets/blades68/stresspill_filled.png");
   background-repeat: no-repeat;
   background-size: contain;
   margin-right: 5px;
 }
-.blades68.actor.pc
-  *
-  .big-teeth-section
-  .small-teeth-container
-  .small-teeth-wrap
-  label:last-of-type {
+.blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap label:last-of-type {
   margin-right: 0px;
 }
-.blades68.actor.pc
-  *
-  .big-teeth-section
-  .small-teeth-container
-  .small-teeth-wrap
-  label[for$="-0"] {
+.blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap label[for$="-0"] {
   width: auto;
   height: auto;
   background-image: none !important;
   color: #eeefff;
 }
-.blades68.actor.pc
-  *
-  .big-teeth-section
-  .small-teeth-container
-  .small-teeth-wrap
-  label[for$="-0"]
-  i {
+.blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap label[for$="-0"] i {
   margin-top: 4px;
 }
-.blades68.actor.pc
-  *
-  .big-teeth-section
-  .small-teeth-container
-  .small-teeth-wrap
-  label {
+.blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap label {
   cursor: not-allowed;
 }
-.blades68.actor.pc
-  *
-  .big-teeth-section
-  .small-teeth-container
-  .small-teeth-wrap {
+.blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap {
   /* Hide the browser's default checkbox */
 }
-.blades68.actor.pc
-  *
-  .big-teeth-section
-  .small-teeth-container
-  .small-teeth-wrap
-  input {
+.blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap input {
   display: none;
 }
-.blades68.actor.pc
-  *
-  .big-teeth-section
-  .small-teeth-container
-  .small-teeth-wrap
-  input:checked
-  ~ label {
-  background-image: url("assets/teeth/shorttooth-grey.png");
+.blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap input:checked~label {
+  background-image: url("assets/blades68/stresspill_empty.png");
 }
-.blades68.actor.pc
-  *
-  .big-teeth-section
-  .small-teeth-container
-  .small-teeth-wrap
-  input:checked
-  + label {
-  background-image: url("assets/teeth/shorttooth-red.png");
+.blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap input:checked+label {
+  background-image: url("assets/blades68/stresspill_filled.png");
 }
-.blades68.actor.pc
-  *
-  .big-teeth-section
-  .small-teeth-container
-  .small-teeth-wrap {
+.blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap {
   flex-direction: column;
 }
-.blades68.actor.pc
-  *
-  .big-teeth-section
-  .small-teeth-container
-  .small-teeth-wrap
-  .small-teeth {
+.blades68.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap .small-teeth {
   display: flex;
   flex-direction: row;
 }
+
 .blades68.actor.pc * .big-teeth-section .trauma-list {
   display: flex;
   flex-wrap: wrap;
 }
+
 .blades68.actor.pc * .big-teeth-section .trauma-list label {
   cursor: pointer;
   font-size: 19px;
@@ -1550,122 +1646,144 @@
   transition: filter 0.1s;
   cursor: pointer;
 }
+
 .blades68.actor.pc * .big-teeth-section .trauma-list label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
+
 .blades68.actor.pc * .big-teeth-section .trauma-list label {
   /* Hide the browser's default checkbox */
 }
+
 .blades68.actor.pc * .big-teeth-section .trauma-list label input {
   display: none;
 }
-.blades68.actor.pc
-  *
-  .big-teeth-section
-  .trauma-list
-  label
-  input:checked
-  ~ .checkmark {
+.blades68.actor.pc * .big-teeth-section .trauma-list label input:checked~.checkmark {
   color: red;
 }
+
 .blades68.actor.pc * .big-teeth-section .trauma-list label .checkmark {
   text-decoration: none;
   font-weight: bold;
 }
+
 .blades68.actor.pc * .big-teeth-section .trauma-list {
   justify-content: space-between;
   align-items: flex-start;
 }
+
 .blades68.actor.pc * .character-stress label[for$="-0"] {
   margin-right: 0px;
 }
+
 .blades68.actor.pc * .abilities .item-name,
 .blades68.actor.pc * .loadout .item-name {
   width: 100px;
 }
+
 .blades68.actor.pc * .abilities .item-body,
 .blades68.actor.pc * .loadout .item-body {
   width: auto;
 }
+
 .blades68.actor.pc * .abilities .item-description,
 .blades68.actor.pc * .loadout .item-description {
   width: 260px;
 }
+
 .blades68.actor.pc * .abilities .label-stripe p:first-child {
   margin-right: 10px;
 }
+
 .blades68.actor.pc * .loadout .item-add-popup {
   margin-left: 10px;
 }
+
 .blades68.actor.pc * .teeth-experience {
   display: flex;
 }
+
 .blades68.actor.pc * .teeth-experience label {
   height: 30px;
   width: 10px;
-  background-image: url("assets/teeth/stresstooth-red.png");
+  background-image: url("assets/blades68/stresspill_filled.png");
   background-repeat: no-repeat;
   background-size: contain;
   margin-right: 5px;
 }
+
 .blades68.actor.pc * .teeth-experience label:last-of-type {
   margin-right: 0px;
 }
+
 .blades68.actor.pc * .teeth-experience label[for$="-0"] {
   width: auto;
   height: auto;
   background-image: none !important;
   color: #eeefff;
 }
+
 .blades68.actor.pc * .teeth-experience label[for$="-0"] i {
   margin-top: 4px;
 }
+
 .blades68.actor.pc * .teeth-experience label {
   transition: filter 0.1s;
   cursor: pointer;
 }
+
 .blades68.actor.pc * .teeth-experience label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
+
 .blades68.actor.pc * .teeth-experience {
   /* Hide the browser's default checkbox */
 }
+
 .blades68.actor.pc * .teeth-experience input {
   display: none;
 }
-.blades68.actor.pc * .teeth-experience input:checked ~ label {
-  background-image: url("assets/teeth/stresstooth-halfgrey.png");
+.blades68.actor.pc * .teeth-experience input:checked~label {
+  background-image: url("assets/blades68/stresspill_empty.png");
 }
-.blades68.actor.pc * .teeth-experience input:checked + label {
-  background-image: url("assets/teeth/stresstooth-red.png");
+.blades68.actor.pc * .teeth-experience input:checked+label {
+  background-image: url("assets/blades68/stresspill_filled.png");
 }
+
 .blades68.actor.pc * .teeth-experience {
   position: absolute;
   top: 0px;
   right: 10px;
 }
+
 .blades68.actor.pc * .harm-armor {
   display: flex;
 }
+
 .blades68.actor.pc * .harm-armor .character-harm {
   width: 100%;
 }
+
 .blades68.actor.pc * .harm-armor .character-harm table {
   width: 100%;
 }
+
 .blades68.actor.pc * .harm-armor .character-harm table th {
   background-color: #191813;
   color: #eeefff;
 }
+
 .blades68.actor.pc * .harm-armor .character-harm table input[type="text"] {
   width: 100%;
 }
+
 .blades68.actor.pc * .harm-armor .character-health-clock {
   margin: 0 auto;
   position: relative;
 }
+
 .blades68.actor.pc * .harm-armor .character-health-clock .blades-clock {
   position: relative;
   padding: 0;
@@ -1676,6 +1794,7 @@
   overflow: hidden;
   background-size: cover;
 }
+
 .blades68.actor.pc * .harm-armor .character-health-clock .blades-clock label {
   overflow: hidden;
   position: absolute;
@@ -1687,173 +1806,125 @@
   transition: filter 0.1s;
   cursor: pointer;
 }
-.blades68.actor.pc
-  *
-  .harm-armor
-  .character-health-clock
-  .blades-clock
-  label:hover {
+.blades68.actor.pc * .harm-armor .character-health-clock .blades-clock label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
+
 .blades68.actor.pc * .harm-armor .character-health-clock .blades-clock input {
   position: absolute;
   display: none;
 }
-.blades68.actor.pc
-  *
-  .harm-armor
-  .character-health-clock
-  .blades-clock
-  input[value="0"] {
+.blades68.actor.pc * .harm-armor .character-health-clock .blades-clock input[value="0"] {
   display: none;
 }
-.blades68.actor.pc
-  *
-  .harm-armor
-  .character-health-clock
-  .blades-clock
-  *:nth-child(3) {
+.blades68.actor.pc * .harm-armor .character-health-clock .blades-clock *:nth-child(3) {
   transform: rotate(0deg) skewY(180deg);
 }
-.blades68.actor.pc
-  *
-  .harm-armor
-  .character-health-clock
-  .blades-clock
-  *:nth-child(5) {
+.blades68.actor.pc * .harm-armor .character-health-clock .blades-clock *:nth-child(5) {
   transform: rotate(90deg) skewY(180deg);
 }
-.blades68.actor.pc
-  *
-  .harm-armor
-  .character-health-clock
-  .blades-clock
-  *:nth-child(7) {
+.blades68.actor.pc * .harm-armor .character-health-clock .blades-clock *:nth-child(7) {
   transform: rotate(180deg) skewY(180deg);
 }
-.blades68.actor.pc
-  *
-  .harm-armor
-  .character-health-clock
-  .blades-clock
-  *:nth-child(9) {
+.blades68.actor.pc * .harm-armor .character-health-clock .blades-clock *:nth-child(9) {
   transform: rotate(270deg) skewY(180deg);
 }
+
 .blades68.actor.pc * .harm-armor .character-armor-uses div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 .blades68.actor.pc * .attributes {
   display: flex;
   flex-direction: column;
   width: 200px;
 }
+
 .blades68.actor.pc * .attributes .stripe {
   background-color: #191813;
   color: #eeefff;
   font-size: 17px;
   padding-left: 5px;
 }
+
 .blades68.actor.pc * .attributes .attribute-label,
 .blades68.actor.pc * .attributes .attribute-skill-label {
   font-weight: bold;
   text-transform: uppercase;
 }
+
 .blades68.actor.pc * .attributes .attribute-skill-label {
   letter-spacing: 1px;
 }
+
 .blades68.actor.pc * .attributes .attributes-exp {
   position: relative;
   margin-bottom: 10px;
 }
+
 .blades68.actor.pc * .attributes .attributes-exp .stripe-tooth-body {
   display: flex;
 }
+
 .blades68.actor.pc * .attributes .attributes-exp .stripe-tooth-body label {
   height: 30px;
   width: 10px;
-  background-image: url("assets/teeth/xptooth-red.png");
+  background-image: url("assets/blades68/stresspill_filled.png");
   background-repeat: no-repeat;
   background-size: contain;
   margin-right: 5px;
 }
-.blades68.actor.pc
-  *
-  .attributes
-  .attributes-exp
-  .stripe-tooth-body
-  label:last-of-type {
+.blades68.actor.pc * .attributes .attributes-exp .stripe-tooth-body label:last-of-type {
   margin-right: 0px;
 }
-.blades68.actor.pc
-  *
-  .attributes
-  .attributes-exp
-  .stripe-tooth-body
-  label[for$="-0"] {
+.blades68.actor.pc * .attributes .attributes-exp .stripe-tooth-body label[for$="-0"] {
   width: auto;
   height: auto;
   background-image: none !important;
   color: #eeefff;
 }
-.blades68.actor.pc
-  *
-  .attributes
-  .attributes-exp
-  .stripe-tooth-body
-  label[for$="-0"]
-  i {
+.blades68.actor.pc * .attributes .attributes-exp .stripe-tooth-body label[for$="-0"] i {
   margin-top: 4px;
 }
+
 .blades68.actor.pc * .attributes .attributes-exp .stripe-tooth-body label {
   transition: filter 0.1s;
   cursor: pointer;
 }
-.blades68.actor.pc
-  *
-  .attributes
-  .attributes-exp
-  .stripe-tooth-body
-  label:hover {
+.blades68.actor.pc * .attributes .attributes-exp .stripe-tooth-body label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
+
 .blades68.actor.pc * .attributes .attributes-exp .stripe-tooth-body {
   /* Hide the browser's default checkbox */
 }
+
 .blades68.actor.pc * .attributes .attributes-exp .stripe-tooth-body input {
   display: none;
 }
-.blades68.actor.pc
-  *
-  .attributes
-  .attributes-exp
-  .stripe-tooth-body
-  input:checked
-  ~ label {
-  background-image: url("assets/teeth/xptooth-white.png");
+.blades68.actor.pc * .attributes .attributes-exp .stripe-tooth-body input:checked~label {
+  background-image: url("assets/blades68/stresspill_empty.png");
 }
-.blades68.actor.pc
-  *
-  .attributes
-  .attributes-exp
-  .stripe-tooth-body
-  input:checked
-  + label {
-  background-image: url("assets/teeth/xptooth-red.png");
+.blades68.actor.pc * .attributes .attributes-exp .stripe-tooth-body input:checked+label {
+  background-image: url("assets/blades68/stresspill_filled.png");
 }
+
 .blades68.actor.pc * .attributes .attributes-exp .stripe-tooth-body {
   position: absolute;
   top: 0px;
   right: 0px;
 }
+
 .blades68.actor.pc * .attributes .attributes-container {
   display: flex;
   margin: 3px 0px;
   display: flex;
 }
+
 .blades68.actor.pc * .attributes .attributes-container label {
   height: 15px;
   width: 15px;
@@ -1862,6 +1933,7 @@
   border: 2px solid #191813;
   border-radius: 24px;
 }
+
 .blades68.actor.pc * .attributes .attributes-container label[for$="-0"] {
   height: 5px;
   width: 5px;
@@ -1870,76 +1942,87 @@
   background-color: red !important;
   margin-right: 0px;
 }
+
 .blades68.actor.pc * .attributes .attributes-container label {
   transition: filter 0.1s;
   cursor: pointer;
 }
+
 .blades68.actor.pc * .attributes .attributes-container label:hover {
   filter: brightness(0.7);
   opacity: 0.7;
 }
+
 .blades68.actor.pc * .attributes .attributes-container {
   /* Hide the browser's default checkbox */
 }
+
 .blades68.actor.pc * .attributes .attributes-container input {
   display: none;
 }
-.blades68.actor.pc * .attributes .attributes-container input:checked ~ label {
+.blades68.actor.pc * .attributes .attributes-container input:checked~label {
   background-color: #eeefff;
 }
-.blades68.actor.pc * .attributes .attributes-container input:checked + label {
+.blades68.actor.pc * .attributes .attributes-container input:checked+label {
   transition: filter 0.1s;
   cursor: pointer;
 }
-.blades68.actor.pc
-  *
-  .attributes
-  .attributes-container
-  input:checked
-  + label:hover {
+.blades68.actor.pc * .attributes .attributes-container input:checked+label:hover {
   filter: brightness(0.7);
   opacity: 0.7;
 }
-.blades68.actor.pc * .attributes .attributes-container input:checked + label {
+.blades68.actor.pc * .attributes .attributes-container input:checked+label {
   background-color: #191813;
 }
+
 .blades68.actor.pc * .attributes .attributes-container * {
   margin-right: 5px;
 }
+
 .blades68.actor.pc * .item {
   justify-content: space-between;
 }
+
 .blades68.actor.pc * .item .item-body {
   margin-bottom: 10px;
 }
+
 .blades68.actor.pc * .item .item-body * {
   margin-right: 10px;
 }
+
 .blades68.actor.pc * .item .item-body .item-description {
   font-style: italic;
   text-align: justify;
 }
+
 .blades68.actor.pc * .item div {
   flex-grow: 2;
 }
+
 .blades68.actor.pc * .item .item-control {
   flex-grow: 1;
 }
+
 .blades68.actor.pc * .item .item-body,
 .blades68.actor.pc * .item .item-class-label {
   width: 100px;
 }
+
 .blades68.actor.pc * .item-class-label {
   margin-bottom: 10px;
 }
+
 .blades68.actor.pc * .name,
 .blades68.actor.pc * .lair,
 .blades68.actor.pc * .alias {
   margin-bottom: 10px;
 }
+
 .blades68.actor.pc * .coins {
   display: flex;
 }
+
 .blades68.actor.pc * .coins label {
   height: 15px;
   width: 15px;
@@ -1947,92 +2030,112 @@
   vertical-align: middle;
   border: 1px solid #191813;
 }
+
 .blades68.actor.pc * .coins label[for$="-0"] {
   margin-right: 0px;
 }
+
 .blades68.actor.pc * .coins label {
   transition: filter 0.1s;
   cursor: pointer;
 }
+
 .blades68.actor.pc * .coins label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
+
 .blades68.actor.pc * .coins {
   /* Hide the browser's default checkbox */
 }
+
 .blades68.actor.pc * .coins input {
   display: none;
 }
-.blades68.actor.pc * .coins input:checked ~ label {
+.blades68.actor.pc * .coins input:checked~label {
   background-color: #eeefff;
 }
-.blades68.actor.pc * .coins input:checked + label {
+.blades68.actor.pc * .coins input:checked+label {
   background-color: #daa520;
 }
+
 .blades68.actor.pc * .coins {
   flex-wrap: wrap;
 }
-.blades68.actor.pc * .coins input ~ label {
+.blades68.actor.pc * .coins input~label {
   margin-right: 3px;
   margin-bottom: 3px;
 }
-.blades68.actor.pc * .coins input ~ label[for$="0"] {
+.blades68.actor.pc * .coins input~label[for$="0"] {
   border-width: 2px;
 }
-.blades68.actor.pc * .coins input ~ label {
+.blades68.actor.pc * .coins input~label {
   transition: filter 0.2s;
   cursor: pointer;
 }
-.blades68.actor.pc * .coins input ~ label:hover {
+.blades68.actor.pc * .coins input~label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
+
 .blades68.actor.pc * .coins.coins-hands {
   width: 36px;
 }
+
 .blades68.actor.pc * .coins.coins-stashed {
   width: 190px;
 }
+
 .blades68.actor.pc * .keys-container .key-slot {
   display: flex;
   align-items: center;
   gap: 8px;
   margin-bottom: 6px;
 }
+
 .blades68.actor.pc * .keys-container .key-slot select {
   flex-grow: 1;
 }
+
 .blades68.actor.pc * .keys-container .key-slot .key-drift {
   font-style: italic;
   font-size: 12px;
 }
+
 .blades68.item.sheet .item {
   justify-content: space-between;
 }
+
 .blades68.item.sheet .item .item-body {
   margin-bottom: 10px;
 }
+
 .blades68.item.sheet .item .item-body * {
   margin-right: 10px;
 }
+
 .blades68.item.sheet .item .item-body .item-description {
   font-style: italic;
   text-align: justify;
 }
+
 .blades68.item.sheet .item div {
   flex-grow: 2;
 }
+
 .blades68.item.sheet .item .item-control {
   flex-grow: 1;
 }
+
 .blades68.item.sheet .item .item-body,
 .blades68.item.sheet .item .item-class-label {
   width: 100px;
 }
+
 .blades68.item.sheet .item-class-label {
   margin-bottom: 10px;
 }
+
 .blades68.blades68-theme {
   /*
    * Blades '68 bright theme.
@@ -2042,32 +2145,39 @@
    * higher-saturation "future Doskvol" look.
    */
 }
+
 .blades68.blades68-theme {
   background-color: #eef6ff;
   color: #101425;
 }
+
 .blades68.blades68-theme .window-content {
   background-color: #eef6ff;
 }
+
 .blades68.blades68-theme .black-label,
 .blades68.blades68-theme .label-stripe,
 .blades68.blades68-theme .label-stripe-chat {
   background-color: #7b2ff7;
   color: #ffffff;
 }
+
 .blades68.blades68-theme .gray-label,
 .blades68.blades68-theme .label-stripe-gray,
 .blades68.blades68-theme .label-stripe-chat-small {
   background-color: #00d1c1;
   color: #101425;
 }
+
 .blades68.blades68-theme a.item-add-popup,
 .blades68.blades68-theme .rollable-text {
   color: #ff5da2;
 }
+
 .blades68.blades68-theme .rollable-text:hover {
   color: #ffb703;
 }
+
 .blades68.blades68-theme input[type="text"],
 .blades68.blades68-theme input[type="number"],
 .blades68.blades68-theme textarea,
@@ -2076,9 +2186,11 @@
   color: #101425;
   border-color: #7b2ff7;
 }
+
 .blades68.blades68-theme .keys-container .black-label {
   background-color: #ff5da2;
 }
+
 .blades68.blades68-theme .keys-container .key-drift {
   color: #7b2ff7;
 }
@@ -2131,15 +2243,19 @@
   text-transform: capitalize;
   font-size: large;
 }
+
 .blades-die-tooltip .die.critical-success {
   color: #12a012;
 }
+
 .blades-die-tooltip .die.success {
   color: #008000;
 }
+
 .blades-die-tooltip .die.partial-success {
   color: #04578f;
 }
+
 .blades-die-tooltip .die.failure {
   color: red;
 }
@@ -2156,14 +2272,16 @@
   overflow-y: auto;
   padding-right: 8px;
 }
+
 .add-items-list input[type="radio"],
 .add-items-list input[type="checkbox"] {
   display: none;
 }
-.add-items-list input[type="radio"]:checked + label,
-.add-items-list input[type="checkbox"]:checked + label {
+.add-items-list input[type="radio"]:checked+label,
+.add-items-list input[type="checkbox"]:checked+label {
   font-weight: bold;
 }
+
 .add-items-list .tooltip .tooltiptext {
   visibility: hidden;
   width: 200px;
@@ -2175,6 +2293,7 @@
   position: absolute;
   z-index: 9999;
 }
+
 .add-items-list .tooltip:hover .tooltiptext {
   visibility: visible;
 }
@@ -2192,4 +2311,5 @@
   align-items: center;
   flex-grow: 1;
 }
+
 /*# sourceMappingURL=style.css.map */

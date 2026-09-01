@@ -414,6 +414,30 @@ export default function register(quench) {
           assert.equal(keys[0].deadlocked, false);
           assert.equal(keys[0].deadlocked_to, '');
         });
+
+        it('updating one Key slot field does not blank sibling Key slots', async function () {
+          requireSystemActive();
+          const actor = tracker.track(await Actor.create({ name: 'Quench Keys Sibling PC', type: 'character' }));
+          const keysList = actor.getComputedKeys();
+          keysList[0].key = 'Arrogant';
+          keysList[0].experience = 1;
+          keysList[1].key = 'Blunt';
+          keysList[1].experience = 2;
+          keysList[2].key = 'Flamboyant';
+          await actor.update({ 'system.keys.list': keysList });
+
+          // Simulate the sheet's per-slot writer (what form submit used to stomp).
+          const next = actor.getComputedKeys();
+          next[1].experience = 3;
+          await actor.update({ 'system.keys.list': next });
+
+          const after = actor.getComputedKeys();
+          assert.equal(after[0].key, 'Arrogant', 'sibling slot 0 key must survive');
+          assert.equal(after[0].experience, 1, 'sibling slot 0 XP must survive');
+          assert.equal(after[1].key, 'Blunt', 'edited slot key must survive');
+          assert.equal(after[1].experience, 3);
+          assert.equal(after[2].key, 'Flamboyant', 'sibling slot 2 key must survive');
+        });
       });
     },
     { displayName: 'Actor sheet catalogs (Keys, Special Abilities, Loadout)' }

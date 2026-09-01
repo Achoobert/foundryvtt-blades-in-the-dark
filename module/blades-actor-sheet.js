@@ -259,6 +259,20 @@ export class BladesActorSheet extends BladesSheet {
             BladesHelpers.addKeyPopup(this.actor);
         });
 
+        // Key / deadlock / XP edits update one slot via full-list write so Foundry form
+        // submit cannot replace system.keys.list and blank sibling slots.
+        html.find('.key-select').on('change', async (ev) => {
+            await this._updateKeySlotField(ev, 'key', ev.currentTarget.value);
+        });
+        html.find('.deadlocked-to-select').on('change', async (ev) => {
+            await this._updateKeySlotField(ev, 'deadlocked_to', ev.currentTarget.value);
+        });
+        // todo
+        html.find('.key-marks input[type="radio"]').on('change', async (ev) => {
+            if (!ev.currentTarget.checked) return;
+            await this._updateKeySlotField(ev, 'experience', Number(ev.currentTarget.value));
+        });
+
         // Deadlock toggle: check opens a choice popup; uncheck clears deadlocked_to.
         // Managed via actor.update (checkbox has no form name) so cancel leaves the row unlocked.
         html.find('.key-boom input').on('click', async (ev) => {
@@ -318,6 +332,42 @@ export class BladesActorSheet extends BladesSheet {
             await this.actor.deleteEmbeddedDocuments("Item", [row.dataset.itemId]);
         });
 
+    }
+
+    /**
+     * Patch one field on one Key slot and write the full normalized list.
+     * @param {Event} ev
+     * @param {"key"|"experience"|"deadlocked_to"} field
+     * @param {string|number} value
+     */
+    async _updateKeySlotField(ev, field, value) {
+        const slotIndex = Number(ev.currentTarget.closest('.key-slot')?.dataset?.slotIndex);
+        if (!Number.isInteger(slotIndex) || slotIndex < 0) return;
+
+        const keysList = this.actor.getComputedKeys();
+        if (!keysList[slotIndex]) return;
+        keysList[slotIndex][field] = value;
+        await this.actor.update({ "system.keys.list": keysList });
+    }
+
+    /**
+     * Drop ephemeral Key XP radio names (and any stray system.keys.* paths) so a
+     * normal sheet form submit cannot stomp Key slots.
+     * @override
+     */
+    _getSubmitData(updateData = {}) {
+        const data = super._getSubmitData(updateData);
+        const flat = foundry.utils.flattenObject(data);
+        for (const key of Object.keys(flat)) {
+            if (key.startsWith("key-xp-") || key.startsWith("system.keys")) {
+                delete flat[key];
+            }
+        }
+        const cleaned = foundry.utils.expandObject(flat);
+        if (cleaned.system?.keys !== undefined) {
+            delete cleaned.system.keys;
+        }
+        return cleaned;
     }
 
 }

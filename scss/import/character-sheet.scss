@@ -71,14 +71,14 @@ $hover-brightness: 0.8;
 
     // Stress
     .big-teeth {
-      @include toothradio(17px, 50px, "assets/teeth/stresstooth-halfgrey.png", "assets/teeth/stresstooth-red.png");
+        @include toothradio(17px, 40px, "assets/blades68/stresspill_empty.png", "assets/blades68/stresspill_filled.png");
     }
 
     /* Trauma */
     .small-teeth-container {
 
       .small-teeth-wrap {
-        @include toothradio(17px, 50px, "assets/teeth/shorttooth-grey.png", "assets/teeth/shorttooth-red.png", false);
+        @include toothradio(17px, 40px, "assets/blades68/stresspill_empty.png", "assets/blades68/stresspill_empty.png", false);
         flex-direction: column;
 
         .small-teeth {
@@ -129,13 +129,16 @@ $hover-brightness: 0.8;
   // Loadout
   .loadout {
     .item-add-popup {
+      // todo
       margin-left: 10px;
+      cursor: pointer;
+      display: flex;
     }
   }
 
   // Experience teeth
   .teeth-experience {
-    @include toothradio(10px, 30px, "assets/teeth/stresstooth-halfgrey.png", "assets/teeth/stresstooth-red.png");
+    @include toothradio(15px, 25px, "assets/blades68/stresspill_empty.png", "assets/blades68/stresspill_filled.png");
     position: absolute;
     top: 0px;
     right: 10px;
@@ -208,10 +211,10 @@ $hover-brightness: 0.8;
       margin-bottom: 10px;
 
       .stripe-tooth-body {
-        @include toothradio(10px, 30px, "assets/teeth/xptooth-white.png", "assets/teeth/xptooth-red.png");
+        @include toothradio(15px, 26px, "assets/blades68/stresspill_empty.png", "assets/blades68/stresspill_filled.png");
         position: absolute;
         top: 0px;
-        right: 0px;
+        right: 1px;
       }
     }
 
@@ -483,6 +486,7 @@ $hover-brightness: 0.8;
       text-transform: uppercase;
       margin-bottom: 6px;
       background: $gold;
+      outline: 1px solid black;
 
       .keys-side {
         padding: 4px 8px;
@@ -534,7 +538,7 @@ $hover-brightness: 0.8;
 
       .key-marks {
         display: flex;
-        @include custom_radio_square(16px);
+@include toothradio(15px, 25px, "assets/blades68/stresspill_empty.png", "assets/blades68/stresspill_filled.png");
 
         &.is-disabled {
           opacity: 0.45;
@@ -557,7 +561,8 @@ $hover-brightness: 0.8;
         }
 
         input:checked + i {
-          color: $gold;
+          color: red;
+          outline: 1px solid black;
         }
       }
     }

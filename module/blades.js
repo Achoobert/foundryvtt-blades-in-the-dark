@@ -224,7 +224,7 @@ Hooks.once("init", async function() {
     for (let i = 1; i <= max_rep; i++) {
 
       if (i > max_rep - turfs_amount_int) {
-		  html += `<input disabled type="radio" id="crew-${_id}-reputation-${i}" name="system.reputation" value="${i} dtype="Radio"><label style="background-image: url('systems/blades-in-the-dark/styles/assets/teeth/stresstooth-black.png')" class="radio-toggle" for="crew-${_id}-reputation-${i}"></label>`;
+        html += `<input disabled type="radio" id="crew-${_id}-reputation-${i}" name="system.reputation" value="${i} dtype="Radio"><label style="background-image: url('systems/blades-in-the-dark/styles/assets/blades68/stresspill_filled.png')" class="radio-toggle" for="crew-${_id}-reputation-${i}"></label>`;
 	  } else {
 	  html += `<input type="radio" id="crew-${_id}-reputation-${i}" name="system.reputation" value="${i}" dtype="Radio"><label class="radio-toggle" for="crew-${_id}-reputation-${i}"></label>`;
 	  }
