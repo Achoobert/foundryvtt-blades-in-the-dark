@@ -69,14 +69,14 @@
   {{!-- Trait line: Heritage - Background - Vice - Class - Crew, spanning the full header width --}}
   <div id="character-{{_id}}-traits" class="trait-line flex-horizontal">
 
-    <div class="item-block flex-horizontal">
+    <div class="item-block flex-horizontal subheader-item">
       {{#unless (hasItemType items "heritage")}}
       <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="heritage"><b>{{localize "BITD.Heritage"}}</b></a></div>
       {{/unless}}
       {{#each items as |item id|}}
       {{#if (eq item.type "heritage")}}
       <div class="item flex-horizontal" data-item-id="{{item._id}}">
-        <div class="item-body flex-horizontal">
+        <div class="item-body flex-horizontal subheader-item">
           <img src="{{item.img}}" data-tooltip="{{item.name}}" width="24" height="24"/>
           <div class="item-name">{{item.name}}</div>
         </div>
@@ -88,7 +88,7 @@
       {{/each}}
     </div>
 
-    <div class="item-block flex-horizontal">
+    <div class="item-block flex-horizontal subheader-item">
       {{#unless (hasItemType items "background")}}
       <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="background"><b>{{localize "BITD.Background"}}</b></a></div>
       {{/unless}}
@@ -107,7 +107,7 @@
       {{/each}}
     </div>
 
-    <div class="item-block flex-horizontal">
+    <div class="item-block flex-horizontal subheader-item">
       {{#unless (hasItemType items "vice")}}
       <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="vice"><b>{{localize "BITD.Vice"}}</b></a></div>
       {{/unless}}
@@ -126,7 +126,7 @@
       {{/each}}
     </div>
 
-    <div class="item-block flex-horizontal">
+    <div class="item-block flex-horizontal subheader-item">
       {{#unless (hasItemType items "class")}}
       <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="class"><b>{{localize "BITD.Class"}}</b></a></div>
       {{/unless}}
@@ -276,7 +276,7 @@
       <div id="character-{{_id}}-keys-container" class="keys-container section-block">
         <header class="keys-header">
           <span class="keys-side">{{localize "BITD.Keys"}}</span>
-          <a class="add-key-popup" data-tooltip="{{localize 'BITD.AddKey'}}"><i class="fas fa-plus"></i></a>
+          <a class="add-key-popup" data-tooltip="{{localize 'BITD.AddKey'}}"><i class="fas fa-plus-square"></i></a>
           <span class="header-spacer"></span>
           <span class="deadlocks-side">{{localize "BITD.Deadlocks"}}</span>
         </header>
@@ -342,7 +342,7 @@
 
       <section class="special-abilities-panel section-block" data-section-key="abilities">
         <header class="section-header">
-          <span>{{localize "BITD.SpecialAbilities"}}</span>
+          <span style="max-width: 125px;">{{localize "BITD.SpecialAbilities"}}</span>
           <a class="item-add-popup" data-item-type="ability" data-tooltip="{{localize 'BITD.AddAbility'}}"><i class="fas fa-plus-square"></i></a>
           {{#if (getSetting 'ClockXP')}}
           {{else}}

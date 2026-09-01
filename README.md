@@ -8,7 +8,7 @@
 </p>
 
 ```console
-https://github.com/achoobert/foundryvtt-blades-in-the-dark/releases/latest/download/module.json
+https://github.com/achoobert/foundryvtt-blades-in-the-dark/releases/latest/download/system.json
 ```
 
 

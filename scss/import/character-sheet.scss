@@ -285,6 +285,10 @@ $hover-brightness: 0.8;
       align-items: baseline;
       margin-right: 0;
 
+      .subheader-item {
+        min-width: fit-content;
+      }
+
       &:not(:last-child)::after {
         content: "\2022";
         margin: 0 6px;
