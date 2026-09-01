@@ -517,15 +517,29 @@ $hover-brightness: 0.8;
         flex-grow: 1;
       }
 
+      .deadlocked-to-select {
+        text-transform: capitalize;
+      }
+
       .key-drift {
         font-style: italic;
         font-size: 12px;
         flex-grow: 1;
+
+        &.key-source {
+          text-transform: none;
+          opacity: 0.75;
+        }
       }
 
       .key-marks {
         display: flex;
         @include custom_radio_square(16px);
+
+        &.is-disabled {
+          opacity: 0.45;
+          pointer-events: none;
+        }
       }
 
       .key-boom {

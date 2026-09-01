@@ -1932,10 +1932,17 @@
 .blades68.actor.pc * .keys-container .key-slot select {
   flex-grow: 1;
 }
+.blades68.actor.pc * .keys-container .key-slot .deadlocked-to-select {
+  text-transform: capitalize;
+}
 .blades68.actor.pc * .keys-container .key-slot .key-drift {
   font-style: italic;
   font-size: 12px;
   flex-grow: 1;
+}
+.blades68.actor.pc * .keys-container .key-slot .key-drift.key-source {
+  text-transform: none;
+  opacity: 0.75;
 }
 .blades68.actor.pc * .keys-container .key-slot .key-marks {
   display: flex;
@@ -1970,6 +1977,10 @@
 }
 .blades68.actor.pc * .keys-container .key-slot .key-marks input:checked + label {
   background-color: #DAA520;
+}
+.blades68.actor.pc * .keys-container .key-slot .key-marks.is-disabled {
+  opacity: 0.45;
+  pointer-events: none;
 }
 .blades68.actor.pc * .keys-container .key-slot .key-boom {
   display: flex;
@@ -2175,5 +2186,3 @@
 .add-items-list .tooltip:hover .tooltiptext {
   visibility: visible;
 }
-
-/*# sourceMappingURL=blades.css.map */

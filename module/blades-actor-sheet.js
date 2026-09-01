@@ -108,7 +108,10 @@ export class BladesActorSheet extends BladesSheet {
 
         sheetData.blades68 = game.settings.get('blades68', 'Blades68Mode');
         sheetData.blades68Keys = game.system.blades68Keys;
-        sheetData.system.keys.list = this.actor.getComputedKeys();
+        sheetData.system.keys.list = this.actor.getComputedKeys().map((slot) => ({
+            ...slot,
+            deadlockOptions: BladesHelpers.getDeadlockedKeysFor(slot.key),
+        }));
 
         // Special Abilities & Loadout: the full catalog of the equipped class's abilities/items
         // (checkbox lists), plus anything the actor owns that falls outside that catalog
@@ -254,6 +257,21 @@ export class BladesActorSheet extends BladesSheet {
         // Add a Key
         html.find('.add-key-popup').click(() => {
             BladesHelpers.addKeyPopup(this.actor);
+        });
+
+        // Deadlock toggle: check opens a choice popup; uncheck clears deadlocked_to.
+        // Managed via actor.update (checkbox has no form name) so cancel leaves the row unlocked.
+        html.find('.key-boom input').on('click', async (ev) => {
+            ev.preventDefault();
+            const slotIndex = Number(ev.currentTarget.closest('.key-slot')?.dataset?.slotIndex);
+            if (!Number.isInteger(slotIndex) || slotIndex < 0) return;
+
+            const slot = this.actor.getComputedKeys()[slotIndex];
+            if (slot?.deadlocked) {
+                await BladesHelpers.clearKeyDeadlock(this.actor, slotIndex);
+            } else {
+                await BladesHelpers.deadlockKeyPopup(this.actor, slotIndex);
+            }
         });
 
         // Special Abilities / Loadout catalogs: each row's checked box count is reconciled

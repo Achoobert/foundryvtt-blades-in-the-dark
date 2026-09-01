@@ -443,6 +443,10 @@ export class BladesActor extends Actor {
    * seeded a single, non-empty "example" slot, which left no empty slot for Add Key to fill
    * and only rendered 1 of the intended 5 rows. Pad the list up to system.keys.max with empty
    * slots and normalize any leftover "example" placeholder to an empty, addable slot.
+   *
+   * Also migrates legacy per-slot fields (`marks` → `experience`, `boomed` → `deadlocked`)
+   * and guarantees every slot has the canonical shape:
+   * `{ key, experience, deadlocked, deadlocked_to }`.
    */
   getComputedKeys() {
     const max = this.system.keys?.max ?? 5;
@@ -452,9 +456,23 @@ export class BladesActor extends Actor {
     // normalize either shape back into an array before working with it.
     const asArray = Array.isArray(rawList) ? rawList : Object.values(rawList);
     const list = foundry.utils.deepClone(asArray);
-    const normalized = list.map((slot) => (slot?.key === "example" ? { ...slot, key: "" } : slot));
+    const emptySlot = () => ({ key: "", experience: 0, deadlocked: false, deadlocked_to: "" });
+    const normalized = list.map((slot) => {
+      const key = slot?.key === "example" ? "" : (slot?.key ?? "");
+      const experience = Number(
+        slot?.experience ?? slot?.marks ?? 0
+      );
+      const deadlocked = Boolean(slot?.deadlocked ?? slot?.boomed ?? false);
+      const deadlocked_to = deadlocked ? String(slot?.deadlocked_to ?? "") : "";
+      return {
+        key,
+        experience: Number.isFinite(experience) ? Math.max(0, Math.min(3, experience)) : 0,
+        deadlocked,
+        deadlocked_to,
+      };
+    });
     while (normalized.length < max) {
-      normalized.push({ key: "", marks: 0, deadlocked: false });
+      normalized.push(emptySlot());
     }
     return normalized;
   }

@@ -1,5 +1,6 @@
 /* global Actor, Item, foundry, game */
 import { createdDocsTracker, requireSystemActive } from '../helpers.js';
+import { BladesHelpers } from '/systems/blades68/module/blades-helpers.js';
 
 /**
  * Fire a change event and poll `until` (if given) rather than trusting a fixed delay — the
@@ -207,6 +208,7 @@ export default function register(quench) {
           const keys = actor.getComputedKeys();
           assert.lengthOf(keys, 5, 'should still pad to 5 slots');
           assert.equal(keys[0].key, 'Defiant', 'the existing slot should be preserved, not dropped');
+          assert.equal(keys[0].experience, 1, 'legacy marks should migrate into experience');
 
           const sheet = actor.sheet;
           await sheet._render(true);
@@ -303,6 +305,114 @@ export default function register(quench) {
             await game.settings.set('blades68', 'Blades68Mode', priorMode);
             await new Promise((resolve) => setTimeout(resolve, 200));
           }
+        });
+
+        it('deadlock popup saves a catalog choice and replaces the Key select', async function () {
+          this.timeout(10000);
+          requireSystemActive();
+
+          const priorMode = game.settings.get('blades68', 'Blades68Mode');
+          await game.settings.set('blades68', 'Blades68Mode', true);
+
+          const actor = tracker.track(await Actor.create({ name: 'Quench Deadlock Catalog PC', type: 'character' }));
+          const keysList = foundry.utils.deepClone(actor.getComputedKeys());
+          keysList[0].key = 'Commanding';
+          keysList[0].experience = 2;
+          await actor.update({ 'system.keys.list': keysList });
+
+          const sheet = actor.sheet;
+          await sheet._render(true);
+          try {
+            const popupPromise = BladesHelpers.deadlockKeyPopup(actor, 0);
+            let dialogEl;
+            for (let attempt = 0; attempt < 20 && !dialogEl; attempt++) {
+              await new Promise((resolve) => setTimeout(resolve, 150));
+              dialogEl = document.querySelector('dialog[open]');
+            }
+            assert.isOk(dialogEl, 'the Choose Deadlock dialog should open');
+
+            const radio = dialogEl.querySelector('input[name="select_deadlock"][value="controlling"]');
+            assert.isOk(radio, 'Commanding should offer controlling');
+            radio.checked = true;
+            radio.dispatchEvent(new Event('change', { bubbles: true }));
+
+            dialogEl.querySelector('button[data-action="ok"]').click();
+            assert.isTrue(await popupPromise);
+
+            const slot = actor.getComputedKeys()[0];
+            assert.equal(slot.deadlocked, true);
+            assert.equal(slot.deadlocked_to, 'controlling');
+            assert.equal(slot.experience, 2, 'XP should persist through deadlock');
+            assert.equal(slot.key, 'Commanding', 'original Key should remain stored');
+
+            await sheet.render(true);
+            const deadlockSelect = sheet.element.find('.deadlocked-to-select').first();
+            assert.equal(deadlockSelect.val(), 'controlling');
+            const xpInputs = sheet.element.find('.key-slot').first().find('.key-marks input[type="radio"]');
+            assert.equal(xpInputs.filter(':disabled').length, 4, 'XP radios should be disabled while deadlocked');
+            assert.isTrue(sheet.element.find('.key-slot').first().find('input[value="2"]').is(':checked'));
+          } finally {
+            await sheet.close();
+            await game.settings.set('blades68', 'Blades68Mode', priorMode);
+            await new Promise((resolve) => setTimeout(resolve, 200));
+          }
+        });
+
+        it('deadlock popup accepts a custom deadlock and cancel leaves the slot unlocked', async function () {
+          this.timeout(10000);
+          requireSystemActive();
+
+          const actor = tracker.track(await Actor.create({ name: 'Quench Deadlock Custom PC', type: 'character' }));
+          const keysList = foundry.utils.deepClone(actor.getComputedKeys());
+          keysList[0].key = 'Commanding';
+          await actor.update({ 'system.keys.list': keysList });
+
+          const cancelPromise = BladesHelpers.deadlockKeyPopup(actor, 0);
+          let dialogEl;
+          for (let attempt = 0; attempt < 20 && !dialogEl; attempt++) {
+            await new Promise((resolve) => setTimeout(resolve, 150));
+            dialogEl = document.querySelector('dialog[open]');
+          }
+          assert.isOk(dialogEl, 'cancel dialog should open');
+          dialogEl.querySelector('button[data-action="cancel"]').click();
+          assert.isNotOk(await cancelPromise);
+          assert.equal(actor.getComputedKeys()[0].deadlocked, false, 'cancel must leave slot unlocked');
+          assert.equal(actor.getComputedKeys()[0].deadlocked_to, '');
+
+          const customPromise = BladesHelpers.deadlockKeyPopup(actor, 0);
+          dialogEl = null;
+          for (let attempt = 0; attempt < 20 && !dialogEl; attempt++) {
+            await new Promise((resolve) => setTimeout(resolve, 150));
+            dialogEl = document.querySelector('dialog[open]');
+          }
+          assert.isOk(dialogEl, 'custom dialog should open');
+          const customInput = dialogEl.querySelector('input[name="custom_deadlock"]');
+          customInput.value = 'overbearing';
+          customInput.dispatchEvent(new Event('input', { bubbles: true }));
+          dialogEl.querySelector('button[data-action="ok"]').click();
+          assert.isTrue(await customPromise);
+
+          const locked = actor.getComputedKeys()[0];
+          assert.equal(locked.deadlocked, true);
+          assert.equal(locked.deadlocked_to, 'overbearing');
+
+          assert.isTrue(await BladesHelpers.clearKeyDeadlock(actor, 0));
+          const cleared = actor.getComputedKeys()[0];
+          assert.equal(cleared.deadlocked, false);
+          assert.equal(cleared.deadlocked_to, '', 'unlock should clear deadlocked_to');
+          assert.equal(cleared.key, 'Commanding', 'unlock should keep the original Key');
+        });
+
+        it('normalizes legacy marks into experience on object-shaped lists', async function () {
+          requireSystemActive();
+          const actor = tracker.track(await Actor.create({ name: 'Quench Keys Marks Migrate PC', type: 'character' }));
+          await actor.update({
+            'system.keys.list': { 0: { key: 'Defiant', marks: 1, boomed: false } }
+          });
+          const keys = actor.getComputedKeys();
+          assert.equal(keys[0].experience, 1);
+          assert.equal(keys[0].deadlocked, false);
+          assert.equal(keys[0].deadlocked_to, '');
         });
       });
     },

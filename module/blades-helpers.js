@@ -422,6 +422,94 @@ export class BladesHelpers {
     return true;
   }
 
+  /**
+   * Allowed deadlock outcomes for a Key id (catalog entry), or [] for custom/unknown Keys.
+   * @param {string} keyId
+   * @returns {string[]}
+   */
+  static getDeadlockedKeysFor(keyId) {
+    const opt = (game.system.blades68Keys || []).find((k) => k.id === keyId);
+    return opt?.deadlockedKeys ? [...opt.deadlockedKeys] : [];
+  }
+
+  /**
+   * Open a single-choice popup to pick which deadlock a Key resolves into.
+   * On confirm: sets deadlocked + deadlocked_to. On cancel: leaves the slot unlocked.
+   * @param {Actor} actor
+   * @param {number} slotIndex
+   * @returns {Promise<boolean>}
+   */
+  static async deadlockKeyPopup(actor, slotIndex) {
+    const keysList = actor.getComputedKeys();
+    const slot = keysList[slotIndex];
+    if (!slot?.key) {
+      ui.notifications?.warn?.("Choose a Key before deadlocking it.");
+      return false;
+    }
+
+    const deadlockOptions = this.getDeadlockedKeysFor(slot.key);
+    const escapeHtml = (value) => foundry.utils.escapeHTML(String(value ?? ""));
+    const options_html = deadlockOptions.map((opt, i) => `
+      <div class="item-block">
+        <input id="select-deadlock-${i}" type="radio" name="select_deadlock" value="${escapeHtml(opt)}">
+        <label for="select-deadlock-${i}">${escapeHtml(opt)}</label>
+      </div>`).join("");
+
+    const dialogContent = `
+      <form class="items-to-add">
+        <div class="form-group">
+          <label>${game.i18n.localize('BITD.CustomDeadlock')}:</label>
+          <input type="text" name="custom_deadlock">
+        </div>
+        <div class="items-list add-items-list">
+          <div class="item-group">
+            ${options_html || `<p class="notes">${game.i18n.localize('BITD.NoCatalogDeadlocks')}</p>`}
+          </div>
+        </div>
+      </form>
+    `;
+
+    const result = await openFormDialog({
+      title: game.i18n.localize('BITD.ChooseDeadlock'),
+      content: dialogContent,
+      okLabel: game.i18n.localize('Add'),
+      cancelLabel: game.i18n.localize('Cancel'),
+      defaultButton: "ok",
+    });
+
+    if (!result) {
+      return false;
+    }
+
+    const custom = String(result.custom_deadlock ?? "").trim();
+    const chosen = custom || String(result.select_deadlock ?? "").trim();
+    if (!chosen) {
+      return false;
+    }
+
+    keysList[slotIndex].deadlocked = true;
+    keysList[slotIndex].deadlocked_to = chosen;
+    await actor.update({ "system.keys.list": keysList });
+    return true;
+  }
+
+  /**
+   * Clear a slot's deadlock flag and deadlocked_to value.
+   * @param {Actor} actor
+   * @param {number} slotIndex
+   * @returns {Promise<boolean>}
+   */
+  static async clearKeyDeadlock(actor, slotIndex) {
+    const keysList = actor.getComputedKeys();
+    if (!keysList[slotIndex]) {
+      return false;
+    }
+    keysList[slotIndex].deadlocked = false;
+    keysList[slotIndex].deadlocked_to = "";
+    await actor.update({ "system.keys.list": keysList });
+    return true;
+  }
+
   static async getSourcedItemsByType(item_type) {
     const limited_items = await this.getAllItemsByType(item_type);
     return limited_items;

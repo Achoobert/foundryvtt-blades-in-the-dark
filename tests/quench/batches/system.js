@@ -36,7 +36,16 @@ export default function register(quench) {
           for (const key of keys) {
             assert.equal(key.label, `BITD.Key${key.id}`);
             assert.equal(key.drift, `BITD.Key${key.id}Drift`);
+            assert.isArray(key.deadlockedKeys, `${key.id} should expose deadlockedKeys`);
+            assert.lengthOf(key.deadlockedKeys, 2, `${key.id} should have exactly two deadlock outcomes`);
           }
+        });
+
+        it('maps Commanding deadlocks to deferential and controlling', function () {
+          requireSystemActive();
+          const commanding = game.system.blades68Keys.find((k) => k.id === 'Commanding');
+          assert.isOk(commanding);
+          assert.deepEqual(commanding.deadlockedKeys, ['deferential', 'controlling']);
         });
 
         it('registers Blades68Mode as a boolean world setting, default off', function () {

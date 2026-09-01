@@ -40,15 +40,71 @@ Hooks.once("init", async function() {
   game.system.traumas = [ "cold", "haunted", "obsessed", "paranoid", "reckless", "soft", "unstable", "vicious" ];
 
   // Blades '68 personality Keys (see lang/en.json BITD.Key*/BITD.Key*Drift entries).
-  game.system.blades68Keys = [
-    "Arrogant", "Bitter", "Blunt", "Bold", "Brooding", "Calculating", "Charismatic", "Cold", "Comical",
-    "Commanding", "Confident", "Cool", "Curious", "Cynical", "Dedicated", "Defiant", "Determined",
-    "Disciplined", "Distant", "Eccentric", "Enigmatic", "Enthusiastic", "Erratic", "Fearless", "Flamboyant",
-    "Haunted", "Hopeful", "Idealistic", "Insecure", "Kind", "Laidback", "Lonely", "Loyal", "Meticulous",
-    "Openminded", "Passionate", "Playful", "Professional", "Protective", "Rational", "Reckless", "Romantic",
-    "Sad", "Sardonic", "Sharp", "Shy", "Soft", "Sophisticated", "Spiritual", "Stubborn", "Suspicious",
-    "Talkative", "Tired", "Violent", "Witty"
-  ].map(name => ({ id: name, label: `BITD.Key${name}`, drift: `BITD.Key${name}Drift` }));
+  // deadlockedKeys are the two drift outcomes (▼ / ▲) that become selectable when a Key is deadlocked.
+  const blades68DeadlockedKeys = {
+    Arrogant: ["humbled", "self-obsessed"],
+    Bitter: ["affable", "vindictive"],
+    Blunt: ["diplomatic", "caustic"],
+    Bold: ["nervous", "reckless"],
+    Brooding: ["morose", "untroubled"],
+    Calculating: ["apathetic", "paranoid"],
+    Charismatic: ["cold", "manipulative"],
+    Cold: ["brutal", "friendly"],
+    Comical: ["serious", "unhinged"],
+    Commanding: ["deferential", "controlling"],
+    Confident: ["insecure", "arrogant"],
+    Cool: ["jittery", "cold"],
+    Curious: ["disinterested", "possessed"],
+    Cynical: ["optimistic", "nihilist"],
+    Dedicated: ["cynical", "obsessed"],
+    Defiant: ["compliant", "furious"],
+    Determined: ["laid-back", "obsessed"],
+    Disciplined: ["loose", "uptight"],
+    Distant: ["warm", "cold"],
+    Eccentric: ["ordinary", "erratic"],
+    Enigmatic: ["open", "reclusive"],
+    Enthusiastic: ["apathetic", "reckless"],
+    Erratic: ["calm", "chaotic"],
+    Fearless: ["nervous", "turbulent"],
+    Flamboyant: ["demure", "self-obsessed"],
+    Haunted: ["self-assured", "tormented"],
+    Hopeful: ["cynical", "content"],
+    Idealistic: ["cynical", "zealous"],
+    Insecure: ["confident", "anxious"],
+    Kind: ["cold", "charitable"],
+    Laidback: ["indifferent", "tense"],
+    Lonely: ["social", "loner"],
+    Loyal: ["selfish", "self-sacrificing"],
+    Meticulous: ["sloppy", "obsessive"],
+    Openminded: ["rigid", "reckless"],
+    Passionate: ["apathetic", "furious"],
+    Playful: ["serious", "unhinged"],
+    Professional: ["casual", "heartless"],
+    Protective: ["cold", "vengeful"],
+    Rational: ["irregular", "uncaring"],
+    Reckless: ["careful", "chaotic"],
+    Romantic: ["cynical", "in-love"],
+    Sad: ["content", "miserable"],
+    Sardonic: ["grim", "witty"],
+    Sharp: ["dulled", "searing"],
+    Shy: ["open", "withdrawn"],
+    Soft: ["hard", "passive"],
+    Sophisticated: ["modest", "pretentious"],
+    Spiritual: ["cynical", "obsessed"],
+    Stubborn: ["flexible", "pig-headed"],
+    Suspicious: ["trusting", "paranoid"],
+    Talkative: ["quiet", "long-winded"],
+    Tired: ["rejuvenated", "defeated"],
+    Violent: ["merciful", "vicious"],
+    Witty: ["serious", "goofy"],
+  };
+
+  game.system.blades68Keys = Object.keys(blades68DeadlockedKeys).map(name => ({
+    id: name,
+    label: `BITD.Key${name}`,
+    drift: `BITD.Key${name}Drift`,
+    deadlockedKeys: blades68DeadlockedKeys[name],
+  }));
 
   CONFIG.Item.documentClass = BladesItem;
   CONFIG.Actor.documentClass = BladesActor;
@@ -148,6 +204,11 @@ Hooks.once("init", async function() {
   // <option> for custom Key text that doesn't match a catalog entry).
   Handlebars.registerHelper('keyOptionExists', (options, key) => {
     return (options || []).some(opt => opt.id === key);
+  });
+
+  // True if a value is in an array (used for custom deadlocked_to fallback options).
+  Handlebars.registerHelper('includes', (arr, value) => {
+    return Array.isArray(arr) && arr.includes(value);
   });
 
 	//Reputation and Turf Bar on Crew Sheet
