@@ -211,6 +211,11 @@ Hooks.once("init", async function() {
     return Array.isArray(arr) && arr.includes(value);
   });
 
+  // True if the actor owns at least one item of the given type (used to hide trait labels).
+  Handlebars.registerHelper('hasItemType', (items, type) => {
+    return (items || []).some(i => i?.type === type);
+  });
+
 	//Reputation and Turf Bar on Crew Sheet
     Handlebars.registerHelper('repturf', (_id, turfs_amount, max_rep, options) => {
 

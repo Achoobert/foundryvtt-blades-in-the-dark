@@ -70,7 +70,9 @@
   <div id="character-{{_id}}-traits" class="trait-line flex-horizontal">
 
     <div class="item-block flex-horizontal">
+      {{#unless (hasItemType items "heritage")}}
       <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="heritage"><b>{{localize "BITD.Heritage"}}</b></a></div>
+      {{/unless}}
       {{#each items as |item id|}}
       {{#if (eq item.type "heritage")}}
       <div class="item flex-horizontal" data-item-id="{{item._id}}">
@@ -81,15 +83,15 @@
         <a class="item-control item-delete" style="max-width: 10px !important;"
           data-tooltip="{{localize 'BITD.TitleDeleteItem'}}" style="max-width: 10px !important;"><i
             class="fas fa-trash"></i></a>
-        <a class="item-control item-post" style="max-width: 10px !important;" data-tooltip="{{localize 'BITD.TitlePostItem'}}"
-          style="max-width: 10px !important;"><i class="fas fa-comment"></i></a>
       </div>
       {{/if}}
       {{/each}}
     </div>
 
     <div class="item-block flex-horizontal">
+      {{#unless (hasItemType items "background")}}
       <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="background"><b>{{localize "BITD.Background"}}</b></a></div>
+      {{/unless}}
       {{#each items as |item id|}}
       {{#if (eq item.type "background")}}
       <div class="item flex-horizontal" data-item-id="{{item._id}}">
@@ -100,15 +102,15 @@
         <a class="item-control item-delete" style="max-width: 10px !important;"
           data-tooltip="{{localize 'BITD.TitleDeleteItem'}}" style="max-width: 10px !important;"><i
             class="fas fa-trash"></i></a>
-        <a class="item-control item-post" style="max-width: 10px !important;"
-          data-tooltip="{{localize 'BITD.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
       </div>
       {{/if}}
       {{/each}}
     </div>
 
     <div class="item-block flex-horizontal">
+      {{#unless (hasItemType items "vice")}}
       <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="vice"><b>{{localize "BITD.Vice"}}</b></a></div>
+      {{/unless}}
       {{#each items as |item id|}}
       {{#if (eq item.type "vice")}}
       <div class="item flex-horizontal" data-item-id="{{item._id}}">
@@ -119,15 +121,15 @@
         <a class="item-control item-delete" style="max-width: 10px !important;"
           data-tooltip="{{localize 'BITD.TitleDeleteItem'}}" style="max-width: 10px !important;"><i
             class="fas fa-trash"></i></a>
-        <a class="item-control item-post" style="max-width: 10px !important;"
-          data-tooltip="{{localize 'BITD.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
       </div>
       {{/if}}
       {{/each}}
     </div>
 
     <div class="item-block flex-horizontal">
+      {{#unless (hasItemType items "class")}}
       <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="class"><b>{{localize "BITD.Class"}}</b></a></div>
+      {{/unless}}
       {{#each items as |item id|}}
       {{#if (eq item.type "class")}}
       <div class="item flex-horizontal" data-item-id="{{item._id}}">
@@ -137,15 +139,15 @@
         </div>
         <a class="item-control item-delete" style="max-width: 10px !important;" style="max-width: 10px !important;"
           data-tooltip="{{localize 'BITD.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
-        <a class="item-control item-post" style="max-width: 10px !important;"
-          data-tooltip="{{localize 'BITD.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
       </div>
       {{/if}}
       {{/each}}
     </div>
 
     <div class="item-block flex-horizontal">
+      {{#unless system.crew.length}}
       <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="crew"><b>{{localize "BITD.CrewName"}}</b></a></div>
+      {{/unless}}
       {{#each system.crew as |item id|}}
       {{#unless (eq item.name undefined)}}
       <div class="item flex-horizontal" data-item-id="{{item.id}}" data-item-type="{{item.type}}">
