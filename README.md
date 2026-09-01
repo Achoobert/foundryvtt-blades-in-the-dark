@@ -7,6 +7,11 @@
 <img alt="GitHub" src="https://img.shields.io/github/license/dez384/foundryvtt-blades-in-the-dark"> <a href="https://github.com/dez384/foundryvtt-blades-in-the-dark/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/dez384/foundryvtt-blades-in-the-dark"></a> <a href="https://github.com/dez384/foundryvtt-blades-in-the-dark/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/dez384/foundryvtt-blades-in-the-dark"></a> <a href="https://github.com/dez384/foundryvtt-blades-in-the-dark/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/dez384/foundryvtt-blades-in-the-dark"></a> 
 </p>
 
+```console
+https://github.com/achoobert/foundryvtt-blades-in-the-dark/releases/latest/download/module.json
+```
+
+
 If you like our work - use the system, use it all, and may the shadows cover your way.
 If you have questions, please ask them on the #forged-in-the-dark channel of the [FoundryVTT Discord](https://discord.gg/foundryvtt)
 

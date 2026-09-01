@@ -98,7 +98,7 @@ export const registerSystemSettings = function() {
     ['ClockXP','ClockXP', false],
     ['Edge','Edge', false],
     ['PublicClocks','PublicClocks', false],
-    ['Blades68Mode','Blades68', false]
+    ['Blades68Mode','Blades68', true]
   ];
  
   for (let i=0; i<set_array.length; i++) {
