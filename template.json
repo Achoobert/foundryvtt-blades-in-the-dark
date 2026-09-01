@@ -45,11 +45,10 @@
       "keys": {
         "max": 5,
         "list": [
-          { "key": "", "marks": 0, "boomed": false },
-          { "key": "", "marks": 0, "boomed": false },
-          { "key": "", "marks": 0, "boomed": false },
-          { "key": "", "marks": 0, "boomed": false },
-          { "key": "", "marks": 0, "boomed": false }
+          { "key": "", "experience": 0, "deadlocked": false, "deadlocked_to": "" },
+          { "key": "", "experience": 0, "deadlocked": false, "deadlocked_to": "" },
+          { "key": "", "experience": 0, "deadlocked": false, "deadlocked_to": "" },
+          { "key": "", "experience": 0, "deadlocked": false, "deadlocked_to": "" }
         ]
       },
       "healing-clock": [0],

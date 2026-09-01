@@ -454,7 +454,7 @@ export class BladesActor extends Actor {
     const list = foundry.utils.deepClone(asArray);
     const normalized = list.map((slot) => (slot?.key === "example" ? { ...slot, key: "" } : slot));
     while (normalized.length < max) {
-      normalized.push({ key: "", marks: 0, boomed: false });
+      normalized.push({ key: "", marks: 0, deadlocked: false });
     }
     return normalized;
   }

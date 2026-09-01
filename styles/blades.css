@@ -1903,7 +1903,7 @@
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 6px;
-  background: linear-gradient(to right, #191813 0%, #191813 68%, #DAA520 68%, #DAA520 100%);
+  background: #DAA520;
 }
 .blades68.actor.pc * .keys-container .keys-header .keys-side {
   padding: 4px 8px;
@@ -1921,6 +1921,7 @@
   padding: 4px 8px;
   text-align: right;
   white-space: nowrap;
+  background: #191813;
 }
 .blades68.actor.pc * .keys-container .key-slot {
   display: flex;

@@ -200,7 +200,7 @@ export default function register(quench) {
           requireSystemActive();
           const actor = tracker.track(await Actor.create({ name: 'Quench Keys Object-Shape PC', type: 'character' }));
           await actor.update({
-            'system.keys.list': { 0: { key: 'Defiant', marks: 1, boomed: false } }
+            'system.keys.list': { 0: { key: 'Defiant', marks: 1, deadlocked: false } }
           });
           assert.isFalse(Array.isArray(actor.system.keys.list), 'setup should reproduce the object-shaped list');
 

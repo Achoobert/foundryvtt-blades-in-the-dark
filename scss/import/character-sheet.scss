@@ -482,7 +482,7 @@ $hover-brightness: 0.8;
       font-weight: bold;
       text-transform: uppercase;
       margin-bottom: 6px;
-      background: linear-gradient(to right, $almost_black 0%, $almost_black 68%, $gold 68%, $gold 100%);
+      background: $gold;
 
       .keys-side {
         padding: 4px 8px;
@@ -503,6 +503,7 @@ $hover-brightness: 0.8;
         padding: 4px 8px;
         text-align: right;
         white-space: nowrap;
+        background: $almost_black;
       }
     }
 

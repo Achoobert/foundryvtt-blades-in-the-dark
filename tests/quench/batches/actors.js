@@ -21,7 +21,7 @@ export default function register(quench) {
           assert.lengthOf(actor.system.keys.list, 5);
           assert.isTrue(actor.system.keys.list.every((slot) => slot.key === ''), 'every slot should start empty and addable');
           assert.equal(actor.system.keys.list[0].marks, 0);
-          assert.equal(actor.system.keys.list[0].boomed, false);
+          assert.equal(actor.system.keys.list[0].deadlocked, false);
 
           assert.equal(actor.system.trauma.max, 4);
           assert.lengthOf(actor.system.trauma.options, 8);

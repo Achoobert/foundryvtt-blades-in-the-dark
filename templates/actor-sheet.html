@@ -361,15 +361,12 @@
             {{#each ../blades68Keys as |opt|}}{{#if (eq opt.id slot.key)}}{{localize opt.drift}}{{/if}}{{/each}}
           </span>
           <span class="key-marks">
-            <input type="radio" id="character-{{../_id}}-keys-{{i}}-marks-0" name="system.keys.list.{{i}}.marks" value="0" {{#if (eq slot.marks 0)}}checked{{/if}}>
+            <input type="radio" id="character-{{../_id}}-keys-{{i}}-marks-0" name="system.keys.list.{{i}}.experience" value="0" {{#if (eq slot.marks 0)}}checked{{/if}}>
             <label class="radio-toggle" for="character-{{../_id}}-keys-{{i}}-marks-0"></label>
-            <input type="radio" id="character-{{../_id}}-keys-{{i}}-marks-1" name="system.keys.list.{{i}}.marks" value="1" {{#if (eq slot.marks 1)}}checked{{/if}}>
-            <label class="radio-toggle" for="character-{{../_id}}-keys-{{i}}-marks-1"></label>
-            <input type="radio" id="character-{{../_id}}-keys-{{i}}-marks-2" name="system.keys.list.{{i}}.marks" value="2" {{#if (eq slot.marks 2)}}checked{{/if}}>
-            <label class="radio-toggle" for="character-{{../_id}}-keys-{{i}}-marks-2"></label>
+            <!-- TODO: experience value can be between 0-3 -->
           </span>
           <label class="key-boom" data-tooltip="{{localize 'BITD.Deadlocks'}}">
-            <input type="checkbox" data-dtype="Boolean" name="system.keys.list.{{i}}.boomed" {{checked slot.boomed}}>
+            <input type="checkbox" data-dtype="Boolean" name="system.keys.list.{{i}}.deadlocked" {{checked slot.deadlocked}}>
             <i class="fas fa-burst"></i>
           </label>
         </div>
