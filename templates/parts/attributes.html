@@ -6,7 +6,7 @@
     <div id="character-{{../_id}}-attributes-{{attribute_name}}-title" class="attributes-exp">
       <div class="stripe">
         <!-- <a class="attribute-label roll-die-attribute rollable-text" data-roll-attribute="{{attribute_name}}">{{localize (concat attribute.label 'Short')}}</a> -->
-		<a class="attribute-label roll-die-attribute rollable-text" data-roll-attribute="{{attribute_name}}">{{localize attribute.label}}</a>
+		<a class="attribute-label roll-die-attribute rollable-text" data-roll-attribute="{{attribute_name}}" data-tooltip="{{localize (concat attribute.label 'Context')}}">{{localize attribute.label}}</a>
       </div>
       <div class="stripe-tooth-body">
 	      {{#if (getSetting 'ClockXP')}}
@@ -60,7 +60,7 @@
 			<label data-tooltip="{{localize "BITD.NoMastery"}}" style="filter: unset; opacity: unset; cursor: unset; background-color: #dadbed; border-color: gray"></label>
 		{{/if}}
 
-        <div class="attribute-skill-label roll-die-attribute rollable-text" data-roll-attribute="{{skill_name}}">{{localize skill.label}}</div>
+        <div class="attribute-skill-label roll-die-attribute rollable-text" data-roll-attribute="{{skill_name}}" data-tooltip="{{localize (concat skill.label 'Context')}}">{{localize skill.label}}</div>
         {{/multiboxes}}
       </div>
     </div>

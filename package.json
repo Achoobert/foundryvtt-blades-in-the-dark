@@ -1,0 +1,39 @@
+{
+  "name": "blades68",
+  "version": "0.1.0",
+  "description": "Foundry VTT system for Blades68, a Forged in the Dark hack.",
+  "type": "module",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Achoobert/blades68.git"
+  },
+  "license": "UNLICENSED",
+  "scripts": {
+    "lint": "eslint module",
+    "format": "prettier --write .",
+    "build:css": "sass scss/style.scss:styles/blades.css --style=expanded --no-source-map",
+    "watch": "node scripts/watch.mjs",
+    "watch:css": "sass scss/style.scss:styles/blades.css --watch --style=expanded --source-map",
+    "packs:pack": "node scripts/build-packs.mjs pack",
+    "dev:sync": "node scripts/dev-sync.mjs",
+    "dev:world": "node scripts/ensure-world.mjs",
+    "dev": "npm run build:css && npm run dev:sync && npm run dev:world && npm run test:quench:sync",
+    "test:quench:sync": "node scripts/sync-quench-module.mjs",
+    "test:quench": "node scripts/note-quench.mjs",
+    "test:e2e": "cd tests/e2e && npm run tests:ci",
+    "test:e2e:open": "cd tests/e2e && npm run tests"
+  },
+  "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^1.1.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.3.0",
+    "sass": "^1.89.0"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "dependencies": {
+    "pdfjs-dist": "^6.2.108"
+  }
+}

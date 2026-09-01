@@ -17,6 +17,7 @@ export class BladesSheet extends BaseActorSheet {
   /** @override */
 	activateListeners(html) {
     super.activateListeners(html);
+    html.toggleClass("blades68-theme", game.settings.get("blades68", "Blades68Mode"));
     html.find(".item-add-popup").click(this._onItemAddClick.bind(this));
     html.find(".update-box").click(this._onUpdateBoxClick.bind(this));
 	
@@ -217,7 +218,7 @@ export class BladesSheet extends BaseActorSheet {
     const grouped_items = BladesHelpers.groupItemsByClass(items);
 
     // Build HTML with grouped items
-    let items_html = '<div class="items-list">';
+    let items_html = '<div class="items-list add-items-list">';
     for (const [itemclass, group] of Object.entries(grouped_items)) {
       items_html += `<div class="item-group"><header>${itemclass}</header>`;
       for (const item of group) {

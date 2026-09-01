@@ -1,5 +1,5 @@
 textarea {
-  margin-top: 10px;
+  margin-top: 15px;
   margin-bottom: 20px;
 }
 
@@ -166,6 +166,11 @@ i {
   }
 }
 
+#loadout {
+  .item-control {
+    max-width: 10px;
+  }
+}
 td {
   padding: 5px;
 }

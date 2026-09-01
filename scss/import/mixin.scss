@@ -30,7 +30,7 @@
       width: $width;
       background-image: url($checked_background);
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: 100% 100%;
       margin-right: 5px;
   
       &:last-of-type {

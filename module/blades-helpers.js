@@ -85,6 +85,15 @@ export class BladesHelpers {
 
    }
    **/
+  /**
+   * Maps a base item type to its Blades '68-specific compendium pack name, for types that have
+   * a parallel Blades '68 catalog alongside the vanilla Blades in the Dark one (e.g. "ability" ->
+   * "blades68_abilities"). Types without a Blades '68 counterpart return undefined.
+   */
+  static getBlades68PackName(item_type) {
+    return { class: "blades68_classes", ability: "blades68_abilities", item: "blades68_items" }[item_type];
+  }
+
   static async getAllItemsByType(item_type) {
 
     let list_of_items = [];
@@ -102,7 +111,14 @@ export class BladesHelpers {
     }
 
     if (item_type != "crew") {
-      let packs = game.packs.filter(e => e.metadata.name === item_type);
+      // In Blades68Mode, pull from the Blades '68 compendium instead of the vanilla Blades in
+      // the Dark one (some playbook names collide between the two rulesets, e.g. "Hound", so
+      // this must replace rather than merge with the base pack).
+      const blades68PackName = this.getBlades68PackName(item_type);
+      const packName = (blades68PackName && game.settings.get("blades68", "Blades68Mode"))
+        ? blades68PackName
+        : item_type;
+      let packs = game.packs.filter(e => e.metadata.name === packName);
       let compendium_contents = await Promise.all(packs.map(pack => pack.getDocuments()));
       for(const compendium_content of compendium_contents) {
         compendium_items = compendium_items.concat(compendium_content)
@@ -264,7 +280,7 @@ export class BladesHelpers {
   static async importAcquaintance(actor, acqId) {
     //try to import from a compendium
     try {
-      let new_actor = await game.actors.importFromCompendium(game.packs.get("blades-in-the-dark.npc"), acqId);
+      let new_actor = await game.actors.importFromCompendium(game.packs.get("blades68.npc"), acqId);
       //get the UUID of newly created actor
       let new_id = new_actor.id;
       console.log(new_id);
@@ -331,6 +347,166 @@ export class BladesHelpers {
     const acquaintances = actor.system.acquaintances || [];
     acquaintances.push(newContact);
     await actor.update({ "system.acquaintances": acquaintances });
+    return true;
+  }
+
+  static async addKeyPopup(actor) {
+    const keyOptions = game.system.blades68Keys || [];
+    const options_html = keyOptions.map(opt => `
+      <div class="item-block">
+        <input id="select-key-${opt.id}" type="checkbox" name="select_keys" value="${opt.id}">
+        <label for="select-key-${opt.id}" title="${game.i18n.localize(opt.drift)}">${game.i18n.localize(opt.label)}</label>
+      </div>`).join("");
+
+    const dialogContent = `
+      <form class="items-to-add">
+        <div class="form-group">
+          <label>${game.i18n.localize('BITD.CustomKey')}:</label>
+          <input type="text" name="custom_key">
+        </div>
+        <div class="items-list add-items-list">
+          <div class="item-group">
+            ${options_html}
+          </div>
+        </div>
+      </form>
+    `;
+
+    const result = await openFormDialog({
+      title: game.i18n.localize('BITD.AddKey'),
+      content: dialogContent,
+      okLabel: game.i18n.localize('Add'),
+      cancelLabel: game.i18n.localize('Cancel'),
+      defaultButton: "ok",
+    });
+
+    if (!result) {
+      return false;
+    }
+
+    let chosen = [];
+    if (result.select_keys) {
+      chosen = Array.isArray(result.select_keys) ? result.select_keys : [result.select_keys];
+    }
+    const customKey = String(result.custom_key ?? "").trim();
+    if (customKey) {
+      chosen.push(customKey);
+    }
+
+    if (!chosen.length) {
+      return false;
+    }
+
+    // Use the self-healing, max-padded list (actor.system.keys.list alone may be short a
+    // slot, or still carry the legacy "example" placeholder, on actors created before this fix).
+    const keysList = actor.getComputedKeys();
+    const emptySlotIndexes = keysList
+      .map((slot, idx) => (slot.key ? null : idx))
+      .filter(idx => idx !== null);
+
+    if (!emptySlotIndexes.length) {
+      ui.notifications?.warn?.("No empty Key slots are available.");
+      return false;
+    }
+
+    if (chosen.length > emptySlotIndexes.length) {
+      ui.notifications?.warn?.(`Only ${emptySlotIndexes.length} Key slot(s) available; extra selections were ignored.`);
+      chosen = chosen.slice(0, emptySlotIndexes.length);
+    }
+
+    chosen.forEach((key, i) => {
+      keysList[emptySlotIndexes[i]].key = key;
+    });
+
+    await actor.update({ "system.keys.list": keysList });
+    return true;
+  }
+
+  /**
+   * Allowed deadlock outcomes for a Key id (catalog entry), or [] for custom/unknown Keys.
+   * @param {string} keyId
+   * @returns {string[]}
+   */
+  static getDeadlockedKeysFor(keyId) {
+    const opt = (game.system.blades68Keys || []).find((k) => k.id === keyId);
+    return opt?.deadlockedKeys ? [...opt.deadlockedKeys] : [];
+  }
+
+  /**
+   * Open a single-choice popup to pick which deadlock a Key resolves into.
+   * On confirm: sets deadlocked + deadlocked_to. On cancel: leaves the slot unlocked.
+   * @param {Actor} actor
+   * @param {number} slotIndex
+   * @returns {Promise<boolean>}
+   */
+  static async deadlockKeyPopup(actor, slotIndex) {
+    const keysList = actor.getComputedKeys();
+    const slot = keysList[slotIndex];
+    if (!slot?.key) {
+      ui.notifications?.warn?.("Choose a Key before deadlocking it.");
+      return false;
+    }
+
+    const deadlockOptions = this.getDeadlockedKeysFor(slot.key);
+    const escapeHtml = (value) => foundry.utils.escapeHTML(String(value ?? ""));
+    const options_html = deadlockOptions.map((opt, i) => `
+      <div class="item-block">
+        <input id="select-deadlock-${i}" type="radio" name="select_deadlock" value="${escapeHtml(opt)}">
+        <label for="select-deadlock-${i}">${escapeHtml(opt)}</label>
+      </div>`).join("");
+
+    const dialogContent = `
+      <form class="items-to-add">
+        <div class="form-group">
+          <label>${game.i18n.localize('BITD.CustomDeadlock')}:</label>
+          <input type="text" name="custom_deadlock">
+        </div>
+        <div class="items-list add-items-list">
+          <div class="item-group">
+            ${options_html || `<p class="notes">${game.i18n.localize('BITD.NoCatalogDeadlocks')}</p>`}
+          </div>
+        </div>
+      </form>
+    `;
+
+    const result = await openFormDialog({
+      title: game.i18n.localize('BITD.ChooseDeadlock'),
+      content: dialogContent,
+      okLabel: game.i18n.localize('Add'),
+      cancelLabel: game.i18n.localize('Cancel'),
+      defaultButton: "ok",
+    });
+
+    if (!result) {
+      return false;
+    }
+
+    const custom = String(result.custom_deadlock ?? "").trim();
+    const chosen = custom || String(result.select_deadlock ?? "").trim();
+    if (!chosen) {
+      return false;
+    }
+
+    keysList[slotIndex].deadlocked = true;
+    keysList[slotIndex].deadlocked_to = chosen;
+    await actor.update({ "system.keys.list": keysList });
+    return true;
+  }
+
+  /**
+   * Clear a slot's deadlock flag and deadlocked_to value.
+   * @param {Actor} actor
+   * @param {number} slotIndex
+   * @returns {Promise<boolean>}
+   */
+  static async clearKeyDeadlock(actor, slotIndex) {
+    const keysList = actor.getComputedKeys();
+    if (!keysList[slotIndex]) {
+      return false;
+    }
+    keysList[slotIndex].deadlocked = false;
+    keysList[slotIndex].deadlocked_to = "";
+    await actor.update({ "system.keys.list": keysList });
     return true;
   }
 

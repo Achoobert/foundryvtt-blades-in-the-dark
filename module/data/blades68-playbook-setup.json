@@ -1,0 +1,242 @@
+{
+  "Ghost": {
+    "sheetKey": "ghost",
+    "contactsTitle": "Enemies & Rivals",
+    "contacts": [],
+    "firstAbilityName": "Resonance Echo"
+  },
+  "Hound": {
+    "sheetKey": "hound",
+    "contactsTitle": "Shady Friends",
+    "contacts": [
+      {
+        "name": "Vanden",
+        "description_short": "a lazy Bluecoat"
+      },
+      {
+        "name": "Chatterley",
+        "description_short": "a secret agent"
+      },
+      {
+        "name": "Mira",
+        "description_short": "a nightclub owner"
+      },
+      {
+        "name": "Zam",
+        "description_short": "a street kid"
+      },
+      {
+        "name": "Hendrik",
+        "description_short": "a veterinarian"
+      }
+    ],
+    "firstAbilityName": "Hound's Instincts"
+  },
+  "Hull": {
+    "sheetKey": "hull",
+    "contactsTitle": "Contacts",
+    "contacts": [],
+    "firstAbilityName": "Automaton"
+  },
+  "Intellectual": {
+    "sheetKey": "intellectual",
+    "contactsTitle": "Brilliant Friends",
+    "contacts": [
+      {
+        "name": "Faden",
+        "description_short": "an innovative doctor"
+      },
+      {
+        "name": "Ackhurst",
+        "description_short": "a professor (fired)"
+      },
+      {
+        "name": "Penny",
+        "description_short": "a debauched theorist"
+      },
+      {
+        "name": "OLEK",
+        "description_short": "a rogue sparkmind"
+      },
+      {
+        "name": "Jarris",
+        "description_short": "an escaped test subject"
+      }
+    ],
+    "firstAbilityName": "Unalloyed Genius"
+  },
+  "Operative": {
+    "sheetKey": "operative",
+    "contactsTitle": "Covert Friends",
+    "contacts": [
+      {
+        "name": "Harani Ankhayat",
+        "description_short": "a diplomat"
+      },
+      {
+        "name": "Percy",
+        "description_short": "a cat burglar"
+      },
+      {
+        "name": "Tailor",
+        "description_short": "a handler"
+      },
+      {
+        "name": "Bowman",
+        "description_short": "an undersecretary"
+      },
+      {
+        "name": "Karla",
+        "description_short": "a field agent"
+      }
+    ],
+    "firstAbilityName": "Clean"
+  },
+  "Paranormalist": {
+    "sheetKey": "paranormalist",
+    "contactsTitle": "Strange Friends",
+    "contacts": [
+      {
+        "name": "Goodridge",
+        "description_short": "an archivist"
+      },
+      {
+        "name": "Warley",
+        "description_short": "a mind traveler"
+      },
+      {
+        "name": "Scurlock",
+        "description_short": "a recluse"
+      },
+      {
+        "name": "Chime",
+        "description_short": "an old whisper"
+      },
+      {
+        "name": "Padeen",
+        "description_short": "a Strelai operative"
+      }
+    ],
+    "firstAbilityName": "Third Eye Opened"
+  },
+  "Radical": {
+    "sheetKey": "radical",
+    "contactsTitle": "Zealous Friends",
+    "contacts": [
+      {
+        "name": "Vuko",
+        "description_short": "a union rep"
+      },
+      {
+        "name": "Plundell",
+        "description_short": "a surgeon (& bad poet)"
+      },
+      {
+        "name": "Delyan",
+        "description_short": "a fireworks technician"
+      },
+      {
+        "name": "Stoker",
+        "description_short": "a fearless journalist"
+      },
+      {
+        "name": "Russo",
+        "description_short": "a maverick artist"
+      }
+    ],
+    "firstAbilityName": "True Believer"
+  },
+  "Swinger": {
+    "sheetKey": "swinger",
+    "contactsTitle": "Fun Friends",
+    "contacts": [
+      {
+        "name": "Revel",
+        "description_short": "a drug dealer"
+      },
+      {
+        "name": "Una Bell",
+        "description_short": "a socialite"
+      },
+      {
+        "name": "Three-Fingers",
+        "description_short": "a lounge singer"
+      },
+      {
+        "name": "Honest Stev",
+        "description_short": "an autopod mechanic"
+      },
+      {
+        "name": "Noleburn",
+        "description_short": "a politician"
+      }
+    ],
+    "firstAbilityName": "Here Goes Nothing"
+  },
+  "Time Traveler Future": {
+    "sheetKey": "time_traveler_future",
+    "contactsTitle": "BITD.Contacts",
+    "contacts": [],
+    "firstAbilityName": "Future Shock"
+  },
+  "Time Traveler Past": {
+    "sheetKey": "time_traveler_past",
+    "contactsTitle": "BITD.Contacts",
+    "contacts": [],
+    "firstAbilityName": "Haunted by the Past"
+  },
+  "Vampire": {
+    "sheetKey": "vampire",
+    "contactsTitle": "Dark Servants (start with two)",
+    "contacts": [
+      {
+        "name": "Blackwood",
+        "description_short": "a chauffeur"
+      },
+      {
+        "name": "Carter",
+        "description_short": "a bodyguard"
+      },
+      {
+        "name": "Sable",
+        "description_short": "a fashion model"
+      },
+      {
+        "name": "Green",
+        "description_short": "a personal assistant"
+      },
+      {
+        "name": "Langdon",
+        "description_short": "a biographer"
+      }
+    ],
+    "firstAbilityName": "Vampire"
+  },
+  "Veteran": {
+    "sheetKey": "veteran",
+    "contactsTitle": "Difficult Friends",
+    "contacts": [
+      {
+        "name": "Brackley",
+        "description_short": "a deserter"
+      },
+      {
+        "name": "Professor",
+        "description_short": "a rough sleeper"
+      },
+      {
+        "name": "Fellows",
+        "description_short": "an army officer"
+      },
+      {
+        "name": "Grunt",
+        "description_short": "a back-alley doctor"
+      },
+      {
+        "name": "Tiptree",
+        "description_short": "a hitwoman"
+      }
+    ],
+    "firstAbilityName": "Military Discipline"
+  }
+}

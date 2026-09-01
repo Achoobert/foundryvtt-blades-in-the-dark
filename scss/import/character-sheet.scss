@@ -71,14 +71,14 @@ $hover-brightness: 0.8;
 
     // Stress
     .big-teeth {
-      @include toothradio(17px, 50px, "assets/teeth/stresstooth-halfgrey.png", "assets/teeth/stresstooth-red.png");
+        @include toothradio(17px, 40px, "assets/blades68/stresspill_empty.png", "assets/blades68/stresspill_filled.png");
     }
 
     /* Trauma */
     .small-teeth-container {
 
       .small-teeth-wrap {
-        @include toothradio(17px, 50px, "assets/teeth/shorttooth-grey.png", "assets/teeth/shorttooth-red.png", false);
+        @include toothradio(17px, 40px, "assets/blades68/stresspill_empty.png", "assets/blades68/stresspill_empty.png", false);
         flex-direction: column;
 
         .small-teeth {
@@ -129,13 +129,16 @@ $hover-brightness: 0.8;
   // Loadout
   .loadout {
     .item-add-popup {
+      // todo
       margin-left: 10px;
+      cursor: pointer;
+      display: flex;
     }
   }
 
   // Experience teeth
   .teeth-experience {
-    @include toothradio(10px, 30px, "assets/teeth/stresstooth-halfgrey.png", "assets/teeth/stresstooth-red.png");
+    @include toothradio(15px, 25px, "assets/blades68/stresspill_empty.png", "assets/blades68/stresspill_filled.png");
     position: absolute;
     top: 0px;
     right: 10px;
@@ -208,10 +211,10 @@ $hover-brightness: 0.8;
       margin-bottom: 10px;
 
       .stripe-tooth-body {
-        @include toothradio(10px, 30px, "assets/teeth/xptooth-white.png", "assets/teeth/xptooth-red.png");
+        @include toothradio(15px, 26px, "assets/blades68/stresspill_empty.png", "assets/blades68/stresspill_filled.png");
         position: absolute;
         top: 0px;
-        right: 0px;
+        right: 1px;
       }
     }
 
@@ -268,9 +271,301 @@ $hover-brightness: 0.8;
 
   @import "coins.scss";
 
+  // Trait line: Heritage - Background - Vice - Class - Crew, shown as one
+  // bullet-separated underlined line instead of stacked blocks.
+  .trait-line {
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-bottom: 1px solid $almost_black;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+    justify-content: flex-start;
 
+    .item-block {
+      align-items: baseline;
+      margin-right: 0;
 
+      &:not(:last-child)::after {
+        content: "\2022";
+        margin: 0 6px;
+        color: $gray;
+      }
 
+      .item-class-label {
+        margin-bottom: 0;
+      }
+    }
+  }
 
+  .look-line {
+    margin-bottom: 4px;
+
+    input {
+      width: 100%;
+      font-style: italic;
+      border: 0;
+      background: none;
+    }
+  }
+
+  .ability-short-list {
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+
+  // Attributes: a horizontal row of the three Insight/Prowess/Resolve blocks
+  // (instead of the narrow single-column sidebar layout).
+  .attributes-row {
+    .attributes {
+      flex-direction: row;
+      width: auto;
+      gap: 10px;
+
+      .attribute {
+        flex: 1;
+      }
+    }
+  }
+
+  // Section headers shared by the Special Abilities / Items / Clever Friends / XP panels
+  .section-block {
+    margin-bottom: 10px;
+
+    .section-header {
+      text-transform: uppercase;
+      background-color: $almost_black;
+      color: $almost_white;
+      position: relative;
+      padding: 4px 10px;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      gap: 8px;
+      margin-bottom: 4px;
+
+      span:first-child {
+        flex-grow: 1;
+      }
+
+      a {
+        color: $almost_white;
+      }
+    }
+
+    .section-body {
+      padding: 4px 2px;
+    }
+  }
+
+  .playbook-columns {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 10px;
+    align-items: start;
+    margin-top: 10px;
+
+    .col-abilities,
+    .col-notes {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .special-abilities-panel {
+    .hint {
+      font-style: italic;
+      color: $gray;
+    }
+
+    .ability-catalog {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      .ability-catalog-item {
+        display: flex;
+        align-items: baseline;
+        gap: 6px;
+        margin-bottom: 6px;
+
+        input[type="checkbox"] {
+          flex-shrink: 0;
+          position: relative;
+          top: 2px;
+        }
+
+        .ability-name {
+          font-weight: bold;
+          text-transform: uppercase;
+          margin-right: 4px;
+        }
+
+        .ability-description {
+          font-size: 13px;
+        }
+      }
+    }
+
+    .other-abilities {
+      margin-top: 10px;
+    }
+  }
+
+  .items-panel {
+    .section-header {
+      .load-fraction {
+        white-space: nowrap;
+      }
+    }
+
+    .item-catalog {
+      list-style: none;
+      margin: 0 0 6px 0;
+      padding: 0;
+
+      .item-catalog-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 3px;
+
+        .item-slots {
+          display: flex;
+          gap: 2px;
+
+          input[type="checkbox"] {
+            margin: 0;
+          }
+        }
+
+        label {
+          font-size: 13px;
+        }
+      }
+    }
+
+    .other-items {
+      .item-catalog-item {
+        label {
+          flex-grow: 1;
+        }
+
+        .other-item-delete {
+          opacity: 0.6;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  // Compact freeform item rows (Other Abilities / Other Items): smaller icon buttons
+  // so the delete/chat controls don't dominate the row.
+  .item.compact {
+    .item-body img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .item-control {
+      font-size: 11px;
+      margin-left: 4px;
+    }
+  }
+
+  // Keys / Deadlocks
+  .keys-container {
+
+    .keys-header {
+      display: flex;
+      align-items: center;
+      color: $almost_white;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      background: $gold;
+      outline: 1px solid black;
+
+      .keys-side {
+        padding: 4px 8px;
+        white-space: nowrap;
+      }
+
+      a.add-key-popup {
+        color: $almost_white;
+        padding: 0 6px;
+        cursor: pointer;
+      }
+
+      .header-spacer {
+        flex-grow: 1;
+      }
+
+      .deadlocks-side {
+        padding: 4px 8px;
+        text-align: right;
+        white-space: nowrap;
+        background: $almost_black;
+      }
+    }
+
+    .key-slot {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+
+      select {
+        flex-grow: 1;
+      }
+
+      .deadlocked-to-select {
+        text-transform: capitalize;
+      }
+
+      .key-drift {
+        font-style: italic;
+        font-size: 12px;
+        flex-grow: 1;
+
+        &.key-source {
+          text-transform: none;
+          opacity: 0.75;
+        }
+      }
+
+      .key-marks {
+        display: flex;
+@include toothradio(15px, 25px, "assets/blades68/stresspill_empty.png", "assets/blades68/stresspill_filled.png");
+
+        &.is-disabled {
+          opacity: 0.45;
+          pointer-events: none;
+        }
+      }
+
+      .key-boom {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        input {
+          display: none;
+        }
+
+        i {
+          color: $lightgray;
+          font-size: 16px;
+        }
+
+        input:checked + i {
+          color: red;
+          outline: 1px solid black;
+        }
+      }
+    }
+  }
 
 }

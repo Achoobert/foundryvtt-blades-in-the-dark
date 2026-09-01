@@ -12,11 +12,11 @@ export class BladesActorSheet extends BladesSheet {
     /** @override */
     static get defaultOptions() {
         return foundry.utils.mergeObject(super.defaultOptions, {
-            classes: ["blades-in-the-dark", "sheet", "actor", "pc"],
-            template: "systems/blades-in-the-dark/templates/actor-sheet.html",
+            classes: ["blades68", "sheet", "actor", "pc"],
+            template: "systems/blades68/templates/actor-sheet.html",
             width: 790,
             height: 890,
-            tabs: [{navSelector: ".tabs", contentSelector: ".tab-content", initial: "abilities"}]
+            tabs: [{navSelector: ".tabs", contentSelector: ".tab-content", initial: "character-notes"}]
         });
     }
 
@@ -52,7 +52,7 @@ export class BladesActorSheet extends BladesSheet {
         // Encumbrance Levels
         let load_level;
         let mule_level;
-        if (game.settings.get('blades-in-the-dark', 'DeepCutLoad')) {
+        if (game.settings.get('blades68', 'DeepCutLoad')) {
             load_level = ["BITD.Discreet", "BITD.Discreet", "BITD.Discreet", "BITD.Discreet", "BITD.Discreet", "BITD.Conspicuous", "BITD.Conspicuous", "BITD.Encumbered",
                 "BITD.Encumbered", "BITD.Encumbered", "BITD.OverMax", "BITD.OverMax"];
             mule_level = ["BITD.Discreet", "BITD.Discreet", "BITD.Discreet", "BITD.Discreet", "BITD.Discreet", "BITD.Discreet", "BITD.Discreet", "BITD.Conspicuous",
@@ -81,7 +81,7 @@ export class BladesActorSheet extends BladesSheet {
             sheetData.system.load_level = load_level[loadout];
         }
 
-        if (game.settings.get('blades-in-the-dark', 'DeepCutLoad')) {
+        if (game.settings.get('blades68', 'DeepCutLoad')) {
             sheetData.system.load_levels = {"BITD.Discreet": "BITD.Discreet", "BITD.Conspicuous": "BITD.Conspicuous"};
         } else {
             sheetData.system.load_levels = {
@@ -106,7 +106,90 @@ export class BladesActorSheet extends BladesSheet {
         //check for healing minimums
         sheetData.system.healing_clock.value = this.actor.getHealingMin();
 
+        sheetData.blades68 = game.settings.get('blades68', 'Blades68Mode');
+        sheetData.blades68Keys = game.system.blades68Keys;
+        sheetData.system.keys.list = this.actor.getComputedKeys().map((slot) => ({
+            ...slot,
+            deadlockOptions: BladesHelpers.getDeadlockedKeysFor(slot.key),
+        }));
+
+        // Special Abilities & Loadout: the full catalog of the equipped class's abilities/items
+        // (checkbox lists), plus anything the actor owns that falls outside that catalog
+        // (Veteran picks, homebrew additions, or no class equipped yet).
+        const selectedClass = this.actor.items.find(i => i.type === "class") ?? null;
+        sheetData.selectedClass = selectedClass;
+
+        const abilityResult = await this._buildCatalog("ability", selectedClass);
+        sheetData.abilityCatalog = abilityResult.catalog;
+        sheetData.otherAbilities = abilityResult.other;
+        sheetData.abilityShortList = abilityResult.catalog
+            .filter(a => a.ownedCount > 0)
+            .map(a => a.name)
+            .concat(abilityResult.other.map(i => BladesHelpers.trimClassFromName(i.name)))
+            .join(" - ");
+
+        const itemResult = await this._buildCatalog("item", selectedClass, { slotsField: "num_available" });
+        sheetData.itemCatalog = itemResult.catalog;
+        sheetData.otherItems = itemResult.other.map(i => ({
+            _id: i.id,
+            name: i.name,
+            system: i.system,
+            description: BladesHelpers.stripHtml(i.system?.description || "")
+        }));
+
         return sheetData;
+    }
+
+    /* -------------------------------------------- */
+
+    /**
+     * Builds a checklist catalog for the actor's equipped class: every item of the given type
+     * tagged with that class's name, merged with the actor's owned items of that type to
+     * determine how many of each are already carried. Owned items that don't belong to the
+     * catalog (e.g. a Veteran pick from another class, or homebrew additions) are returned
+     * separately so nothing owned is ever hidden.
+     *
+     * @param {string} itemType - "ability" or "item"
+     * @param {Item|null} selectedClass
+     * @param {{slotsField?: string}} [options] - system field naming how many owned copies the
+     *   catalog entry supports (e.g. "num_available"); omit for a single-checkbox entry.
+     * @returns {Promise<{catalog: Array, other: Array}>}
+     */
+    async _buildCatalog(itemType, selectedClass, { slotsField } = {}) {
+        const owned = this.actor.items.filter(i => i.type === itemType);
+
+        if (!selectedClass) {
+            return { catalog: [], other: owned };
+        }
+
+        const allSource = await BladesHelpers.getAllItemsByType(itemType);
+        const className = selectedClass.name;
+
+        const seen = new Set();
+        const catalog = [];
+        for (const source of allSource) {
+            if ((source.system?.class || "") !== className) continue;
+            const displayName = BladesHelpers.trimClassFromName(source.name);
+            if (seen.has(displayName)) continue;
+            seen.add(displayName);
+
+            const slots = slotsField ? Math.max(1, parseInt(source.system?.[slotsField]) || 1) : 1;
+            const ownedMatches = owned.filter(i => BladesHelpers.trimClassFromName(i.name) === displayName);
+            catalog.push({
+                id: source.id,
+                name: displayName,
+                description: BladesHelpers.stripHtml(source.system?.description || ""),
+                slots,
+                slotIndexes: Array.from({ length: slots }, (_, i) => i + 1),
+                ownedCount: ownedMatches.length
+            });
+        }
+        catalog.sort((a, b) => a.name.localeCompare(b.name));
+
+        const catalogNames = new Set(catalog.map(c => c.name));
+        const other = owned.filter(i => !catalogNames.has(BladesHelpers.trimClassFromName(i.name)));
+
+        return { catalog, other };
     }
 
     /** @override **/
@@ -171,6 +254,120 @@ export class BladesActorSheet extends BladesSheet {
             BladesHelpers.addCustomContact(this.actor);
         });
 
+        // Add a Key
+        html.find('.add-key-popup').click(() => {
+            BladesHelpers.addKeyPopup(this.actor);
+        });
+
+        // Key / deadlock / XP edits update one slot via full-list write so Foundry form
+        // submit cannot replace system.keys.list and blank sibling slots.
+        html.find('.key-select').on('change', async (ev) => {
+            await this._updateKeySlotField(ev, 'key', ev.currentTarget.value);
+        });
+        html.find('.deadlocked-to-select').on('change', async (ev) => {
+            await this._updateKeySlotField(ev, 'deadlocked_to', ev.currentTarget.value);
+        });
+        // todo
+        html.find('.key-marks input[type="radio"]').on('change', async (ev) => {
+            if (!ev.currentTarget.checked) return;
+            await this._updateKeySlotField(ev, 'experience', Number(ev.currentTarget.value));
+        });
+
+        // Deadlock toggle: check opens a choice popup; uncheck clears deadlocked_to.
+        // Managed via actor.update (checkbox has no form name) so cancel leaves the row unlocked.
+        html.find('.key-boom input').on('click', async (ev) => {
+            ev.preventDefault();
+            const slotIndex = Number(ev.currentTarget.closest('.key-slot')?.dataset?.slotIndex);
+            if (!Number.isInteger(slotIndex) || slotIndex < 0) return;
+
+            const slot = this.actor.getComputedKeys()[slotIndex];
+            if (slot?.deadlocked) {
+                await BladesHelpers.clearKeyDeadlock(this.actor, slotIndex);
+            } else {
+                await BladesHelpers.deadlockKeyPopup(this.actor, slotIndex);
+            }
+        });
+
+        // Special Abilities / Loadout catalogs: each row's checked box count is reconciled
+        // against how many matching items the actor actually owns (creating/deleting the
+        // difference), which is what lets multi-slot Loadout entries (e.g. 2 Bandoliers) work
+        // with plain checkboxes instead of a single owned/not-owned toggle.
+        html.find('.catalog-toggle').change(async (ev) => {
+            const row = ev.currentTarget.closest('.catalog-item');
+            if (!row) return;
+            const itemType = row.dataset.itemType;
+            const itemName = row.dataset.itemName;
+            const sourceId = row.dataset.sourceId;
+            const checkedCount = row.querySelectorAll('.catalog-toggle:checked').length;
+
+            const owned = this.actor.items.filter(i => i.type === itemType && BladesHelpers.trimClassFromName(i.name) === itemName);
+            const diff = checkedCount - owned.length;
+
+            if (diff > 0) {
+                const source = await BladesHelpers.getItemByType(itemType, sourceId);
+                if (!source) return;
+                const data = source.toObject();
+                delete data._id;
+                const toCreate = Array.from({ length: diff }, () => foundry.utils.deepClone(data));
+                await this.actor.createEmbeddedDocuments("Item", toCreate);
+            } else if (diff < 0) {
+                const toDelete = owned.slice(0, -diff).map(i => i.id);
+                await this.actor.deleteEmbeddedDocuments("Item", toDelete);
+            }
+        });
+
+        // Owned items outside the class catalog (Veteran picks, homebrew additions): a plain
+        // checkbox marking whether the item is carried/in-use, persisted on system.equipped.
+        html.find('.item-equipped-toggle').change(async (ev) => {
+            const itemId = ev.currentTarget.dataset.itemId;
+            const item = this.actor.items.get(itemId);
+            if (!item) return;
+            await item.update({ "system.equipped": ev.currentTarget.checked });
+        });
+
+        // Remove an owned item that falls outside the class catalog.
+        html.find('.other-item-delete').click(async (ev) => {
+            const row = ev.currentTarget.closest('.other-item');
+            if (!row) return;
+            await this.actor.deleteEmbeddedDocuments("Item", [row.dataset.itemId]);
+        });
+
+    }
+
+    /**
+     * Patch one field on one Key slot and write the full normalized list.
+     * @param {Event} ev
+     * @param {"key"|"experience"|"deadlocked_to"} field
+     * @param {string|number} value
+     */
+    async _updateKeySlotField(ev, field, value) {
+        const slotIndex = Number(ev.currentTarget.closest('.key-slot')?.dataset?.slotIndex);
+        if (!Number.isInteger(slotIndex) || slotIndex < 0) return;
+
+        const keysList = this.actor.getComputedKeys();
+        if (!keysList[slotIndex]) return;
+        keysList[slotIndex][field] = value;
+        await this.actor.update({ "system.keys.list": keysList });
+    }
+
+    /**
+     * Drop ephemeral Key XP radio names (and any stray system.keys.* paths) so a
+     * normal sheet form submit cannot stomp Key slots.
+     * @override
+     */
+    _getSubmitData(updateData = {}) {
+        const data = super._getSubmitData(updateData);
+        const flat = foundry.utils.flattenObject(data);
+        for (const key of Object.keys(flat)) {
+            if (key.startsWith("key-xp-") || key.startsWith("system.keys")) {
+                delete flat[key];
+            }
+        }
+        const cleaned = foundry.utils.expandObject(flat);
+        if (cleaned.system?.keys !== undefined) {
+            delete cleaned.system.keys;
+        }
+        return cleaned;
     }
 
 }

@@ -7,19 +7,17 @@ import { openFormDialog } from "./lib/dialog-compat.js";
  * @extends {Actor}
  */
 export class BladesActor extends Actor {
-
   /** @override */
-  static async create(data, options={}) {
-
+  static async create(data, options = {}) {
     data.prototypeToken = data.prototypeToken || {};
 
     // For Crew and Character set the Token to sync with charsheet.
     switch (data.type) {
-      case 'character':
-      case 'crew':
-      case '\uD83D\uDD5B clock':
-	  case 'npc':
-	  case 'factions':
+      case "character":
+      case "crew":
+      case "\uD83D\uDD5B clock":
+      case "npc":
+      case "factions":
         data.prototypeToken.actorLink = true;
         break;
     }
@@ -41,17 +39,19 @@ export class BladesActor extends Actor {
    * Calculate Attribute Dice to throw.
    */
   getAttributeDiceToThrow() {
-
     // Calculate Dice to throw.
     let dice_amount = {};
-    dice_amount['BITD.Vice'] = 4;
+    dice_amount["BITD.Vice"] = 4;
 
     for (var attribute_name in this.system.attributes) {
       //dice_amount[attribute_name] = 0;
-	  dice_amount[attribute_name] = this.system.attributes[attribute_name].bonus;
+      dice_amount[attribute_name] =
+        this.system.attributes[attribute_name].bonus;
       for (var skill_name in this.system.attributes[attribute_name].skills) {
-       // dice_amount[skill_name] = parseInt(this.system.attributes[attribute_name].skills[skill_name]['value'][0])
-        dice_amount[skill_name] = parseInt(this.system.attributes[attribute_name].skills[skill_name]['value'])
+        // dice_amount[skill_name] = parseInt(this.system.attributes[attribute_name].skills[skill_name]['value'][0])
+        dice_amount[skill_name] = parseInt(
+          this.system.attributes[attribute_name].skills[skill_name]["value"],
+        );
 
         // We add a +1d for every skill higher than 0.
         if (dice_amount[skill_name] > 0) {
@@ -59,7 +59,11 @@ export class BladesActor extends Actor {
         }
       }
       // Vice dice roll uses lowest attribute dice amount
-      dice_amount['BITD.Vice'] = Math.min(dice_amount['insight'],dice_amount['prowess'],dice_amount['resolve']);
+      dice_amount["BITD.Vice"] = Math.min(
+        dice_amount["insight"],
+        dice_amount["prowess"],
+        dice_amount["resolve"],
+      );
     }
 
     return dice_amount;
@@ -77,7 +81,6 @@ export class BladesActor extends Actor {
   /* -------------------------------------------- */
 
   async rollAttributePopup(attribute_name, defaultDice = 0) {
-
     // const roll = new Roll("1d20 + @abilities.wis.mod", actor.getRollData());
     let attribute_label = BladesHelpers.getRollLabel(attribute_name);
 
@@ -99,38 +102,42 @@ export class BladesActor extends Actor {
     }
 
     let content = `
-        <h2>${game.i18n.localize('BITD.Roll')} ${game.i18n.localize(attribute_label)}</h2>
         <form class="bitd-roll-dialog">
           <div class="form-group">
-            <label>${game.i18n.localize('BITD.Modifier')}:</label>
+            <label>${game.i18n.localize("BITD.Modifier")}:</label>
             <select id="mod" name="mod">
-              ${this.createListOfDiceMods(-3,+3,0)}
+              ${this.createListOfDiceMods(-3, +3, 0)}
             </select>
           </div>`;
     if (BladesHelpers.isAttributeAction(attribute_name)) {
       content += `
         <fieldset class="form-group" style="display:grid; gap:0.5em;">
           <legend>Roll Types</legend>`;
-		// Row 1: Action Roll (if enabled)
-		if (game.settings.get('blades-in-the-dark', 'ActionRoll')) {
-		  content += `
+      // Row 1: Action Roll (if enabled)
+      if (game.settings.get("blades68", "ActionRoll")) {
+        content += `
           <div style="display:grid; grid-template-columns:auto auto auto; gap:0.5em 1em; align-items:center;">
             <label><input type="radio" id="actionRoll" name="rollSelection" value="actionRoll" checked=true> ${game.i18n.localize("BITD.ActionRoll")}</label>
-            <span><label>${game.i18n.localize('BITD.Position')}:</label> <select id="pos" name="pos"><option value="controlled">${game.i18n.localize('BITD.PositionControlled')}</option><option value="risky" selected>${game.i18n.localize('BITD.PositionRisky')}</option><option value="desperate">${game.i18n.localize('BITD.PositionDesperate')}</option></select></span>
-            <span><label>${game.i18n.localize('BITD.Effect')}:</label> <select id="fx" name="fx"><option value="limited">${game.i18n.localize('BITD.EffectLimited')}</option><option value="standard" selected>${game.i18n.localize('BITD.EffectStandard')}</option><option value="great">${game.i18n.localize('BITD.EffectGreat')}</option></select></span>
+            <span><label>${game.i18n.localize("BITD.Position")}:</label> <select id="pos" name="pos"><option value="controlled">${game.i18n.localize("BITD.PositionControlled")}</option><option value="risky" selected>${game.i18n.localize("BITD.PositionRisky")}</option><option value="desperate">${game.i18n.localize("BITD.PositionDesperate")}</option></select></span>
+            <span><label>${game.i18n.localize("BITD.Effect")}:</label> <select id="fx" name="fx"><option value="limited">${game.i18n.localize("BITD.EffectLimited")}</option><option value="standard" selected>${game.i18n.localize("BITD.EffectStandard")}</option><option value="great">${game.i18n.localize("BITD.EffectGreat")}</option></select></span>
           </div>`;
-		}
-		// Row 2: Threat Roll (if enabled)
-		if (game.settings.get('blades-in-the-dark', 'ThreatRoll')) {
-		  content += `
+      }
+      // Row 2: Threat Roll (if enabled)
+      if (game.settings.get("blades68", "ThreatRoll")) {
+        content += `
           <div style="display:grid; grid-template-columns:auto auto auto; gap:0.5em 1em; align-items:center;">
             <label><input type="radio" id="threatRoll" name="rollSelection" value="threatRoll" checked=true> ${game.i18n.localize("BITD.ThreatRoll")}</label>
-            <span><label>${game.i18n.localize('BITD.Position')}:</label> <select id="pos2" name="pos2"><option value="risky" selected>${game.i18n.localize('BITD.PositionRisky')}</option><option value="desperate">${game.i18n.localize('BITD.PositionDesperate')}</option></select></span>
-            <span><label>${game.i18n.localize('BITD.ExtraThreats')}:</label> <select id="extraThreats" name="extraThreats">${Array(6).fill().map((item, i) => `<option value="${i}">${i}</option>`).join('')}</select></span>
+            <span><label>${game.i18n.localize("BITD.Position")}:</label> <select id="pos2" name="pos2"><option value="risky" selected>${game.i18n.localize("BITD.PositionRisky")}</option><option value="desperate">${game.i18n.localize("BITD.PositionDesperate")}</option></select></span>
+            <span><label>${game.i18n.localize("BITD.ExtraThreats")}:</label> <select id="extraThreats" name="extraThreats">${Array(
+              6,
+            )
+              .fill()
+              .map((item, i) => `<option value="${i}">${i}</option>`)
+              .join("")}</select></span>
           </div>`;
-		}
-		// Row 3: Other roll types
-		content += `
+      }
+      // Row 3: Other roll types
+      content += `
           <div style="display:grid; grid-template-columns:auto auto auto; column-gap:0.5em; row-gap:0.4em; align-items:center;">
             <label><input type="radio" id="fortune" name="rollSelection" value="fortune"> ${game.i18n.localize("BITD.Fortune")}</label>
             <span style="grid-column:2 / 4;"></span>
@@ -140,31 +147,42 @@ export class BladesActor extends Actor {
             <span style="grid-column:2 / 4;"></span>
             <label><input type="radio" id="engagement" name="rollSelection" value="engagement"> ${game.i18n.localize("BITD.Engagement")}</label>
             <label style="margin:0; justify-self:end; white-space:nowrap;">${game.i18n.localize("BITD.RollNumberOfDice")}:</label>
-            <select id="qty" name="qty" style="width:auto; min-width:4.5em; justify-self:start;">${Array.from({ length: 11 }, (_, i) => { const selected = i === sanitizedDefaultDice ? " selected" : ""; return `<option value="${i}"${selected}>${i}d</option>`; }).join("")}</select>
+            <select id="qty" name="qty" style="width:auto; min-width:4.5em; justify-self:start;">${Array.from(
+              { length: 11 },
+              (_, i) => {
+                const selected = i === sanitizedDefaultDice ? " selected" : "";
+                return `<option value="${i}"${selected}>${i}d</option>`;
+              },
+            ).join("")}</select>
             <label><input type="radio" id="acquireAsset" name="rollSelection" value="acquireAsset"> ${game.i18n.localize("BITD.AcquireAsset")}</label>
-            <label style="margin:0; justify-self:end; white-space:nowrap;">${game.i18n.localize('BITD.CrewTier')}:</label>
-            <select id="tier" name="tier" style="width:auto; min-width:4.5em; justify-self:start;"><option value="${current_tier}" selected disabled hidden>${current_tier}</option>${Array(5).fill().map((item, i) => `<option value="${i}">${i}</option>`).join('')}</select>
+            <label style="margin:0; justify-self:end; white-space:nowrap;">${game.i18n.localize("BITD.CrewTier")}:</label>
+            <select id="tier" name="tier" style="width:auto; min-width:4.5em; justify-self:start;"><option value="${current_tier}" selected disabled hidden>${current_tier}</option>${Array(
+              5,
+            )
+              .fill()
+              .map((item, i) => `<option value="${i}">${i}</option>`)
+              .join("")}</select>
           </div>
         </fieldset>
             `;
-      } else {
-        content += `
+    } else {
+      content += `
             <input  id="pos" name="pos" type="hidden" value="">
 			<input  id="pos2" name="pos2" type="hidden" value="">
             <input id="fx" name="fx" type="hidden" value="">`;
     }
     content += `
         <div className="form-group">
-          <label>${game.i18n.localize('BITD.Notes')}:</label>
+          <label>${game.i18n.localize("BITD.Notes")}:</label>
           <input id="note" name="note" type="text" value="">
         </div><br/>
        </form>
       `;
     const dialogResult = await openFormDialog({
-      title: `${game.i18n.localize('BITD.Roll')} ${game.i18n.localize(attribute_label)}`,
+      title: `${game.i18n.localize("BITD.Roll")} ${game.i18n.localize(attribute_label)}`,
       content,
-      okLabel: game.i18n.localize('BITD.Roll'),
-      cancelLabel: game.i18n.localize('Close'),
+      okLabel: game.i18n.localize("BITD.Roll"),
+      cancelLabel: game.i18n.localize("Close"),
       defaultButton: "ok",
     });
 
@@ -176,7 +194,7 @@ export class BladesActor extends Actor {
     const note = dialogResult.note ?? "";
     const rollData = this.getRollData();
     const actionDiceAmount = rollData.dice_amount[attribute_name] + modifier;
-    const viceDiceAmount = rollData.dice_amount['BITD.Vice'] + modifier;
+    const viceDiceAmount = rollData.dice_amount["BITD.Vice"] + modifier;
     const stress = Number(this.system.stress.value) || 0;
 
     if (!BladesHelpers.isAttributeAction(attribute_name)) {
@@ -190,58 +208,102 @@ export class BladesActor extends Actor {
 
     switch (rollSelection) {
       case "actionRoll":
-        await this.rollAttribute(attribute_name, modifier, position, effect, note);
+        await this.rollAttribute(
+          attribute_name,
+          modifier,
+          position,
+          effect,
+          note,
+        );
         break;
       case "threatRoll": {
         const extraThreats = Number(dialogResult.extraThreats ?? 0) || 0;
         const position2 = dialogResult.pos2 ?? "risky";
-        await bladesRoll(actionDiceAmount, attribute_name, position2, 'BITD.ThreatRoll', note, extraThreats);
+        await bladesRoll(
+          actionDiceAmount,
+          attribute_name,
+          position2,
+          "BITD.ThreatRoll",
+          note,
+          extraThreats,
+        );
         break;
       }
       case "fortune":
         await bladesRoll(actionDiceAmount, "BITD.Fortune", "", "", note, "");
         break;
       case "gatherInfo":
-        await bladesRoll(actionDiceAmount, "BITD.GatherInformation", "", "", note, "");
+        await bladesRoll(
+          actionDiceAmount,
+          "BITD.GatherInformation",
+          "",
+          "",
+          note,
+          "",
+        );
         break;
       case "indulgeVice":
         await bladesRoll(viceDiceAmount, "BITD.Vice", "", "", note, stress);
         break;
       case "engagement": {
-        const engagementDice = Number(dialogResult.qty ?? sanitizedDefaultDice) || 0;
+        const engagementDice =
+          Number(dialogResult.qty ?? sanitizedDefaultDice) || 0;
         await bladesRoll(engagementDice, "BITD.Engagement", "", "", note, "");
         break;
       }
       case "acquireAsset": {
         const tier = Number(dialogResult.tier ?? current_tier) || 0;
         const assetDice = tier + modifier;
-        await bladesRoll(assetDice, "BITD.AcquireAsset", "", "", note, "", tier);
+        await bladesRoll(
+          assetDice,
+          "BITD.AcquireAsset",
+          "",
+          "",
+          note,
+          "",
+          tier,
+        );
         break;
       }
       default:
-        await this.rollAttribute(attribute_name, modifier, position, effect, note);
+        await this.rollAttribute(
+          attribute_name,
+          modifier,
+          position,
+          effect,
+          note,
+        );
         break;
     }
-
   }
 
   /* -------------------------------------------- */
 
-  async rollAttribute(attribute_name = "", additional_dice_amount = 0, position, effect, note) {
-
+  async rollAttribute(
+    attribute_name = "",
+    additional_dice_amount = 0,
+    position,
+    effect,
+    note,
+  ) {
     let dice_amount = 0;
     if (attribute_name !== "") {
       let roll_data = this.getRollData();
       dice_amount += roll_data.dice_amount[attribute_name];
-    }
-    else {
+    } else {
       dice_amount = 1;
     }
     dice_amount += additional_dice_amount;
 
-    await bladesRoll(dice_amount, attribute_name, position, effect, note, this.system.stress.value);
+    await bladesRoll(
+      dice_amount,
+      attribute_name,
+      position,
+      effect,
+      note,
+      this.system.stress.value,
+    );
   }
-
 
   /* -------------------------------------------- */
 
@@ -250,27 +312,23 @@ export class BladesActor extends Actor {
    *  which can be performed.
    */
   createListOfActions() {
-
     let text, attribute, skill;
     let attributes = this.system.attributes;
 
-    for ( attribute in attributes ) {
-
+    for (attribute in attributes) {
       const skills = attributes[attribute].skills;
 
       text += `<optgroup label="${attribute} Actions">`;
       text += `<option value="${attribute}">${attribute} (Resist)</option>`;
 
-      for ( skill in skills ) {
+      for (skill in skills) {
         text += `<option value="${skill}">${skill}</option>`;
       }
 
       text += `</optgroup>`;
-
     }
 
     return text;
-
   }
 
   /* -------------------------------------------- */
@@ -286,19 +344,20 @@ export class BladesActor extends Actor {
    *  Selected die
    */
   createListOfDiceMods(rs, re, s) {
-
     var text = ``;
     var i = 0;
 
-    if ( s == "" ) {
+    if (s == "") {
       s = 0;
     }
 
-    for ( i  = rs; i <= re; i++ ) {
+    for (i = rs; i <= re; i++) {
       var plus = "";
-      if ( i >= 0 ) { plus = "+" };
+      if (i >= 0) {
+        plus = "+";
+      }
       text += `<option value="${i}"`;
-      if ( i == s ) {
+      if (i == s) {
         text += ` selected`;
       }
 
@@ -306,28 +365,30 @@ export class BladesActor extends Actor {
     }
 
     return text;
-
   }
 
   /* -------------------------------------------- */
   getComputedAttributes() {
     let attributes = this.system.attributes;
-    for( const a in attributes ) {
-      for( const s in attributes[a].skills ) {
-        if( attributes[a].skills[s].max === undefined || attributes[a].skills[s].max === 4){
+    for (const a in attributes) {
+      for (const s in attributes[a].skills) {
+        if (
+          attributes[a].skills[s].max === undefined ||
+          attributes[a].skills[s].max === 4
+        ) {
           attributes[a].skills[s].max = 3;
         }
-		
-		//include Active Effect alterations to skill minimums
-        if( attributes[a].skills[s].value <= attributes[a].skills[s].min ) { 
+
+        //include Active Effect alterations to skill minimums
+        if (attributes[a].skills[s].value <= attributes[a].skills[s].min) {
           attributes[a].skills[s].value = attributes[a].skills[s].min;
         }
       }
     }
     //check for mastery
     if (this.getHasMastery()) {
-      for( const b in attributes ) {
-        for( const t in attributes[b].skills ) {
+      for (const b in attributes) {
+        for (const t in attributes[b].skills) {
           if (attributes[b].skills[t].max === 3) {
             attributes[b].skills[t].max = 4;
           }
@@ -361,21 +422,58 @@ export class BladesActor extends Actor {
     return max_trauma;
   }
 
-  getHasMastery(){
+  getHasMastery() {
     const crew_actor = this._getCrewActor();
     if (!crew_actor) {
       return false;
     }
     return Boolean(crew_actor?.system?.scoundrel?.mastery);
   }
-  
-  getHealingMin(){
-	let current_healing = parseInt(this.system.healing_clock.value);
-	if (current_healing < this.system.healing_clock.min) {
-		current_healing = this.system.healing_clock.min;
-	}
-	return current_healing;
+
+  getHealingMin() {
+    let current_healing = parseInt(this.system.healing_clock.value);
+    if (current_healing < this.system.healing_clock.min) {
+      current_healing = this.system.healing_clock.min;
+    }
+    return current_healing;
   }
 
-	
+  /**
+   * Keys/Deadlocks self-heal: older actors (and the pre-fix template default) only ever
+   * seeded a single, non-empty "example" slot, which left no empty slot for Add Key to fill
+   * and only rendered 1 of the intended 5 rows. Pad the list up to system.keys.max with empty
+   * slots and normalize any leftover "example" placeholder to an empty, addable slot.
+   *
+   * Also migrates legacy per-slot fields (`marks` → `experience`, `boomed` → `deadlocked`)
+   * and guarantees every slot has the canonical shape:
+   * `{ key, experience, deadlocked, deadlocked_to }`.
+   */
+  getComputedKeys() {
+    const max = this.system.keys?.max ?? 5;
+    const rawList = this.system.keys?.list ?? [];
+    // Partial dot-notation updates (e.g. "system.keys.list.0.key") can leave Foundry's merge
+    // with a plain object keyed by index ({"0": {...}, "1": {...}}) instead of a real array;
+    // normalize either shape back into an array before working with it.
+    const asArray = Array.isArray(rawList) ? rawList : Object.values(rawList);
+    const list = foundry.utils.deepClone(asArray);
+    const emptySlot = () => ({ key: "", experience: 0, deadlocked: false, deadlocked_to: "" });
+    const normalized = list.map((slot) => {
+      const key = slot?.key === "example" ? "" : (slot?.key ?? "");
+      const experience = Number(
+        slot?.experience ?? slot?.marks ?? 0
+      );
+      const deadlocked = Boolean(slot?.deadlocked ?? slot?.boomed ?? false);
+      const deadlocked_to = deadlocked ? String(slot?.deadlocked_to ?? "") : "";
+      return {
+        key,
+        experience: Number.isFinite(experience) ? Math.max(0, Math.min(3, experience)) : 0,
+        deadlocked,
+        deadlocked_to,
+      };
+    });
+    while (normalized.length < max) {
+      normalized.push(emptySlot());
+    }
+    return normalized;
+  }
 }

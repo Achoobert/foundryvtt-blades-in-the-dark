@@ -1,0 +1,49 @@
+/*
+ * Blades '68 bright theme.
+ * Applied only when the sheet root also carries .blades68-theme
+ * (toggled via the "Blades68Mode" world setting, see module/blades-sheet.js).
+ * Overrides the base noir near-black/parchment palette with a brighter,
+ * higher-saturation "future Doskvol" look.
+ */
+& {
+  background-color: #eef6ff;
+  color: #101425;
+}
+& .window-content {
+  background-color: #eef6ff;
+}
+& .black-label,
+& .label-stripe,
+& .label-stripe-chat {
+  background-color: #7b2ff7;
+  color: #ffffff;
+}
+& .gray-label,
+& .label-stripe-gray,
+& .label-stripe-chat-small {
+  background-color: #00d1c1;
+  color: #101425;
+}
+& a.item-add-popup,
+& .rollable-text {
+  color: #ff5da2;
+}
+& .rollable-text:hover {
+  color: #ffb703;
+}
+& input[type=text],
+& input[type=number],
+& textarea,
+& select {
+  background-color: #ffffff;
+  color: #101425;
+  border-color: #7b2ff7;
+}
+& .keys-container .black-label {
+  background-color: #ff5da2;
+}
+& .keys-container .key-drift {
+  color: #7b2ff7;
+}
+
+/*# sourceMappingURL=blades68-theme.css.map */

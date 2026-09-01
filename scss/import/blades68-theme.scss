@@ -1,0 +1,76 @@
+/*
+ * Blades '68 theme.
+ * Applied only when the sheet root also carries .blades68-theme
+ * (toggled via the "Blades68Mode" world setting, see module/blades-sheet.js).
+ * Palette matches the reference build's CSS custom properties (--b68-*).
+ */
+
+$b68-bg: #e9e4ce; // --b68-parchment
+$b68-bg-alt: #ddd7be; // --b68-parchment-header
+$b68-ink: #220e10; // --b68-ink
+$b68-header: #4c372a; // --b68-brown
+$b68-header-text: #e9e4ce; // --b68-parchment
+$b68-accent: #eb5000; // --b68-accent
+$b68-accent-2: #dad1bc; // --b68-parchment-dark
+$b68-gold: #e8c05b; // --b68-parchment-sheet-tabs
+$b68-border: #795c4a; // --b68-brown-light
+
+& {
+  background-color: $b68-bg;
+  color: $b68-ink;
+
+  .window-content {
+    background-color: $b68-bg;
+  }
+
+  .black-label,
+  .label-stripe,
+  .label-stripe-chat {
+    background-color: $b68-header;
+    color: $b68-header-text;
+  }
+
+  .gray-label,
+  .label-stripe-gray,
+  .label-stripe-chat-small {
+    background-color: $b68-accent-2;
+    color: $b68-ink;
+  }
+
+  a.item-add-popup,
+  .rollable-text {
+    color: $b68-accent;
+  }
+  .rollable-text:hover {
+    color: $b68-gold;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  select {
+    background-color: $b68-bg-alt;
+    color: $b68-ink;
+    border-color: $b68-border;
+  }
+
+  .section-header {
+    background-color: $b68-header;
+    color: $b68-header-text;
+  }
+
+  .keys-container {
+    .keys-header {
+      background: linear-gradient(to right, $b68-header 0%, $b68-header 68%, $b68-accent 68%, $b68-accent 100%);
+      color: $b68-header-text;
+    }
+
+    .key-drift {
+      color: $b68-header;
+    }
+
+    .key-boom input:checked + i {
+      color: $b68-accent;
+    }
+  }
+}

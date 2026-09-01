@@ -39,6 +39,73 @@ Hooks.once("init", async function() {
 
   game.system.traumas = [ "cold", "haunted", "obsessed", "paranoid", "reckless", "soft", "unstable", "vicious" ];
 
+  // Blades '68 personality Keys (see lang/en.json BITD.Key*/BITD.Key*Drift entries).
+  // deadlockedKeys are the two drift outcomes (▼ / ▲) that become selectable when a Key is deadlocked.
+  const blades68DeadlockedKeys = {
+    Arrogant: ["humbled", "self-obsessed"],
+    Bitter: ["affable", "vindictive"],
+    Blunt: ["diplomatic", "caustic"],
+    Bold: ["nervous", "reckless"],
+    Brooding: ["morose", "untroubled"],
+    Calculating: ["apathetic", "paranoid"],
+    Charismatic: ["cold", "manipulative"],
+    Cold: ["brutal", "friendly"],
+    Comical: ["serious", "unhinged"],
+    Commanding: ["deferential", "controlling"],
+    Confident: ["insecure", "arrogant"],
+    Cool: ["jittery", "cold"],
+    Curious: ["disinterested", "possessed"],
+    Cynical: ["optimistic", "nihilist"],
+    Dedicated: ["cynical", "obsessed"],
+    Defiant: ["compliant", "furious"],
+    Determined: ["laid-back", "obsessed"],
+    Disciplined: ["loose", "uptight"],
+    Distant: ["warm", "cold"],
+    Eccentric: ["ordinary", "erratic"],
+    Enigmatic: ["open", "reclusive"],
+    Enthusiastic: ["apathetic", "reckless"],
+    Erratic: ["calm", "chaotic"],
+    Fearless: ["nervous", "turbulent"],
+    Flamboyant: ["demure", "self-obsessed"],
+    Haunted: ["self-assured", "tormented"],
+    Hopeful: ["cynical", "content"],
+    Idealistic: ["cynical", "zealous"],
+    Insecure: ["confident", "anxious"],
+    Kind: ["cold", "charitable"],
+    Laidback: ["indifferent", "tense"],
+    Lonely: ["social", "loner"],
+    Loyal: ["selfish", "self-sacrificing"],
+    Meticulous: ["sloppy", "obsessive"],
+    Openminded: ["rigid", "reckless"],
+    Passionate: ["apathetic", "furious"],
+    Playful: ["serious", "unhinged"],
+    Professional: ["casual", "heartless"],
+    Protective: ["cold", "vengeful"],
+    Rational: ["irregular", "uncaring"],
+    Reckless: ["careful", "chaotic"],
+    Romantic: ["cynical", "in-love"],
+    Sad: ["content", "miserable"],
+    Sardonic: ["grim", "witty"],
+    Sharp: ["dulled", "searing"],
+    Shy: ["open", "withdrawn"],
+    Soft: ["hard", "passive"],
+    Sophisticated: ["modest", "pretentious"],
+    Spiritual: ["cynical", "obsessed"],
+    Stubborn: ["flexible", "pig-headed"],
+    Suspicious: ["trusting", "paranoid"],
+    Talkative: ["quiet", "long-winded"],
+    Tired: ["rejuvenated", "defeated"],
+    Violent: ["merciful", "vicious"],
+    Witty: ["serious", "goofy"],
+  };
+
+  game.system.blades68Keys = Object.keys(blades68DeadlockedKeys).map(name => ({
+    id: name,
+    label: `BITD.Key${name}`,
+    drift: `BITD.Key${name}Drift`,
+    deadlockedKeys: blades68DeadlockedKeys[name],
+  }));
+
   CONFIG.Item.documentClass = BladesItem;
   CONFIG.Actor.documentClass = BladesActor;
   CONFIG.ActiveEffect.documentClass = BladesActiveEffect;
@@ -47,7 +114,7 @@ Hooks.once("init", async function() {
   registerSystemSettings();
 
 
-  if (game.settings.get('blades-in-the-dark', "PublicClocks")) {
+  if (game.settings.get('blades68', "PublicClocks")) {
 	Hooks.on("preCreateActor", (actor, createData, options, userId) => {
 		if (actor.type === "\uD83D\uDD5B clock") {
 			actor.updateSource({
@@ -133,6 +200,22 @@ Hooks.once("init", async function() {
     return (a - 1);
   });
 
+  // True if one of the given Key options has this id (used to fall back to a plain
+  // <option> for custom Key text that doesn't match a catalog entry).
+  Handlebars.registerHelper('keyOptionExists', (options, key) => {
+    return (options || []).some(opt => opt.id === key);
+  });
+
+  // True if a value is in an array (used for custom deadlocked_to fallback options).
+  Handlebars.registerHelper('includes', (arr, value) => {
+    return Array.isArray(arr) && arr.includes(value);
+  });
+
+  // True if the actor owns at least one item of the given type (used to hide trait labels).
+  Handlebars.registerHelper('hasItemType', (items, type) => {
+    return (items || []).some(i => i?.type === type);
+  });
+
 	//Reputation and Turf Bar on Crew Sheet
     Handlebars.registerHelper('repturf', (_id, turfs_amount, max_rep, options) => {
 
@@ -141,7 +224,7 @@ Hooks.once("init", async function() {
     for (let i = 1; i <= max_rep; i++) {
 
       if (i > max_rep - turfs_amount_int) {
-		  html += `<input disabled type="radio" id="crew-${_id}-reputation-${i}" name="system.reputation" value="${i} dtype="Radio"><label style="background-image: url('systems/blades-in-the-dark/styles/assets/teeth/stresstooth-black.png')" class="radio-toggle" for="crew-${_id}-reputation-${i}"></label>`;
+        html += `<input disabled type="radio" id="crew-${_id}-reputation-${i}" name="system.reputation" value="${i} dtype="Radio"><label style="background-image: url('systems/blades-in-the-dark/styles/assets/blades68/stresspill_filled.png')" class="radio-toggle" for="crew-${_id}-reputation-${i}"></label>`;
 	  } else {
 	  html += `<input type="radio" id="crew-${_id}-reputation-${i}" name="system.reputation" value="${i}" dtype="Radio"><label class="radio-toggle" for="crew-${_id}-reputation-${i}"></label>`;
 	  }
@@ -311,7 +394,7 @@ Hooks.once("init", async function() {
   
   // check for game settings
   Handlebars.registerHelper('getSetting', function( string ) {
-	  return (game.settings.get('blades-in-the-dark', string));
+	  return (game.settings.get('blades68', string));
 
   });
 });

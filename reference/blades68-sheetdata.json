@@ -1,0 +1,1994 @@
+{
+  "crew": {
+    "dealers": {
+      "base": {
+        "claim_10_desc": "claim_vip_clients_description",
+        "claim_10_name": "claim_vip_clients",
+        "claim_11_desc": "claim_branding_description",
+        "claim_11_name": "claim_branding",
+        "claim_12_desc": "claim_money_laundering_description",
+        "claim_12_name": "claim_money_laundering",
+        "claim_13_desc": "claim_top_secret_intel_description",
+        "claim_13_name": "claim_top_secret_intel",
+        "claim_14_desc": "claim_money_laundering_description",
+        "claim_14_name": "claim_money_laundering",
+        "claim_15_desc": "claim_monopoly_description",
+        "claim_15_name": "claim_monopoly",
+        "claim_16_desc": "claim_turf_dealers_description",
+        "claim_16_name": "claim_turf",
+        "claim_17_desc": "claim_turf_dealers_description",
+        "claim_17_name": "claim_turf",
+        "claim_18_desc": "claim_turf_dealers_description",
+        "claim_18_name": "claim_turf",
+        "claim_19_desc": "claim_turf_dealers_description",
+        "claim_19_name": "claim_turf",
+        "claim_1_desc": "claim_local_supplier_description",
+        "claim_1_name": "claim_local_supplier",
+        "claim_20_desc": "claim_turf_dealers_description",
+        "claim_20_name": "claim_turf",
+        "claim_2_desc": "claim_local_supplier_description",
+        "claim_2_name": "claim_local_supplier",
+        "claim_3_desc": "claim_smuggler_description",
+        "claim_3_name": "claim_smuggler",
+        "claim_4_desc": "claim_manufacturer_description",
+        "claim_4_name": "claim_manufacturer",
+        "claim_5_desc": "claim_airship_description",
+        "claim_5_name": "claim_airship",
+        "claim_6_desc": "claim_local_fiends_description",
+        "claim_6_name": "claim_local_fiends",
+        "claim_7_desc": "claim_citywide_description",
+        "claim_7_name": "claim_citywide",
+        "claim_8_desc": "claim_luxury_venue2_description",
+        "claim_8_name": "claim_luxury_venue2",
+        "claim_9_desc": "claim_key_influencer_description",
+        "claim_9_name": "claim_key_influencer",
+        "claim_bridge_10_15": "0",
+        "claim_bridge_11_16": "0",
+        "claim_bridge_12_17": "0",
+        "claim_bridge_13_18": "0",
+        "claim_bridge_14_19": "0",
+        "claim_bridge_15_20": "0",
+        "claim_bridge_1_6": "0",
+        "claim_bridge_2_7": "1",
+        "claim_bridge_3_8": "0",
+        "claim_bridge_4_9": "0",
+        "claim_bridge_5_10": "0",
+        "claim_bridge_6_11": "0",
+        "claim_bridge_6_7": "0",
+        "claim_bridge_7_12": "1",
+        "claim_bridge_8_13": "0",
+        "claim_bridge_9_14": "0",
+        "cohort1_subtype": "hustlers",
+        "crew_description": "crew_dealers_description",
+        "crew_xp_condition": "crew_dealers_xp_condition",
+        "hunting_grounds_blurb": "crew_dealers_hunting_grounds_blurb",
+        "hunting_grounds_description": "crew_dealers_hunting_grounds_description",
+        "hunting_grounds_type": "crew_dealers_hunting_grounds_type",
+        "setting_show_dealer_claims": "1",
+        "specialclaim_13_check": "1",
+        "specialclaim_15_check": "1",
+        "upgrade_14_check_1": "1"
+      },
+      "crewability": [
+        "first_ones_free",
+        "like_candy",
+        "on_retainer",
+        "cat_and_mouse",
+        "double_blind",
+        "payment_in_kind",
+        "benefactor",
+        "versatile"
+      ],
+      "upgrade": [
+        {
+          "name": "crew_upgrade_intriguing",
+          "numboxes": "3"
+        },
+        {
+          "name": "crew_upgrade_dealers_rigging",
+          "numboxes": "1"
+        },
+        {
+          "name": "crew_upgrade_elite_hustlers",
+          "numboxes": "1"
+        },
+        {
+          "name": "crew_upgrade_elite_thugs",
+          "numboxes": "1"
+        }
+      ]
+    },
+    "hit_squad": {
+      "base": {
+        "claim_10_desc": "claim_hagfish_farm_description",
+        "claim_10_name": "claim_hagfish_farm",
+        "claim_11_desc": "claim_elusive_target_description",
+        "claim_11_name": "claim_elusive_target",
+        "claim_12_desc": "claim_gambling_hall_description",
+        "claim_12_name": "claim_gambling_hall",
+        "claim_13_desc": "claim_vip_lounge_description",
+        "claim_13_name": "claim_vip_lounge",
+        "claim_14_desc": "claim_dispensary_description",
+        "claim_14_name": "claim_dispensary",
+        "claim_15_desc": "claim_informants_description",
+        "claim_15_name": "claim_informants",
+        "claim_16_desc": "claim_dive_bar_description",
+        "claim_16_name": "claim_dive_bar",
+        "claim_17_desc": "claim_turf_description",
+        "claim_17_name": "claim_turf",
+        "claim_19_desc": "claim_turf_description",
+        "claim_19_name": "claim_turf",
+        "claim_1_desc": "claim_friendly_ink_rake_description",
+        "claim_1_name": "claim_friendly_ink_rake",
+        "claim_20_desc": "claim_clock_the_routine_description",
+        "claim_20_name": "claim_clock_the_routine",
+        "claim_2_desc": "claim_city_records_description",
+        "claim_2_name": "claim_city_records",
+        "claim_3_desc": "claim_legendary_target_description",
+        "claim_3_name": "claim_legendary_target",
+        "claim_4_desc": "claim_double_contract_description",
+        "claim_4_name": "claim_double_contract",
+        "claim_5_desc": "claim_cover_identities_description",
+        "claim_5_name": "claim_cover_identities",
+        "claim_6_desc": "claim_protection_racket_description",
+        "claim_6_name": "claim_protection_racket",
+        "claim_7_desc": "claim_shady_hotel_description",
+        "claim_7_name": "claim_shady_hotel",
+        "claim_8_desc": "claim_detailed_map_description",
+        "claim_8_name": "claim_detailed_map",
+        "claim_9_desc": "claim_cover_operation_description",
+        "claim_9_name": "claim_cover_operation",
+        "claim_bridge_12_13": "0",
+        "claim_bridge_19_20": "0",
+        "claim_bridge_3_8": "0",
+        "claim_bridge_4_9": "0",
+        "claim_bridge_7_12": "0",
+        "claim_bridge_9_14": "0",
+        "cohort1_subtype": "muscle",
+        "crew_description": "crew_hit_squad_description",
+        "crew_xp_condition": "crew_hit_squad_xp_condition",
+        "hunting_grounds_blurb": "crew_hit_squad_hunting_grounds_blurb",
+        "hunting_grounds_description": "crew_hit_squad_hunting_grounds_description",
+        "hunting_grounds_type": "crew_hit_squad_hunting_grounds_type",
+        "specialclaim_11_check": "1",
+        "specialclaim_20_check": "1",
+        "specialclaim_3_check": "2",
+        "specialclaim_4_check": "1",
+        "specialclaim_8_check": "1",
+        "upgrade_21_check_1": "1"
+      },
+      "crewability": [
+        "take_the_shot",
+        "under_the_radar",
+        "chameleons",
+        "cold_storage",
+        "benefactor",
+        "loopers",
+        "professionals",
+        "versatile"
+      ],
+      "upgrade": [
+        {
+          "name": "crew_upgrade_multifaceted",
+          "numboxes": "3"
+        },
+        {
+          "name": "crew_upgrade_assassin_rigging",
+          "numboxes": "1"
+        },
+        {
+          "name": "crew_upgrade_elite_skulks",
+          "numboxes": "1"
+        },
+        {
+          "name": "crew_upgrade_elite_thugs",
+          "numboxes": "1"
+        }
+      ]
+    },
+    "militants": {
+      "base": {
+        "claim_10_desc": "claim_interview_room_description",
+        "claim_10_name": "claim_interview_room",
+        "claim_11_desc": "claim_informants_description",
+        "claim_11_name": "claim_informants",
+        "claim_12_desc": "claim_grassroot_support_description",
+        "claim_12_name": "claim_grassroot_support",
+        "claim_13_desc": "claim_donations_description",
+        "claim_13_name": "claim_donations",
+        "claim_14_desc": "claim_dispensary_description",
+        "claim_14_name": "claim_dispensary",
+        "claim_15_desc": "claim_social_clubs_description",
+        "claim_15_name": "claim_social_clubs",
+        "claim_16_desc": "claim_covert_funding_description",
+        "claim_16_name": "claim_covert_funding",
+        "claim_17_desc": "claim_turf_militants_description",
+        "claim_17_name": "claim_turf",
+        "claim_19_desc": "claim_turf_militants_description",
+        "claim_19_name": "claim_turf",
+        "claim_1_desc": "claim_secret_caches_description",
+        "claim_1_name": "claim_secret_caches",
+        "claim_20_desc": "claim_meeting_hall_description",
+        "claim_20_name": "claim_meeting_hall",
+        "claim_2_desc": "claim_popular_support_description",
+        "claim_2_name": "claim_popular_support",
+        "claim_3_desc": "claim_critical_strike_description",
+        "claim_3_name": "claim_critical_strike",
+        "claim_4_desc": "claim_expropriation_description",
+        "claim_4_name": "claim_expropriation",
+        "claim_5_desc": "claim_hostel_description",
+        "claim_5_name": "claim_hostel",
+        "claim_6_desc": "claim_catalyst_action_description",
+        "claim_6_name": "claim_catalyst_action",
+        "claim_7_desc": "claim_turf_militants_description",
+        "claim_7_name": "claim_turf",
+        "claim_8_desc": "claim_key_conspirator_description",
+        "claim_8_name": "claim_key_conspirator",
+        "claim_9_desc": "claim_turf_militants_description",
+        "claim_9_name": "claim_turf",
+        "claim_bridge_11_12": "0",
+        "claim_bridge_12_17": "0",
+        "claim_bridge_14_19": "0",
+        "claim_bridge_3_8": "0",
+        "claim_bridge_9_10": "0",
+        "cohort1_subtype": "muscle",
+        "crew_description": "crew_militants_description",
+        "crew_xp_condition": "crew_militants_xp_condition",
+        "hunting_grounds_blurb": "crew_militants_hunting_grounds_blurb",
+        "hunting_grounds_description": "crew_militants_hunting_grounds_description",
+        "hunting_grounds_type": "crew_militants_hunting_grounds_type",
+        "specialclaim_12_check": "1",
+        "specialclaim_3_check": "2",
+        "specialclaim_4_check": "1",
+        "specialclaim_6_check": "1",
+        "specialclaim_8_check": "1",
+        "upgrade_22_check_1": "1"
+      },
+      "crewability": [
+        "sympathizers",
+        "mutual_aid",
+        "guerrillas",
+        "on_the_side_of_the_oppressed",
+        "absolute_commitment",
+        "benefactor",
+        "revolutionaries",
+        "versatile"
+      ],
+      "upgrade": [
+        {
+          "name": "crew_upgrade_complicated",
+          "numboxes": "3"
+        },
+        {
+          "name": "crew_upgrade_militant_rigging",
+          "numboxes": "1"
+        },
+        {
+          "name": "crew_upgrade_elite_rovers",
+          "numboxes": "1"
+        },
+        {
+          "name": "crew_upgrade_elite_thugs",
+          "numboxes": "1"
+        }
+      ]
+    },
+    "racers": {
+      "base": {
+        "claim_10_desc": "claim_warehouse_description",
+        "claim_10_name": "claim_warehouse",
+        "claim_11_desc": "claim_big_street_race_description",
+        "claim_11_name": "claim_big_street_race",
+        "claim_12_desc": "claim_lounge_bar_description",
+        "claim_12_name": "claim_lounge_bar",
+        "claim_13_desc": "claim_turf_racers_description",
+        "claim_13_name": "claim_turf",
+        "claim_14_desc": "claim_informants_description",
+        "claim_14_name": "claim_informants",
+        "claim_15_desc": "claim_cover_operation_description",
+        "claim_15_name": "claim_cover_operation",
+        "claim_16_desc": "claim_turf_racers_description",
+        "claim_16_name": "claim_turf",
+        "claim_17_desc": "claim_loyal_fence_description",
+        "claim_17_name": "claim_loyal_fence",
+        "claim_19_desc": "claim_convoy_description",
+        "claim_19_name": "claim_convoy",
+        "claim_1_desc": "claim_ancient_gate_description",
+        "claim_1_name": "claim_weird_old_gate",
+        "claim_20_desc": "claim_bets_placed_description",
+        "claim_20_name": "claim_bets_placed",
+        "claim_2_desc": "claim_weird_old_maps_description",
+        "claim_2_name": "claim_weird_old_maps",
+        "claim_3_desc": "claim_deathlands_race_description",
+        "claim_3_name": "claim_deathlands_race",
+        "claim_4_desc": "claim_secret_hit_description",
+        "claim_4_name": "claim_secret_hit",
+        "claim_5_desc": "claim_gambling_den_description",
+        "claim_5_name": "claim_gambling_den",
+        "claim_6_desc": "claim_secret_routes_description",
+        "claim_6_name": "claim_secret_routes",
+        "claim_7_desc": "claim_turf_racers_description",
+        "claim_7_name": "claim_turf",
+        "claim_8_desc": "claim_turf_racers_description",
+        "claim_8_name": "claim_turf",
+        "claim_9_desc": "claim_chop_shop_description",
+        "claim_9_name": "claim_chop_shop",
+        "claim_bridge_11_12": "0",
+        "claim_bridge_13_14": "0",
+        "claim_bridge_2_7": "0",
+        "claim_bridge_3_8": "0",
+        "claim_bridge_4_9": "0",
+        "claim_bridge_9_14": "0",
+        "crew_description": "crew_racers_description",
+        "crew_xp_condition": "crew_racers_xp_condition",
+        "hunting_grounds_blurb": "crew_racers_hunting_grounds_blurb",
+        "hunting_grounds_description": "crew_racers_hunting_grounds_description",
+        "hunting_grounds_type": "crew_racers_hunting_grounds_type",
+        "setting_show_racers": "1",
+        "specialclaim_11_check": "1",
+        "specialclaim_20_check": "1",
+        "specialclaim_2_check": "1",
+        "specialclaim_3_check": "2",
+        "specialclaim_4_check": "1",
+        "upgrade_18_check_1": "1",
+        "upgrade_6_check_1": "1",
+        "upgrade_6_name": "vehicles",
+        "upgrade_8_name": "heavy_vehicle"
+      },
+      "crewability": [
+        "stunt_riders",
+        "custom_ride",
+        "escape_velocity",
+        "the_family_takes_a_cut",
+        "bring_them_in",
+        "speed_demons",
+        "versatile"
+      ],
+      "upgrade": [
+        {
+          "name": "crew_upgrade_complicated",
+          "numboxes": "3"
+        },
+        {
+          "name": "crew_upgrade_smuggler's_rigging",
+          "numboxes": "1"
+        },
+        {
+          "name": "crew_upgrade_elite_rovers",
+          "numboxes": "1"
+        },
+        {
+          "name": "crew_upgrade_barge",
+          "numboxes": "1"
+        }
+      ]
+    },
+    "shadows": {
+      "base": {
+        "claim_10_desc": "claim_luxury_venue_description",
+        "claim_10_name": "claim_luxury_venue",
+        "claim_11_desc": "claim_jackpot_description",
+        "claim_11_name": "claim_jackpot",
+        "claim_12_desc": "claim_high_stakes_game_description",
+        "claim_12_name": "claim_high_stakes_game",
+        "claim_13_desc": "claim_informants_description",
+        "claim_13_name": "claim_informants",
+        "claim_14_desc": "claim_turf_description",
+        "claim_14_name": "claim_turf",
+        "claim_15_desc": "claim_dispensary_description",
+        "claim_15_name": "claim_dispensary",
+        "claim_16_desc": "claim_turf_description",
+        "claim_16_name": "claim_turf",
+        "claim_17_desc": "claim_luxury_fence_description",
+        "claim_17_name": "claim_luxury_fence",
+        "claim_19_desc": "claim_shadowy_fixer_description",
+        "claim_19_name": "claim_shadowy_fixer",
+        "claim_1_desc": "claim_cover_identities_description",
+        "claim_1_name": "claim_cover_identities",
+        "claim_20_desc": "claim_lounge_bar_description",
+        "claim_20_name": "claim_lounge_bar",
+        "claim_2_desc": "claim_turf_description",
+        "claim_2_name": "claim_turf",
+        "claim_3_desc": "claim_the_big_score_description",
+        "claim_3_name": "claim_the_big_score",
+        "claim_4_desc": "claim_inside_mark_description",
+        "claim_4_name": "claim_inside_mark",
+        "claim_5_desc": "claim_secret_pathways_description",
+        "claim_5_name": "claim_secret_pathways",
+        "claim_6_desc": "claim_paid_off_bluecoats_description",
+        "claim_6_name": "claim_paid_off_bluecoats",
+        "claim_7_desc": "claim_double_jackpot_description",
+        "claim_7_name": "claim_double_jackpot",
+        "claim_8_desc": "claim_vip_status_description",
+        "claim_8_name": "claim_vip_status",
+        "claim_9_desc": "claim_cover_story_description",
+        "claim_9_name": "claim_cover_story",
+        "claim_bridge_12_17": "0",
+        "claim_bridge_14_19": "0",
+        "claim_bridge_3_8": "0",
+        "claim_bridge_6_7": "0",
+        "claim_bridge_9_14": "0",
+        "cohort1_subtype": "infiltrators",
+        "crew_description": "crew_shadows_description",
+        "crew_xp_condition": "crew_shadows_xp_condition",
+        "hunting_grounds_blurb": "crew_shadows_hunting_grounds_blurb",
+        "hunting_grounds_description": "crew_shadows_hunting_grounds_description",
+        "hunting_grounds_type": "crew_shadows_hunting_grounds_type",
+        "specialclaim_11_check": "1",
+        "specialclaim_3_check": "2",
+        "specialclaim_4_check": "1",
+        "specialclaim_7_check": "1",
+        "specialclaim_9_check": "1",
+        "upgrade_10_check_1": "1"
+      },
+      "crewability": [
+        "synchronized_watches",
+        "thieves_with_a_code",
+        "sleepy_time",
+        "dont_forget_the_duffel_bag",
+        "echo_safehouse",
+        "black_bag_operations",
+        "benefactor",
+        "versatile"
+      ],
+      "upgrade": [
+        {
+          "name": "crew_upgrade_multifaceted_shadows",
+          "numboxes": "3"
+        },
+        {
+          "name": "crew_upgrade_underground_maps_&_passkeys",
+          "numboxes": "1"
+        },
+        {
+          "name": "crew_upgrade_elite_hustlers",
+          "numboxes": "1"
+        },
+        {
+          "name": "crew_upgrade_elite_skulks",
+          "numboxes": "1"
+        }
+      ]
+    },
+    "utopians": {
+      "base": {
+        "claim_10_desc": "claim_dispensary_description",
+        "claim_10_name": "claim_natural_healer",
+        "claim_11_desc": "claim_abandoned_lab_description",
+        "claim_11_name": "claim_abandoned_lab",
+        "claim_12_desc": "claim_ancient_altar_description",
+        "claim_12_name": "claim_ancient_altar",
+        "claim_13_desc": "claim_reality_shift_description",
+        "claim_13_name": "claim_reality_shift",
+        "claim_14_desc": "claim_ancient_tower_description",
+        "claim_14_name": "claim_ancient_tower",
+        "claim_15_desc": "claim_ancient_gate_description",
+        "claim_15_name": "claim_ancient_gate",
+        "claim_16_desc": "claim_ancient_tomes_description",
+        "claim_16_name": "claim_ancient_tomes",
+        "claim_17_desc": "claim_notable_skeptic_description",
+        "claim_17_name": "claim_notable_skeptic",
+        "claim_18_desc": "claim_reality_tear_description",
+        "claim_18_name": "claim_reality_tear",
+        "claim_19_desc": "claim_interested_party_description",
+        "claim_19_name": "claim_interested_party",
+        "claim_1_desc": "claim_wellness_class_description",
+        "claim_1_name": "claim_wellness_class",
+        "claim_20_desc": "claim_the_obelisk_description",
+        "claim_20_name": "claim_the_obelisk",
+        "claim_2_name": "claim_turf",
+        "claim_4_name": "claim_turf",
+        "claim_5_desc": "claim_luxury_retreat_description",
+        "claim_5_name": "claim_luxury_retreat",
+        "claim_6_desc": "claim_donations2_description",
+        "claim_6_name": "claim_donations2",
+        "claim_7_name": "claim_turf",
+        "claim_8_desc": "claim_temple_description",
+        "claim_8_name": "claim_temple",
+        "claim_9_name": "claim_turf",
+        "cohort1_subtype": "eggheads",
+        "crew_description": "crew_utopians_description",
+        "crew_xp_condition": "crew_utopians_xp_condition",
+        "hunting_grounds_blurb": "crew_utopians_hunting_grounds_blurb",
+        "hunting_grounds_description": "crew_utopians_hunting_grounds_description",
+        "hunting_grounds_type": "crew_utopians_hunting_grounds_type",
+        "setting_hide_hunting_grounds": "0",
+        "setting_show_anomalies": "1",
+        "setting_show_claim_map": "0",
+        "setting_show_utopian_map": "1",
+        "specialclaim_13_check": "1",
+        "specialclaim_16_check": "1",
+        "specialclaim_17_check": "1",
+        "specialclaim_18_check": "2",
+        "specialclaim_19_check": "1",
+        "upgrade_22_check_1": "1"
+      },
+      "crewability": [
+        "enlightened",
+        "commune",
+        "best_intentions",
+        "zeal",
+        "versatile",
+        "second_circle",
+        "true_believers",
+        "altered_states",
+        "third_circle",
+        "for_the_greater_good",
+        "this_is_fine",
+        "fourth_circle",
+        "remember_the_forgotten",
+        "paradise_manifest",
+        "we_no_longer_play_by_your_rules"
+      ],
+      "upgrade": [
+        {
+          "name": "crew_upgrade_awakened",
+          "numboxes": "3"
+        },
+        {
+          "name": "crew_upgrade_utopians_rigging",
+          "numboxes": "1"
+        },
+        {
+          "name": "crew_upgrade_elite_eggheads",
+          "numboxes": "1"
+        },
+        {
+          "name": "crew_upgrade_elite_thugs",
+          "numboxes": "1"
+        }
+      ]
+    },
+    "vigilantes": {
+      "base": {
+        "claim_10_desc": "claim_infirmary_description",
+        "claim_10_name": "claim_infirmary",
+        "claim_11_desc": "claim_above_the_law_description",
+        "claim_11_name": "claim_above_the_law",
+        "claim_12_desc": "claim_bluecoat_confidants_description",
+        "claim_12_name": "claim_bluecoat_confidants",
+        "claim_13_desc": "claim_lookouts_description",
+        "claim_13_name": "claim_lookouts",
+        "claim_14_desc": "claim_the_hookup_description",
+        "claim_14_name": "claim_the_hookup",
+        "claim_15_desc": "claim_doskvol's_most_wanted_description",
+        "claim_15_name": "claim_doskvol's_most_wanted",
+        "claim_1_desc": "claim_fierce_allies_description",
+        "claim_1_name": "claim_fierce_allies",
+        "claim_2_desc": "claim_local_heroes_description",
+        "claim_2_name": "claim_local_heroes",
+        "claim_3_desc": "claim_publicity_description",
+        "claim_3_name": "claim_publicity",
+        "claim_4_desc": "claim_hidden_paths_description",
+        "claim_4_name": "claim_hidden_paths",
+        "claim_5_desc": "claim_catacombs_description",
+        "claim_5_name": "claim_catacombs",
+        "claim_6_desc": "claim_defiant_citizens_description",
+        "claim_6_name": "claim_defiant_citizens",
+        "claim_7_name": "claim_turf",
+        "claim_9_name": "claim_turf",
+        "claim_bridge_10_15": "0",
+        "claim_bridge_12_13": "0",
+        "claim_bridge_13_14": "0",
+        "claim_bridge_2_3": "0",
+        "claim_bridge_3_4": "0",
+        "claim_bridge_6_11": "0",
+        "cohort1_type": "expert",
+        "crew_description": "crew_vigilantes_description",
+        "crew_xp_condition": "crew_vigilantes_xp_condition",
+        "hunting_grounds_description": "crew_vigilantes_hunting_grounds_description",
+        "hunting_grounds_type": "crew_vigilantes_hunting_grounds_type",
+        "setting_show_origin": "1",
+        "upgrade_22_check_1": "1"
+      },
+      "crewability": [
+        "as_good_as_your_word",
+        "avengers",
+        "thorn_in_your_side",
+        "misdirection",
+        "uncanny_preparation",
+        "moral_compass",
+        "favors",
+        "roots",
+        "versatile"
+      ],
+      "upgrade": [
+        {
+          "name": "crew_upgrade_unbroken",
+          "numboxes": "3"
+        },
+        {
+          "name": "crew_upgrade_vigilantes_attire",
+          "numboxes": "1"
+        },
+        {
+          "name": "crew_upgrade_dedicated_crafters",
+          "numboxes": "1"
+        },
+        {
+          "name": "crew_upgrade_irregulars",
+          "numboxes": "1"
+        },
+        {
+          "name": "crew_upgrade_willing_to_fight",
+          "numboxes": "1"
+        }
+      ]
+    }
+  },
+  "factions": {
+    "factions1": [
+      {
+        "hold": "S",
+        "name": "faction_the_unseen",
+        "notes": "faction_the_unseen_notes",
+        "tier": "VI"
+      },
+      {
+        "hold": "W",
+        "name": "faction_scorpion_syndicate",
+        "notes": "faction_scorpion_syndicate_notes",
+        "tier": "IV"
+      },
+      {
+        "hold": "S",
+        "name": "faction_strangford_michter",
+        "notes": "faction_strangford_michter_notes",
+        "tier": "IV"
+      },
+      {
+        "hold": "S",
+        "name": "faction_mirror_house",
+        "notes": "faction_mirror_house_notes",
+        "tier": "III"
+      },
+      {
+        "hold": "S",
+        "name": "faction_the_golden_hand",
+        "notes": "faction_the_golden_hand_notes",
+        "tier": "III"
+      },
+      {
+        "hold": "S",
+        "name": "faction_the_tomorrow_program",
+        "notes": "faction_the_tomorrow_program_notes",
+        "tier": "III"
+      },
+      {
+        "hold": "S",
+        "name": "faction_the_gallo_family",
+        "notes": "faction_the_gallo_family_notes",
+        "tier": "II"
+      },
+      {
+        "hold": "S",
+        "name": "faction_the_keel_twins",
+        "notes": "faction_the_keel_twins_notes",
+        "tier": "II"
+      },
+      {
+        "hold": "S",
+        "name": "faction_lord_scurlock",
+        "notes": "faction_lord_scurlock_notes",
+        "tier": "II"
+      },
+      {
+        "hold": "S",
+        "name": "faction_silk",
+        "notes": "faction_silk_notes",
+        "tier": "II"
+      },
+      {
+        "hold": "W",
+        "name": "faction_the_rail_jacks",
+        "notes": "faction_the_rail_jacks_notes",
+        "tier": "II"
+      },
+      {
+        "hold": "W",
+        "name": "faction_the_burn_corps",
+        "notes": "faction_the_burn_corps_notes",
+        "tier": "II"
+      },
+      {
+        "hold": "W",
+        "name": "faction_the_limmerfield_gang",
+        "notes": "faction_the_limmerfield_gang_notes",
+        "tier": "II"
+      },
+      {
+        "hold": "W",
+        "name": "faction_the_lounge_rats",
+        "notes": "faction_the_lounge_rats_notes",
+        "tier": "II"
+      },
+      {
+        "hold": "W",
+        "name": "faction_red_torque",
+        "notes": "faction_red_torque_notes",
+        "tier": "II"
+      },
+      {
+        "hold": "S",
+        "name": "faction_d13",
+        "notes": "faction_d13_notes",
+        "tier": "I"
+      },
+      {
+        "hold": "S",
+        "name": "faction_the_dirt_barons",
+        "notes": "faction_the_dirt_barons_notes",
+        "tier": "I"
+      },
+      {
+        "hold": "S",
+        "name": "faction_leatherbacks",
+        "notes": "faction_leatherbacks_notes",
+        "tier": "I"
+      },
+      {
+        "hold": "S",
+        "name": "faction_paxton",
+        "notes": "faction_paxton_notes",
+        "tier": "I"
+      },
+      {
+        "hold": "W",
+        "name": "faction_the_fighting_goats",
+        "notes": "faction_the_fighting_goats_notes",
+        "tier": "I"
+      }
+    ],
+    "factions2": [
+      {
+        "hold": "S",
+        "name": "faction_imperial_military",
+        "notes": "faction_imperial_military_notes",
+        "tier": "VI"
+      },
+      {
+        "hold": "S",
+        "name": "faction_city_council",
+        "notes": "faction_city_council_notes",
+        "tier": "V"
+      },
+      {
+        "hold": "S",
+        "name": "faction_section6",
+        "notes": "faction_section6_notes",
+        "tier": "V"
+      },
+      {
+        "hold": "S",
+        "name": "faction_the_palace",
+        "notes": "faction_the_palace_notes",
+        "tier": "V"
+      },
+      {
+        "hold": "S",
+        "name": "faction_ministry_of_discovery",
+        "notes": "faction_ministry_of_discovery_notes",
+        "tier": "IV"
+      },
+      {
+        "hold": "S",
+        "name": "faction_ministry_of_stability",
+        "notes": "faction_ministry_of_stability_notes",
+        "tier": "IV"
+      },
+      {
+        "hold": "S",
+        "name": "faction_the_strelai",
+        "notes": "faction_the_strelai_notes",
+        "tier": "IV"
+      },
+      {
+        "hold": "W",
+        "name": "faction_the_church",
+        "notes": "faction_the_church_notes",
+        "tier": "IV"
+      },
+      {
+        "hold": "W",
+        "name": "faction_ironhook_prison",
+        "notes": "faction_ironhook_prison_notes",
+        "tier": "IV"
+      },
+      {
+        "hold": "S",
+        "name": "faction_blackthorn_park",
+        "notes": "faction_blackthorn_park_notes",
+        "tier": "III"
+      },
+      {
+        "hold": "S",
+        "name": "faction_bluecoats",
+        "notes": "faction_bluecoats_notes",
+        "tier": "III"
+      },
+      {
+        "hold": "S",
+        "name": "faction_inspectors",
+        "notes": "faction_inspectors_notes",
+        "tier": "III"
+      },
+      {
+        "hold": "S",
+        "name": "faction_new_reform_clinic",
+        "notes": "faction_new_reform_clinic_notes",
+        "tier": "III"
+      },
+      {
+        "hold": "S",
+        "name": "faction_anixis_field_unit",
+        "notes": "faction_anixis_field_unit_notes",
+        "tier": "II"
+      },
+      {
+        "hold": "W",
+        "name": "faction_usc_consulate",
+        "tier": "II"
+      },
+      {
+        "hold": "S",
+        "name": "faction_dagger_isles_consulate",
+        "tier": "I"
+      },
+      {
+        "hold": "S",
+        "name": "faction_iruvian_consulate",
+        "tier": "I"
+      },
+      {
+        "hold": "S",
+        "name": "faction_severosi_consulate",
+        "tier": "I"
+      }
+    ],
+    "factions3": [
+      {
+        "hold": "S",
+        "name": "faction_the_doskvol_foundation",
+        "notes": "faction_the_doskvol_foundation_notes",
+        "tier": "IV"
+      },
+      {
+        "hold": "S",
+        "name": "faction_saltfords_banking_group",
+        "notes": "faction_saltfords_banking_group_notes",
+        "tier": "IV"
+      },
+      {
+        "hold": "S",
+        "name": "faction_xantara_pharm",
+        "notes": "faction_xantara_pharm_notes",
+        "tier": "IV"
+      },
+      {
+        "hold": "W",
+        "name": "faction_ankhayat_consortium",
+        "notes": "faction_ankhayat_consortium_notes",
+        "tier": "IV"
+      },
+      {
+        "hold": "W",
+        "name": "faction_burning_orange",
+        "notes": "faction_burning_orange_notes",
+        "tier": "III"
+      },
+      {
+        "hold": "W",
+        "name": "faction_sicu",
+        "notes": "faction_sicu_notes",
+        "tier": "III"
+      },
+      {
+        "hold": "S",
+        "name": "faction_ink_lane_tabloids",
+        "notes": "faction_ink_lane_tabloids_notes",
+        "tier": "II"
+      },
+      {
+        "hold": "S",
+        "name": "faction_laborers",
+        "notes": "faction_laborers_notes",
+        "tier": "II"
+      },
+      {
+        "hold": "S",
+        "name": "faction_tottle_orlov_arran",
+        "notes": "faction_tottle_orlov_arran_notes",
+        "tier": "II"
+      },
+      {
+        "hold": "S",
+        "name": "faction_yammies",
+        "notes": "faction_yammies_notes",
+        "tier": "II"
+      },
+      {
+        "hold": "W",
+        "name": "faction_cabbies",
+        "notes": "faction_cabbies_notes",
+        "tier": "II"
+      },
+      {
+        "hold": "S",
+        "name": "faction_captain_laudius_blanchet",
+        "notes": "faction_captain_laudius_blanchet_notes",
+        "tier": "I"
+      }
+    ],
+    "factions4": [
+      {
+        "hold": "W",
+        "name": "faction_new_dawn",
+        "notes": "faction_new_dawn_notes",
+        "tier": "IV"
+      },
+      {
+        "hold": "S",
+        "name": "faction_carousel",
+        "notes": "faction_carousel_notes",
+        "tier": "III"
+      },
+      {
+        "hold": "W",
+        "name": "faction_the_kethrys_lodge",
+        "notes": "faction_the_kethrys_lodge_notes",
+        "tier": "III"
+      },
+      {
+        "hold": "W",
+        "name": "faction_the_silver_echoes",
+        "notes": "faction_the_silver_echoes_notes",
+        "tier": "III"
+      },
+      {
+        "hold": "W",
+        "name": "faction_the_old_northport_preservation_society",
+        "notes": "faction_the_old_northport_preservation_society_notes",
+        "tier": "II"
+      },
+      {
+        "hold": "S",
+        "name": "faction_deathsteaders",
+        "notes": "faction_deathsteaders_notes",
+        "tier": "I"
+      },
+      {
+        "hold": "S",
+        "name": "faction_gondoliers",
+        "notes": "faction_gondoliers_notes",
+        "tier": "I"
+      },
+      {
+        "hold": "W",
+        "name": "faction_plasmovision_social_club",
+        "notes": "faction_plasmovision_social_club_notes",
+        "tier": "I"
+      }
+    ],
+    "factions5": [
+      {
+        "hold": "S",
+        "name": "faction_whitecrown",
+        "tier": "V"
+      },
+      {
+        "hold": "S",
+        "name": "faction_brightstone",
+        "tier": "IV"
+      },
+      {
+        "hold": "S",
+        "name": "faction_charterhall",
+        "tier": "IV"
+      },
+      {
+        "hold": "W",
+        "name": "faction_six_towers",
+        "tier": "IV"
+      },
+      {
+        "hold": "S",
+        "name": "faction_coalridge",
+        "tier": "III"
+      },
+      {
+        "hold": "W",
+        "name": "faction_radiance",
+        "tier": "III"
+      },
+      {
+        "hold": "S",
+        "name": "faction_barrowcleft",
+        "tier": "II"
+      },
+      {
+        "hold": "S",
+        "name": "faction_bowmore_fields",
+        "tier": "II"
+      },
+      {
+        "hold": "S",
+        "name": "faction_crow's_foot",
+        "tier": "II"
+      },
+      {
+        "hold": "S",
+        "name": "faction_nightmarket",
+        "tier": "II"
+      },
+      {
+        "hold": "S",
+        "name": "faction_silkshore",
+        "tier": "II"
+      },
+      {
+        "hold": "S",
+        "name": "faction_charhollow",
+        "tier": "I"
+      },
+      {
+        "hold": "S",
+        "name": "faction_the_docks",
+        "notes": "",
+        "tier": "I"
+      },
+      {
+        "hold": "W",
+        "name": "faction_dunslough",
+        "tier": "I"
+      },
+      {
+        "hold": "W",
+        "name": "faction_new_horizon",
+        "tier": "I"
+      }
+    ]
+  },
+  "playbook": {
+    "ghost": {
+      "ability": [
+        "ghost_form",
+        "dissipate",
+        "manifest",
+        "poltergeist",
+        "possess",
+        "versatile"
+      ],
+      "base": {
+        "friends_title": "playbook_ghost_friends_title",
+        "gatherinfo1": "gatherinfo_what_do_they_intend",
+        "gatherinfo2": "gatherinfo_how_can_I_get_them",
+        "gatherinfo3": "gatherinfo_what_are_they_really",
+        "gatherinfo4": "gatherinfo_what_should_I_look",
+        "gatherinfo5": "gatherinfo_wheres_the_weakness",
+        "gatherinfo6": "gatherinfo_how_can_I_find",
+        "playbook_description": "playbook_ghost_description",
+        "setting_stress_label": "drain",
+        "setting_trauma_label": "echo_irregularities",
+        "setting_traumata_set": "ghost",
+        "setting_vice_type": "ghost",
+        "xp_condition": "playbook_ghost_xp_condition",
+        "xp_condition2": "playbook_ghost_xp_condition2",
+        "xp_condition3": "playbook_ghost_xp_condition3"
+      },
+      "playbookitem": []
+    },
+    "hound": {
+      "ability": [
+        "hounds_instincts",
+        "learn_hard_way",
+        "just_a_scratch",
+        "fixer",
+        "in_too_deep",
+        "weird_pet",
+        "dogged_persistence",
+        "versatile"
+      ],
+      "base": {
+        "char_cohort_name": "hunting_pet",
+        "char_cohort_subtype": "hunter",
+        "consort": "2",
+        "friends_title": "playbook_hound_friends_title",
+        "gatherinfo1": "gatherinfo_what_do_they_intend",
+        "gatherinfo2": "gatherinfo_how_can_I_get_them",
+        "gatherinfo3": "gatherinfo_what_are_they_really",
+        "gatherinfo4": "gatherinfo_where_they_vulnerable",
+        "gatherinfo5": "gatherinfo_where_did_x_go",
+        "gatherinfo6": "gatherinfo_how_can_I_find",
+        "keyexample10big": "key-cool-1",
+        "keyexample10small": "key-cool-2",
+        "keyexample11big": "key-stubborn-1",
+        "keyexample11small": "key-stubborn-2",
+        "keyexample12big": "key-confident-1",
+        "keyexample12small": "key-confident-2",
+        "keyexample13big": "key-blunt-1",
+        "keyexample13small": "key-blunt-2",
+        "keyexample14big": "key-brooding-1",
+        "keyexample14small": "key-brooding-2",
+        "keyexample15big": "key-laidback-1",
+        "keyexample15small": "key-laidback-2",
+        "keyexample16big": "key-sad-1",
+        "keyexample16small": "key-sad-2",
+        "keyexample1big": "key-sardonic-1",
+        "keyexample1small": "key-sardonic-2",
+        "keyexample2big": "key-cynical-1",
+        "keyexample2small": "key-cynical-2",
+        "keyexample3big": "key-romantic-1",
+        "keyexample3small": "key-romantic-2",
+        "keyexample4big": "key-bitter-1",
+        "keyexample4small": "key-bitter-2",
+        "keyexample5big": "key-lonely-1",
+        "keyexample5small": "key-lonely-2",
+        "keyexample6big": "key-determined-1",
+        "keyexample6small": "key-determined-2",
+        "keyexample7big": "key-suspicious-1",
+        "keyexample7small": "key-suspicious-2",
+        "keyexample8big": "key-tired-1",
+        "keyexample8small": "key-tired-2",
+        "keyexample9big": "key-sharp-1",
+        "keyexample9small": "key-sharp-2",
+        "playbook_description": "playbook_hound_description",
+        "setting_show_cohort": "1",
+        "setting_show_veteran": "0",
+        "special_resource": "Tenacity",
+        "survey": "1",
+        "xp_condition": "playbook_hound_xp_condition"
+      },
+      "playbookitem": [
+        {
+          "bold": "1",
+          "description": "playbook_item_fine_snubnosed_handcannon_description",
+          "name": "playbook_item_fine_snubnosed_handcannon",
+          "numboxes": "1"
+        },
+        {
+          "description": "playbook_item_loyal_clever_pet_description",
+          "name": "playbook_item_loyal_clever_pet",
+          "numboxes": "0"
+        },
+        {
+          "description": "playbook_item_binoculars_description",
+          "name": "playbook_item_binoculars",
+          "numboxes": "1"
+        },
+        {
+          "description": "playbook_item_hipflask_description",
+          "name": "playbook_item_hipflask",
+          "numboxes": "0"
+        },
+        {
+          "description": "playbook_item_focus_pills_description",
+          "name": "playbook_item_focus_pills",
+          "numboxes": "0"
+        },
+        {
+          "description": "playbook_item_rf_handset_description",
+          "name": "playbook_item_rf_handset",
+          "numboxes": "0"
+        }
+      ]
+    },
+    "hull": {
+      "ability": [
+        "automaton",
+        "a_room_of_your_own",
+        "powerhouse",
+        "retractable_arsenal",
+        "energy_beam",
+        "interface",
+        "frame_upgrade"
+      ],
+      "base": {
+        "advanced_visual_sensors": "advanced_visual_sensors",
+        "attune": "1",
+        "friends_title": "playbook_hull_friends_title",
+        "gatherinfo1": "gatherinfo_what_do_they_intend",
+        "gatherinfo2": "gatherinfo_how_can_I_get_them",
+        "gatherinfo3": "gatherinfo_what_are_they_really",
+        "gatherinfo4": "gatherinfo_what_should_I_look",
+        "gatherinfo5": "gatherinfo_wheres_the_weakness",
+        "gatherinfo6": "gatherinfo_how_can_I_find",
+        "hidden_compartment": "hidden_compartment",
+        "jet_propulsion": "jet_propulsion",
+        "life_like_appearance": "life_like_appearance",
+        "playbook_description": "playbook_hull_description",
+        "setting_extra_stress": "1",
+        "setting_load_h": "6",
+        "setting_show_background": "0",
+        "setting_show_designation": "0",
+        "setting_show_frame": "1",
+        "setting_show_heritage": "0",
+        "setting_show_wearing": "0",
+        "setting_special_background": "4",
+        "setting_stress_label": "drain",
+        "setting_trauma_label": "wear",
+        "setting_traumata_set": "hull",
+        "setting_vice_type": "hull",
+        "skirmish": "1",
+        "smokescreen_emitter": "smokescreen_emitter",
+        "surveillance_hardware": "surveillance_hardware",
+        "xp_condition": "playbook_hull_xp_condition"
+      },
+      "playbookitem": []
+    },
+    "intellectual": {
+      "ability": [
+        "unalloyed_genius",
+        "mentalist",
+        "insomniac",
+        "try_not_break_it",
+        "researcher",
+        "anatomist",
+        "deep_thinker",
+        "advanced_sparkmind",
+        "versatile"
+      ],
+      "base": {
+        "char_cohort_housing_large": "housing_large",
+        "char_cohort_housing_small": "housing_small",
+        "char_cohort_name": "name",
+        "char_cohort_subtype": "sparkmind_assistant",
+        "char_cohort_type_analysis": "type_analysis",
+        "char_cohort_type_ingress": "type_ingress",
+        "char_cohort_type_research": "type_research",
+        "friends_title": "playbook_intellectual_friends_title",
+        "gatherinfo1": "gatherinfo_what_do_they_intend",
+        "gatherinfo2": "gatherinfo_how_can_I_get_them",
+        "gatherinfo3": "gatherinfo_are_they_telling",
+        "gatherinfo4": "gatherinfo_what_can_i_hack",
+        "gatherinfo5": "gatherinfo_what_might_happen",
+        "gatherinfo6": "gatherinfo_how_can_I_find",
+        "hack": "2",
+        "keyexample10big": "key-cold-1",
+        "keyexample10small": "key-cold-2",
+        "keyexample11big": "key-witty-1",
+        "keyexample11small": "key-witty-2",
+        "keyexample12big": "key-curious-1",
+        "keyexample12small": "key-curious-2",
+        "keyexample13big": "key-shy-1",
+        "keyexample13small": "key-shy-2",
+        "keyexample14big": "key-talkative-1",
+        "keyexample14small": "key-talkative-2",
+        "keyexample15big": "key-rational-1",
+        "keyexample15small": "key-rational-2",
+        "keyexample1big": "key-arrogant-1",
+        "keyexample1small": "key-arrogant-2",
+        "keyexample2big": "key-sophisticated-1",
+        "keyexample2small": "key-sophisticated-2",
+        "keyexample3big": "key-insecure-1",
+        "keyexample3small": "key-insecure-2",
+        "keyexample4big": "key-enigmatic-1",
+        "keyexample4small": "key-enigmatic-2",
+        "keyexample5big": "key-lonely-1",
+        "keyexample5small": "key-lonely-2",
+        "keyexample6big": "key-determined-1",
+        "keyexample6small": "key-determined-2",
+        "keyexample7big": "key-enthusiastic-1",
+        "keyexample7small": "key-enthusiastic-2",
+        "keyexample8big": "key-eccentric-1",
+        "keyexample8small": "key-eccentric-2",
+        "keyexample9big": "key-idealistic-1",
+        "keyexample9small": "key-idealistic-2",
+        "playbook_description": "playbook_intellectual_description",
+        "setting_show_cohort": "0",
+        "setting_show_sparkmind": "1",
+        "setting_show_veteran": "0",
+        "setting_special_background": "2",
+        "special_resource": "Research",
+        "study": "1",
+        "xp_condition": "playbook_intellectual_xp_condition"
+      },
+      "playbookitem": [
+        {
+          "bold": "1",
+          "description": "hacking_tools_description",
+          "name": "playbook_item_fine_hacking_tools",
+          "numboxes": "1"
+        },
+        {
+          "description": "playbook_item_experimental_laser_cannon_description",
+          "name": "playbook_item_experimental_laser_cannon",
+          "numboxes": "2"
+        },
+        {
+          "description": "playbook_item_sparkmind_assistant_description",
+          "name": "playbook_sparkmind_assistant",
+          "numboxes": "0"
+        },
+        {
+          "description": "playbook_gadgets_description",
+          "name": "playbook_gadgets",
+          "numboxes": "3"
+        },
+        {
+          "description": "playbook_item_focus_pills_description",
+          "name": "playbook_item_focus_pills",
+          "numboxes": "0"
+        },
+        {
+          "description": "playbook_item_rf_handset_description",
+          "name": "playbook_item_rf_handset",
+          "numboxes": "0"
+        }
+      ]
+    },
+    "operative": {
+      "ability": [
+        "infiltrator",
+        "double_agent",
+        "dead_drop",
+        "echo_walker",
+        "wetwork",
+        "cipher",
+        "sleeper_agents",
+        "control",
+        "versatile"
+      ],
+      "base": {
+        "friends_title": "playbook_operative_friends_title",
+        "gatherinfo1": "gatherinfo_how_can_I_get_them",
+        "gatherinfo2": "gatherinfo_where_they_vulnerable",
+        "gatherinfo3": "gatherinfo_routine",
+        "gatherinfo4": "gatherinfo_whats_the_best_way",
+        "gatherinfo5": "gatherinfo_where_can_I_hide",
+        "gatherinfo6": "gatherinfo_how_can_I_blend",
+        "hunt": "1",
+        "keyexample10big": "key-meticulous-1",
+        "keyexample10small": "key-meticulous-2",
+        "keyexample11big": "key-calculating-1",
+        "keyexample11small": "key-calculating-2",
+        "keyexample12big": "key-professional-1",
+        "keyexample12small": "key-professional-2",
+        "keyexample13big": "key-dedicated-1",
+        "keyexample13small": "key-dedicated-2",
+        "keyexample14big": "key-brooding-1",
+        "keyexample14small": "key-brooding-2",
+        "keyexample15big": "key-witty-1",
+        "keyexample15small": "key-witty-2",
+        "keyexample1big": "key-disciplined-1",
+        "keyexample1small": "key-disciplined-2",
+        "keyexample2big": "key-enigmatic-1",
+        "keyexample2small": "key-enigmatic-2",
+        "keyexample3big": "key-haunted-1",
+        "keyexample3small": "key-haunted-2",
+        "keyexample4big": "key-sharp-1",
+        "keyexample4small": "key-sharp-2",
+        "keyexample5big": "key-fearless-1",
+        "keyexample5small": "key-fearless-2",
+        "keyexample6big": "key-cold-1",
+        "keyexample6small": "key-cold-2",
+        "keyexample7big": "key-confident-1",
+        "keyexample7small": "key-confident-2",
+        "keyexample8big": "key-blunt-1",
+        "keyexample8small": "key-blunt-2",
+        "keyexample9big": "key-bitter-1",
+        "keyexample9small": "key-bitter-2",
+        "playbook_description": "playbook_operative_description",
+        "prowl": "2",
+        "setting_show_autopod": "0",
+        "setting_show_cohort": "0",
+        "setting_show_faction": "1",
+        "setting_show_operative": "1",
+        "setting_show_radical": "0",
+        "setting_show_sparkmind": "0",
+        "setting_show_veteran": "0",
+        "special_resource": "Precision",
+        "xp_condition": "playbook_operative_xp_condition"
+      },
+      "playbookitem": [
+        {
+          "description": "playbook_item_truth_serum_description",
+          "name": "playbook_item_truth_serum",
+          "numboxes": "0"
+        },
+        {
+          "bold": "1",
+          "description": "playbook_item_fine_sniper_rifle_description",
+          "name": "playbook_item_fine_sniper_rifle",
+          "numboxes": "2"
+        },
+        {
+          "description": "playbook_item_tiny_tracking_device_description",
+          "name": "playbook_item_tiny_tracking_device",
+          "numboxes": "0"
+        },
+        {
+          "bold": "1",
+          "description": "playbook_item_fine_silenced_shooter_description",
+          "name": "playbook_item_fine_silenced_shooter",
+          "numboxes": "1"
+        },
+        {
+          "bold": "1",
+          "description": "playbook_item_fine_disguise_description",
+          "name": "playbook_item_fine_disguise",
+          "numboxes": "1"
+        },
+        {
+          "description": "playbook_item_rf_handset_description",
+          "name": "playbook_item_rf_handset",
+          "numboxes": "0"
+        }
+      ]
+    },
+    "paranormalist": {
+      "ability": [
+        "third_eye_opened",
+        "precognition",
+        "psychokinesis",
+        "extrasensory_perception",
+        "forbidden_science",
+        "resonance_projection",
+        "medium",
+        "parapsychology",
+        "versatile"
+      ],
+      "base": {
+        "attune": "2",
+        "char_cohort_name": "loyal_resonance_entity",
+        "char_cohort_subtype": "paranormal_assistant",
+        "friends_title": "playbook_paranormalist_friends_title",
+        "gatherinfo1": "gatherinfo_what_is_arcane",
+        "gatherinfo2": "gatherinfo_what_echoes",
+        "gatherinfo3": "gatherinfo_what_is_hidden",
+        "gatherinfo4": "gatherinfo_what_do_they_intend",
+        "gatherinfo5": "gatherinfo_what_drives_them",
+        "gatherinfo6": "gatherinfo_how_can_I_reveal",
+        "keyexample10big": "key-passionate-1",
+        "keyexample10small": "key-passionate-2",
+        "keyexample11big": "key-fearless-1",
+        "keyexample11small": "key-fearless-2",
+        "keyexample12big": "key-idealistic-1",
+        "keyexample12small": "key-idealistic-2",
+        "keyexample13big": "key-shy-1",
+        "keyexample13small": "key-shy-2",
+        "keyexample14big": "key-openminded-1",
+        "keyexample14small": "key-openminded-2",
+        "keyexample15big": "key-spiritual-1",
+        "keyexample15small": "key-spiritual-2",
+        "keyexample1big": "key-flamboyant-1",
+        "keyexample1small": "key-flamboyant-2",
+        "keyexample2big": "key-enigmatic-1",
+        "keyexample2small": "key-enigmatic-2",
+        "keyexample3big": "key-haunted-1",
+        "keyexample3small": "key-haunted-2",
+        "keyexample4big": "key-bold-1",
+        "keyexample4small": "key-bold-2",
+        "keyexample5big": "key-charismatic-1",
+        "keyexample5small": "key-charismatic-2",
+        "keyexample6big": "key-comical-1",
+        "keyexample6small": "key-comical-2",
+        "keyexample7big": "key-curious-1",
+        "keyexample7small": "key-curious-2",
+        "keyexample8big": "key-distant-1",
+        "keyexample8small": "key-distant-2",
+        "keyexample9big": "key-eccentric-1",
+        "keyexample9small": "key-eccentric-2",
+        "playbook_description": "playbook_paranormalist_description",
+        "setting_show_autopod": "0",
+        "setting_show_cohort": "1",
+        "setting_show_faction": "0",
+        "setting_show_operative": "0",
+        "setting_show_radical": "0",
+        "setting_show_sparkmind": "0",
+        "setting_show_veteran": "0",
+        "special_resource": "Sixth Sense",
+        "study": "1",
+        "xp_condition": "playbook_paranormalist_xp_condition"
+      },
+      "playbookitem": [
+        {
+          "bold": "1",
+          "description": "playbook_item_fine_resonance_gauge_description",
+          "name": "playbook_item_fine_resonance_gauge",
+          "numboxes": "1"
+        },
+        {
+          "description": "playbook_item_resonance_accelerator_pack_description",
+          "name": "playbook_item_resonance_accelerator_pack",
+          "numboxes": "2"
+        },
+        {
+          "bold": "1",
+          "description": "playbook_item_fine_echo_containment_unit_description",
+          "name": "playbook_item_fine_echo_containment_unit",
+          "numboxes": "1"
+        },
+        {
+          "description": "playbook_item_psychic_amplification_device_description",
+          "name": "playbook_item_psychic_amplification_device",
+          "numboxes": "0"
+        },
+        {
+          "description": "playbook_item_loyal_resonance_entity_description",
+          "name": "playbook_item_loyal_resonance_entity",
+          "numboxes": "0"
+        },
+        {
+          "description": "playbook_item_rf_handset_description",
+          "name": "playbook_item_rf_handset",
+          "numboxes": "0"
+        }
+      ]
+    },
+    "radical": {
+      "ability": [
+        "true_believer",
+        "direct_action",
+        "echo_chamber",
+        "solidarity",
+        "polemicist",
+        "praxis",
+        "pamphleteer",
+        "total_dedication",
+        "versatile"
+      ],
+      "base": {
+        "friends_title": "playbook_radical_friends_title",
+        "gatherinfo1": "gatherinfo_what_do_they_intend",
+        "gatherinfo2": "gatherinfo_how_can_I_get_them",
+        "gatherinfo3": "gatherinfo_what_are_they_really",
+        "gatherinfo4": "gatherinfo_what_do_they_care_about",
+        "gatherinfo5": "gatherinfo_whats_the_weak_point",
+        "gatherinfo6": "gatherinfo_what_might_happen",
+        "keyexample10big": "key-cool-1",
+        "keyexample10small": "key-cool-2",
+        "keyexample11big": "key-commanding-1",
+        "keyexample11small": "key-commanding-2",
+        "keyexample12big": "key-passionate-1",
+        "keyexample12small": "key-passionate-2",
+        "keyexample13big": "key-defiant-1",
+        "keyexample13small": "key-defiant-2",
+        "keyexample14big": "key-charismatic-1",
+        "keyexample14small": "key-charismatic-2",
+        "keyexample15big": "key-fearless-1",
+        "keyexample15small": "key-fearless-2",
+        "keyexample1big": "key-idealistic-1",
+        "keyexample1small": "key-idealistic-2",
+        "keyexample2big": "key-determined-1",
+        "keyexample2small": "key-determined-2",
+        "keyexample3big": "key-protective-1",
+        "keyexample3small": "key-protective-2",
+        "keyexample4big": "key-romantic-1",
+        "keyexample4small": "key-romantic-2",
+        "keyexample5big": "key-suspicious-1",
+        "keyexample5small": "key-suspicious-2",
+        "keyexample6big": "key-violent-1",
+        "keyexample6small": "key-violent-2",
+        "keyexample7big": "key-stubborn-1",
+        "keyexample7small": "key-stubborn-2",
+        "keyexample8big": "key-reckless-1",
+        "keyexample8small": "key-reckless-2",
+        "keyexample9big": "key-kind-1",
+        "keyexample9small": "key-kind-2",
+        "playbook_description": "playbook_radical_description",
+        "setting_show_cohort": "0",
+        "setting_show_radical": "1",
+        "setting_show_sparkmind": "0",
+        "setting_show_veteran": "0",
+        "setting_special_background": "3",
+        "show_alchemicals": "0",
+        "special_resource": "Conviction",
+        "sway": "1",
+        "wreck": "2",
+        "xp_condition": "playbook_radical_xp_condition"
+      },
+      "playbookitem": [
+        {
+          "description": "playbook_item_provocative_manifesto_description",
+          "name": "playbook_item_provocative_manifesto",
+          "numboxes": "0"
+        },
+        {
+          "description": "playbook_item_nondescript_clothes_description",
+          "name": "playbook_item_nondescript_clothes",
+          "numboxes": "1"
+        },
+        {
+          "description": "playbook_item_bandolier_description",
+          "name": "playbook_item_bandolier",
+          "numboxes": "1"
+        },
+        {
+          "description": "playbook_item_bandolier_description",
+          "name": "playbook_item_bandolier",
+          "numboxes": "1"
+        },
+        {
+          "description": "playbook_item_gogo_pills_description",
+          "name": "playbook_item_gogo_pills",
+          "numboxes": "0"
+        },
+        {
+          "description": "playbook_item_rf_handset_description",
+          "name": "playbook_item_rf_handset",
+          "numboxes": "0"
+        }
+      ]
+    },
+    "swinger": {
+      "ability": [
+        "wing_it",
+        "yeah_baby",
+        "in_the_groove",
+        "side_hustles",
+        "connected",
+        "party_animal",
+        "twice_the_fun",
+        "smooth",
+        "versatile"
+      ],
+      "base": {
+        "char_cohort_autopod_style": "autopod_style",
+        "char_cohort_name": "name",
+        "char_cohort_purpose_impressing": "purpose_impressing",
+        "char_cohort_purpose_racing": "purpose_racing",
+        "char_cohort_purpose_surprising": "purpose_surprising",
+        "char_cohort_subtype": "fine_autopod",
+        "finesse": "1",
+        "friends_title": "playbook_swinger_friends_title",
+        "gatherinfo1": "gatherinfo_how_can_I_get_them",
+        "gatherinfo2": "gatherinfo_are_they_telling",
+        "gatherinfo3": "gatherinfo_good_time",
+        "gatherinfo4": "gatherinfo_wheres_the_party",
+        "gatherinfo5": "gatherinfo_what_are_they_really",
+        "gatherinfo6": "gatherinfo_how_can_I_reveal",
+        "keyexample10big": "key-laidback-1",
+        "keyexample10small": "key-laidback-2",
+        "keyexample11big": "key-enthusiastic-1",
+        "keyexample11small": "key-enthusiastic-2",
+        "keyexample12big": "key-eccentric-1",
+        "keyexample12small": "key-eccentric-2",
+        "keyexample13big": "key-arrogant-1",
+        "keyexample13small": "key-arrogant-2",
+        "keyexample14big": "key-playful-1",
+        "keyexample14small": "key-playful-2",
+        "keyexample15big": "key-loyal-1",
+        "keyexample15small": "key-loyal-2",
+        "keyexample1big": "key-charismatic-1",
+        "keyexample1small": "key-charismatic-2",
+        "keyexample2big": "key-flamboyant-1",
+        "keyexample2small": "key-flamboyant-2",
+        "keyexample3big": "key-confident-1",
+        "keyexample3small": "key-confident-2",
+        "keyexample4big": "key-witty-1",
+        "keyexample4small": "key-witty-2",
+        "keyexample5big": "key-reckless-1",
+        "keyexample5small": "key-reckless-2",
+        "keyexample6big": "key-kind-1",
+        "keyexample6small": "key-kind-2",
+        "keyexample7big": "key-soft-1",
+        "keyexample7small": "key-soft-2",
+        "keyexample8big": "key-sharp-1",
+        "keyexample8small": "key-sharp-2",
+        "keyexample9big": "key-talkative-1",
+        "keyexample9small": "key-talkative-2",
+        "playbook_description": "playbook_swinger_description",
+        "setting_show_autopod": "1",
+        "setting_show_cohort": "0",
+        "setting_show_radical": "0",
+        "setting_show_sparkmind": "0",
+        "setting_show_veteran": "0",
+        "special_resource": "Mojo",
+        "sway": "2",
+        "xp_condition": "playbook_swinger_xp_condition"
+      },
+      "playbookitem": [
+        {
+          "bold": "1",
+          "description": "playbook_item_fine_clothes_&_jewelry_description",
+          "name": "playbook_item_fine_clothes_&_jewelry",
+          "numboxes": "0"
+        },
+        {
+          "bold": "1",
+          "description": "playbook_item_fine_twoseat_autopod_description",
+          "name": "playbook_item_fine_twoseat_autopod",
+          "numboxes": "0"
+        },
+        {
+          "description": "playbook_item_invitation_to_the_party_description",
+          "name": "playbook_item_invitation_to_the_party",
+          "numboxes": "0"
+        },
+        {
+          "bold": "1",
+          "description": "playbook_item_concealed_shooter_description",
+          "name": "playbook_item_concealed_shooter",
+          "numboxes": "1"
+        },
+        {
+          "description": "playbook_item_sleeping_pills_description",
+          "name": "playbook_item_sleeping_pills",
+          "numboxes": "0"
+        },
+        {
+          "description": "playbook_item_rf_handset_description",
+          "name": "playbook_item_rf_handset",
+          "numboxes": "0"
+        }
+      ]
+    },
+    "time_traveler_future": {
+      "ability": [
+        "future_shock",
+        "advanced_combat_reflexes",
+        "psionics",
+        "pocket_dimension",
+        "multi_dimensional",
+        "quantum_displacement",
+        "save_and_reload"
+      ],
+      "base": {
+        "gatherinfo1": "gatherinfo_what_do_they_intend",
+        "gatherinfo2": "gatherinfo_how_can_I_get_them",
+        "gatherinfo3": "gatherinfo_what_are_they_really",
+        "gatherinfo4": "gatherinfo_what_should_I_look",
+        "gatherinfo5": "gatherinfo_wheres_the_weakness",
+        "gatherinfo6": "gatherinfo_how_can_I_find",
+        "playbook_description": "playbook_time_traveler_description",
+        "setting_hidevicebutton": "0",
+        "setting_show_future": "1",
+        "setting_show_temporal_glitches": "1",
+        "setting_show_timetravel": "1",
+        "setting_stress_label": "instability",
+        "setting_vice_type": "time_traveler",
+        "trauma": "4",
+        "xp_condition": "playbook_time_traveler_xp_condition",
+        "xp_condition3": "playbook_time_traveler_xp_condition3"
+      },
+      "playbookitem": [
+        {
+          "bold": "1",
+          "name": "playbook_item_powerful_mechanical_limb",
+          "numboxes": "0"
+        },
+        {
+          "name": "playbook_item_forcefield_device",
+          "numboxes": "1"
+        },
+        {
+          "bold": "1",
+          "name": "playbook_item_fine_laser_pistol",
+          "numboxes": "1"
+        },
+        {
+          "bold": "1",
+          "name": "playbook_item_fine_plasma_blade",
+          "numboxes": "1"
+        },
+        {
+          "name": "playbook_item_holo_projector",
+          "numboxes": "1"
+        },
+        {
+          "name": "playbook_item_mysterious_tape_reel",
+          "numboxes": "0"
+        }
+      ]
+    },
+    "time_traveler_past": {
+      "ability": [
+        "haunted_by_the_past",
+        "ancient_martial_techniques",
+        "sorcery",
+        "step_into_the_void",
+        "multi_dimensional",
+        "shadow_walk",
+        "resurrection_of_the_flesh"
+      ],
+      "base": {
+        "gatherinfo1": "gatherinfo_what_do_they_intend",
+        "gatherinfo2": "gatherinfo_how_can_I_get_them",
+        "gatherinfo3": "gatherinfo_what_are_they_really",
+        "gatherinfo4": "gatherinfo_what_should_I_look",
+        "gatherinfo5": "gatherinfo_wheres_the_weakness",
+        "gatherinfo6": "gatherinfo_how_can_I_find",
+        "playbook_description": "playbook_time_traveler_description",
+        "setting_hidevicebutton": "0",
+        "setting_show_past": "1",
+        "setting_show_temporal_glitches": "1",
+        "setting_show_timetravel": "1",
+        "setting_stress_label": "instability",
+        "setting_vice_type": "time_traveler_past",
+        "trauma": "4",
+        "xp_condition": "playbook_time_traveler_xp_condition",
+        "xp_condition3": "playbook_time_traveler_xp_condition3"
+      },
+      "playbookitem": [
+        {
+          "bold": "1",
+          "name": "playbook_item_fine_shadow_cloak",
+          "numboxes": "0"
+        },
+        {
+          "bold": "1",
+          "name": "playbook_item_fine_blade_jira_forged",
+          "numboxes": "0"
+        },
+        {
+          "bold": "1",
+          "name": "playbook_item_fine_antiquated_pistol",
+          "numboxes": "0"
+        },
+        {
+          "name": "playbook_item_electroplasmic_ammo",
+          "numboxes": "2"
+        },
+        {
+          "name": "playbook_item_demonbane_charm",
+          "numboxes": "0"
+        },
+        {
+          "name": "playbook_item_mysterious_ghost_key",
+          "numboxes": "0"
+        }
+      ]
+    },
+    "vampire": {
+      "ability": [
+        "undead",
+        "terrible_power",
+        "arcane_sight",
+        "a_void_in_the_echo",
+        "dark_talent",
+        "sinister_guile",
+        "feral_whispers",
+        "versatile"
+      ],
+      "base": {
+        "attune": "1",
+        "friends_title": "playbook_vampire_friends_title",
+        "gatherinfo1": "gatherinfo_what_do_they_intend",
+        "gatherinfo2": "gatherinfo_how_can_I_get_them",
+        "gatherinfo3": "gatherinfo_what_are_they_really",
+        "gatherinfo4": "gatherinfo_what_should_I_look",
+        "gatherinfo5": "gatherinfo_wheres_the_weakness",
+        "gatherinfo6": "gatherinfo_how_can_I_find",
+        "hunt": "1",
+        "playbook_description": "playbook_vampire_description",
+        "prowl": "1",
+        "setting_extra_stress": "3",
+        "setting_show_strictures": "1",
+        "setting_vampire_extras": "1",
+        "setting_vice_type": "vampire",
+        "stricture_dayfire": "1",
+        "sway": "1",
+        "trauma": "4",
+        "xp_condition": "playbook_vampire_xp_condition",
+        "xp_condition3": "playbook_vampire_xp_condition3"
+      },
+      "playbookitem": [
+        {
+          "bold": "1",
+          "name": "playbook_item_fine_clothes_and_accoutrements",
+          "numboxes": "0"
+        },
+        {
+          "bold": "1",
+          "name": "playbook_item_fine_personal_weapon",
+          "numboxes": "1"
+        },
+        {
+          "bold": "1",
+          "name": "playbook_item_fine_autopod",
+          "numboxes": "0"
+        },
+        {
+          "name": "playbook_item_vial_of_rare_drug",
+          "numboxes": "2"
+        },
+        {
+          "name": "playbook_item_demonbane_charm",
+          "numboxes": "0"
+        },
+        {
+          "name": "playbook_item_spiritbane_charm",
+          "numboxes": "0"
+        }
+      ]
+    },
+    "veteran": {
+      "ability": [
+        "military_discipline",
+        "got_your_back",
+        "echo_fighter",
+        "leadership",
+        "walking_arsenal",
+        "war_machine",
+        "beast",
+        "creative_outlet",
+        "versatile"
+      ],
+      "base": {
+        "command": "1",
+        "friends_title": "playbook_veteran_friends_title",
+        "gatherinfo1": "gatherinfo_upperhand",
+        "gatherinfo2": "gatherinfo_whos_about_to_break",
+        "gatherinfo3": "gatherinfo_whats_the_danger",
+        "gatherinfo4": "gatherinfo_what_do_they_intend",
+        "gatherinfo5": "gatherinfo_how_can_I_get_them",
+        "gatherinfo6": "gatherinfo_are_they_telling",
+        "hunt": "2",
+        "keyexample10big": "key-comical-1",
+        "keyexample10small": "key-comical-2",
+        "keyexample11big": "key-suspicious-1",
+        "keyexample11small": "key-suspicious-2",
+        "keyexample12big": "key-tired-1",
+        "keyexample12small": "key-tired-2",
+        "keyexample13big": "key-arrogant-1",
+        "keyexample13small": "key-arrogant-2",
+        "keyexample14big": "key-bold-1",
+        "keyexample14small": "key-bold-2",
+        "keyexample15big": "key-kind-1",
+        "keyexample15small": "key-kind-2",
+        "keyexample16big": "key-haunted-1",
+        "keyexample16small": "key-haunted-2",
+        "keyexample1big": "key-protective-1",
+        "keyexample1small": "key-protective-2",
+        "keyexample2big": "key-hopeful-1",
+        "keyexample2small": "key-hopeful-2",
+        "keyexample3big": "key-erratic-1",
+        "keyexample3small": "key-erratic-2",
+        "keyexample4big": "key-commanding-1",
+        "keyexample4small": "key-commanding-2",
+        "keyexample5big": "key-lonely-1",
+        "keyexample5small": "key-lonely-2",
+        "keyexample6big": "key-distant-1",
+        "keyexample6small": "key-distant-2",
+        "keyexample7big": "key-violent-1",
+        "keyexample7small": "key-violent-2",
+        "keyexample8big": "key-reckless-1",
+        "keyexample8small": "key-reckless-2",
+        "keyexample9big": "key-disciplined-1",
+        "keyexample9small": "key-disciplined-2",
+        "playbook_description": "playbook_veteran_description",
+        "setting_show_damage": "1",
+        "setting_show_veteran": "1",
+        "setting_special_background": "1",
+        "skirmish": "1",
+        "special_resource": "Training",
+        "xp_condition": "playbook_veteran_xp_condition"
+      },
+      "playbookitem": [
+        {
+          "bold": "1",
+          "description": "playbook_item_lmc_description",
+          "name": "playbook_item_lmc",
+          "numboxes": "1"
+        },
+        {
+          "bold": "1",
+          "description": "playbook_item_coilgun_description",
+          "name": "playbook_item_coilgun",
+          "numboxes": "2"
+        },
+        {
+          "bold": "1",
+          "description": "playbook_item_fine_melee_weapon_description",
+          "name": "playbook_item_fine_melee_weapon",
+          "numboxes": "1"
+        },
+        {
+          "description": "playbook_item_grenades_description",
+          "name": "playbook_item_grenades",
+          "numboxes": "1"
+        },
+        {
+          "description": "playbook_item_gogo_pills_description",
+          "name": "playbook_item_gogo_pills",
+          "numboxes": "0"
+        },
+        {
+          "description": "playbook_item_rf_handset_description",
+          "name": "playbook_item_rf_handset",
+          "numboxes": "0"
+        }
+      ]
+    }
+  }
+}
