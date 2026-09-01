@@ -90,7 +90,7 @@
   font-family: "Crimson Text", serif;
 }
 .blades68 textarea {
-  margin-top: 10px;
+  margin-top: 15px;
   margin-bottom: 20px;
 }
 .blades68 .debug-toggle {
@@ -232,6 +232,9 @@
 }
 .blades68 .abilities .item-description, .blades68 .loadout .item-description, .blades68 .faction-items .item-description {
   width: 260px;
+}
+.blades68 #loadout .item-control {
+  max-width: 10px;
 }
 .blades68 td {
   padding: 5px;
@@ -2171,3 +2174,5 @@
 .add-items-list .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
+/*# sourceMappingURL=blades.css.map */

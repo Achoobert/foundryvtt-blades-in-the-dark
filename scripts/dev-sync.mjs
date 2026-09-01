@@ -18,7 +18,6 @@ const ENTRIES_TO_SYNC = [
   'themes',
   'assets',
   'packs',
-  'rule_books',
 ];
 
 await mkdir(TARGET, { recursive: true });

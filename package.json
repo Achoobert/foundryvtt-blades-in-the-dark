@@ -15,7 +15,6 @@
     "build:css": "sass scss/style.scss:styles/blades.css --style=expanded --no-source-map",
     "watch": "node scripts/watch.mjs",
     "watch:css": "sass scss/style.scss:styles/blades.css --watch --style=expanded --source-map",
-    "content:generate": "node scripts/gen-roll20-content.mjs",
     "packs:pack": "node scripts/build-packs.mjs pack",
     "dev:sync": "node scripts/dev-sync.mjs",
     "dev:world": "node scripts/ensure-world.mjs",

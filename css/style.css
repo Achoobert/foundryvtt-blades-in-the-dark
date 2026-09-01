@@ -227,9 +227,6 @@
 .blades68 .loadout select:hover {
   color: red;
 }
-.item-delete {
-  max-width: 10px;
-}
 .blades68 .abilities .item-name,
 .blades68 .loadout .item-name,
 .blades68 .faction-items .item-name {

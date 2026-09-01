@@ -466,7 +466,7 @@
   flex-grow: 1;
 }
 .item-control {
-  max-width: 10px;
+  max-width: 20px;
 }
 & * .item .item-body,
 & * .item .item-class-label {
