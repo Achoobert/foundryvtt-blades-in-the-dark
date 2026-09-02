@@ -62,7 +62,7 @@ system:
       # new row
     - name: Dive Bar
       description: +2 stacks from lower-class clients
-      connects: [right]
+      connects: [left, right]
     - name: Turf
       description: Expand hunting grounds and add new preferred operation
     - name: Base
@@ -71,11 +71,6 @@ system:
     - name: Turf
       description: Expand hunting grounds and add new preferred operation
       connects: [right]
-    - name: Turf
-      description: Expand hunting grounds and add new preferred operation
-      connects: [right]
-    - name: Turf
-      description: Expand hunting grounds and add new preferred operation
     - name: Clock the Routine
       description: 3 free flashbacks during Ledgendary Target score
       highlight: true 
