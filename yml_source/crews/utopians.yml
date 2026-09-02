@@ -22,7 +22,7 @@ system:
       select: 1
       subheader: Learn a new truth of the Vision
       options: [Psychedelic, Inhuman, Violent, Future, Past, Tempestuous]
-    - name: Fourth Circle
+    - name: Final Circle
       unlock: "Threshold of Power: Unlocks when the crew reaches Tier 3 and created a major anomaly."
       select: 1
       subheader: Learn a new truth of the Vision

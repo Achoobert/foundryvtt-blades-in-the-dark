@@ -117,6 +117,77 @@ export class BladesCrewSheet extends BladesSheet {
       this.render(false);
     });
 
+    // Turf row header: unlock circle
+    html.find('.turf-header-unlock').click(async ev => {
+      ev.preventDefault();
+      ev.stopPropagation();
+      const target = $(ev.currentTarget);
+      const item = target.parents(".item");
+      const item_id = item.data("itemId");
+      const header_id = target.data("headerId");
+      if (!item_id || header_id == null) return;
+
+      const embed = this.actor.items.get(item_id);
+      const current = embed?.system?.turf_headers?.[header_id]?.value === true;
+      await this.actor.updateEmbeddedDocuments('Item', [{
+        _id: item_id,
+        [`system.turf_headers.${header_id}.value`]: !current
+      }]);
+      this.render(false);
+    });
+
+    // Turf row header: units dots (Dealers)
+    html.find('.turf-header-unit').click(async ev => {
+      ev.preventDefault();
+      ev.stopPropagation();
+      const target = $(ev.currentTarget);
+      const item = target.parents(".item");
+      const item_id = item.data("itemId");
+      const header_id = target.data("headerId");
+      const unit_index = Number(target.data("unitIndex"));
+      if (!item_id || header_id == null || !Number.isFinite(unit_index)) return;
+
+      const embed = this.actor.items.get(item_id);
+      const current = Number(embed?.system?.turf_headers?.[header_id]?.units_filled ?? 0) || 0;
+      const next = current === unit_index ? 0 : unit_index;
+      await this.actor.updateEmbeddedDocuments('Item', [{
+        _id: item_id,
+        [`system.turf_headers.${header_id}.units_filled`]: next
+      }]);
+      this.render(false);
+    });
+
+    // Turf row header: Utopians Vision word select (persist bold)
+    html.find('.turf-header-option').click(async ev => {
+      ev.preventDefault();
+      ev.stopPropagation();
+      const target = $(ev.currentTarget);
+      const item = target.parents(".item");
+      const item_id = item.data("itemId");
+      const header_id = target.data("headerId");
+      const option = String(target.data("option") ?? "");
+      if (!item_id || header_id == null || !option) return;
+
+      const embed = this.actor.items.get(item_id);
+      const header = embed?.system?.turf_headers?.[header_id] ?? {};
+      const max = Number(header.select ?? 0) || 0;
+      const selected = Array.isArray(header.selected) ? [...header.selected] : [];
+      const idx = selected.indexOf(option);
+      if (idx >= 0) {
+        selected.splice(idx, 1);
+      } else if (selected.length < max) {
+        selected.push(option);
+      } else {
+        return;
+      }
+
+      await this.actor.updateEmbeddedDocuments('Item', [{
+        _id: item_id,
+        [`system.turf_headers.${header_id}.selected`]: selected
+      }]);
+      this.render(false);
+    });
+
     // Cohort Block Harm handler
     html.find('.cohort-block-harm input[type="radio"]').change( async ev => {
       const element = $(ev.currentTarget).parents(".item");

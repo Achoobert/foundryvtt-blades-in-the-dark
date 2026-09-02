@@ -661,6 +661,52 @@
           "description": "",
           "connects": []
         }
+      },
+      "turf_headers": {
+        "1": {
+          "name": "",
+          "subheader": "",
+          "unlock": "",
+          "select": 0,
+          "options": [],
+          "selected": [],
+          "units": 0,
+          "value": false,
+          "units_filled": 0
+        },
+        "2": {
+          "name": "",
+          "subheader": "",
+          "unlock": "",
+          "select": 0,
+          "options": [],
+          "selected": [],
+          "units": 0,
+          "value": false,
+          "units_filled": 0
+        },
+        "3": {
+          "name": "",
+          "subheader": "",
+          "unlock": "",
+          "select": 0,
+          "options": [],
+          "selected": [],
+          "units": 0,
+          "value": false,
+          "units_filled": 0
+        },
+        "4": {
+          "name": "",
+          "subheader": "",
+          "unlock": "",
+          "select": 0,
+          "options": [],
+          "selected": [],
+          "units": 0,
+          "value": false,
+          "units_filled": 0
+        }
       }
     },
     "prison": {

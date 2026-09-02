@@ -1,5 +1,12 @@
 <div id="crew-{{_id}}-turf-list" class="turf-list {{#if can_edit}}section-editable{{else}}section-non-editable{{/if}}">
 
+  {{#if not_prison}}
+  {{#if turf_headers}}
+  {{> "systems/blades68/templates/parts/turf-header.html" header=(lookup turf_headers "1") header_id="1"
+  can_edit=can_edit}}
+  {{/if}}
+  {{/if}}
+
   <div class="turf-row">
    {{#each turfs_data as |turf id|}}
 
@@ -33,7 +40,6 @@
             {{/multiboxes}}
           </div>
 
-          <!-- TODO implement slighly different formatting for Utopians and  dealers, each row has a header-->
 		  <input class="turf-name" type="text" name="system.turfs.{{id}}.name" value="{{#if ../editable}}{{turf.name}}{{else}}{{localize turf.name}}{{/if}}">
           {{#noteq turf.name "BITD.Turf"}}
           {{#noteq turf.name "BITD.Lair"}}
@@ -49,7 +55,12 @@
     </div>
 	{{#if ../not_prison}}
     {{#if (eq id "5")}}
-    </div><div class="turf-row">
+    </div>
+    {{#if ../turf_headers}}
+    {{> "systems/blades68/templates/parts/turf-header.html" header=(lookup ../turf_headers "2") header_id="2"
+    can_edit=../can_edit}}
+    {{/if}}
+    <div class="turf-row">
     {{/if}}
 	{{else}}
     {{#if (eq id "4")}}
@@ -58,10 +69,19 @@
 	{{/if}}
 	{{#if ../not_prison}}
     {{#if (eq id "10")}}
-    </div><div class="turf-row">
+    </div>
+    {{#if ../turf_headers}}
+    {{> "systems/blades68/templates/parts/turf-header.html" header=(lookup ../turf_headers "3") header_id="3"
+    can_edit=../can_edit}}
+    {{/if}}
+    <div class="turf-row">
     {{/if}}
     {{#if (eq id "15")}}
     </div>
+    {{#if ../turf_headers}}
+    {{> "systems/blades68/templates/parts/turf-header.html" header=(lookup ../turf_headers "4") header_id="4"
+    can_edit=../can_edit}}
+    {{/if}}
     <div class="turf-row">
       {{/if}}
 	{{else}}

@@ -61,6 +61,47 @@ export default function register(quench) {
           }
         });
       });
+      describe('Dealers and Utopians turf headers', function () {
+        it('ships row headers with units / select / options', async function () {
+          this.timeout(10000);
+          requireSystemActive();
+
+          const pack = game.packs.get('blades68.blades68_crew_types');
+          assert.isOk(pack, 'blades68.blades68_crew_types pack should exist');
+
+          const docs = await pack.getDocuments();
+          const dealers = docs.find((doc) => doc.name === 'Dealers' && doc.type === 'crew_type');
+          const utopians = docs.find((doc) => doc.name === 'Utopians' && doc.type === 'crew_type');
+          const shadows = docs.find((doc) => doc.name === 'Shadows' && doc.type === 'crew_type');
+
+          assert.isOk(dealers, 'Dealers crew_type should be in the pack');
+          assert.isOk(utopians, 'Utopians crew_type should be in the pack');
+          assert.isOk(shadows, 'Shadows crew_type should be in the pack');
+
+          const dealersH1 = dealers.system.turf_headers?.['1'];
+          assert.isOk(dealersH1, 'Dealers should have turf_headers.1');
+          assert.equal(dealersH1.name, 'Supply');
+          assert.equal(dealersH1.units, 30);
+          assert.equal(dealersH1.units_filled, 0);
+          assert.deepEqual(dealersH1.selected, []);
+
+          const utopiansH1 = utopians.system.turf_headers?.['1'];
+          assert.isOk(utopiansH1, 'Utopians should have turf_headers.1');
+          assert.equal(utopiansH1.name, 'First Circle');
+          assert.equal(utopiansH1.select, 2);
+          assert.lengthOf(utopiansH1.options, 7);
+          assert.deepEqual(utopiansH1.selected, []);
+          assert.include(utopiansH1.options, 'Free');
+
+          const utopiansH2 = utopians.system.turf_headers?.['2'];
+          assert.isOk(utopiansH2?.unlock, 'Utopians header 2 should have unlock text');
+
+          const shadowsHeaders = shadows.system.turf_headers;
+          const shadowsHasNamed = shadowsHeaders
+            && Object.values(shadowsHeaders).some((h) => h?.name);
+          assert.isNotOk(shadowsHasNamed, 'Shadows should not ship named turf_headers');
+        });
+      });
     },
     { displayName: 'Crew type turfs' }
   );

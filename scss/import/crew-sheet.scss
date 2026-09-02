@@ -115,6 +115,144 @@ nav{
   }
 }
 
+.turf-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  margin: 8px 0 4px;
+  padding: 2px 0;
+  border-bottom: 1px solid $almost_black;
+  font-size: 12px;
+  color: $almost_black;
+
+  .turf-header-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .turf-header-unlock {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid $orange;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    &.unlocked {
+      background: $orange;
+    }
+  }
+
+  .turf-header-name {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: $orange;
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+  }
+
+  input.turf-header-name {
+    width: 100%;
+  }
+
+  .turf-header-unlock-text {
+    font-size: 11px;
+    color: $darkgray;
+
+    input {
+      width: 100%;
+      border: none;
+      background: transparent;
+      font-size: 11px;
+      color: $darkgray;
+    }
+  }
+
+  .turf-header-subheader {
+    font-style: italic;
+    font-size: 11px;
+
+    input {
+      width: 100%;
+      border: none;
+      background: transparent;
+      font-style: italic;
+      font-size: 11px;
+    }
+  }
+
+  .turf-header-options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 2px;
+    font-size: 11px;
+  }
+
+  .turf-header-option {
+    cursor: pointer;
+    font-weight: 400;
+
+    &.selected {
+      font-weight: 700;
+    }
+  }
+
+  .turf-header-option-sep {
+    color: $gray;
+    margin: 0 2px;
+  }
+
+  .turf-header-units {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .turf-header-units-label {
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding-top: 2px;
+  }
+
+  .turf-header-units-dots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    max-width: 780px;
+  }
+
+  .turf-header-unit {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1.5px solid $almost_black;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    // Visual groups of 6 (sheet art)
+    &:nth-child(6n) {
+      margin-right: 6px;
+    }
+
+    &.filled {
+      background: $almost_black;
+    }
+  }
+}
 .crew-hold {
   border-top: 3px solid $almost_black;
   @include toothradio_single(17px, 50px, "assets/blades68/stresspill_empty.png", "assets/blades68/stresspill_filled.png");

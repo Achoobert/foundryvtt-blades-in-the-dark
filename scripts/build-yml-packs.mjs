@@ -162,6 +162,41 @@ function normalizeTurfs(raw, file) {
   return turfs;
 }
 
+/**
+ * Optional per-row claim headers (Dealers, Utopians). Authored as a list;
+ * Foundry wants a map keyed "1".."N" with persisted tracker fields.
+ */
+function normalizeTurfHeaders(raw, file) {
+  const entries = Array.isArray(raw)
+    ? raw.map((header, index) => [String(index + 1), header])
+    : Object.entries(raw).sort(([a], [b]) => Number(a) - Number(b));
+
+  const headers = {};
+  for (const [slot, header] of entries) {
+    if (header === null || typeof header !== "object") {
+      warn(file, `turf_headers slot ${slot} is not a mapping`);
+      continue;
+    }
+    const select = Number(header.select ?? 0);
+    const units = Number(header.units ?? 0);
+    const selected = Array.isArray(header.selected)
+      ? header.selected.map(String)
+      : [];
+    headers[slot] = {
+      name: String(header.name ?? ""),
+      subheader: String(header.subheader ?? ""),
+      unlock: String(header.unlock ?? ""),
+      select: Number.isFinite(select) ? select : 0,
+      options: Array.isArray(header.options) ? header.options.map(String) : [],
+      selected,
+      units: Number.isFinite(units) ? units : 0,
+      value: header.value === true,
+      units_filled: Number(header.units_filled ?? 0) || 0
+    };
+  }
+  return headers;
+}
+
 /** Playbook YAML may list only rated actions as `survey: 1` or `survey: [1]`. */
 function normalizeBaseSkills(raw, file) {
   if (typeof raw !== "object" || Array.isArray(raw) || raw === null) {
@@ -242,6 +277,9 @@ function buildDoc(source, file) {
   const system = { ...(source.system ?? {}) };
   delete system.abilities;
   if (system.turfs != null) system.turfs = normalizeTurfs(system.turfs, file);
+  if (system.turf_headers != null) {
+    system.turf_headers = normalizeTurfHeaders(system.turf_headers, file);
+  }
   if (system.experience_clues != null) {
     system.experience_clues = Array.isArray(system.experience_clues)
       ? system.experience_clues.map((s) => String(s).trim()).filter(Boolean).join("\n")
