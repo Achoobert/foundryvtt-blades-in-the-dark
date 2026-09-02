@@ -31,6 +31,11 @@ const MACROS = [
     name: "Import Faction Images from PDF",
     img: "icons/svg/book.svg",
   },
+  {
+    file: "import-city-map.js",
+    name: "Import City Map from PDF",
+    img: "icons/svg/direction.svg",
+  },
 ];
 
 const lines = MACROS.map(({ file, name, img }) => {
