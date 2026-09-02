@@ -1,0 +1,10 @@
+name: Swinger
+type: class
+img: icons/svg/upgrade.svg
+system:
+  description: A Wheeler And Dealer — The Life Of The Party
+  experience_clues: You addressed a challenge with charm or quick thinking.
+  special_resource: Mojo
+  base_skills:
+    finesse: 1
+    sway: 2

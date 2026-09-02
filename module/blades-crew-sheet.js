@@ -102,8 +102,8 @@ export class BladesCrewSheet extends BladesSheet {
       BladesHelpers._addOwnedItem(ev, this.actor);
     });
 
-    // Toggle Turf
-    html.find('.turf-select').click( async ev => {
+    // Toggle Turf by clicking the block. The base / lair claim is always owned.
+    html.find('.turf-list.section-non-editable .turf-block:not(.turf-base)').click(async ev => {
       const element = $(ev.currentTarget).parents(".item");
 
       let item_id = element.data("itemId")

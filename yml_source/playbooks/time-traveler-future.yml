@@ -1,0 +1,8 @@
+name: Time Traveler Future
+type: class
+img: icons/svg/upgrade.svg
+system:
+  description: A Voyager Visiting This Era on an Important Mission
+  experience_clues:
+    - You addressed a challenge with fearless conviction or lateral thinking.
+    - You struggled with issues stemming from a temporal glitch.

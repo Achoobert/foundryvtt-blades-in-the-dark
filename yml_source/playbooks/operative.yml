@@ -1,0 +1,10 @@
+name: Operative
+type: class
+img: icons/svg/upgrade.svg
+system:
+  description: A Stealthy And Clandestine Professional
+  experience_clues: You addressed a challenge with stealth or subterfuge.
+  special_resource: Precision
+  base_skills:
+    hunt: 1
+    prowl: 2

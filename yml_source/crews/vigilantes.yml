@@ -23,3 +23,20 @@ system:
       description: Large gang who will fight for you
     - name: Turf
       description: ""
+    - name: Base
+      description: Base
+    - name: Turf
+      description: ""
+    - name: Informant
+      description: ""
+      # new row
+    - name: Above the Law
+      description: ""
+    - name: Bluecoat Informants
+      description: ""
+    - name: Lookouts
+      description: ""
+    - name: The Hookup
+      description: ""
+    - name: Doskvols's most wanted
+      description: ""

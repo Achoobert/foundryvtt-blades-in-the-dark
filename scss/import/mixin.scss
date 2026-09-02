@@ -339,6 +339,21 @@
     background-color: $gray;
   }
 
+  // Inset ring instead of a border so the block keeps its size and the
+  // connectors stay aligned.
+  &.turf-highlight {
+    box-shadow: inset 0 0 0 3px $orange;
+  }
+
+  &.turf-base {
+    cursor: default;
+
+    &:hover {
+      filter: none;
+      opacity: 1;
+    }
+  }
+
   .turf-description {
     border: none;
     background: none;
@@ -358,14 +373,6 @@
 
   input[type="checkbox"] {
     transform: scale(1);
-  }
-
-  .turf-control {
-    &.turf-select {
-      position: absolute;
-      top: -7px;
-      left: -7px;
-    }
   }
 }
 

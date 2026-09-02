@@ -31,9 +31,26 @@ const PACK_BY_DIR = {
   items: "blades68_items.db"
 };
 
+const ACTIONS = [
+  "hunt",
+  "study",
+  "survey",
+  "tinker",
+  "finesse",
+  "prowl",
+  "skirmish",
+  "wreck",
+  "attune",
+  "command",
+  "consort",
+  "sway"
+];
+
 const TURF_SIDES = ["left", "top", "right", "bottom"];
 const TURF_COLS = 5;
 const TURF_OPPOSITE = { left: "right", right: "left", top: "bottom", bottom: "top" };
+// The base / lair claim starts owned and cannot be toggled on the sheet.
+const BASE_TURF_NAMES = new Set(["base", "lair", "prison", "bitd.base", "bitd.lair", "bitd.prison"]);
 
 const problems = [];
 
@@ -81,10 +98,13 @@ function normalizeTurfs(raw, file) {
       continue;
     }
     sideSets[slot] = new Set();
+    const name = String(turf.name ?? "BITD.Turf");
+    const isBase = BASE_TURF_NAMES.has(name.trim().toLowerCase());
     turfs[slot] = {
-      name: String(turf.name ?? "BITD.Turf"),
-      value: turf.value === true,
+      name,
+      value: isBase || turf.value === true,
       description: String(turf.description ?? ""),
+      highlight: turf.highlight === true,
       connects: [],
       connected: TURF_SIDES.map(() => false)
     };
@@ -134,6 +154,21 @@ function normalizeTurfs(raw, file) {
   return turfs;
 }
 
+/** Playbook YAML may list only rated actions as `survey: 1` or `survey: [1]`. */
+function normalizeBaseSkills(raw, file) {
+  if (typeof raw !== "object" || Array.isArray(raw) || raw === null) {
+    warn(file, "base_skills is not a mapping");
+    return Object.fromEntries(ACTIONS.map((a) => [a, [0]]));
+  }
+  const skills = {};
+  for (const action of ACTIONS) {
+    const v = raw[action];
+    const n = Array.isArray(v) ? Number(v[0] || 0) : Number(v || 0);
+    skills[action] = [Number.isFinite(n) ? n : 0];
+  }
+  return skills;
+}
+
 function buildDoc(source, file) {
   const name = String(source.name ?? "").replace(/\s+/g, " ").trim();
   const type = String(source.type ?? "").trim();
@@ -144,6 +179,14 @@ function buildDoc(source, file) {
 
   const system = { ...(source.system ?? {}) };
   if (system.turfs != null) system.turfs = normalizeTurfs(system.turfs, file);
+  if (system.experience_clues != null) {
+    system.experience_clues = Array.isArray(system.experience_clues)
+      ? system.experience_clues.map((s) => String(s).trim()).filter(Boolean).join("\n")
+      : String(system.experience_clues);
+  }
+  if (type === "class" || system.base_skills != null) {
+    system.base_skills = normalizeBaseSkills(system.base_skills ?? {}, file);
+  }
 
   return {
     _id: stableId(type, name),

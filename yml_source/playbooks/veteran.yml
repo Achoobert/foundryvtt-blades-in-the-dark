@@ -1,0 +1,11 @@
+name: Veteran
+type: class
+img: icons/svg/upgrade.svg
+system:
+  description: A Battered Soldier Returned From The Front
+  experience_clues: You addressed a challenge with violence or discipline.
+  special_resource: Training
+  base_skills:
+    hunt: 2
+    skirmish: 1
+    command: 1

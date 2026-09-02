@@ -1,0 +1,9 @@
+name: Intellectual
+type: class
+img: icons/svg/upgrade.svg
+system:
+  description: A Brilliant Engineer, Scientist, And Philosopher
+  experience_clues: You addressed a challenge with technical skill or cleverness.
+  special_resource: Research
+  base_skills:
+    study: 1

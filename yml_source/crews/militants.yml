@@ -10,38 +10,69 @@ system:
   turfs:
     - name: Secret Caches
       description: Stockpiles give you +1d to Acquire Asset rolls
+      connects: [right, bottom]
     - name: Popular Support
       description: +1d engagement for stealth approaches
+      connects: [right, bottom]
     - name: Critical Strike
       description: Tier 5 target, target drops 2 Tiers
+      highlight: true 
+      connects: [right]
     - name: Expropriation
       description: Critical Strike score includes +10 bonus stacks
+      highlight: true 
+      connects: [right, bottom]
     - name: Hostel
       description: +1 scale for your Muscle cohorts
+      connects: [bottom]
       # new row
     - name: Catalyst Action
       description: Tier 4 target, creates new Tier 2 faction (+2 status)
+      highlight: true 
+      connects: [right, bottom]
     - name: Turf
       description: Add new preferred operation
+      connects: [right, bottom]
     - name: Key Conspirator
       description: +2d engagement for Critical Strike score
+      highlight: true 
+      connects: [right, bottom]
     - name: Turf
       description: Add new preferred operation
+      connects: [bottom]
     - name: '"Interview Room"'
       description: +1d to Command and Sway on-site
+      connects: [bottom]
       # new row
     - name: Informants
       description: +1d to gather info for scores
+      connects: [bottom]
     - name: Grassroot Support
       description: New faction from Catalyst Action score will be +3 status
+      highlight: true 
+      connects: [right]
     - name: Donations
       description: +2 stacks for battle or demonstration
+      connects: [bottom, right]
     - name: Dispensary
       description: +1d to healing rolls
+      connects: [right]
     - name: Social Clubs
       description: (Tier roll) - Heat = stacks in downtime
+      connects: [bottom]
       # new row
     - name: Covert Funding
       description: +2 stacks for sabotage or assassination
+      connects: [right]
     - name: Turf
       description: Add new preferred operation
+      connects: [right]
+    - name: Base
+      description: Base
+      connects: [right, top]
+    - name: Turf
+      description: Add new preferred operation
+      connects: [bottom]
+    - name: Meeting Hall
+      description: +1d to Consort and Sway on-site
+      connects: [top]

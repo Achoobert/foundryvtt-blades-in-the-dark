@@ -1,0 +1,10 @@
+name: Radical
+type: class
+img: icons/svg/upgrade.svg
+system:
+  description: An Agitator — Incendiary In Every Sense
+  experience_clues: You addressed a challenge with persuasion or mayhem.
+  special_resource: Conviction
+  base_skills:
+    wreck: 2
+    sway: 1

@@ -1,0 +1,10 @@
+name: Paranormalist
+type: class
+img: icons/svg/upgrade.svg
+system:
+  description: A Maverick Thinker And Visionary
+  experience_clues: You addressed a challenge with knowledge or paranormal power.
+  special_resource: Sixth Sense
+  base_skills:
+    study: 1
+    attune: 2

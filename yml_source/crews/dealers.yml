@@ -7,6 +7,13 @@ system:
   # List order is the turf slot: item 1 becomes system.turfs."1". The crew sheet
   # grid breaks rows after slots 5, 10, and 15; slot 18 is the Base / lair.
   # connects draws connector lines: left, right, top, bottom.
+  turf_headers:
+    - name: Supply
+      subheader: The Product
+      units: 30
+    - name: Demand
+    - name: Competitive Advantages
+    - name: Distribution
   turfs:
     - name: Local Supplier
       description: Once per personal business, take 1 Heat to gain 1 unit
@@ -46,13 +53,15 @@ system:
     - name: Top Secret Intel
       description: +2d engagement for Monopoly score
       connects: [right]
+      highlight: true
     - name: Money Laundering
       description: Take -3 Heat from gaining/moving units, every personal business
       connects: [right]
     - name: Monopoly
       description: Tier 5 target, all Turf can move 2 units per downtime for the same Heat
+      highlight: true
       # new row
-    - name: Turf
+    - name: Base Turf
       description: 1 unit can be moved for 1 stack in personal business (take 1 Heat)
       connects: [right]
     - name: Turf
@@ -66,6 +75,4 @@ system:
       connects: [right]
     - name: Turf
       description: 1 unit can be moved for 1 stack in personal business (take 1 Heat)
-      connects: [right]
-    - name: Turf
-      description: 1 unit can be moved for 1 stack in personal business (take 1 Heat)
+

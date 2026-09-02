@@ -1,0 +1,9 @@
+name: Hull
+type: class
+img: icons/svg/upgrade.svg
+system:
+  description: The Soul Of A Condemned Criminal Trapped In A Robot Body
+  experience_clues: You obeyed orders, or addressed a challenge with cold simplicity.
+  base_skills:
+    skirmish: 1
+    attune: 1

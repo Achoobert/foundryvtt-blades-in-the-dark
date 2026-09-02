@@ -3,7 +3,9 @@
   <div class="turf-row">
    {{#each turfs_data as |turf id|}}
 
-    <div class="turf-block {{#if (or turf.value (is_base_turf turf.name))}}turf-selected{{/if}} {{#if turf.highlight}}turf-highlight{{/if}}">
+    <div
+      class="turf-block {{#if (or turf.value (is_base_turf turf.name))}}turf-selected{{/if}} {{#if turf.highlight}}turf-highlight{{/if}} {{#if (is_base_turf turf.name)}}turf-base{{/if}}"
+      data-turf-id="{{id}}" data-turf-status="{{turf.value}}">
 
         {{#each turf.connects as |connect key|}}
 
@@ -43,15 +45,6 @@
           {{#if turf.description}}
           <p class="turf-description">{{{localize turf.description}}}</p>
           {{/if}}
-      <!-- {{#if ../not_prison}}
-          {{#noteq id "8"}}
-          <a class="turf-control turf-select" data-tooltip="Select" data-turf-id="{{id}}" data-turf-status="{{turf.value}}"><i class="fa-solid fa-arrows-rotate"></i></a>
-          {{/noteq}}
-		  {{else}}
-          {{#noteq id "6"}}
-          <a class="turf-control turf-select" data-tooltip="Select" data-turf-id="{{id}}" data-turf-status="{{turf.value}}"><i class="fa-solid fa-arrows-rotate"></i></a>
-          {{/noteq}}
-      {{/if}} -->
         {{/if}}
     </div>
 	{{#if ../not_prison}}

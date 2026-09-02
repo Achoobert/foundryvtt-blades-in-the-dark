@@ -798,6 +798,16 @@
 .blades68.crew.sheet .turf-list.section-non-editable .turf-block.turf-selected {
   background-color: #999;
 }
+.blades68.crew.sheet .turf-list.section-non-editable .turf-block.turf-highlight {
+  box-shadow: inset 0 0 0 3px #E2571E;
+}
+.blades68.crew.sheet .turf-list.section-non-editable .turf-block.turf-base {
+  cursor: default;
+}
+.blades68.crew.sheet .turf-list.section-non-editable .turf-block.turf-base:hover {
+  filter: none;
+  opacity: 1;
+}
 .blades68.crew.sheet .turf-list.section-non-editable .turf-block .turf-description {
   border: none;
   background: none;
@@ -815,11 +825,6 @@
 }
 .blades68.crew.sheet .turf-list.section-non-editable .turf-block input[type=checkbox] {
   transform: scale(1);
-}
-.blades68.crew.sheet .turf-list.section-non-editable .turf-block .turf-control.turf-select {
-  position: absolute;
-  top: -7px;
-  left: -7px;
 }
 .blades68.crew.sheet .turf-list.section-editable .turf-block {
   transition: filter 0.1s;
@@ -871,6 +876,16 @@
 .blades68.crew.sheet .turf-list.section-editable .turf-block.turf-selected {
   background-color: #999;
 }
+.blades68.crew.sheet .turf-list.section-editable .turf-block.turf-highlight {
+  box-shadow: inset 0 0 0 3px #E2571E;
+}
+.blades68.crew.sheet .turf-list.section-editable .turf-block.turf-base {
+  cursor: default;
+}
+.blades68.crew.sheet .turf-list.section-editable .turf-block.turf-base:hover {
+  filter: none;
+  opacity: 1;
+}
 .blades68.crew.sheet .turf-list.section-editable .turf-block .turf-description {
   border: none;
   background: none;
@@ -888,11 +903,6 @@
 }
 .blades68.crew.sheet .turf-list.section-editable .turf-block input[type=checkbox] {
   transform: scale(1);
-}
-.blades68.crew.sheet .turf-list.section-editable .turf-block .turf-control.turf-select {
-  position: absolute;
-  top: -7px;
-  left: -7px;
 }
 .blades68.crew.sheet .crew-hold {
   border-top: 3px solid #191813;

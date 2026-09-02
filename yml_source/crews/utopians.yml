@@ -7,8 +7,72 @@ system:
   # List order is the turf slot: item 1 becomes system.turfs."1". The crew sheet
   # grid breaks rows after slots 5, 10, and 15; slot 18 is the Base / lair.
   # connects draws connector lines: left, right, top, bottom.
+  turf_headers:
+    - name: First Circle
+      select: 2
+      subheader: Choose two truths of the Vision
+      options: [Free, Egalitarian, Abundant, Beautiful, Serene, Radiant, Natural]
+    - name: Second Circle
+      unlock: "Threshold of Gold: Circle unlocks when the crew has earned 20 stacks total"
+      select: 2
+      subheader: Learn a new truth of the Vision
+      options: [Shifting, Sweltering, Lustful, Unsettling, Future, Past, Alien]
+    - name: Third Circle
+      unlock: "Threshold of Blood: Circle unlocks when the crew has also ended at least 10 lives"
+      select: 1
+      subheader: Learn a new truth of the Vision
+      options: [Psychedelic, Inhuman, Violent, Future, Past, Tempestuous]
+    - name: Fourth Circle
+      unlock: "Threshold of Power: Unlocks when the crew reaches Tier 3 and created a major anomaly."
+      select: 1
+      subheader: Learn a new truth of the Vision
+      options: [Fiery, Frozen, Terrifying, Cruel, Monstrous, Capricious, Inhuman]
   turfs:
     - name: Wellness Class
       description: (Tier roll) - Heat = stacks in downtime
     - name: Turf
       description: ""
+    - name: Base
+      description: Base
+    - name: Turf
+      description: ""
+    - name: Luxury Retreat
+      description: ""
+    # new row
+    - name: Donations
+      description: +2 stacks for paranormal operations
+    - name: Turf
+      description: ""
+    - name: Temple
+      description: +1d to Command and Sway on-site
+    - name: Turf
+      description: ""
+    - name: Natural Healer
+      description: +1d to healing rolls
+    # new row
+    - name: Abandoned Lab
+      description: ""
+    - name: Ancient Altar
+      description: ""
+    - name: Reality Shift
+      description: Tier 4 target, creates new major anomaly
+      highlight: true
+    - name: Ancient Tower
+      description: +1d to Consort w/ resonance entities on-site
+    - name: Ancient Gate
+      description: Safe passage out of the Bubble
+    # new row
+    - name: Ancient Tomes
+      description: +2d engagement for Reality Tear score
+      highlight: true
+    - name: Notable Skeptic
+      description: Successful Reality Tear score includes +4 Rep
+      highlight: true
+    - name: Reality Tear
+      description: Tier 5 target, creates new mega anomaly
+      highlight: true
+    - name: Interested Party
+      description: Reality Tear score includes +6 bonus stacks
+      highlight: true
+    - name: Figurehead
+      description: NPC can take the fall to remove 3 Wanted Levels

@@ -1,0 +1,10 @@
+name: Hound
+type: class
+img: icons/svg/upgrade.svg
+system:
+  description: A Hard-Bitten Fixer Who Follows Their Instincts
+  experience_clues: You addressed a challenge with talking or determination.
+  special_resource: Tenacity
+  base_skills:
+    survey: 1
+    consort: 2
