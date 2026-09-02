@@ -21,6 +21,11 @@ const MACROS = [
     name: "Assign Blades '68 Playbook",
     img: "icons/svg/upgrade.svg",
   },
+  {
+    file: "import-faction-images.js",
+    name: "Import Faction Images from PDF",
+    img: "icons/svg/book.svg",
+  },
 ];
 
 const lines = MACROS.map(({ file, name, img }) => {

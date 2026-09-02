@@ -4,15 +4,16 @@
   "description": "Blades '68 support built on the Blades in the Dark game system (test build).",
   "version": "6.1.2",
   "compatibility": {
-    "minimum": 11,
+    "minimum": 14,
     "verified": "14.362"
   },
-  "background": "systems/blades68/images/BITD_title.webp",
+  "background": "systems/blades68/images/blades68/blades68_cover.png",
   "authors": [
     { "name": "megastruktur" },
     { "name": "drewg13" },
     { "name": "justinross" },
-    { "name": "Dez384" }
+    { "name": "Dez384" }, 
+    { "name": "achoobert" }
   ],
   "esmodules": [
     "module/blades.js"
