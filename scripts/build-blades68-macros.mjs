@@ -22,6 +22,11 @@ const MACROS = [
     img: "icons/svg/upgrade.svg",
   },
   {
+    file: "assign-blades68-crew.js",
+    name: "Assign Blades '68 Crew Type",
+    img: "icons/svg/city.svg",
+  },
+  {
     file: "import-faction-images.js",
     name: "Import Faction Images from PDF",
     img: "icons/svg/book.svg",

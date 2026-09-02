@@ -1,0 +1,75 @@
+// Assign Blades '68 Crew Type
+// Turns a blank crew actor into a typed crew: embeds the chosen crew_type
+// item and creates that type's contacts as NPC actors linked as acquaintances.
+(async () => {
+  const SYSTEM_ID = "blades68";
+
+  const token = canvas.tokens.controlled[0];
+  let actor = token?.actor;
+  if (!actor) {
+    actor = game.actors.find((a) => a.type === "crew" && a.isOwner);
+  }
+  if (!actor) {
+    ui.notifications.warn("Select a crew token (or own a crew actor) first.");
+    return;
+  }
+  if (actor.type !== "crew") {
+    ui.notifications.warn(`${actor.name} isn't a crew actor.`);
+    return;
+  }
+
+  const { openFormDialog } = await import(
+    foundry.utils.getRoute(`systems/${SYSTEM_ID}/module/lib/dialog-compat.js`)
+  );
+  const { BladesHelpers } = await import(
+    foundry.utils.getRoute(`systems/${SYSTEM_ID}/module/blades-helpers.js`)
+  );
+
+  const crewTypePack = game.packs.get(`${SYSTEM_ID}.blades68_crew_types`);
+  if (!crewTypePack) {
+    ui.notifications.error("Blades '68 crew type compendium is not available.");
+    return;
+  }
+
+  const crewTypeItems = (await crewTypePack.getDocuments()).sort((a, b) =>
+    a.name.localeCompare(b.name)
+  );
+  const options = crewTypeItems.map((i) => `<option value="${i.name}">${i.name}</option>`).join("");
+
+  const existingType = actor.items.find((i) => i.type === "crew_type");
+  const existingWarning = existingType
+    ? `<p style="color:#a33"><strong>Note:</strong> ${actor.name} already has crew type ${existingType.name}. Re-running will not add a second type; contacts are filled only if missing.</p>`
+    : "";
+
+  const result = await openFormDialog({
+    title: "Assign Blades '68 Crew Type",
+    content: `
+      <form>
+        ${existingWarning}
+        <div class="form-group">
+          <label>Crew Type</label>
+          <select name="crewType" style="width:100%">${options}</select>
+        </div>
+      </form>
+    `,
+    okLabel: "Assign",
+    cancelLabel: "Cancel",
+  });
+  if (!result?.crewType) return;
+
+  const chosen = result.crewType;
+  const crewTypeItem = crewTypeItems.find((i) => i.name === chosen);
+  if (!crewTypeItem) {
+    ui.notifications.error(`Crew type "${chosen}" not found in compendium.`);
+    return;
+  }
+
+  if (!existingType) {
+    await actor.createEmbeddedDocuments("Item", [crewTypeItem.toObject()]);
+  }
+
+  const created = await BladesHelpers.generateCrewTypeContacts(actor, chosen);
+  ui.notifications.info(
+    `${actor.name} is now ${chosen}. Created ${created} contact${created === 1 ? "" : "s"}.`
+  );
+})();

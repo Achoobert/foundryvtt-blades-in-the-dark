@@ -225,6 +225,53 @@ export default function register(quench) {
             'Sevoy must appear only once'
           );
         });
+
+        it('macro path: embeds Dealers crew_type then generates six contacts', async function () {
+          this.timeout(20000);
+          requireSystemActive();
+
+          BladesHelpers._crewSetupCache = undefined;
+
+          const pack = game.packs.get('blades68.blades68_crew_types');
+          assert.isOk(pack, 'blades68.blades68_crew_types pack should exist');
+          const docs = await pack.getDocuments();
+          const dealers = docs.find((doc) => doc.name === 'Dealers' && doc.type === 'crew_type');
+          assert.isOk(dealers, 'Dealers crew_type should be in the pack');
+
+          const crew = tracker.track(
+            await Actor.create({ name: 'Quench Macro Dealers Crew', type: 'crew' })
+          );
+          assert.lengthOf(
+            crew.items.filter((i) => i.type === 'crew_type'),
+            0,
+            'blank crew should have no crew_type'
+          );
+
+          await crew.createEmbeddedDocuments('Item', [dealers.toObject()]);
+          assert.lengthOf(
+            crew.items.filter((i) => i.type === 'crew_type'),
+            1,
+            'should embed exactly one crew_type'
+          );
+          assert.equal(crew.items.find((i) => i.type === 'crew_type')?.name, 'Dealers');
+
+          const created = await BladesHelpers.generateCrewTypeContacts(crew, 'Dealers');
+          assert.equal(created, 6, 'should create six Dealers contacts after embedding type');
+
+          const acquaintances = crew.system.acquaintances ?? [];
+          assert.lengthOf(acquaintances, 6);
+          assert.isOk(acquaintances.find((a) => a.name === 'Sevoy'));
+
+          for (const acq of acquaintances) {
+            const npc = game.actors.get(acq.id);
+            assert.isOk(npc, `NPC actor should exist for ${acq.name}`);
+            tracker.track(npc);
+            assert.equal(npc.system.associated_crew_type, 'Dealers');
+          }
+
+          const again = await BladesHelpers.generateCrewTypeContacts(crew, 'Dealers');
+          assert.equal(again, 0, 'rerun after embed path should create no duplicates');
+        });
       });
     },
     { displayName: 'Crew types, catalogs, and contacts' }
