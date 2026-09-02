@@ -1,5 +1,6 @@
-/* global game */
-import { requireSystemActive } from '../helpers.js';
+/* global Actor, game */
+import { createdDocsTracker, requireSystemActive } from '../helpers.js';
+import { BladesHelpers } from '/systems/blades68/module/blades-helpers.js';
 
 /** Canonical side order emitted by scripts/build-yml-packs.mjs. */
 const EXPECTED_SHADOWS_CONNECTS = {
@@ -25,11 +26,26 @@ const EXPECTED_SHADOWS_CONNECTS = {
   20: ['left', 'top']
 };
 
+const B68_CREW_TYPES = [
+  'Dealers',
+  'Hit Squad',
+  'Militants',
+  'Racers',
+  'Shadows',
+  'Utopians',
+  'Vigilantes'
+];
+
 export default function register(quench) {
   quench.registerBatch(
     'blades68.crew-types',
     (context) => {
-      const { describe, it, assert } = context;
+      const { describe, it, assert, after } = context;
+      const tracker = createdDocsTracker();
+
+      after(async () => {
+        await tracker.cleanup();
+      });
 
       describe('Shadows crew type turfs', function () {
         it('ships 20 claims with the authored connector sides', async function () {
@@ -102,7 +118,115 @@ export default function register(quench) {
           assert.isNotOk(shadowsHasNamed, 'Shadows should not ship named turf_headers');
         });
       });
+
+      describe('Blades68Mode crew catalogs', function () {
+        it('routes crew_type / crew_ability / crew_upgrade to blades68 packs', function () {
+          requireSystemActive();
+          assert.equal(BladesHelpers.getBlades68PackName('crew_type'), 'blades68_crew_types');
+          assert.equal(BladesHelpers.getBlades68PackName('crew_ability'), 'blades68_crew_abilities');
+          assert.equal(BladesHelpers.getBlades68PackName('crew_upgrade'), 'blades68_crew_upgrades');
+        });
+
+        it('lists B68 crew types/abilities/upgrades when Blades68Mode is on', async function () {
+          this.timeout(15000);
+          requireSystemActive();
+
+          const priorMode = game.settings.get('blades68', 'Blades68Mode');
+          await game.settings.set('blades68', 'Blades68Mode', true);
+          try {
+            const types = await BladesHelpers.getAllItemsByType('crew_type');
+            for (const name of B68_CREW_TYPES) {
+              assert.isOk(
+                types.find((i) => i.name === name && i.type === 'crew_type'),
+                `Blades68Mode crew_type list should include ${name}`
+              );
+            }
+
+            const abilities = await BladesHelpers.getAllItemsByType('crew_ability');
+            const abilityGroups = BladesHelpers.groupItemsByClass(abilities);
+            assert.isOk(abilityGroups.Dealers?.length, 'Dealers crew abilities should group under Dealers');
+            assert.isOk(abilityGroups['Hit Squad']?.length, 'Hit Squad crew abilities should group');
+
+            const upgrades = await BladesHelpers.getAllItemsByType('crew_upgrade');
+            const upgradeGroups = BladesHelpers.groupItemsByClass(upgrades);
+            // B68 upgrades store ownership on system.crew_type (class is often blank).
+            assert.isOk(upgradeGroups.Dealers?.length, 'Dealers upgrades should group via crew_type fallback');
+            assert.isOk(upgradeGroups.Shadows?.length, 'Shadows upgrades should group via crew_type fallback');
+          } finally {
+            await game.settings.set('blades68', 'Blades68Mode', priorMode);
+          }
+        });
+
+        it('keeps classic crew catalogs when Blades68Mode is off', async function () {
+          this.timeout(15000);
+          requireSystemActive();
+
+          const priorMode = game.settings.get('blades68', 'Blades68Mode');
+          await game.settings.set('blades68', 'Blades68Mode', false);
+          try {
+            const types = await BladesHelpers.getAllItemsByType('crew_type');
+            assert.isOk(
+              types.find((i) => i.name === 'Assassins' && i.type === 'crew_type'),
+              'vanilla crew_type list should include Assassins'
+            );
+            assert.isNotOk(
+              types.find((i) => i.name === 'Dealers' && i.type === 'crew_type'),
+              'vanilla crew_type list should not include Dealers'
+            );
+          } finally {
+            await game.settings.set('blades68', 'Blades68Mode', priorMode);
+          }
+        });
+      });
+
+      describe('Crew type contact generation', function () {
+        it('creates six Dealers contacts, is idempotent, and keeps custom contacts', async function () {
+          this.timeout(20000);
+          requireSystemActive();
+
+          // Force a fresh setup load in case a prior test poisoned the cache.
+          BladesHelpers._crewSetupCache = undefined;
+
+          const crew = tracker.track(await Actor.create({ name: 'Quench Dealers Crew', type: 'crew' }));
+          await crew.update({
+            'system.acquaintances': [
+              {
+                id: 'custom-keep-me',
+                name: 'Custom Buddy',
+                description_short: 'a homebrew contact',
+                standing: 'friend'
+              }
+            ]
+          });
+
+          const created = await BladesHelpers.generateCrewTypeContacts(crew, 'Dealers');
+          assert.equal(created, 6, 'should create six Dealers contacts');
+
+          let acquaintances = crew.system.acquaintances ?? [];
+          assert.lengthOf(acquaintances, 7, 'custom contact + six generated');
+          assert.isOk(acquaintances.find((a) => a.name === 'Custom Buddy' && a.standing === 'friend'));
+          assert.isOk(acquaintances.find((a) => a.name === 'Sevoy'));
+
+          for (const acq of acquaintances.filter((a) => a.name !== 'Custom Buddy')) {
+            const npc = game.actors.get(acq.id);
+            assert.isOk(npc, `NPC actor should exist for ${acq.name}`);
+            tracker.track(npc);
+            assert.equal(npc.type, 'npc');
+            assert.equal(npc.system.associated_crew_type, 'Dealers');
+          }
+
+          const again = await BladesHelpers.generateCrewTypeContacts(crew, 'Dealers');
+          assert.equal(again, 0, 'rerun should create no duplicates');
+          acquaintances = crew.system.acquaintances ?? [];
+          assert.lengthOf(acquaintances, 7, 'idempotent rerun keeps the same acquaintance count');
+          assert.lengthOf(
+            acquaintances.filter((a) => a.name === 'Sevoy'),
+            1,
+            'Sevoy must appear only once'
+          );
+        });
+      });
     },
-    { displayName: 'Crew type turfs' }
+    { displayName: 'Crew types, catalogs, and contacts' }
   );
 }

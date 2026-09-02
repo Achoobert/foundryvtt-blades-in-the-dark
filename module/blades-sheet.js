@@ -281,6 +281,17 @@ export class BladesSheet extends BaseActorSheet {
 	}
 	else {
 		await Item.create(items_to_add, {parent: this.document});
+      if (item_type === "crew_type" && this.actor?.type === "crew") {
+        const crewTypeName = items_to_add[0]?.name;
+        try {
+          await BladesHelpers.generateCrewTypeContacts(this.actor, crewTypeName);
+        } catch (err) {
+          console.error("Failed to generate crew type contacts", err);
+          ui.notifications?.warn?.(
+            `Crew type added, but contacts for ${crewTypeName} could not be generated.`
+          );
+        }
+      }
 	}
   }
   /* -------------------------------------------- */

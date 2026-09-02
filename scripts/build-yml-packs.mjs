@@ -34,7 +34,8 @@ const PACK_BY_DIR = {
   playbooks: "blades68_classes.db",
   factions: "blades68_factions.db",
   items: "blades68_items.db",
-  abilities: "blades68_abilities.db"
+  abilities: "blades68_abilities.db",
+  prisons: "prison.db"
 };
 
 const ABILITY_PACK = PACK_BY_DIR.abilities;

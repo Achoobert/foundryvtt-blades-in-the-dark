@@ -1,0 +1,212 @@
+{
+  "Dealers": {
+    "sheetKey": "dealers",
+    "contactsTitle": "Contacts",
+    "contacts": [
+      {
+        "name": "Sevoy",
+        "description_short": "a magistrate"
+      },
+      {
+        "name": "Vera",
+        "description_short": "an airship pilot"
+      },
+      {
+        "name": "Blodgett",
+        "description_short": "a Bluecoat"
+      },
+      {
+        "name": "Sloan",
+        "description_short": "a gang boss"
+      },
+      {
+        "name": "Marlyn",
+        "description_short": "a party animal"
+      },
+      {
+        "name": "Crimson",
+        "description_short": "a fixer"
+      }
+    ]
+  },
+  "Hit Squad": {
+    "sheetKey": "hit_squad",
+    "contactsTitle": "Contacts",
+    "contacts": [
+      {
+        "name": "Vestine Keel",
+        "description_short": "a crime boss"
+      },
+      {
+        "name": "Beesby",
+        "description_short": "a deal broker"
+      },
+      {
+        "name": "Tilton",
+        "description_short": "a vengeful aristocrat"
+      },
+      {
+        "name": "Mowsley",
+        "description_short": "a cult leader"
+      },
+      {
+        "name": "Hush",
+        "description_short": "a Reality Warden"
+      },
+      {
+        "name": "Yugo Xantara",
+        "description_short": "a powerful CEO"
+      }
+    ]
+  },
+  "Militants": {
+    "sheetKey": "militants",
+    "contactsTitle": "Contacts",
+    "contacts": [
+      {
+        "name": "Davran",
+        "description_short": "a foreign diplomat"
+      },
+      {
+        "name": "Hickling",
+        "description_short": "a union organizer"
+      },
+      {
+        "name": "Eaves",
+        "description_short": "a Palace handler"
+      },
+      {
+        "name": "Kannick",
+        "description_short": "a Blackthorn Park handler"
+      },
+      {
+        "name": "Sovata",
+        "description_short": "a student leader"
+      },
+      {
+        "name": "Kastor",
+        "description_short": "a weapons dealer"
+      }
+    ]
+  },
+  "Racers": {
+    "sheetKey": "racers",
+    "contactsTitle": "Contacts",
+    "contacts": [
+      {
+        "name": "Karson",
+        "description_short": "a bookmaker"
+      },
+      {
+        "name": "Rinse",
+        "description_short": "a drug dealer"
+      },
+      {
+        "name": "Ivory",
+        "description_short": "an arms dealer"
+      },
+      {
+        "name": "Baine",
+        "description_short": "a Palace spy"
+      },
+      {
+        "name": "Buddy",
+        "description_short": "a mechanic"
+      },
+      {
+        "name": "Vreen",
+        "description_short": "owns the autodrome"
+      }
+    ]
+  },
+  "Shadows": {
+    "sheetKey": "shadows",
+    "contactsTitle": "Contacts",
+    "contacts": [
+      {
+        "name": "Malloy",
+        "description_short": "a Ministry clerk"
+      },
+      {
+        "name": "Caldwell",
+        "description_short": "an art forger"
+      },
+      {
+        "name": "Bloom",
+        "description_short": "a collector"
+      },
+      {
+        "name": "Vera",
+        "description_short": "a switchboard operator"
+      },
+      {
+        "name": "Catton",
+        "description_short": "a hotel concierge"
+      },
+      {
+        "name": "Tarnish",
+        "description_short": "an information broker"
+      }
+    ]
+  },
+  "Utopians": {
+    "sheetKey": "utopians",
+    "contactsTitle": "Contacts",
+    "contacts": [
+      {
+        "name": "Evangeline",
+        "description_short": "a spiritual sage"
+      },
+      {
+        "name": "Friswell",
+        "description_short": "an aristocrat"
+      },
+      {
+        "name": "Netherley",
+        "description_short": "a psychedelic artist"
+      },
+      {
+        "name": "Tarn",
+        "description_short": "a paranormal experimentalist"
+      },
+      {
+        "name": "Lockmore Wend",
+        "description_short": "a celebrity"
+      },
+      {
+        "name": "Om",
+        "description_short": "a deathlands dropout"
+      }
+    ]
+  },
+  "Vigilantes": {
+    "sheetKey": "vigilantes",
+    "contactsTitle": "Contacts",
+    "contacts": [
+      {
+        "name": "Mara",
+        "description_short": "a chief inspector"
+      },
+      {
+        "name": "Twelves",
+        "description_short": "a Leviathan Hunter"
+      },
+      {
+        "name": "Soren",
+        "description_short": "a restless ghost"
+      },
+      {
+        "name": "Remira",
+        "description_short": "a reluctant Lampblack"
+      },
+      {
+        "name": "Anis",
+        "description_short": "a Spirit Warden"
+      },
+      {
+        "name": "Badger",
+        "description_short": "a brilliant inventor"
+      }
+    ]
+  }
+}

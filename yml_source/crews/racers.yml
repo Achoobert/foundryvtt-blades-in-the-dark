@@ -10,7 +10,7 @@ system:
   turfs:
     - name: Weird Old Gate
       description: Safe passage out of the Bubble
-      connects: [bottom, left]
+      connects: [bottom, right]
     - name: Weird Old Maps
       description: +2d engagement for Deathlands Race score
       highlight: true
@@ -25,11 +25,11 @@ system:
       connects: [left]
     - name: Gambling Den
       description: (Tier roll) - Heat = stacks in downtime
-      connects: [bottom]
+      connects: [bottom, left]
       # new row
     - name: Secret Routes
       description: +1d engagement for speed approaches
-      connects: [bottom, left]
+      connects: [bottom, right]
     - name: Turf
       description: Expand local circuit and add new preferred operation
       connects: [left, bottom]
@@ -41,28 +41,28 @@ system:
       connects: [left]
     - name: Warehouse
       description: Stockpiles give you +1d to Acquire Asset rolls
-      connects: [bottom]
+      connects: [bottom, left]
       # new row
     - name: Big Street Race
       description: Tier 3 opponents, 15 stacks (one-off opportunity)
       highlight: true
-      connects: [left]
+      connects: [bottom]
     - name: Lounge Bar
       description: +1d to Consort and Sway on-site
-      connects: [left]
+      connects: [bottom, right]
     - name: Turf
       description: Expand local circuit and add new preferred operation
       connects: [bottom]
     - name: Informants
       description: +1d to gather info for scores
-      connects: [left, bottom]
+      connects: [right, bottom]
     - name: Cover Operation
       description: -2 Heat per score
       connects: [bottom]
       # new row
     - name: Turf
       description: Expand local circuit and add new preferred operation
-      connects: [left]
+      connects: [right]
     - name: Loyal Fence
       description: +2 stacks for smuggling or hijacking
       connects: [left]
