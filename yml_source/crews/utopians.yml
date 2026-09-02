@@ -1,0 +1,14 @@
+name: Utopians
+type: crew_type
+img: icons/svg/city.svg
+system:
+  description: A NEW AGE CULT DEDICATED TO AN UNSETTLING VISION OF THE FUTURE
+  experience_clues: You advanced the realization of your Utopian Vision.
+  # List order is the turf slot: item 1 becomes system.turfs."1". The crew sheet
+  # grid breaks rows after slots 5, 10, and 15; slot 18 is the Base / lair.
+  # connects draws connector lines: left, right, top, bottom.
+  turfs:
+    - name: Wellness Class
+      description: (Tier roll) - Heat = stacks in downtime
+    - name: Turf
+      description: ""

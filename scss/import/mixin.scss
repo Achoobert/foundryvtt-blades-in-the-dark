@@ -304,7 +304,8 @@
 
     position: absolute;
     display: block;
-    background-color: $lightgray;
+    // Slightly darker than turf fill so unclaimed bridges stay visible on the gap.
+      background-color: #aaa;
 
     &.right,
     &.left {

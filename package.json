@@ -16,6 +16,7 @@
     "watch": "node scripts/watch.mjs",
     "watch:css": "sass scss/style.scss:styles/blades.css --watch --style=expanded --source-map",
     "packs:pack": "node scripts/build-packs.mjs pack",
+    "packs:yml": "node scripts/build-yml-packs.mjs",
     "dev:sync": "node scripts/dev-sync.mjs",
     "dev:world": "node scripts/ensure-world.mjs",
     "dev": "npm run build:css && npm run dev:sync && npm run dev:world && npm run test:quench:sync",
@@ -27,6 +28,7 @@
   "devDependencies": {
     "@foundryvtt/foundryvtt-cli": "^1.1.0",
     "eslint": "^9.0.0",
+    "js-yaml": "^4.1.0",
     "prettier": "^3.3.0",
     "sass": "^1.89.0"
   },

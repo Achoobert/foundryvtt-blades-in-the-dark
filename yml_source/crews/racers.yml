@@ -1,0 +1,47 @@
+name: Racers
+type: crew_type
+img: icons/svg/city.svg
+system:
+  description: Thrill-Seekers, Smugglers, Daredevils, And Family
+  experience_clues: You executed a successful smuggling, hijacking, racing, or smash-and-grab operation.
+  # List order is the turf slot: item 1 becomes system.turfs."1". The crew sheet
+  # grid breaks rows after slots 5, 10, and 15; slot 18 is the Base / lair.
+  # connects draws connector lines: left, right, top, bottom.
+  turfs:
+    - name: Weird Old Gate
+      description: Safe passage out of the Bubble
+    - name: Weird Old Maps
+      description: +2d engagement for Deathlands Race score
+    - name: Deathlands Race
+      description: Tier 4 opponents, 10 Rep, 15 stacks (one-off opportunity)
+    - name: Secret Hit
+      description: Take out a target during Deathlands Race score for +10 bonus stacks
+    - name: Gambling Den
+      description: (Tier roll) - Heat = stacks in downtime
+      # new row
+    - name: Secret Routes
+      description: +1d engagement for speed approaches
+    - name: Turf
+      description: Expand local circuit and add new preferred operation
+    - name: Turf
+      description: Expand local circuit and add new preferred operation
+    - name: Chop Shop
+      description: (Tier roll) - Heat = stacks in downtime
+    - name: Warehouse
+      description: Stockpiles give you +1d to Acquire Asset rolls
+      # new row
+    - name: Big Street Race
+      description: Tier 3 opponents, 15 stacks (one-off opportunity)
+    - name: Lounge Bar
+      description: +1d to Consort and Sway on-site
+    - name: Turf
+      description: Expand local circuit and add new preferred operation
+    - name: Informants
+      description: +1d to gather info for scores
+    - name: Cover Operation
+      description: -2 Heat per score
+      # new row
+    - name: Turf
+      description: Expand local circuit and add new preferred operation
+    - name: Loyal Fence
+      description: +2 stacks for smuggling or hijacking

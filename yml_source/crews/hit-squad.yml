@@ -1,0 +1,47 @@
+name: Hit Squad
+type: crew_type
+img: icons/svg/city.svg
+system:
+  description: Contract Killers, Discreet And Skilled Assassins
+  experience_clues: You executed a successful accident, disappearance, murder, or ransom operation.
+  # List order is the turf slot: item 1 becomes system.turfs."1". The crew sheet
+  # grid breaks rows after slots 5, 10, and 15; slot 18 is the Base / lair.
+  # connects draws connector lines: left, right, top, bottom.
+  turfs:
+    - name: Friendly Ink Rake
+      description: +1 Rep per score
+    - name: City Records
+      description: +1d engagement for stealth approaches
+    - name: Legendary Target
+      description: Tier 5 target, 15 Rep, 10 stacks (one-off opportunity)
+    - name: Double Contract
+      description: Legendary Target includes second hit, for +10 bonus stacks
+    - name: Cover Identities
+      description: +1d engagement for deception and social approaches
+      # new row
+    - name: Protection Racket
+      description: (Tier roll) - Heat = stacks in downtime
+    - name: Shady Hotel
+      description: +1 scale for your Infiltrator cohorts
+    - name: Detailed Map
+      description: +2d engagement for Legendary Target score
+    - name: Cover Operation
+      description: -2 Heat per score
+    - name: Hagfish Farm
+      description: Body disposal, +1d to reduce Heat after killing
+      # new row
+    - name: Elusive Target
+      description: Tier 4 target, +5 bonus Rep (one-off opportunity)
+    - name: Gambling Hall
+      description: (Tier roll) - Heat = stacks in downtime
+    - name: VIP Lounge
+      description: +2 stacks from high-class clients
+    - name: Dispensary
+      description: +1d to healing rolls
+    - name: Informants
+      description: +1d to gather info for scores
+      # new row
+    - name: Dive Bar
+      description: +2 stacks from lower-class clients
+    - name: Turf
+      description: Expand hunting grounds and add new preferred operation

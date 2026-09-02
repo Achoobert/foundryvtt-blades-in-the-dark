@@ -1,0 +1,78 @@
+name: Shadows
+type: crew_type
+img: icons/svg/city.svg
+system:
+  description: COVERT SPECIALISTS, EXPERTS IN HEISTS AND ESPIONAGE
+  experience_clues: You executed a surveillance, heist, subterfuge, or cleanup operation.
+  # List order is the turf slot: item 1 becomes system.turfs."1". The crew sheet
+  # grid breaks rows after slots 5, 10, and 15; slot 18 is the Base / lair.
+  # connects draws connector lines: left, right, top, bottom.
+  turfs:
+    - name: Cover Identities
+      description: +1d engagement for deception and social approaches
+      connects: [bottom, right]
+    - name: Turf
+      description: Expand hunting grounds and add new preferred operation
+      connects: [bottom, left, right]
+    - name: Checkmate
+      description: Tier 5 target, 30 stacks, complete any clock (one-off opportunity)
+      highlight: true
+      connects: [ right]
+    - name: Inside Mark
+      description: Target for Checkmate counts as -1 Tier for that score
+      highlight: true
+      connects: [left, right]
+    - name: Secret Pathways
+      description: +1d engagement for stealth plans
+      connects: [left, bottom]
+      # new row
+    - name: Paid-Off Bluecoats
+      description: -2 Heat per score
+      connects: [top, bottom]
+    - name: Interested Party
+      description: Checkmate score earns +10 bonus stacks
+      highlight: true
+      connects: [top, right, bottom]
+    - name: Slush Fund
+      description: +1d to Acquire Asset rolls
+      connects: [left, right, bottom]
+    - name: Cover Story
+      description: +2d engagement for Checkmate score
+      highlight: true
+      connects: [left, right, top]
+    - name: Luxury Venue
+      description: +1d to Consort and Sway on-site
+      connects: [left, top]
+      # new row
+    - name: Critical Move
+      description: Tier 4 target, 15 stacks, +4 ticks on any clock (one-off opportunity)
+      highlight: true
+      connects: [right, bottom]
+    - name: High-Stakes Game
+      description: (Tier roll) - Heat = stacks in downtime
+      connects: [left, right, top]
+    - name: Informants
+      description: +1d to gather info for scores
+      connects: [left, right, top, bottom]
+    - name: Turf
+      description: Expand hunting grounds and add new preferred operation
+      connects: [left, right]
+    - name: Dispensary
+      description: +1d to healing rolls
+      connects: [left, top]
+      # new row
+    - name: Turf
+      description: Expand hunting grounds and add new preferred operation
+      connects: [top, right]
+    - name: Specialist Fence
+      description: +2 stacks for heists or subterfuge
+      connects: [left, right]
+    - name: Base
+      description: Base of Operations
+      connects: [left, right, top]
+    - name: Covert Fixer
+      description: +2 stacks for surveillance or sabatauge
+      connects: [left, right]
+    - name: Lounge bar
+      description: Tier roll - heat = stacks in downtime
+      connects: [left, top]

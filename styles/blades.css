@@ -771,7 +771,7 @@
 .blades68.crew.sheet .turf-list.section-non-editable .turf-block .connector {
   position: absolute;
   display: block;
-  background-color: #bbb;
+  background-color: #aaa;
 }
 .blades68.crew.sheet .turf-list.section-non-editable .turf-block .connector.right, .blades68.crew.sheet .turf-list.section-non-editable .turf-block .connector.left {
   width: 40px;
@@ -844,7 +844,7 @@
 .blades68.crew.sheet .turf-list.section-editable .turf-block .connector {
   position: absolute;
   display: block;
-  background-color: #bbb;
+  background-color: #aaa;
 }
 .blades68.crew.sheet .turf-list.section-editable .turf-block .connector.right, .blades68.crew.sheet .turf-list.section-editable .turf-block .connector.left {
   width: 40px;
@@ -2245,4 +2245,13 @@
 }
 .add-items-list .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+#pause img,
+#pause #pause-icon {
+  animation: none;
+  width: auto;
+  max-width: 400px;
+  height: auto;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.75));
 }

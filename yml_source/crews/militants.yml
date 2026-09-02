@@ -1,0 +1,47 @@
+name: Militants
+type: crew_type
+img: icons/svg/city.svg
+system:
+  description: Activists Pushing For Revolutionary Change
+  experience_clues: You executed a successful assassination, demonstration, sabotage, or battle operation.
+  # List order is the turf slot: item 1 becomes system.turfs."1". The crew sheet
+  # grid breaks rows after slots 5, 10, and 15; slot 18 is the Base / lair.
+  # connects draws connector lines: left, right, top, bottom.
+  turfs:
+    - name: Secret Caches
+      description: Stockpiles give you +1d to Acquire Asset rolls
+    - name: Popular Support
+      description: +1d engagement for stealth approaches
+    - name: Critical Strike
+      description: Tier 5 target, target drops 2 Tiers
+    - name: Expropriation
+      description: Critical Strike score includes +10 bonus stacks
+    - name: Hostel
+      description: +1 scale for your Muscle cohorts
+      # new row
+    - name: Catalyst Action
+      description: Tier 4 target, creates new Tier 2 faction (+2 status)
+    - name: Turf
+      description: Add new preferred operation
+    - name: Key Conspirator
+      description: +2d engagement for Critical Strike score
+    - name: Turf
+      description: Add new preferred operation
+    - name: '"Interview Room"'
+      description: +1d to Command and Sway on-site
+      # new row
+    - name: Informants
+      description: +1d to gather info for scores
+    - name: Grassroot Support
+      description: New faction from Catalyst Action score will be +3 status
+    - name: Donations
+      description: +2 stacks for battle or demonstration
+    - name: Dispensary
+      description: +1d to healing rolls
+    - name: Social Clubs
+      description: (Tier roll) - Heat = stacks in downtime
+      # new row
+    - name: Covert Funding
+      description: +2 stacks for sabotage or assassination
+    - name: Turf
+      description: Add new preferred operation

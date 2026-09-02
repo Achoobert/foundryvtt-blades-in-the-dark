@@ -465,3 +465,18 @@ Hooks.on("renderSceneControls", async (app, html) => {
 	}
 
 });
+
+const PAUSE_IMAGE = "systems/blades68/styles/assets/blades68/bladesin68_logo.png";
+
+function setPauseImage(target) {
+  // renderGamePause (V13+) passes an HTMLElement, renderPause (V12 and older) passes jQuery
+  const root = target instanceof HTMLElement ? target : target?.[0];
+  const image = root?.querySelector("img");
+
+  if (image) {
+    image.src = PAUSE_IMAGE;
+  }
+}
+
+Hooks.on("renderGamePause", (app, element) => setPauseImage(element));
+Hooks.on("renderPause", (app, html) => setPauseImage(html));

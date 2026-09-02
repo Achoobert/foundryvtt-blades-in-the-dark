@@ -10,7 +10,14 @@
 ```console
 https://github.com/achoobert/foundryvtt-blades-in-the-dark/releases/latest/download/system.json
 ```
+🚧 🚧 🚧 🚧 
+WARNING this is a UNOFFICIAL work in progress from an inexperienced dev. 
+My goal is to provide nice player-facing sheets and rolls NOT to perfectly model everything in the rulebook!
+I seriously doubt this can be merged back into the base blades system at this point, and I'm going to be too busy running games to try. Thus even though I'm keeping it close to the base Blades system this will be a seperate fork for the time being.
 
+If this game system helped you, I may have some games open if you want to play some blades68! 
+https://startplaying.games/gm/achoobert
+🚧 🚧 🚧 
 
 If you like our work - use the system, use it all, and may the shadows cover your way.
 If you have questions, please ask them on the #forged-in-the-dark channel of the [FoundryVTT Discord](https://discord.gg/foundryvtt)
@@ -20,36 +27,15 @@ If you have questions, please ask them on the #forged-in-the-dark channel of the
 
 - All bars can be adjusted by clicking on the box that you want to check. Clicking or right-clicking a checked box will uncheck it.
 - To add items you can click a corresponding link or drag items from compendium/game to the sheet.
-- All "class/crew" specific items are prefixed with first letters
 - To enable Deep Cuts options, use the settings menu.
 
-- I don't want the "class/crew items" to be prepopulated, so the character sheet contains less "compendium" info.
 - To see the description of Class, Vice, Background, etc you can just click added item and see all the info in the popup.
-- When adding a new item you can hower a "question-circle" icon to see the item's description.
 - To add Custom abilities just add a new "Foundry Item" of the corresponding type and fill all the necessary info. Then drag it to the sheet or add via button on a sheet.
 
-Classes:
-- (C)  Cutter
-- (G)  Ghost
-- (H)  Hound
-- (Hu) Hull
-- (Le) Leech
-- (Lu) Lurk
-- (Sl) Slide
-- (Sp) Spider
-- (V)  Vampire
-- (W)  Whisper
-
-Crew Types:
-- (A)  Assassins
-- (B)  Bravos
-- (C)  Cult
-- (H)  Hawkers
-- (Sh) Shadows
-- (Sm) Smugglers
+I left in the old Blades classes: since 68 is MEANT to be able to cross-play with old playbooks. 
 
 ## Screenshots
-
+TODO update
 ### Character Sheet, Crew Sheet and Clock
 ![alt screen][screenshot_all]
 
@@ -61,26 +47,20 @@ Crew Types:
 ![alt screen][screenshot_roll_2]
 
 ## Clocks
-Clocks are now here!
 - To add clock go to Actors tab and create a new Actor of type "🕛 clock".
 - To share it to other players just drag it to a scene.
 
 ## Supported Languages
 - English
-- Russian (Русский)
-- Spanish (Español)
-- Polish (Język Polski)
-- German (Deutsch)
-- French (Français)
-- Portuguese (Português)
-- Brazilian Portuguese (Português do Brasil)
-- Italian (Italiano)
+(old translation of old content has not been removed, but is entirely untested)
 
 ## Troubleshooting
 - If you can't find the drag-n-dropped item, refer to "All Items" tab on each sheet.
 
 ## Credits
 - This work is based on Blades in the Dark (found at http://www.bladesinthedark.com/), product of One Seven Design, developed and authored by John Harper, and licensed for our use under the Creative Commons Attribution 3.0 Unported license (http://creativecommons.org/licenses/by/3.0/).
+- TODO attribute blades68
+- TODO attribute trouble engine
 - This game system for FoundryVTT was originally made and maintained by Megastruktur (https://github.com/megastruktur/foundryvtt-blades-in-the-dark_)
 - Some assets were taken from here (thank you  timdenee and joesinghaus): https://github.com/joesinghaus/Blades-in-the-Dark
 
@@ -91,5 +71,6 @@ Clocks are now here!
 [screenshot_roll_2]: ./images/screenshot_roll_2.png "screenshot_roll_2"
 
 
-text imported from:
+text and icons imported from:
 https://github.com/Roll20/roll20-character-sheets/tree/master/Blades%2068
+under an MIT lisence
