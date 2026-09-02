@@ -11,28 +11,28 @@ system:
       description: "+2 load in prison, & can carry stacks, +2d to Doing Time"
       connects: [right, bottom]
     - name: Contraband
-      description: 
+      description: "Can now Indulge Vice inside prison, +1d to Doing Time"
       connects: [right, bottom]
     - name: Cell Block Control
-      description: 
+      description: "No more Survival rolls, +2d to Doing Time rolls"
       connects: [left]
       # row
     - name: Prison
       description: base 
       connects: [right, bottom, top]
     - name: Hardcase
-      description: 
+      description: "Mark turf box on crew’s Rep tracker"
       connects: [right, bottom]
     - name: Outside Claim
-      description: 
+      description: "Take a claim for the crew"
       connects: [left]
     # row
     - name: Guard Payoff
-      description: 
-      connects: [right]
+      description: "+1d to all rolls inside prison, +1d to Doing Time"
+      connects: [rightw]
     - name: Smuggling
-      description:
-      connects: [right]
+      description: "+2 load in prison, & can carry stacks, +1d to Doing Time"
+      connects: [right] 
     - name: Parloe Infulence
-      description: 
+      description: "Wanted Level counts as one lower for sentence"
       connects: [left]
