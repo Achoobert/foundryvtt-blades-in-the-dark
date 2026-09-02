@@ -89,3 +89,7 @@ Clocks are now here!
 [screenshot_compendium]: ./images/screenshot_compendium.png "screenshot_compendium"
 [screenshot_roll_1]: ./images/screenshot_roll_1.png "screenshot_roll_1"
 [screenshot_roll_2]: ./images/screenshot_roll_2.png "screenshot_roll_2"
+
+
+text imported from:
+https://github.com/Roll20/roll20-character-sheets/tree/master/Blades%2068
