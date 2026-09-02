@@ -425,6 +425,13 @@
   "BITD.Prison": "Prison",
 
   "BITD.ActionRoll": "Action",
+  "BITD.RollOptions": "Roll Options",
+  "BITD.RollOptionAssist": "Get an Assist: +1d if an ally helps (they take 1 stress).",
+  "BITD.RollOptionGambit": "Spend a Gambit: +1d, if your crew has one available to spend.",
+  "BITD.RollOptionPush": "Push Yourself: +1d, take 2 stress (can't also take a Devil's Bargain).",
+  "BITD.RollOptionDevilsBargain": "Devil's Bargain: +1d, accept the GM's complication (can't also Push Yourself).",
+  "BITD.RollOptionGroupAction": "Group Action: everyone involved rolls; use the best single result.",
+  "BITD.RollOptionSetupAction": "Setup Action: on a success, improve position or effect for the next roll.",
   "BITD.ThreatRoll": "Threat",
   "BITD.PushYourself": "Push Yourself",
   "BITD.IndulgeVice": "Indulge Vice",

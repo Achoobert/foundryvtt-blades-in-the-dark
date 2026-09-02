@@ -11,3 +11,40 @@ system:
     prowl: 1
     attune: 1
     sway: 1
+# First ability is the starting special.
+abilities:
+  - name: Vampire
+    description: >-
+      You are a resonance echo who animates an undying body. Your deadlocks are maxed out.
+      Choose four that reflect your vampiric nature. Paranormal attacks are potent against you.
+      If you suffer mortal harm or another deadlock, you are overwhelmed. You take level 3 harm:
+      "Incapacitated" until you feed enough to recover. If you suffer paranormal harm while in
+      this state, you are destroyed utterly. Your xp tracks are longer (you now advance more
+      slowly). You have more Stress boxes.
+  - name: Terrible Power
+    description: >-
+      Take 1 Stress to perform a feat of superhuman strength or speed (run faster than an
+      autopod, bend steel with bare hands, leap onto the roof of a building, etc.). This factors
+      into effect.
+  - name: Telepathy
+    description: >-
+      Take 1 Stress to sense beyond human limits. Read a subject's true thoughts or feelings,
+      see in pitch darkness, sense the presence of invisible things, intuit the location of a
+      hidden object, etc.
+  - name: Resonance Void
+    description: >-
+      You are invisible to resonance entities and may not be harmed by them. Take 2 Stress to
+      cause living things to avert their gaze and fail to observe you for a few moments.
+  - name: Dark Majesty
+    description: >-
+      Choose Insight, Prowess, or Resolve. Your max rating for actions under that attribute
+      becomes 5. When you take this ability, add +1 dot to the resistance rating of the
+      attribute you've chosen.
+  - name: Sinister Guile
+    description: >-
+      During downtime, choose one: get a free additional downtime activity, or take +1d to all
+      downtime activity rolls.
+  - name: Feral Whispers
+    description: You can Attune to animals to have them do your bidding.
+  - name: Versatile
+    description: Choose a special ability from another source (can be taken more than once).

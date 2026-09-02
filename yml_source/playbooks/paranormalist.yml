@@ -8,3 +8,43 @@ system:
   base_skills:
     study: 1
     attune: 2
+# First ability is the starting special.
+abilities:
+  - name: Third Eye Opened
+    description: >-
+      You’re always aware of resonance entities in your vicinity. You can Attune to the
+      resonance field to force a nearby entity to appear and obey a command you give it.
+  - name: Precognition
+    description: >-
+      Two times per score, you can assist a teammate without paying Stress. Tell us how you
+      prepared for this in advance.
+  - name: Psychokinesis
+    description: >-
+      When you push yourself, you can also do one of the following: levitate for a short
+      time—violently push or pull objects through the air.
+  - name: Extrasensory Perception
+    description: >-
+      Twice per score, you may use your sixth sense to resist a paranormal consequence, or to
+      push yourself when you deal with paranormal forces.
+  - name: Forbidden Science
+    description: >-
+      You can use a downtime action to perform a paranormal experiment to manifest a
+      supernatural effect or being. Gain one free downtime action to perform such experiments.
+  - name: Echo Projection
+    description: >-
+      Pay 2 Stress to become a radiant being of crackling energy. While in this mode, you count
+      as wearing armor, your physical attacks gain potency, and you can push yourself to shoot
+      arcs of electroplasmic lightning. The projection drops at the end of the scene (or pay 2
+      Stress to continue for another scene). When you drop the projection, take the level 2 harm
+      Drained and the GM will tick a clock of their choice (you may resist these consequences).
+      If you take this ability a second time, the GM will not tick a clock.
+  - name: Medium
+    description: >-
+      You can communicate with all paranormal entities, even those not present in the physical
+      realm. Take +1d and potency when you do.
+  - name: Parapsychology
+    description: >-
+      You're immune to the terror that paranormal entities inflict on sight. Take +1d to
+      resistance rolls with Resolve. Take +1d when you gather info about the paranormal.
+  - name: Versatile
+    description: Choose a special ability from another source (can be taken more than once).

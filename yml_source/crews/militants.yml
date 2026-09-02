@@ -72,7 +72,7 @@ system:
       connects: [right, top]
     - name: Turf
       description: Add new preferred operation
-      connects: [bottom]
+      connects: [left]
     - name: Meeting Hall
       description: +1d to Consort and Sway on-site
       connects: [top]

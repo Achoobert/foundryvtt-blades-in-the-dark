@@ -9,3 +9,45 @@ system:
     hunt: 2
     skirmish: 1
     command: 1
+# First ability is the starting special.
+abilities:
+  - name: Military Discipline
+    description: >-
+      Twice per score, you may use your training to resist harm from an attack in combat or to
+      push yourself during a fight.
+  - name: Got Your Back
+    description: When you protect a teammate, clear 1 Stress and take +1d to any resistance rolls.
+  - name: Echo Fighter
+    description: >-
+      Thanks to special training, you may engage enemies in combat with nothing but your mind.
+      You gain potency in combat vs. the paranormal. You can attempt to read people’s next
+      intentions.
+  - name: Leadership
+    description: >-
+      When you Command a cohort in combat, they continue to fight when they would otherwise
+      break (they're not taken out when they suffer level 3 harm). They gain increased effect
+      and 1 armor.
+  - name: Walking Arsenal
+    description: >-
+      Your load limit is always 2 higher than normal (5 for a Quiet approach, 8 for Loud). Pull
+      out another 1-load gun at any time, no matter how many you’ve already used. Each
+      additional gun of its type (after the first) is 0 load.
+  - name: War Machine
+    description: >-
+      When you push yourself, you can also do one of the following: sweep and secure a large
+      area single-handedly and without pausing—engage an improbable number of enemies in a
+      ballet of violence.
+  - name: Get Back In There
+    description: >-
+      You were subject to experimental procedures designed to increase the shelf life of
+      frontline soldiers. Permanently fill in one of your healing clock segments. Take +1d to
+      healing treatment rolls.
+  - name: Creative Community
+    description: >-
+      You gain a second vice: learning a new creative hobby. What is it? When you indulge this
+      vice by going to class, add +2 to the result, and then create a new friend or rival
+      (classmate or teacher), or develop your relationship with an existing one. These people
+      have no criminal utility, but they might give you a ride or let you lay low at their place
+      in a pinch. When you overindulge, one of these friends is put in danger.
+  - name: Versatile
+    description: Choose a special ability from another source (can be taken more than once).

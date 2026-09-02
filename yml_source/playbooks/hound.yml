@@ -8,3 +8,43 @@ system:
   base_skills:
     survey: 1
     consort: 2
+# First ability is the starting special.
+abilities:
+  - name: Hound's Instincts
+    description: >-
+      When you push yourself, you can also do one of the following: figure out where to go next,
+      even with zero leads—make someone stop and listen to you for a few moments, no matter how
+      unlikely it is.
+  - name: Learn the Hard Way
+    description: >-
+      Whenever you take harm, clear an amount of Stress equal to the harm level, and it counts
+      as a successful gather information roll (with a level of detail equal to the harm level).
+      The GM will tell you what you learn.
+  - name: Just a Scratch
+    description: >-
+      Harm doesn’t slow you down during a score, and never factors into effect (level 4 harm is
+      still fatal, and you still roll for harm complications). You gain potency when you Consort
+      with someone who has caused you to mark harm.
+  - name: Fixer
+    description: >-
+      During downtime, you get +1 result level when you Acquire Asset or Reduce Heat. When
+      incarcerated, take +1d to any real time prison rolls, or take +2d to a prison time skip
+      roll.
+  - name: In Too Deep
+    description: >-
+      Once per score, you can Consort with an NPC to form an intimate bond. If you have such a
+      bond with someone involved in a score, you get +1d and potency to any actions dealing with
+      them.
+  - name: Echo Pet
+    description: >-
+      Your pet is imbued with anomalous resonance. It gains potency when tracking or fighting
+      the paranormal, and gains a paranormal ability: time-glitching, mind-link, or
+      mirror-field. Take this ability again to choose an additional paranormal ability for your
+      pet.
+  - name: Dogged Persistence
+    description: >-
+      Twice per score, you may use your tenacity to resist a consequence of exhaustion or mental
+      harm (fear, confusion, losing track of someone) or to push yourself for influencing
+      someone or searching for clues.
+  - name: Versatile
+    description: Choose a special ability from another source (can be taken more than once).

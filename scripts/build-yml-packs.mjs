@@ -7,6 +7,11 @@
  * directory picks the target pack (see PACK_BY_DIR); a `pack:` key in the file
  * overrides it.
  *
+ * Playbook YAML may also list `abilities:` (name + description). Those upsert
+ * into blades68_abilities.db. The first ability is the starting special
+ * (`system.starting_ability` on the class). Names listed on more than one
+ * playbook (e.g. Versatile) get a blank class restriction.
+ *
  * Documents are upserted into the target pack by name, so YAML files can
  * override or extend whatever build-blades68-packs.mjs generated without
  * clobbering the rest of the pack. Existing _ids are reused; new documents get
@@ -28,8 +33,11 @@ const PACK_BY_DIR = {
   crews: "blades68_crew_types.db",
   playbooks: "blades68_classes.db",
   factions: "blades68_factions.db",
-  items: "blades68_items.db"
+  items: "blades68_items.db",
+  abilities: "blades68_abilities.db"
 };
+
+const ABILITY_PACK = PACK_BY_DIR.abilities;
 
 const ACTIONS = [
   "hunt",
@@ -169,6 +177,60 @@ function normalizeBaseSkills(raw, file) {
   return skills;
 }
 
+/** Playbook YAML lists abilities as `{name, description}` maps, or bare names. First is starting unless `starting: true` is set. */
+function parseAbilityList(raw, file) {
+  if (raw == null) return [];
+  if (!Array.isArray(raw)) {
+    warn(file, "abilities must be a list");
+    return [];
+  }
+  const abilities = [];
+  for (const [index, entry] of raw.entries()) {
+    if (typeof entry === "string") {
+      const name = entry.replace(/\s+/g, " ").trim();
+      if (!name) warn(file, `ability ${index} is empty`);
+      else abilities.push({ name, description: "", starting: index === 0 });
+      continue;
+    }
+    if (entry === null || typeof entry !== "object") {
+      warn(file, `ability ${index} is not a mapping`);
+      continue;
+    }
+    const name = String(entry.name ?? "").replace(/\s+/g, " ").trim();
+    if (!name) {
+      warn(file, `ability ${index} missing name`);
+      continue;
+    }
+    abilities.push({
+      name,
+      description: String(entry.description ?? ""),
+      starting: entry.starting === true || (entry.starting == null && index === 0)
+    });
+  }
+  return abilities;
+}
+
+function abilityDoc(name, description, owner) {
+  return {
+    _id: stableId("ability", name),
+    name,
+    type: "ability",
+    img: "icons/svg/item-bag.svg",
+    system: {
+      description,
+      class: owner,
+      class_default: owner,
+      price: "1",
+      purchased: false
+    },
+    effects: [],
+    folder: null,
+    sort: 0,
+    permission: { default: 0 },
+    flags: {}
+  };
+}
+
 function buildDoc(source, file) {
   const name = String(source.name ?? "").replace(/\s+/g, " ").trim();
   const type = String(source.type ?? "").trim();
@@ -178,6 +240,7 @@ function buildDoc(source, file) {
   }
 
   const system = { ...(source.system ?? {}) };
+  delete system.abilities;
   if (system.turfs != null) system.turfs = normalizeTurfs(system.turfs, file);
   if (system.experience_clues != null) {
     system.experience_clues = Array.isArray(system.experience_clues)
@@ -233,6 +296,12 @@ function writePack(packFile, docs) {
 }
 
 const docsByPack = new Map();
+const pendingAbilities = [];
+
+function pushDoc(packFile, doc) {
+  if (!docsByPack.has(packFile)) docsByPack.set(packFile, []);
+  docsByPack.get(packFile).push(doc);
+}
 
 for (const { group, file } of readSourceFiles()) {
   const text = fs.readFileSync(file, "utf8");
@@ -262,8 +331,29 @@ for (const { group, file } of readSourceFiles()) {
 
   const doc = buildDoc(source, file);
   if (!doc) continue;
-  if (!docsByPack.has(packFile)) docsByPack.set(packFile, []);
-  docsByPack.get(packFile).push(doc);
+  pushDoc(packFile, doc);
+
+  const abilities = parseAbilityList(source.abilities ?? source.system?.abilities, file);
+  if (!abilities.length) continue;
+  if (doc.type === "class") {
+    doc.system.starting_ability = (abilities.find((a) => a.starting) ?? abilities[0]).name;
+  }
+  pendingAbilities.push({ playbook: doc.name, abilities });
+}
+
+const abilityOwners = new Map();
+const abilityDefs = new Map();
+for (const { playbook, abilities } of pendingAbilities) {
+  for (const ability of abilities) {
+    if (!abilityOwners.has(ability.name)) abilityOwners.set(ability.name, new Set());
+    abilityOwners.get(ability.name).add(playbook);
+    abilityDefs.set(ability.name, ability.description);
+  }
+}
+for (const [name, description] of abilityDefs) {
+  const owners = abilityOwners.get(name);
+  const owner = owners.size === 1 ? [...owners][0] : "";
+  pushDoc(ABILITY_PACK, abilityDoc(name, description, owner));
 }
 
 for (const [packFile, incoming] of docsByPack) {

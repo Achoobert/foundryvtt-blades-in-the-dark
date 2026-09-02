@@ -7,3 +7,40 @@ system:
   special_resource: Research
   base_skills:
     study: 1
+# First ability is the starting special.
+abilities:
+  - name: Unalloyed Genius
+    description: >-
+      When you craft an invention, take +1 result level to the roll. Invention clocks start with
+      1 segment already filled.
+  - name: Mentalist
+    description: >-
+      You can deduce trivial details about anyone. Study them to reveal their current intentions
+      as well as a deep desire they’re keeping secret or didn’t even know they had; gain +1d and
+      potency when acting on this information.
+  - name: High-Functioning Insomniac
+    description: >-
+      During downtime, you get two ticks to distribute among any long-term project clocks that
+      involve research, investigation, or crafting.
+  - name: Try Not to Break It This Time
+    description: >-
+      Any flashbacks to give another crew member just the right gadget before the score cost 0
+      Stress. Gain one free downtime action to craft such a gadget in a flashback.
+  - name: Researcher
+    description: >-
+      Twice per score, you may use your research to resist a consequence of fatigue, weakness,
+      or resonance effects, or to push yourself when working with technical skill or handling
+      resonance objects.
+  - name: Anatomist
+    description: >-
+      You can Tinker the human body to treat wounds or stabilize the dying. You may Study a
+      sickness or corpse. Everyone in your crew gets +1d to their healing treatment rolls.
+  - name: Encyclopedic Knowledge
+    description: >-
+      When you push yourself, you can also do one of the following: instantly find a weak point
+      or exploitable pattern in an obstacle—dazzle an audience with your intellect, leaving them
+      confused and distracted.
+  - name: Advanced Sparkmind
+    description: Choose an additional type, or add an edge, or remove a flaw.
+  - name: Versatile
+    description: Choose a special ability from another source (can be taken more than once).

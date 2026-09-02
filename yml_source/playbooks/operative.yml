@@ -8,3 +8,47 @@ system:
   base_skills:
     hunt: 1
     prowl: 2
+# First ability is the starting special.
+abilities:
+  - name: Clean
+    description: >-
+      Twice per score, you may use your precision to resist a consequence from detection or
+      security measures, or to push yourself for a feat of athletics or stealth.
+  - name: Double Agent
+    description: >-
+      You gain a second backing faction of your choice immediately. You get +2d when working on
+      long-term projects to influence any of your backing factions. How long have you been
+      secretly building this relationship? Does your first backing faction know about it?
+  - name: Dead Drop
+    description: >-
+      You have access to a bound resonance entity who will leave up to 2 load of items anywhere
+      you need them. The flashback to requesting the item(s) is free, and they’re left anywhere
+      you choose. You can also flashback to an Acquire Asset roll for the items as a free
+      downtime activity.
+  - name: Echo Walker
+    description: >-
+      Pay 2 Stress to step into the resonance field and disappear. Reappear at a moment of your
+      choice, wherever you want (you have to be able to move there physically). When you
+      reappear you are so cold (level 1 harm, can be resisted).
+  - name: Wetwork
+    description: >-
+      When you push yourself, you can also do one of the following: make an improbable shot at
+      extreme distance or with extreme speed—perform a feat of athletics that verges on the
+      superhuman.
+  - name: Cipher
+    description: >-
+      You have a deep cover identity. When you use it, you get +1d to rolls to confuse or
+      deflect suspicion. When you reveal your true identity, the resulting surprise gives you
+      the initiative in the situation (as well as +1d and potency). If your cover identity is
+      blown, create a new one with a 4-segment long-term project.
+  - name: Sleeper Agents
+    description: >-
+      Once per score, pay 2 Stress and nominate a minor NPC. They’ve been working for you this
+      whole time.
+  - name: Control
+    description: >-
+      Choose one of your action ratings. When you lead a group action using that action, you can
+      suffer only 1 Stress at most regardless of the number of failed rolls, and you may count
+      multiple 6s from different rolls as a critical.
+  - name: Versatile
+    description: Choose a special ability from another source (can be taken more than once).

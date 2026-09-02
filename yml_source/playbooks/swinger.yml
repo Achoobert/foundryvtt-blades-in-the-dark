@@ -8,3 +8,46 @@ system:
   base_skills:
     finesse: 1
     sway: 2
+# First ability is the starting special.
+abilities:
+  - name: Here Goes Nothing
+    description: >-
+      Take 2 Stress to roll your Sway or Consort rating while performing a different action. Use
+      a free flashback to reveal who you convinced to teach you this particular technique or
+      approach.
+  - name: Yeah, Baby
+    description: >-
+      When you agree to an NPC’s proposal, even though it complicates the crew’s goals, everyone
+      else on the crew marks 1 xp while you clear 3 Stress.
+  - name: Groove Machine
+    description: >-
+      You always know where the nearest music is playing and when you start dancing, others feel
+      compelled to join. When you take action while moving it on the dance floor, take +1d and
+      potency.
+  - name: Improviser
+    description: >-
+      When you push yourself, you can also do one of the following: claim to be anyone and
+      others will consider the possibility, no matter how outlandish—plunge blindly in an
+      unexpected direction and find a new path.
+  - name: Always Hustling
+    description: >-
+      Every personal business phase, mark +1 bank, and you may give yourself or another crew
+      member +1 downtime action. What’s your side hustle?
+  - name: Party Animal
+    description: >-
+      When you Indulge Vice, you can invite an ally to join you. They do not need to spend their
+      own downtime action, and lose the same Stress that you do. One time during the next score,
+      they can assist you once for free.
+  - name: Echo Twin
+    description: >-
+      There’s an alternate version of you in the resonance field, ghostly and glitched out. Take
+      2 Stress to summon them for a few moments, plus 1 Stress for each additional feature: They
+      last for a scene rather than a few minutes—they appear completely stable and solid—they
+      obey your instructions to the letter.
+  - name: Smooth
+    description: >-
+      Twice per score, you may use your mojo to resist a consequence of suspicion or social faux
+      pas, or to push yourself when talking your way out of a tight spot or driving under
+      pressure.
+  - name: Versatile
+    description: Choose a special ability from another source (can be taken more than once).
