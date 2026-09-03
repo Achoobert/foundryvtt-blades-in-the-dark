@@ -2,7 +2,7 @@
   "id": "blades68",
   "title": "Blades '68 (test build)",
   "description": "Blades '68 support built on the Blades in the Dark game system (test build).",
-  "version": "6.1.2",
+  "version": "6.4.0",
   "compatibility": {
     "minimum": 14,
     "verified": "14.362"
@@ -165,7 +165,7 @@
       "banner": "systems/blades68/images/compendium-banners/Doskvol_11.webp",
       "type": "Item"
     },
-	{
+    {
       "name": "faction",
       "label": "Factions",
       "system": "blades68",
@@ -181,7 +181,7 @@
       "banner": "systems/blades68/images/compendium-banners/Doskvol_13.webp",
       "type": "Actor"
     },
-	{
+    {
       "name": "entanglements",
       "label": "Entanglements",
       "system": "blades68",
@@ -189,7 +189,7 @@
       "banner": "systems/blades68/images/compendium-banners/Doskvol_14.webp",
       "type": "RollTable"
     },
-	{
+    {
       "name": "entanglements-journals",
       "label": "Entanglements Journals",
       "system": "blades68",
@@ -197,7 +197,7 @@
       "banner": "systems/blades68/images/compendium-banners/Doskvol_15.webp",
       "type": "JournalEntry"
     },
-	{
+    {
       "name": "entanglements-macro",
       "label": "Entanglements Macro",
       "system": "blades68",
@@ -266,27 +266,59 @@
     {
       "name": "Character Options",
       "sorting": "m",
-      "packs": ["class", "ability", "item", "background", "heritage", "vice"]
-	},
+      "packs": [
+        "class",
+        "ability",
+        "item",
+        "background",
+        "heritage",
+        "vice"
+      ]
+    },
     {
       "name": "Crew Options",
       "sorting": "m",
-      "packs": ["crew_type", "crew_ability", "crew_upgrade", "prison", "crew_reputation", "hunting_grounds"]
-	},
+      "packs": [
+        "crew_type",
+        "crew_ability",
+        "crew_upgrade",
+        "prison",
+        "crew_reputation",
+        "hunting_grounds"
+      ]
+    },
     {
       "name": "Factions & NPCs",
       "sorting": "m",
-      "packs": ["faction", "npc"]
-	},
+      "packs": [
+        "faction",
+        "npc"
+      ]
+    },
     {
       "name": "Entanglements",
       "sorting": "m",
-      "packs": ["entanglements-macro", "entanglements", "entanglements-journals"]
-	},
+      "packs": [
+        "entanglements-macro",
+        "entanglements",
+        "entanglements-journals"
+      ]
+    },
     {
       "name": "Blades '68 Content",
       "sorting": "m",
-      "packs": ["blades68_classes", "blades68_abilities", "blades68_items", "blades68_crew_types", "blades68_crew_abilities", "blades68_crew_upgrades", "blades68_factions", "blades68_macros"]
-	}
-  ]
+      "packs": [
+        "blades68_classes",
+        "blades68_abilities",
+        "blades68_items",
+        "blades68_crew_types",
+        "blades68_crew_abilities",
+        "blades68_crew_upgrades",
+        "blades68_factions",
+        "blades68_macros"
+      ]
+    }
+  ],
+  "manifest": "https://github.com/Achoobert/foundryvtt-blades-in-the-dark/releases/latest/download/system.json",
+  "download": "https://github.com/Achoobert/foundryvtt-blades-in-the-dark/releases/latest/download/system.zip"
 }
