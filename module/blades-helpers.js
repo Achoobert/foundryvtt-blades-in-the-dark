@@ -91,7 +91,14 @@ export class BladesHelpers {
    * "blades68_abilities"). Types without a Blades '68 counterpart return undefined.
    */
   static getBlades68PackName(item_type) {
-    return { class: "blades68_classes", ability: "blades68_abilities", item: "blades68_items" }[item_type];
+    return {
+      class: "blades68_classes",
+      ability: "blades68_abilities",
+      item: "blades68_items",
+      crew_type: "blades68_crew_types",
+      crew_ability: "blades68_crew_abilities",
+      crew_upgrade: "blades68_crew_upgrades",
+    }[item_type];
   }
 
   static async getAllItemsByType(item_type) {
@@ -545,6 +552,90 @@ export class BladesHelpers {
     }
   }
 
+  /**
+   * Load Blades '68 crew contact setup (cached). Returns null if unavailable.
+   * @returns {Promise<object|null>}
+   */
+  static async getCrewSetup() {
+    if (this._crewSetupCache !== undefined) {
+      return this._crewSetupCache;
+    }
+    try {
+      const setupUrl = foundry.utils.getRoute("systems/blades68/module/data/blades68-crew-setup.json");
+      this._crewSetupCache = await (await fetch(setupUrl)).json();
+    } catch (err) {
+      console.error("Failed to load blades68-crew-setup.json", err);
+      this._crewSetupCache = null;
+    }
+    return this._crewSetupCache;
+  }
+
+  /**
+   * Create NPC actors for a Blades '68 crew type and link them as acquaintances.
+   * Idempotent: keeps existing contacts; creates only missing names from the setup list.
+   * @param {Actor} actor - crew actor
+   * @param {string} crewTypeName - embedded crew_type item name (e.g. "Dealers")
+   * @returns {Promise<number>} number of new contacts created
+   */
+  static async generateCrewTypeContacts(actor, crewTypeName) {
+    if (!actor || actor.type !== "crew" || !crewTypeName) {
+      return 0;
+    }
+
+    const allSetup = await this.getCrewSetup();
+    const crewSetup = allSetup?.[crewTypeName];
+    if (!crewSetup?.contacts?.length) {
+      return 0;
+    }
+
+    const existing = foundry.utils.deepClone(actor.system.acquaintances ?? []);
+    const existingNames = new Set(
+      existing.map((acq) => String(acq?.name ?? "").trim().toLowerCase()).filter(Boolean)
+    );
+    const missing = crewSetup.contacts.filter((c) => {
+      const name = String(c?.name ?? "").trim();
+      return name && !existingNames.has(name.toLowerCase());
+    });
+    if (!missing.length) {
+      return 0;
+    }
+
+    let rootFolder = game.folders.find((f) => f.type === "Actor" && f.name === "PC_contacts" && !f.folder);
+    if (!rootFolder) {
+      rootFolder = await Folder.create({ name: "PC_contacts", type: "Actor" });
+    }
+
+    let actorFolder = game.folders.find(
+      (f) => f.type === "Actor" && f.name === actor.name && f.folder === rootFolder.id
+    );
+    if (!actorFolder) {
+      actorFolder = await Folder.create({ name: actor.name, type: "Actor", folder: rootFolder.id });
+    }
+
+    const npcData = missing.map((c) => ({
+      name: c.name,
+      type: "npc",
+      folder: actorFolder.id,
+      system: {
+        description_short: c.description_short ?? "",
+        associated_crew_type: crewTypeName,
+      },
+    }));
+    const createdNpcs = await Actor.createDocuments(npcData);
+
+    const acquaintances = existing;
+    for (const npc of createdNpcs) {
+      acquaintances.push({
+        id: npc.id,
+        name: npc.name,
+        description_short: npc.system.description_short,
+        standing: "neutral",
+      });
+    }
+    await actor.update({ "system.acquaintances": acquaintances });
+    return createdNpcs.length;
+  }
+
   // adds a crew to the character
   static async addCrew(actor, dropped_crew) {
     let current_crew = actor.system.crew;
@@ -586,7 +677,9 @@ export class BladesHelpers {
     let generics = [];
 
     for (const item of item_list) {
-      let itemclass = foundry.utils.getProperty(item, "system.class");
+      // Crew upgrades store ownership on system.crew_type; abilities/gear use system.class.
+      let itemclass = foundry.utils.getProperty(item, "system.class")
+        || foundry.utils.getProperty(item, "system.crew_type");
       if (!itemclass || itemclass === "") {
         generics.push(item);
       } else {

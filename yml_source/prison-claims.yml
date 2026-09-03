@@ -1,0 +1,30 @@
+turfs:
+    - name: Smuggling
+      description: "+2 load in prison, & can carry stacks, +2d to Doing Time"
+      connects: [right, bottom]
+    - name: Contraband
+      description: 
+      connects: [right, bottom]
+    - name: Cell Block Control
+      description: 
+      connects: [left]
+      # row
+    - name: Prison
+      description: base 
+      connects: [right, bottom, top]
+    - name: Hardcase
+      description: 
+      connects: [right, bottom]
+    - name: Outside Claim
+      description: 
+      connects: [left]
+    # row
+    - name: Guard Payoff
+      description: 
+      connects: [right]
+    - name: Smuggling
+      description:
+      connects: [right]
+    - name: Parloe Infulence
+      description: 
+      connects: [left]

@@ -1,0 +1,57 @@
+{{#if header.name}}
+{{#with header}}
+<div class="turf-header" data-header-id="{{../header_id}}">
+  <div class="turf-header-title">
+    <span class="turf-header-unlock {{#if value}}unlocked{{/if}}" data-header-id="{{../header_id}}"
+      title="Unlock"></span>
+    {{#if ../can_edit}}
+    <input class="turf-header-name" type="text" name="system.turf_headers.{{../header_id}}.name" value="{{name}}">
+    {{else}}
+    <span class="turf-header-name">{{localize name}}</span>
+    {{/if}}
+  </div>
+
+  {{#if unlock}}
+  <div class="turf-header-unlock-text">
+    {{#if ../can_edit}}
+    <input type="text" name="system.turf_headers.{{../header_id}}.unlock" value="{{unlock}}">
+    {{else}}
+    {{unlock}}
+    {{/if}}
+  </div>
+  {{/if}}
+
+  {{#if subheader}}
+  <div class="turf-header-subheader">
+    {{#if ../can_edit}}
+    <input type="text" name="system.turf_headers.{{../header_id}}.subheader" value="{{subheader}}">
+    {{else}}
+    {{subheader}}
+    {{/if}}
+  </div>
+  {{/if}}
+
+  {{#if options.length}}
+  <div class="turf-header-options">
+    {{#each options as |option|}}
+    {{#unless @first}}<span class="turf-header-option-sep">—</span>{{/unless}}
+    <span class="turf-header-option {{#if (includes ../selected option)}}selected{{/if}}"
+      data-header-id="{{../../header_id}}" data-option="{{option}}">{{option}}</span>
+    {{/each}}
+  </div>
+  {{/if}}
+
+  {{#if units}}
+  <div class="turf-header-units" data-header-id="{{../header_id}}" data-units-filled="{{units_filled}}">
+    <span class="turf-header-units-label">UNITS</span>
+    <div class="turf-header-units-dots">
+      {{#times_from_1 units}}
+      <span class="turf-header-unit {{#if (lteq this ../units_filled)}}filled{{/if}}"
+        data-header-id="{{../../header_id}}" data-unit-index="{{this}}"></span>
+      {{/times_from_1}}
+    </div>
+  </div>
+  {{/if}}
+</div>
+{{/with}}
+{{/if}}

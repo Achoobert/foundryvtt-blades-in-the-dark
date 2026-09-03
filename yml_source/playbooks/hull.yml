@@ -1,0 +1,42 @@
+name: Hull
+type: class
+img: icons/svg/upgrade.svg
+system:
+  description: The Soul Of A Condemned Criminal Trapped In A Robot Body
+  experience_clues: You obeyed orders, or addressed a challenge with cold simplicity.
+  base_skills:
+    skirmish: 1
+    attune: 1
+# First ability is the starting special.
+abilities:
+  - name: Automaton
+    description: >-
+      You are a soul powering a robotic body. You have human-like strength and senses, by
+      default. Your frame has built-in armor (this doesn't count for your load). Your former
+      human feelings, interests, and connections are almost entirely gone (you start with no
+      keys). You may be repaired if damaged or destroyed. Whenever you would take Stress, take
+      Drain instead. Choose two frame features.
+  - name: A Room of Your Own
+    description: >-
+      You have your own secret little den. You can now put stacks into bank. You have a pet. You
+      can spend a downtime action to look after the pet (describe the lengths you go to), and
+      mark 3 xp in a memory clock (below) of your choice.
+  - name: Powerhouse
+    description: >-
+      Take 1 Drain to perform a feat of extreme strength or speed (run faster than an autopod,
+      rend metal with your hands, etc.). This factors into effect.
+  - name: Retractable Arsenal
+    description: >-
+      Your items are built into your frame and may recess beneath panels out of sight. Your
+      frame can now carry +2 load.
+  - name: Energy Beam
+    description: >-
+      You may release some of your energy as an electric shock around you or as a directed beam.
+      You may also use this ability to create a lightning barrier to repel or trap a resonance
+      entity. Take 1 Drain for each level of magnitude.
+  - name: Interface
+    description: >-
+      You may Attune to the local electroplasmic power field to control it or something
+      connected to it (including another hull).
+  - name: Frame Upgrade
+    description: Choose two additional frame features. This trait may be taken twice.

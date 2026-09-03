@@ -1,0 +1,53 @@
+name: Radical
+type: class
+img: icons/svg/upgrade.svg
+system:
+  description: An Agitator — Incendiary In Every Sense
+  experience_clues: You addressed a challenge with persuasion or mayhem.
+  special_resource: Conviction
+  base_skills:
+    wreck: 2
+    sway: 1
+# First ability is the starting special.
+abilities:
+  - name: True Believer
+    description: >-
+      Twice per score, you may use your conviction to resist a consequence of law-breaking
+      (being arrested or hassled by Bluecoats, etc.) or to push yourself when fighting for your
+      ideology.
+  - name: Direct Action
+    description: >-
+      When you make a desperate roll with either Wreck or Command, you gain both potency and
+      scale. Remember that you can trade position for effect to make almost any action
+      desperate, if you dare.
+  - name: Echo Chamber
+    description: >-
+      The resonance echoes of the downtrodden are drawn to you, and when you open yourself to
+      them, your poetry reverberates with their power. Whenever you loudly recite poetry, a
+      crowd gathers to listen (if possible). When you use poetry as a means to an end, take +1d,
+      and gain potency dealing with the paranormal.
+  - name: Fellow Travelers
+    description: >-
+      In any scene with more than one NPC, ask the GM which of them are sympathetic to your
+      cause. It’s always at least one, but often a few, many, or sometimes all of them.
+  - name: Polemicist
+    description: >-
+      When you push yourself, you can also do one of the following: whip a crowd into a
+      righteous fury—shame a powerful figure into silence or retreat.
+  - name: Praxis
+    description: >-
+      If you loudly and visibly destroy a symbolic target during a score, gain +2 result levels
+      to any long-term project rolls related to your revolutionary work during the following
+      personal business phase.
+  - name: Pamphleteer
+    description: >-
+      You can publish revolutionary literature as a 4-segment long-term project. Name each work.
+      Once complete, a published work can tick another long-term project clock related to the
+      revolution, once per downtime (maximum of four such works may be in effective
+      circulation). If you die or get imprisoned, each work adds two ticks.
+  - name: Total Dedication
+    description: >-
+      When you roll a desperate action, you get +1d to your roll if you also take -1d to any
+      resistance rolls against consequences from your action.
+  - name: Versatile
+    description: Choose a special ability from another source (can be taken more than once).

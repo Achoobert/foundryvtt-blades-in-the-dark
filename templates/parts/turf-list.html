@@ -1,9 +1,18 @@
 <div id="crew-{{_id}}-turf-list" class="turf-list {{#if can_edit}}section-editable{{else}}section-non-editable{{/if}}">
 
+  {{#if not_prison}}
+  {{#if turf_headers}}
+  {{> "systems/blades68/templates/parts/turf-header.html" header=(lookup turf_headers "1") header_id="1"
+  can_edit=can_edit}}
+  {{/if}}
+  {{/if}}
+
   <div class="turf-row">
    {{#each turfs_data as |turf id|}}
 
-    <div class="turf-block {{#if turf.value}}turf-selected{{/if}}">
+    <div
+      class="turf-block {{#if (or turf.value (is_base_turf turf.name))}}turf-selected{{/if}} {{#if turf.highlight}}turf-highlight{{/if}} {{#if (is_base_turf turf.name)}}turf-base{{/if}}"
+      data-turf-id="{{id}}" data-turf-status="{{turf.value}}">
 
         {{#each turf.connects as |connect key|}}
 
@@ -18,15 +27,9 @@
         {{/each}}
 
         {{#if ../can_edit}}
-		  {{#if ../not_prison}}
-          {{#noteq id "8"}}
+          {{#unless (is_base_turf turf.name)}}
           <input class="name-box" type="checkbox" data-dType="Boolean" name="system.turfs.{{id}}.value" {{checked turf.value}}>
-          {{/noteq}}
-		  {{else}}
-          {{#noteq id "6"}}
-          <input class="name-box" type="checkbox" data-dType="Boolean" name="system.turfs.{{id}}.value" {{checked turf.value}}>
-          {{/noteq}}		  
-		  {{/if}}
+          {{/unless}}
 
           <div>
             {{#multiboxes turf.connects}}
@@ -48,32 +51,41 @@
           {{#if turf.description}}
           <p class="turf-description">{{{localize turf.description}}}</p>
           {{/if}}
-		  {{#if ../not_prison}}
-          {{#noteq id "8"}}
-          <a class="turf-control turf-select" data-tooltip="Select" data-turf-id="{{id}}" data-turf-status="{{turf.value}}"><i class="fa-solid fa-arrows-rotate"></i></a>
-          {{/noteq}}
-		  {{else}}
-          {{#noteq id "6"}}
-          <a class="turf-control turf-select" data-tooltip="Select" data-turf-id="{{id}}" data-turf-status="{{turf.value}}"><i class="fa-solid fa-arrows-rotate"></i></a>
-          {{/noteq}}
-		  {{/if}}
         {{/if}}
     </div>
 	{{#if ../not_prison}}
     {{#if (eq id "5")}}
-    </div><div class="turf-row">
+    </div>
+    {{#if ../turf_headers}}
+    {{> "systems/blades68/templates/parts/turf-header.html" header=(lookup ../turf_headers "2") header_id="2"
+    can_edit=../can_edit}}
+    {{/if}}
+    <div class="turf-row">
     {{/if}}
 	{{else}}
-    {{#if (eq id "4")}}
+    {{#if (eq id "3")}}
     </div><div class="turf-row">
     {{/if}}
 	{{/if}}
 	{{#if ../not_prison}}
     {{#if (eq id "10")}}
-    </div><div class="turf-row">
+    </div>
+    {{#if ../turf_headers}}
+    {{> "systems/blades68/templates/parts/turf-header.html" header=(lookup ../turf_headers "3") header_id="3"
+    can_edit=../can_edit}}
     {{/if}}
+    <div class="turf-row">
+    {{/if}}
+    {{#if (eq id "15")}}
+    </div>
+    {{#if ../turf_headers}}
+    {{> "systems/blades68/templates/parts/turf-header.html" header=(lookup ../turf_headers "4") header_id="4"
+    can_edit=../can_edit}}
+    {{/if}}
+    <div class="turf-row">
+      {{/if}}
 	{{else}}
-    {{#if (eq id "8")}}
+    {{#if (eq id "6")}}
     </div><div class="turf-row">
     {{/if}}
 	{{/if}}

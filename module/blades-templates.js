@@ -14,6 +14,7 @@ export const preloadHandlebarsTemplates = async function() {
     "systems/blades68/templates/parts/coins.html",
     "systems/blades68/templates/parts/attributes.html",
     "systems/blades68/templates/parts/turf-list.html",
+    "systems/blades68/templates/parts/turf-header.html",
     "systems/blades68/templates/parts/cohort-block.html",
     "systems/blades68/templates/parts/factions.html",
     "systems/blades68/templates/parts/active-effects.html",

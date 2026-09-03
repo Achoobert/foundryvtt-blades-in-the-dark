@@ -1,15 +1,13 @@
 # Builds a rolling "latest" GitHub Release on every push to the default
-# branch, auto-bumping the minor version in system.json (patch reset to 0).
+# branch. Only the minor semver segment is bumped in the packaged
+# system.json (major stays as in the repo, patch reset to 0). The repo
+# file is not committed back — version stamping is release-only.
 #
 # This complements main.yml (which packages a specific, manually-published
 # GitHub Release). This workflow instead gives players a stable
 # "Install Module" URL that always points at the newest build off the
 # default branch:
 #   https://github.com/<repo>/releases/latest/download/system.json
-#
-# The version-bump commit this workflow pushes back includes "[skip ci]",
-# which GitHub Actions natively honors to skip re-triggering push-based
-# workflows -- this prevents an infinite loop.
 
 name: Build Rolling Latest Release
 
@@ -32,14 +30,17 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Bump the minor version segment of system.json (e.g. 6.1.2 -> 6.2.0).
+      # Stamp only the minor segment for this rolling build.
+      # Repo system.json stays put (e.g. 6.1.2). Artifact version is
+      # major.(minor + run_number).0 so each push is newer for Foundry
+      # (run 1 -> 6.2.0, run 2 -> 6.3.0, ...).
       - name: Compute Next Version
         id: bump_version
         run: |
           current=$(jq -r '.version' system.json)
           IFS='.' read -r major minor patch <<< "$current"
-          next="${major}.$((minor + 1)).0"
-          echo "Bumping version: ${current} -> ${next}"
+          next="${major}.$((minor + ${{ github.run_number }})).0"
+          echo "Bumping version: ${current} -> ${next} (minor only, release artifact)"
           echo "current=${current}" >> "$GITHUB_OUTPUT"
           echo "next=${next}" >> "$GITHUB_OUTPUT"
 
@@ -53,18 +54,6 @@ jobs:
              '.version = $version | .manifest = $manifest | .download = $download' \
              system.json > system.json.tmp
           mv system.json.tmp system.json
-
-      - name: Commit Version Bump
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add system.json
-          git commit -m "chore: bump version to ${{ steps.bump_version.outputs.next }} [skip ci]"
-          git push
-
-      - name: Get Bump Commit SHA
-        id: sha
-        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
       # Note that `zip` will only emit warnings when a file or directory
       # doesn't exist, it will not fail.
@@ -94,8 +83,8 @@ jobs:
           replacesArtifacts: true
           makeLatest: true
           tag: latest
-          commit: ${{ steps.sha.outputs.sha }}
+          commit: ${{ github.sha }}
           name: "Latest (v${{ steps.bump_version.outputs.next }})"
-          body: "Automated rolling build from ${{ github.repository }}@${{ steps.sha.outputs.sha }}."
+          body: "Automated rolling build from ${{ github.repository }}@${{ github.sha }}."
           token: ${{ secrets.GITHUB_TOKEN }}
           artifacts: './system.json, ./system.zip'

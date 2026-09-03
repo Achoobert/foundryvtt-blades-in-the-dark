@@ -164,6 +164,17 @@ export class BladesActor extends Actor {
               .join("")}</select>
           </div>
         </fieldset>
+        <fieldset class="roll-options-reminder" style="margin-top:0.5em;">
+          <legend>${game.i18n.localize("BITD.RollOptions")}</legend>
+          <ul style="margin:0; padding-left:1.2em;">
+            <li>${game.i18n.localize("BITD.RollOptionAssist")}</li>
+            <li>${game.i18n.localize("BITD.RollOptionGambit")}</li>
+            <li>${game.i18n.localize("BITD.RollOptionPush")}</li>
+            <li>${game.i18n.localize("BITD.RollOptionDevilsBargain")}</li>
+            <li>${game.i18n.localize("BITD.RollOptionGroupAction")}</li>
+            <li>${game.i18n.localize("BITD.RollOptionSetupAction")}</li>
+          </ul>
+        </fieldset>
             `;
     } else {
       content += `

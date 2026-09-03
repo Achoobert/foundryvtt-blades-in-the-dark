@@ -13,7 +13,8 @@
     {{editor system.experience_clues target="system.experience_clues" button=true editable=editable}}
 
     <label class="label-stripe">{{localize "BITD.Turf"}}</label>
-    <div id="turf-container">{{> "systems/blades68/templates/parts/turf-list.html" turfs_data=system.turfs can_edit=true editable=editable}}</div>
+    <div id="turf-container">{{> "systems/blades68/templates/parts/turf-list.html" turfs_data=system.turfs
+      turf_headers=system.turf_headers can_edit=true editable=editable not_prison=true}}</div>
 	{{#if isGM}}
 	<div class="label-stripe">{{localize "BITD.Effects"}}</div>
     <div id="effects">{{> "systems/blades68/templates/parts/active-effects.html"}}</div>

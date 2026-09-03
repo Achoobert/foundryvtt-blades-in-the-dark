@@ -1,0 +1,44 @@
+name: Time Traveler Past
+type: class
+img: icons/svg/upgrade.svg
+system:
+  description: A Voyager Visiting This Era on an Important Mission
+  experience_clues:
+    - You addressed a challenge with fearless conviction or lateral thinking.
+    - You struggled with issues stemming from a temporal glitch.
+# First ability is the starting special.
+abilities:
+  - name: Haunted by the Past
+    description: >-
+      You are a visitor from the past, here on an important mission. Your mind starts muddled
+      from the time travel process. Every time you fill your playbook xp, you gain
+      clarity—choose a new Time Traveler trait and an ability from one of the Blades in the Dark
+      playbooks, and take another temporal glitch, and note down a new detail of your mission.
+      You burn brightly but briefly. Make the most of your time here.
+  - name: Ancient Martial Techniques
+    description: >-
+      You have been trained in mystical combat arts lost to time. Your bare hands count as a
+      fine weapon. When there's a question about who acts first, the answer is you.
+  - name: Sorcery
+    description: >-
+      When you push yourself, you can also do one of the following: communicate without
+      words—view another location clairvoyantly—temporarily increase your strength and
+      speed—supernaturally interface with electroplasmic technology.
+  - name: Step into the Void
+    description: >-
+      Take 2 Instability to step out of this timeline for a few minutes, disappearing instantly
+      before reappearing in the same place. Take 1 Instability for each additional feature: it
+      lasts for up to an hour rather than a few minutes—you reappear in a visible location of
+      your choice—you also take anyone you're touching.
+  - name: Multi-Dimensional
+    description: >-
+      Unmoored in time, you can tap into the knowledge and experiences of yourself from
+      alternate timelines. Attune to instantly "remember" a new skill or experience (e.g.
+      piloting an airship, speaking another language, knowing how to relate to wealthy
+      aristocrats).
+  - name: Shadow Walk
+    description: Take 1 Instability to teleport anywhere you can see.
+  - name: Resurrection of the Flesh
+    description: >-
+      Take 5 Instability to reverse the timeline of your physical body to a pre-injured state.
+      Clear all harm.

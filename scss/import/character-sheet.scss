@@ -285,6 +285,10 @@ $hover-brightness: 0.8;
       align-items: baseline;
       margin-right: 0;
 
+      .subheader-item {
+        min-width: fit-content;
+      }
+
       &:not(:last-child)::after {
         content: "\2022";
         margin: 0 6px;
@@ -389,6 +393,8 @@ $hover-brightness: 0.8;
         margin-bottom: 6px;
 
         input[type="checkbox"] {
+          // todo
+            @include toothradio(15px, 25px, "assets/blades68/dice_bg_black.png", "assets/blades68/dice_bg.png");
           flex-shrink: 0;
           position: relative;
           top: 2px;
@@ -538,7 +544,7 @@ $hover-brightness: 0.8;
 
       .key-marks {
         display: flex;
-@include toothradio(15px, 25px, "assets/blades68/stresspill_empty.png", "assets/blades68/stresspill_filled.png");
+        @include toothradio(15px, 25px, "assets/blades68/stresspill_empty.png", "assets/blades68/stresspill_filled.png");
 
         &.is-disabled {
           opacity: 0.45;

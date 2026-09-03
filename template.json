@@ -630,6 +630,82 @@
           "value": "",
           "description": "",
           "connects": []
+        },
+        "16": {
+          "name": "",
+          "value": "",
+          "description": "",
+          "connects": []
+        },
+        "17": {
+          "name": "",
+          "value": "",
+          "description": "",
+          "connects": []
+        },
+        "18": {
+          "name": "",
+          "value": "",
+          "description": "",
+          "connects": []
+        },
+        "19": {
+          "name": "",
+          "value": "",
+          "description": "",
+          "connects": []
+        },
+        "20": {
+          "name": "",
+          "value": "",
+          "description": "",
+          "connects": []
+        }
+      },
+      "turf_headers": {
+        "1": {
+          "name": "",
+          "subheader": "",
+          "unlock": "",
+          "select": 0,
+          "options": [],
+          "selected": [],
+          "units": 0,
+          "value": false,
+          "units_filled": 0
+        },
+        "2": {
+          "name": "",
+          "subheader": "",
+          "unlock": "",
+          "select": 0,
+          "options": [],
+          "selected": [],
+          "units": 0,
+          "value": false,
+          "units_filled": 0
+        },
+        "3": {
+          "name": "",
+          "subheader": "",
+          "unlock": "",
+          "select": 0,
+          "options": [],
+          "selected": [],
+          "units": 0,
+          "value": false,
+          "units_filled": 0
+        },
+        "4": {
+          "name": "",
+          "subheader": "",
+          "unlock": "",
+          "select": 0,
+          "options": [],
+          "selected": [],
+          "units": 0,
+          "value": false,
+          "units_filled": 0
         }
       }
     },
@@ -655,8 +731,8 @@
           "connects": []
         },
         "4": {
-          "name": "",
-          "value": "",
+          "name": "BITD.Prison",
+          "value": 1,
           "description": "",
           "connects": []
         },
@@ -667,8 +743,8 @@
           "connects": []
         },
         "6": {
-          "name": "BITD.Prison",
-          "value": 1,
+          "name": "",
+          "value": "",
           "description": "",
           "connects": []
         },
@@ -685,24 +761,6 @@
           "connects": []
         },
         "9": {
-          "name": "",
-          "value": "",
-          "description": "",
-          "connects": []
-        },
-        "10": {
-          "name": "",
-          "value": "",
-          "description": "",
-          "connects": []
-        },
-        "11": {
-          "name": "",
-          "value": "",
-          "description": "",
-          "connects": []
-        },
-        "12": {
           "name": "",
           "value": "",
           "description": "",

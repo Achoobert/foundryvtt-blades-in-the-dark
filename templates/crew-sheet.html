@@ -288,7 +288,8 @@
       {{#each items as |item id|}}
       {{#if (eq item.type "crew_type")}}
       <div class="item" data-item-id="{{item._id}}">
-        {{> "systems/blades68/templates/parts/turf-list.html" _id=../_id turfs_data=item.system.turfs can_edit=false not_prison=true}}
+        {{> "systems/blades68/templates/parts/turf-list.html" _id=../_id turfs_data=item.system.turfs
+        turf_headers=item.system.turf_headers can_edit=false not_prison=true}}
       </div>
       {{/if}}
       {{/each}}

@@ -134,6 +134,12 @@ Hooks.once("init", async function() {
     }
   });
 
+  // The base / lair claim is owned from the start, so the sheet never offers a toggle for it.
+  const BASE_TURF_NAMES = ["base", "lair", "prison", "bitd.base", "bitd.lair", "bitd.prison"];
+  Handlebars.registerHelper('is_base_turf', (name) => {
+    return BASE_TURF_NAMES.includes(String(name ?? "").trim().toLowerCase());
+  });
+
   // Multiboxes.
   Handlebars.registerHelper('multiboxes', function(selected, options) {
 
@@ -465,3 +471,18 @@ Hooks.on("renderSceneControls", async (app, html) => {
 	}
 
 });
+
+const PAUSE_IMAGE = "systems/blades68/styles/assets/blades68/bladesin68_logo.png";
+
+function setPauseImage(target) {
+  // renderGamePause (V13+) passes an HTMLElement, renderPause (V12 and older) passes jQuery
+  const root = target instanceof HTMLElement ? target : target?.[0];
+  const image = root?.querySelector("img");
+
+  if (image) {
+    image.src = PAUSE_IMAGE;
+  }
+}
+
+Hooks.on("renderGamePause", (app, element) => setPauseImage(element));
+Hooks.on("renderPause", (app, html) => setPauseImage(html));

@@ -1,0 +1,12 @@
+#pause {
+
+  img,
+  #pause-icon {
+    // core spins the round default icon; the logo is wide, so keep it still
+    animation: none;
+    width: auto;
+    max-width: 400px;
+    height: auto;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.75));
+  }
+}
