@@ -1,0 +1,18 @@
+_id: d743945e25d0d8c5
+name: For the Greater Good
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    A human sacrifice removes the Stress cost for any paranormal experiment you perform, and such sacrifices performed
+    in your base do not trigger the Death Radar or generate Heat.
+  class: Utopians
+  class_default: Utopians
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

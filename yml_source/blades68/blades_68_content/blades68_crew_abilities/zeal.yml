@@ -1,0 +1,16 @@
+_id: 41b071f2571cc43c
+name: Zeal
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: Every PC gets +1d and potency when they evangelize about the Utopian Vision.
+  class: Utopians
+  class_default: Utopians
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

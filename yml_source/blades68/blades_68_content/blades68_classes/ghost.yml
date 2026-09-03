@@ -1,0 +1,42 @@
+_id: 33a780e1d58fc7bb
+name: Ghost
+type: class
+img: icons/svg/upgrade.svg
+system:
+  description: A Resonance Echo Adrift Without A Body
+  experience_clues: |-
+    You exacted vengeance upon those whom you deem deserving.
+    You expressed your outrage or anger.
+    You struggled with issues stemming from a deadlock.
+  base_skills:
+    hunt:
+      - 0
+    study:
+      - 0
+    survey:
+      - 0
+    tinker:
+      - 0
+    finesse:
+      - 0
+    prowl:
+      - 0
+    skirmish:
+      - 0
+    wreck:
+      - 0
+    attune:
+      - 0
+    command:
+      - 0
+    consort:
+      - 0
+    sway:
+      - 0
+  starting_ability: Resonance Echo
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

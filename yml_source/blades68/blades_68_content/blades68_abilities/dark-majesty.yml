@@ -1,0 +1,18 @@
+_id: d1d7761d07b32e9e
+name: Dark Majesty
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Choose Insight, Prowess, or Resolve. Your max rating for actions under that attribute becomes 5. When you take this
+    ability, add +1 dot to the resistance rating of the attribute you've chosen.
+  class: Vampire
+  class_default: Vampire
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

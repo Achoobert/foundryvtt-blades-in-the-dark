@@ -1,0 +1,16 @@
+_id: a1395ac515ed3a32
+name: Frame Upgrade
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: Choose two additional frame features. This trait may be taken twice.
+  class: Hull
+  class_default: Hull
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

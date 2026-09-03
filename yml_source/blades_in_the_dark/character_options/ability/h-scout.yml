@@ -1,0 +1,14 @@
+_id: DPRnFPkObGyvgzGW
+name: (H) Scout
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    When  you  gather  info  to  locate  a  target,  you  get  +1  effect. When you hide in a prepared position or use
+    camouflage, you get +1dto rolls to avoid detection.
+  class: Hound
+  price: '1'
+folder: PaUiEAoDgddaXGEi
+sort: 400001
+flags: {}

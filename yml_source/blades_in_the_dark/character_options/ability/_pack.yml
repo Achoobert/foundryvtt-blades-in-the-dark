@@ -1,0 +1,6 @@
+# Compendium manifest — compiled by scripts/build-yml-packs.mjs
+name: "ability"
+label: "Abilities"
+type: "Item"
+path: "./packs/abilities.db"
+banner: "systems/blades68/images/compendium-banners/Doskvol_06.webp"

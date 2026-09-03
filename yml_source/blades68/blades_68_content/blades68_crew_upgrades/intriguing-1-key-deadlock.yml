@@ -1,0 +1,17 @@
+_id: 37387bcdb3d12517
+name: Intriguing (+1 key/deadlock)
+type: crew_upgrade
+img: icons/svg/item-bag.svg
+system:
+  description: ''
+  class: ''
+  price: '3'
+  purchased: false
+  logic: ''
+  crew_type: Dealers
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

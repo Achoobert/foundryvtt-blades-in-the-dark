@@ -1,0 +1,40 @@
+_id: f3bbcf1119efea60
+name: The Unseen
+type: faction
+img: icons/svg/city.svg
+system:
+  description: 'A highly organized and powerful group with secret membership. Thought to pull the strings of most of Doskvol.'
+  type: Underworld
+  tier: '6'
+  goal_1: ''
+  goal_1_clock_max: 0
+  goal_2: ''
+  goal_2_clock_max: 0
+  turf: ''
+  assets: ''
+  quirks: ''
+  notables: ''
+  allies: ''
+  enemies: ''
+  situation: ''
+  goal_clock: 0
+  hold:
+    value: 2
+    max: 2
+    max_default: 2
+    name_default: BITD.Hold
+    name: BITD.Hold
+  status:
+    value:
+      - 0
+    max: 7
+    max_default: 7
+    name_default: BITD.Status
+    name: BITD.Status
+  notes: 'A highly organized and powerful group with secret membership. Thought to pull the strings of most of Doskvol.  '
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

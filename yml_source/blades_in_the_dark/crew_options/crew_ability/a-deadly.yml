@@ -1,0 +1,13 @@
+_id: JtEOGnDwWUZf3lL6
+name: (A) Deadly
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: Each PC may add +1 action rating to Hunt, Prowl, or Skirmish (up to a max rating of 3).
+  class: Assassins
+  price: '1'
+folder: null
+sort: 100001
+flags: {}

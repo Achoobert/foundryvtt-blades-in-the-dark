@@ -1,0 +1,17 @@
+_id: sf9PXgmdlFkV0v5v
+name: Secure Lair 2
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: >-
+    Improves the defenses to include arcane measures that work against spirits. You might roll your crew's Tier if these
+    measures are ever put to the test, to see how well they thwart an intruder.
+  class: ''
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 1600001
+flags: {}

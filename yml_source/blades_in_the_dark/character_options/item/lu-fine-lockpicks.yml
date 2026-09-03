@@ -1,0 +1,13 @@
+_id: 5CDiyHMKJ1kWX6wp
+name: (Lu) Fine lockpicks
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: item
+system:
+  description: A finely crafted set of tools to disable and circumvent locks.
+  class: Lurk
+  load: '0'
+folder: null
+sort: 1600000
+flags: {}

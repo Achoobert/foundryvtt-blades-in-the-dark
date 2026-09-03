@@ -1,0 +1,17 @@
+_id: 4b267b669530f139
+name: Documents
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    A folder of paperwork on a variety of topics, including a registry of the nobility, bluecoat commanders, and other
+    notable citizens. Blank pages, a pen. A number of interesting maps. Some relevant print-outs of archival
+    information, prepared before the score.
+  class: ''
+  load: '1'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

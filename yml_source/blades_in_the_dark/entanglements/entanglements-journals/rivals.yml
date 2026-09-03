@@ -1,0 +1,14 @@
+name: Rivals
+content: >-
+  <p>A neutral faction throws their weight around. They threaten you, a friend, a contact, or one of your vice
+  purveyors. Forfeit (<strong>1 rep</strong> or <strong>1 coin</strong>) per Tier of the rival, or stand up to them and
+  lose <strong>1 status</strong> with them.</p>
+folder: null
+sort: 0
+permission:
+  default: 0
+  thWDvNEhl7M3mC2d: 3
+flags:
+  core:
+    sourceId: JournalEntry.HLCamOpbBCJNRYLG
+_id: ADi9NxzmVOAueO2n

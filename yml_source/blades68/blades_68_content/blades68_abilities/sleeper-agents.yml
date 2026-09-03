@@ -1,0 +1,16 @@
+_id: 2c6e929610646440
+name: Sleeper Agents
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: Once per score, pay 2 Stress and nominate a minor NPC. They’ve been working for you this whole time.
+  class: Operative
+  class_default: Operative
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,16 @@
+_id: 202d70c7c63fc355
+name: Thieves With a Code
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: When you complete a score with no deaths having occurred, gain +1 faction status with the local citizenry.
+  class: Shadows
+  class_default: Shadows
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

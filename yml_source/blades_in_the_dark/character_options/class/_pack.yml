@@ -1,0 +1,6 @@
+# Compendium manifest — compiled by scripts/build-yml-packs.mjs
+name: "class"
+label: "Classes"
+type: "Item"
+path: "./packs/classes.db"
+banner: "systems/blades68/images/compendium-banners/Doskvol_00.webp"

@@ -1,0 +1,39 @@
+_id: cad9580e2eabb743
+name: Hull
+type: class
+img: icons/svg/upgrade.svg
+system:
+  description: The Soul Of A Condemned Criminal Trapped In A Robot Body
+  experience_clues: You obeyed orders, or addressed a challenge with cold simplicity.
+  base_skills:
+    hunt:
+      - 0
+    study:
+      - 0
+    survey:
+      - 0
+    tinker:
+      - 0
+    finesse:
+      - 0
+    prowl:
+      - 0
+    skirmish:
+      - 1
+    wreck:
+      - 0
+    attune:
+      - 1
+    command:
+      - 0
+    consort:
+      - 0
+    sway:
+      - 0
+  starting_ability: Automaton
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

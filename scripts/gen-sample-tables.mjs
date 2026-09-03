@@ -1,3 +1,7 @@
+/**
+ * DEPRECATED: wrote Foundry JSON into packs-source/. Compendiums now live as
+ * lossless YAML under yml_source/ and compile via `npm run packs:build`.
+ */
 import { writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';

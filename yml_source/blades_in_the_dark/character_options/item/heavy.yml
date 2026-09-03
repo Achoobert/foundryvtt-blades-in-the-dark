@@ -1,0 +1,11 @@
+_id: 8kgtZo4ddpRAJH7l
+name: + Heavy
+permission:
+  default: 0
+type: item
+system:
+  class: ''
+  load: '3'
+  description: The addition of chain mail, metal plates, a metal helm.
+sort: 800000
+flags: {}

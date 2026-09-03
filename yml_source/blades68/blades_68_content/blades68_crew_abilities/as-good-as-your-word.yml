@@ -1,0 +1,16 @@
+_id: 1a7e229ca7eb0369
+name: As Good as Your Word
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: You may spend rep as coin in downtime actions. Vigilantes gain Obligation as a second vice.
+  class: Vigilantes
+  class_default: Vigilantes
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

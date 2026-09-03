@@ -1,0 +1,18 @@
+_id: 0036fca883421d33
+name: Under the Radar
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    When you kill someone during a score, you can take 2 Stress so that it doesn’t count towards Heat afterwards. How
+    does your crew avoid the Death Radar?
+  class: Hit Squad
+  class_default: Hit Squad
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

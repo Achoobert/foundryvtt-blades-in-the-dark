@@ -1,0 +1,15 @@
+_id: hedTeAsVIrGcdj6N
+name: (Lu) Fine shadow cloak
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: item
+system:
+  description: >-
+    A hooded cloak made of rare Iruvian shadow-silk that blends into the darkness around it. This item improves your
+    effect level when you sneak around.
+  class: Lurk
+  load: '1'
+folder: null
+sort: 1800000
+flags: {}

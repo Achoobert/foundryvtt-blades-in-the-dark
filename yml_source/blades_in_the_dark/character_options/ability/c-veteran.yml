@@ -1,0 +1,13 @@
+_id: z1H8ntG0PE1PGRSB
+name: (C) Veteran
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: ability
+system:
+  description: Choose a special ability from another source.
+  class: Cutter
+  price: '3'
+folder: null
+sort: 700001
+flags: {}

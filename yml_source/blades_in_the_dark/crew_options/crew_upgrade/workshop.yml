@@ -1,0 +1,17 @@
+_id: t2LsOuDGPZtTeqO4
+name: Workshop
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: >-
+    Your lair has a workshop appointed with tools for tinkering and alchemy, as well as a small library of books,
+    documents, and maps. You may accomplish long-term projects with these assets without leaving your lair.
+  class: ''
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 2100001
+flags: {}

@@ -1,0 +1,14 @@
+name: Cooperation
+content: >-
+  <p>A +3 status faction asks you for a favor. Agree to do it, or forfeit <strong>1 rep </strong>per Tier of the
+  friendly faction, or<strong> </strong>lose<strong> 1 status</strong> with them. If you don’t have a +3 faction status,
+  you avoid entanglements right now.</p>
+folder: null
+sort: 0
+permission:
+  default: 0
+  thWDvNEhl7M3mC2d: 3
+flags:
+  core:
+    sourceId: JournalEntry.xoz34R22ATadDztX
+_id: Cy31qmwfzifm7DaZ

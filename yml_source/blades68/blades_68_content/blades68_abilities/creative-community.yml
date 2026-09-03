@@ -1,0 +1,20 @@
+_id: febef6cb911e3176
+name: Creative Community
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    You gain a second vice: learning a new creative hobby. What is it? When you indulge this vice by going to class, add
+    +2 to the result, and then create a new friend or rival (classmate or teacher), or develop your relationship with an
+    existing one. These people have no criminal utility, but they might give you a ride or let you lay low at their
+    place in a pinch. When you overindulge, one of these friends is put in danger.
+  class: Veteran
+  class_default: Veteran
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

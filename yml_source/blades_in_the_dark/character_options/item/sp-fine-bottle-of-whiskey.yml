@@ -1,0 +1,13 @@
+_id: YKAC8KhZF6wtjAox
+name: (Sp) Fine bottle of whiskey
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: item
+system:
+  description: A rare distillation from your personal collection, potent both in its alcohol and its ability to impress.
+  class: Spider
+  load: '1'
+folder: null
+sort: 2700000
+flags: {}

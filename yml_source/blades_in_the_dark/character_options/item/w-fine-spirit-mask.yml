@@ -1,0 +1,16 @@
+_id: vXdIYwROF3sCGCHQ
+name: (W) Fine spirit mask
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: item
+system:
+  description: >-
+    An arcane item that allows the trained user to see supernatural energies in great detail. Also affords some measure
+    of protection against ghostly possession. Each spirit mask is unique. What does yours look like? What makes it
+    strange and disturbing to see?
+  class: Whisper
+  load: '1'
+folder: null
+sort: 3200000
+flags: {}

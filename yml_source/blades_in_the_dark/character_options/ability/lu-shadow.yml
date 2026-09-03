@@ -1,0 +1,14 @@
+_id: j20q54yIvqlg51Z5
+name: (Lu) Shadow
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    You may expend your special armor to resist a consequence from detection or security measures, or to push yourself
+    for a feat of athletics or stealth.
+  class: Lurk
+  price: '1'
+folder: 7gkE4yoqYZiTi9EB
+sort: 800001
+flags: {}

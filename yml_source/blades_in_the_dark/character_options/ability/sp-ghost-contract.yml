@@ -1,0 +1,14 @@
+_id: YeRIdgN6dt54tSAK
+name: (Sp) Ghost  Contract
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    When  you  shake  on  a  deal,  you  and  your  partner - human or otherwise - both bear a mark of your oath. If
+    either breaks the contract, they take level 3 harm, "Cursed".
+  class: Spider
+  price: '1'
+folder: io6Cdw11wDXIixI3
+sort: 500001
+flags: {}

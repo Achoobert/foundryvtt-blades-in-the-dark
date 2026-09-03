@@ -1,0 +1,16 @@
+_id: 3f93b739a64a30fa
+name: Unalloyed Genius
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: When you craft an invention, take +1 result level to the roll. Invention clocks start with 1 segment already filled.
+  class: Intellectual
+  class_default: Intellectual
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

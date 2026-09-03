@@ -1,0 +1,14 @@
+_id: bqQNAewUffuNUfbV
+name: (Sl) Rook's Gambit
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    Take 2 Stress to roll your best action rating while performing a different action. Say how you adapt your skill to
+    this use.
+  class: Slide
+  price: '1'
+folder: 537uDqf28OmWJoAM
+sort: 100001
+flags: {}

@@ -1,0 +1,10 @@
+name: Sinister
+permission:
+  default: 0
+type: crew_reputation
+system:
+  description: ''
+folder: null
+sort: 700001
+flags: {}
+_id: u0Dpn1VcDO7OJBRy

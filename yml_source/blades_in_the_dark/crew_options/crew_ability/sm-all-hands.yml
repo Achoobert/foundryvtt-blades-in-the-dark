@@ -1,0 +1,15 @@
+_id: itHJyy5VIgIdCXhG
+name: (Sm) All Hands
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: >-
+    During downtime, one of your cohorts may perform a downtime activity for the crew to acquire an asset, reduce heat,
+    or work on a long-term project.
+  class: Smugglers
+  price: '1'
+folder: null
+sort: 3500001
+flags: {}

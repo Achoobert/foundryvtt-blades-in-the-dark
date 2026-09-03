@@ -1,0 +1,14 @@
+_id: npFfvkY95OWza0Mo
+name: (W) Warded
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    You may expend your special armor to resist a supernatural consequence, or to push yourself when you deal with
+    arcane forces.
+  class: Whisper
+  price: '1'
+folder: 5Sb9YUatUQwtpdMZ
+sort: 800001
+flags: {}

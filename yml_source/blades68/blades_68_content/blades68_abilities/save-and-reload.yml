@@ -1,0 +1,16 @@
+_id: 0cbb136e161d7d9a
+name: Save and Reload
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: Take 5 Instability to rewind the timeline of your physical body to a pre-injured state. Clear all harm.
+  class: Time Traveler Future
+  class_default: Time Traveler Future
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

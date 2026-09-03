@@ -1,0 +1,21 @@
+name: (V) Terrible Power
+type: ability
+system:
+  description: >-
+    Take 1 stress to perform a feat of superhuman strength or speed (run faster than a carriage, break stone with bare
+    hands, leap onto the roof of a building, etc.). This factors into effect.
+  class: Vampire
+  price: 1
+  purchased: false
+  class_default: false
+  logic: ''
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+  hp9rhyB0AtTZTutm: 3
+flags:
+  core:
+    sourceId: Item.7UGVjNIqFnUUDO3R
+_id: DSsHNic5eOshjAhx

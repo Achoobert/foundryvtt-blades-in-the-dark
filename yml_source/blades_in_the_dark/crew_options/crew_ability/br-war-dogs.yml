@@ -1,0 +1,15 @@
+_id: cBMiM64v4w94bAx2
+name: (Br) War Dogs
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: >-
+    When you’re at war (-3 faction status), your crew does not suffer -1 hold and PCs still get two downtime activities,
+    instead of just one.
+  class: Bravos
+  price: '1'
+folder: null
+sort: 1500001
+flags: {}

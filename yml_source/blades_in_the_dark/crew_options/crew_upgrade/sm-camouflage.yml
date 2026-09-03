@@ -1,0 +1,17 @@
+_id: srZeBFjuq53E8rGD
+name: (Sm) Camouflage
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: >-
+    Your vehicles are perfectly concealed when at rest. They blend in as part of the environment, or as an uninteresting
+    civilian vehicle (your choice).
+  class: Smugglers
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 2800000
+flags: {}

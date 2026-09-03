@@ -1,0 +1,15 @@
+_id: yEeIGHhSNiGTBEJI
+name: (H) Ghost Market
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: >-
+    Through arcane ritual or hard-won experience, you have discovered how to prepare your product for sale to ghosts
+    and/or demons. They do not pay in coin. What do they pay with?
+  class: Hawkers
+  price: '1'
+folder: null
+sort: 2100001
+flags: {}

@@ -1,0 +1,16 @@
+_id: s2oRkgeBkSCfG07n
+name: (A) Emberdeath
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: >-
+    Due to hard-won experience or occult ritual, you know the arcane method to destroy a living victim's spirit at the
+    moment you kill them. Take 3 stress to channel electroplasmic energy from the ghost field to disintegrate the spirit
+    and dead body in a shower of sparking embers.
+  class: Assassins
+  price: '1'
+folder: null
+sort: 300001
+flags: {}

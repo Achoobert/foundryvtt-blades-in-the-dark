@@ -1,0 +1,12 @@
+_id: ANBgWHbSQVgUQecV
+name: Iruvia
+permission:
+  default: 0
+type: heritage
+system:
+  description: >-
+    If you want to be from a culture considered “foreign” by the locals, you could be from Iruvia, a rich and powerful
+    desert kingdom far to the south. It’s another diverse land of varying cultures similar to old Persia, Egypt, and
+    India.
+sort: 300000
+flags: {}

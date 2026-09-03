@@ -1,0 +1,18 @@
+_id: 81c5494f3b470d10
+name: Anatomist
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    You can Tinker the human body to treat wounds or stabilize the dying. You may Study a sickness or corpse. Everyone
+    in your crew gets +1d to their healing treatment rolls.
+  class: Intellectual
+  class_default: Intellectual
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

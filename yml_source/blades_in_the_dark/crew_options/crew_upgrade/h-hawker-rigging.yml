@@ -1,0 +1,17 @@
+_id: JQvE1of750ltopF5
+name: (H) Hawker Rigging
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: >-
+    One carried item is concealed and has no load. For example, you could carry a load of drugs or a weapon, perfectly
+    concealed, for zero load.
+  class: Hawkers
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 1600000
+flags: {}

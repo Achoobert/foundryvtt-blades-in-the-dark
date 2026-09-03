@@ -1,0 +1,16 @@
+_id: 568cd219bb361945
+name: Fine clothes & jewelry
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    A fabulous outfit with a flattering cut, in the latest style. Sure to impress. If you’re carrying this item as a
+    second outfit to change into, it counts as 2 load.
+  class: Swinger
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

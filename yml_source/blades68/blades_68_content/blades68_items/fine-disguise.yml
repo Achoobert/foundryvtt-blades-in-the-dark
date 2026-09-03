@@ -1,0 +1,17 @@
+_id: 4e06f7905b2b0bd9
+name: Fine disguise
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    A state-of-the-art disguise of one specific person. Includes clothing as well as a super-realistic latex mask and
+    wig. Could fool their own family, assuming you're roughly the same height and build. If you’re carrying this item as
+    a second outfit to change into, it counts as 2 load.
+  class: Operative
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

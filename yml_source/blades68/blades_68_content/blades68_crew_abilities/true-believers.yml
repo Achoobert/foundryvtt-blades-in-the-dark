@@ -1,0 +1,18 @@
+_id: de61adc546061dbf
+name: True Believers
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Your cohorts will undertake any service, no matter how dangerous or strange. They gain +1d to rolls against enemies
+    of the Utopian Vision.
+  class: Utopians
+  class_default: Utopians
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

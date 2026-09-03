@@ -1,0 +1,16 @@
+_id: d5d43be9b7c2ad57
+name: Provocative manifesto
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    A short punchy document declaring the views, motives, and intentions of a political movement. Has the potential to
+    incite a crowd, or to enrage the authorities.
+  class: Radical
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

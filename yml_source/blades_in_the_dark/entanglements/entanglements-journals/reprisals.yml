@@ -1,0 +1,14 @@
+_id: wVkkWR1jl10k7aeu
+name: Reprisals
+content: >-
+  <p>An enemy faction makes a move against you (or a friend, contact, or vice purveyor). Pay them (<strong>1
+  rep</strong> and <strong>1 coin</strong>) per Tier of the enemy as an apology, allow them to mess with you or yours,
+  or fight back and show them who’s boss.</p>
+folder: null
+sort: 0
+permission:
+  default: 0
+  thWDvNEhl7M3mC2d: 3
+flags:
+  core:
+    sourceId: JournalEntry.q0txK7pUnzstXrUy

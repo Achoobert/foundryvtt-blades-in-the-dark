@@ -1,0 +1,18 @@
+_id: c28056f99bdff529
+name: High-Functioning Insomniac
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    During downtime, you get two ticks to distribute among any long-term project clocks that involve research,
+    investigation, or crafting.
+  class: Intellectual
+  class_default: Intellectual
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,14 @@
+_id: 78ba0b627d2ba795
+name: Submachine Coilgun (SMC)
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: A military-grade firearm noted for its compact size and rapid-fire capability.
+  class: Veteran
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

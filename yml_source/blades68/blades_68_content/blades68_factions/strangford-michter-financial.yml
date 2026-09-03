@@ -1,0 +1,42 @@
+_id: b84920f081db0817
+name: Strangford-Michter Financial
+type: faction
+img: icons/svg/city.svg
+system:
+  description: ''
+  type: Underworld
+  tier: '4'
+  goal_1: ''
+  goal_1_clock_max: 0
+  goal_2: ''
+  goal_2_clock_max: 0
+  turf: ''
+  assets: ''
+  quirks: ''
+  notables: ''
+  allies: ''
+  enemies: ''
+  situation: ''
+  goal_clock: 0
+  hold:
+    value: 2
+    max: 2
+    max_default: 2
+    name_default: BITD.Hold
+    name: BITD.Hold
+  status:
+    value:
+      - 0
+    max: 7
+    max_default: 7
+    name_default: BITD.Status
+    name: BITD.Status
+  notes: >-
+    A powerful investment firm with a habit of backing illegal ventures off the books. Has stakes in a large number of
+    criminal groups and shady scientific projects.
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

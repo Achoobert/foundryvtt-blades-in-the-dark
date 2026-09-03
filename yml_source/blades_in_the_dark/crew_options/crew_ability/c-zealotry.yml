@@ -1,0 +1,16 @@
+_id: Ts7Jjd3kVI6NHiAB
+name: (C) Zealotry
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: >-
+    Your cohorts have abandoned their reason to devote themselves to the cult. They will undertake any service, no
+    matter how dangerous or strange. They gain +1d to rolls against enemies of the faith.
+  class: Cult
+  price: '1'
+folder: null
+sort: 700001
+flags: {}
+img: icons/svg/mystery-man.svg

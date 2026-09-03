@@ -1,0 +1,21 @@
+name: (V) Dark Talent
+type: ability
+system:
+  description: >-
+    Choose Insight, Prowess, or Resolve. Your max rating for actions under that attribute becomes 5. When you take this
+    ability, add +1 dot to the resistance rating of the attribute you've chosen.
+  class: Vampire
+  price: 1
+  purchased: false
+  class_default: false
+  logic: ''
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+  hp9rhyB0AtTZTutm: 3
+flags:
+  core:
+    sourceId: Item.KdtF8wI4cpY6l1h0
+_id: dlECJDA6cZpGr4s5

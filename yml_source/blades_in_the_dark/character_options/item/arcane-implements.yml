@@ -1,0 +1,13 @@
+_id: YLPAWyYPQZuuHL18
+name: Arcane Implements
+permission:
+  default: 0
+type: item
+system:
+  class: ''
+  load: '1'
+  description: >-
+    A vial of quicksilver. A pouch of black salt. A spirit anchor in the form of a small stone. A spirit bottle. A vial
+    of electroplasm, designed to break and splatter on impact.
+sort: 1100000
+flags: {}

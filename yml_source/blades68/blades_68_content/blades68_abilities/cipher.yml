@@ -1,0 +1,19 @@
+_id: 93387cf3e41f2182
+name: Cipher
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    You have a deep cover identity. When you use it, you get +1d to rolls to confuse or deflect suspicion. When you
+    reveal your true identity, the resulting surprise gives you the initiative in the situation (as well as +1d and
+    potency). If your cover identity is blown, create a new one with a 4-segment long-term project.
+  class: Operative
+  class_default: Operative
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

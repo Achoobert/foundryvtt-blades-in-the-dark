@@ -1,0 +1,15 @@
+_id: c6f24068bd2e2842
+name: Jet Propulsion
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: Your frame includes jet boosters that provide a limited form of flight (either slow or temporary).
+  class: Hull
+  load: '0'
+  additional_info: frame_feature
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,15 @@
+_id: uzbuPWR43JAw4N7K
+name: (Sm) Just Passing Through
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: >-
+    During downtime, take -1 heat. When your heat is 4 or less, you get +1d to deceive people when you pass yourselves
+    off as ordinary citizens.
+  class: Smugglers
+  price: '1'
+folder: null
+sort: 3700001
+flags: {}

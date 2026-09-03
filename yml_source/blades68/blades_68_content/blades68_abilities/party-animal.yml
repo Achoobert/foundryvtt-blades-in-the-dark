@@ -1,0 +1,18 @@
+_id: 7c4066b6a8c2b89a
+name: Party Animal
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    When you Indulge Vice, you can invite an ally to join you. They do not need to spend their own downtime action, and
+    lose the same Stress that you do. One time during the next score, they can assist you once for free.
+  class: Swinger
+  class_default: Swinger
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

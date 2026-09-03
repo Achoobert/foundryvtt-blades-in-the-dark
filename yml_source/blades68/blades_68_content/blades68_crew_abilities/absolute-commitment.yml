@@ -1,0 +1,16 @@
+_id: 5a2cca31e9664e86
+name: Absolute Commitment
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: You have all sworn solemn vows of service to the cause. You get +1d to resistance rolls.
+  class: Militants
+  class_default: Militants
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

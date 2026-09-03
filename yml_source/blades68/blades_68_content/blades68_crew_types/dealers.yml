@@ -1,0 +1,292 @@
+_id: d6e714e7e5cde4c3
+name: Dealers
+type: crew_type
+img: icons/svg/city.svg
+system:
+  description: Pushers Who Acquire And Sell Illegal Product
+  experience_clues: You completed a successful show of force, social intrigue, bulk acquisition, or bulk sale operation.
+  turf_headers:
+    '1':
+      name: Supply
+      subheader: The Product
+      unlock: ''
+      select: 0
+      options: []
+      selected: []
+      units: 30
+      value: false
+      units_filled: 0
+    '2':
+      name: Demand
+      subheader: ''
+      unlock: ''
+      select: 0
+      options: []
+      selected: []
+      units: 0
+      value: false
+      units_filled: 0
+    '3':
+      name: Competitive Advantages
+      subheader: ''
+      unlock: ''
+      select: 0
+      options: []
+      selected: []
+      units: 0
+      value: false
+      units_filled: 0
+    '4':
+      name: Distribution
+      subheader: ''
+      unlock: ''
+      select: 0
+      options: []
+      selected: []
+      units: 0
+      value: false
+      units_filled: 0
+  turfs:
+    '1':
+      name: Local Supplier
+      value: false
+      description: Once per personal business, take 1 Heat to gain 1 unit
+      highlight: false
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '2':
+      name: Local Supplier
+      value: false
+      description: Once per personal business, take 1 Heat to gain 1 unit
+      highlight: false
+      connects:
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '3':
+      name: Smuggler
+      value: false
+      description: Once per personal business, take 1 Heat to gain 2 units
+      highlight: false
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '4':
+      name: Manufacturer
+      value: false
+      description: Once per personal business, take 1 Heat to gain 2 units
+      highlight: false
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '5':
+      name: Airship
+      value: false
+      description: Once per personal business, take 1 Heat to gain 3 units
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '6':
+      name: Local Fiends
+      value: false
+      description: All turf generates +1 stack when moving units
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '7':
+      name: City-Wide
+      value: false
+      description: All turf generates +1 stack when moving units
+      highlight: false
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '8':
+      name: Luxury Venue
+      value: false
+      description: +1d to Consort and Sway on-site, +2 stacks for social intrigue
+      highlight: false
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '9':
+      name: Key Influencer
+      value: false
+      description: All turf generates +1 stack when moving units
+      highlight: false
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '10':
+      name: VIP Clients
+      value: false
+      description: All turf generates +1 stack when moving units
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '11':
+      name: Branding
+      value: false
+      description: +1d engagement roll for social plans, +2 stacks for bulk sale or supply
+      highlight: false
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '12':
+      name: Money Laundering
+      value: false
+      description: Take -3 Heat from gaining/moving units, every personal business
+      highlight: false
+      connects:
+        - top
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '13':
+      name: Top Secret Intel
+      value: false
+      description: +2d engagement for Monopoly score
+      highlight: true
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '14':
+      name: Money Laundering
+      value: false
+      description: Take -3 Heat from gaining/moving units, every personal business
+      highlight: false
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '15':
+      name: Monopoly
+      value: false
+      description: Tier 5 target, all Turf can move 2 units per downtime for the same Heat
+      highlight: true
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '16':
+      name: Base Turf
+      value: false
+      description: 1 unit can be moved for 1 stack in personal business (take 1 Heat)
+      highlight: false
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '17':
+      name: Turf
+      value: false
+      description: 1 unit can be moved for 1 stack in personal business (take 1 Heat)
+      highlight: false
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '18':
+      name: Turf
+      value: false
+      description: 1 unit can be moved for 1 stack in personal business (take 1 Heat)
+      highlight: false
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '19':
+      name: Turf
+      value: false
+      description: 1 unit can be moved for 1 stack in personal business (take 1 Heat)
+      highlight: false
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '20':
+      name: Turf
+      value: false
+      description: 1 unit can be moved for 1 stack in personal business (take 1 Heat)
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

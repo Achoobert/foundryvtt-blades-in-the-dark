@@ -1,0 +1,18 @@
+_id: e2fa449b4063e2af
+name: Medium
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    You can communicate with all paranormal entities, even those not present in the physical realm. Take +1d and potency
+    when you do.
+  class: Paranormalist
+  class_default: Paranormalist
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

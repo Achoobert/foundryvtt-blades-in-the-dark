@@ -1,0 +1,18 @@
+_id: YvdNh0jOooVF0uWj
+name: (B) Hardened
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: >-
+    Each PC gets +1 trauma box. This costs three upgrades to unlock, not just one. This may bring a PC with 4 trauma
+    back into play if you wish.
+  class: Bravos
+  price: '3'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 1000000
+flags: {}
+img: icons/svg/mystery-man.svg

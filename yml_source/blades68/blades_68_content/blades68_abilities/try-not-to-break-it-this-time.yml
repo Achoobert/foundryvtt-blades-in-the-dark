@@ -1,0 +1,18 @@
+_id: e5ed9138762df168
+name: Try Not to Break It This Time
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Any flashbacks to give another crew member just the right gadget before the score cost 0 Stress. Gain one free
+    downtime action to craft such a gadget in a flashback.
+  class: Intellectual
+  class_default: Intellectual
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

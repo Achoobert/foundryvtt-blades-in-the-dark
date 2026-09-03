@@ -1,0 +1,56 @@
+_id: P6LMZBrG5U9eCjhX
+name: Spider
+type: class
+img: systems/blades-in-the-dark/styles/assets/icons/Icon.7_60.png
+system:
+  description: A devious mastermind
+  logic: ''
+  experience_clues: You addressed a challenge with calculation or conspiracy.
+  base_skills:
+    hunt:
+      - 0
+    study:
+      - 1
+    survey:
+      - 0
+    tinker:
+      - 0
+    finesse:
+      - 0
+    prowl:
+      - 0
+    skirmish:
+      - 0
+    wreck:
+      - 0
+    attune:
+      - 0
+    command:
+      - 0
+    consort:
+      - 2
+    sway:
+      - 0
+effects:
+  - _id: dRFr32clJUE70Z4C
+    changes:
+      - key: data.acquaintances_label
+        mode: 5
+        value: BITD.ShrewdFriends
+      - key: data.experience_clues
+        mode: 2
+        value: BITD.ExpChallengeCalculation
+    disabled: false
+    duration:
+      startTime: null
+    icon: systems/blades-in-the-dark/styles/assets/icons/Icon.3_13.png
+    label: Spider
+    origin: Compendium.blades-in-the-dark.class.P6LMZBrG5U9eCjhX
+    transfer: true
+    flags: {}
+    tint: null
+folder: null
+sort: 700000
+permission:
+  default: 0
+flags: {}

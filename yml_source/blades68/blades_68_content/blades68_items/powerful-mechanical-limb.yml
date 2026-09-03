@@ -1,0 +1,14 @@
+_id: 1fa61f4a565d9982
+name: Powerful mechanical limb
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: ''
+  class: Time Traveler Future
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

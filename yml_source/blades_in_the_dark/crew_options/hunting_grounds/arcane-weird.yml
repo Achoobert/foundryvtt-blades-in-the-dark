@@ -1,0 +1,21 @@
+name: Arcane/Weird
+type: hunting_grounds
+_id: v5kgFoxTwRsLoha2
+img: systems/blades-in-the-dark/styles/assets/icons/Icon.3_03.png
+system:
+  description: <p>Spirit essences, ghosts, cult materials.</p>
+  class: Smugglers
+effects: []
+folder: null
+sort: 2400000
+ownership:
+  default: 0
+  B7A33cKMwj3J5fQB: 3
+flags: {}
+_stats:
+  systemId: blades-in-the-dark
+  systemVersion: '4.9'
+  coreVersion: '11.315'
+  createdTime: 1710724600651
+  modifiedTime: 1710727589455
+  lastModifiedBy: B7A33cKMwj3J5fQB

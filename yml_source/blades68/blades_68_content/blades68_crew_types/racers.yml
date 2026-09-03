@@ -1,0 +1,263 @@
+_id: dc443493ec59bc07
+name: Racers
+type: crew_type
+img: icons/svg/city.svg
+system:
+  description: Thrill-Seekers, Smugglers, Daredevils, And Family
+  experience_clues: You executed a successful smuggling, hijacking, racing, or smash-and-grab operation.
+  turfs:
+    '1':
+      name: Weird Old Gate
+      value: false
+      description: Safe passage out of the Bubble
+      highlight: false
+      connects:
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '2':
+      name: Weird Old Maps
+      value: false
+      description: +2d engagement for Deathlands Race score
+      highlight: true
+      connects:
+        - left
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '3':
+      name: Deathlands Race
+      value: false
+      description: Tier 4 opponents, 10 Rep, 15 stacks (one-off opportunity)
+      highlight: true
+      connects:
+        - left
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '4':
+      name: Secret Hit
+      value: false
+      description: Take out a target during Deathlands Race score for +10 bonus stacks
+      highlight: true
+      connects:
+        - left
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '5':
+      name: Gambling Den
+      value: false
+      description: (Tier roll) - Heat = stacks in downtime
+      highlight: false
+      connects:
+        - left
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '6':
+      name: Secret Routes
+      value: false
+      description: +1d engagement for speed approaches
+      highlight: false
+      connects:
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '7':
+      name: Turf
+      value: false
+      description: Expand local circuit and add new preferred operation
+      highlight: false
+      connects:
+        - left
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '8':
+      name: Turf
+      value: false
+      description: Expand local circuit and add new preferred operation
+      highlight: false
+      connects:
+        - left
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '9':
+      name: Chop Shop
+      value: false
+      description: (Tier roll) - Heat = stacks in downtime
+      highlight: false
+      connects:
+        - left
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '10':
+      name: Warehouse
+      value: false
+      description: Stockpiles give you +1d to Acquire Asset rolls
+      highlight: false
+      connects:
+        - left
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '11':
+      name: Big Street Race
+      value: false
+      description: Tier 3 opponents, 15 stacks (one-off opportunity)
+      highlight: true
+      connects:
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '12':
+      name: Lounge Bar
+      value: false
+      description: +1d to Consort and Sway on-site
+      highlight: false
+      connects:
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '13':
+      name: Turf
+      value: false
+      description: Expand local circuit and add new preferred operation
+      highlight: false
+      connects:
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '14':
+      name: Informants
+      value: false
+      description: +1d to gather info for scores
+      highlight: false
+      connects:
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '15':
+      name: Cover Operation
+      value: false
+      description: '-2 Heat per score'
+      highlight: false
+      connects:
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '16':
+      name: Turf
+      value: false
+      description: Expand local circuit and add new preferred operation
+      highlight: false
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '17':
+      name: Loyal Fence
+      value: false
+      description: +2 stacks for smuggling or hijacking
+      highlight: false
+      connects:
+        - left
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '18':
+      name: Base
+      value: true
+      description: Base
+      highlight: false
+      connects:
+        - left
+        - top
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '19':
+      name: Convoy
+      value: false
+      description: Your cohorts have their own vehicles
+      highlight: false
+      connects:
+        - left
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '20':
+      name: Bets Placed
+      value: false
+      description: +5 bonus stacks for Deathlands Race score
+      highlight: true
+      connects:
+        - top
+      connected:
+        - false
+        - false
+        - false
+        - false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,16 @@
+_id: afbb6481b810ef6b
+name: Precognition
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: Two times per score, you can assist a teammate without paying Stress. Tell us how you prepared for this in advance.
+  class: Paranormalist
+  class_default: Paranormalist
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

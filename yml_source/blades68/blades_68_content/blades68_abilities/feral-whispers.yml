@@ -1,0 +1,16 @@
+_id: 10b7a589d7ff767d
+name: Feral Whispers
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: You can Attune to animals to have them do your bidding.
+  class: Vampire
+  class_default: Vampire
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

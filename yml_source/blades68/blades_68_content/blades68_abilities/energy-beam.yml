@@ -1,0 +1,18 @@
+_id: f5c604251e42dbe4
+name: Energy Beam
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    You may release some of your energy as an electric shock around you or as a directed beam. You may also use this
+    ability to create a lightning barrier to repel or trap a resonance entity. Take 1 Drain for each level of magnitude.
+  class: Hull
+  class_default: Hull
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

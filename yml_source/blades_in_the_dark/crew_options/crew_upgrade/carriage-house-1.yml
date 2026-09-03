@@ -1,0 +1,17 @@
+_id: xc1nrGZziYzHXxlu
+name: Carriage House 1
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: |-
+    You have a carriage, two goats to pull it, and a stable.
+    Horses are very rare in Doskvol - most carriages in the city use the large Akorosian goat as their draft animal.
+  class: ''
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 500001
+flags: {}

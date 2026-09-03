@@ -1,0 +1,15 @@
+_id: kJ32qvcJZmCBJVwt
+name: (C) Scary weapon or tool
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: item
+system:
+  description: >-
+    A scary-looking hand weapon or tool. This item grants increased effect when you intimidate, not increased harm in
+    combat.
+  class: Cutter
+  load: '1'
+folder: null
+sort: 300000
+flags: {}

@@ -1,0 +1,21 @@
+name: (Hu) Overcharge
+type: ability
+system:
+  description: >-
+    Take 1 drain to perform a feat of extreme strength or speed (run faster than a horse, rend metal with bare hands,
+    etc.). This factors into effect.
+  class: Hull
+  price: 1
+  purchased: false
+  class_default: false
+  logic: ''
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+  hp9rhyB0AtTZTutm: 3
+flags:
+  core:
+    sourceId: Item.FA8pi47XOSwUUA7K
+_id: c9vStJntEBQjPvon

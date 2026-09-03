@@ -1,0 +1,18 @@
+_id: 1b7f63fee46273f0
+name: Forbidden Science
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    You can use a downtime action to perform a paranormal experiment to manifest a supernatural effect or being. Gain
+    one free downtime action to perform such experiments.
+  class: Paranormalist
+  class_default: Paranormalist
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

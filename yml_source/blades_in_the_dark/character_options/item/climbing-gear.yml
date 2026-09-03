@@ -1,0 +1,13 @@
+_id: cIa0ZZUXpOcqPtKy
+name: Climbing Gear
+permission:
+  default: 0
+type: item
+system:
+  class: ''
+  load: '2'
+  description: >-
+    A large coil of rope. A small coil of rope. Grappling hooks. A small pouch of chalk dust. A climbing harness with
+    loops and metal rings. A set of iron pitons and a small mallet.
+sort: 1000000
+flags: {}

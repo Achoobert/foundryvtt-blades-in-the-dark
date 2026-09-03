@@ -1,0 +1,16 @@
+_id: IYYjvk2vrCOff8oF
+name: (C) Bound in Darkness
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: >-
+    You may use teamwork with any cult member, regardless of the distance separating you. By taking 1 stress, your
+    whispered message is heard by every cultist.
+  class: Cult
+  price: '1'
+folder: null
+sort: 300001
+flags: {}
+img: icons/svg/mystery-man.svg

@@ -1,0 +1,16 @@
+_id: 8830b5f3b4dbe06b
+name: Heat blade
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    The latest in military technology, an advanced electro-blade that superheats to red hot intensity. Can cut through
+    steel. Well balanced and deadly.
+  class: Veteran
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

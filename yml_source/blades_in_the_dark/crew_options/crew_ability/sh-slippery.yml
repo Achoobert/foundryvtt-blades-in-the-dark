@@ -1,0 +1,13 @@
+_id: Osh2XOrfWVxi5PSo
+name: (Sh) Slippery
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: When you roll entanglements, roll twice and keep the one you want. When you reduce heat on the crew, take +1d.
+  class: Shadows
+  price: '1'
+folder: null
+sort: 3100001
+flags: {}

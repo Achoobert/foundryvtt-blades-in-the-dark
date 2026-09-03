@@ -1,0 +1,19 @@
+_id: c3224366501ed154
+name: Echo Twin
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    There’s an alternate version of you in the resonance field, ghostly and glitched out. Take 2 Stress to summon them
+    for a few moments, plus 1 Stress for each additional feature: They last for a scene rather than a few minutes—they
+    appear completely stable and solid—they obey your instructions to the letter.
+  class: Swinger
+  class_default: Swinger
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

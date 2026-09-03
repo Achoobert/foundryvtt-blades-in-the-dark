@@ -1,0 +1,14 @@
+_id: KzghACWjB35yp9Ox
+name: (Le) Fortitude
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    You  may  expend  your  special  armor  to  resist  a  consequence  of  fatigue,  weakness,  or  chemical  effects, 
+    or  to  push  yourself when working with technical skill or handling alchemicals.
+  class: Leech
+  price: '1'
+folder: EorKoKOCKsvC93ZA
+sort: 400001
+flags: {}

@@ -1,0 +1,13 @@
+_id: v0tyV4dS1BqGb44h
+name: (Sp) Veteran
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: ability
+system:
+  description: Choose a special ability from another source.
+  class: Spider
+  price: '3'
+folder: null
+sort: 200001
+flags: {}

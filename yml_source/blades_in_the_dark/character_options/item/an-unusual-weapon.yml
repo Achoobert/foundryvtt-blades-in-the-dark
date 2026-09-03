@@ -1,0 +1,13 @@
+_id: OEspgCofoCwHOcm9
+name: An Unusual Weapon
+permission:
+  default: 0
+type: item
+system:
+  class: ''
+  load: '1'
+  description: >-
+    A curiosity or tool turned into a weapon. A whip, a flail, a hatchet, a shovel, a length of chain, a razor-edged
+    fan, steel-toed boots.
+sort: 600000
+flags: {}

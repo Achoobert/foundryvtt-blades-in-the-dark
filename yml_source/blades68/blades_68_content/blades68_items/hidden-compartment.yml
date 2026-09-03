@@ -1,0 +1,17 @@
+_id: 36c35dbdc6c041d7
+name: Hidden Compartment
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Your frame has a secret compartment that escapes even the most thorough search. Lead-lined to prevent x-ray
+    scanning.
+  class: Hull
+  load: '0'
+  additional_info: frame_feature
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

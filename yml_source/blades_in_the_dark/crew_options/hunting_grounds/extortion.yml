@@ -1,0 +1,21 @@
+name: Extortion
+type: hunting_grounds
+_id: MxwTDH33YxRO3F4t
+img: systems/blades-in-the-dark/styles/assets/icons/Icon.2_24.png
+system:
+  description: <p>Threaten violence unless you're paid off.</p>
+  class: Bravos
+effects: []
+folder: null
+sort: 900000
+ownership:
+  default: 0
+  B7A33cKMwj3J5fQB: 3
+flags: {}
+_stats:
+  systemId: blades-in-the-dark
+  systemVersion: '4.9'
+  coreVersion: '11.315'
+  createdTime: 1710716903219
+  modifiedTime: 1710727589455
+  lastModifiedBy: B7A33cKMwj3J5fQB

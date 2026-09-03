@@ -1,0 +1,15 @@
+_id: rfgJiaaxEmBFnbGm
+name: (W) Ghost key
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: item
+system:
+  description: >-
+    An arcane device that can open ghost doors. There’s an echo of the entire city, across the ages, trapped in the
+    ghost field. Sometimes a door to that place can be found.
+  class: Whisper
+  load: '0'
+folder: null
+sort: 3400000
+flags: {}

@@ -1,0 +1,15 @@
+_id: z3dLixmU55odNYhf
+name: (H) A trained hunting pet
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: item
+system:
+  description: |-
+    Your animal companion obeys your commands and anticipates your actions.
+    Cohort (Expert: Hunter).
+  class: Hound
+  load: '0'
+folder: null
+sort: 900000
+flags: {}

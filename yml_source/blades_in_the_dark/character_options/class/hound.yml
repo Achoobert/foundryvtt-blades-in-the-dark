@@ -1,0 +1,56 @@
+_id: JGxBjlbooxuUHe4E
+name: Hound
+type: class
+img: systems/blades-in-the-dark/styles/assets/icons/Icon.3_33.png
+system:
+  description: A deadly sharpshooter and tracker
+  logic: ''
+  experience_clues: You addressed a challenge with tracking or violence.
+  base_skills:
+    hunt:
+      - 2
+    study:
+      - 0
+    survey:
+      - 1
+    tinker:
+      - 0
+    finesse:
+      - 0
+    prowl:
+      - 0
+    skirmish:
+      - 0
+    wreck:
+      - 0
+    attune:
+      - 0
+    command:
+      - 0
+    consort:
+      - 0
+    sway:
+      - 0
+effects:
+  - _id: e4KGBnKo7Wmjrz1I
+    changes:
+      - key: data.acquaintances_label
+        mode: 5
+        value: BITD.DeadlyFriends
+      - key: data.experience_clues
+        mode: 2
+        value: BITD.ExpChallengeTracking
+    disabled: false
+    duration:
+      startTime: null
+    icon: systems/blades-in-the-dark/styles/assets/icons/Icon.3_13.png
+    label: Hound
+    origin: Compendium.blades-in-the-dark.class.JGxBjlbooxuUHe4E
+    transfer: true
+    flags: {}
+    tint: ''
+folder: null
+sort: 100000
+permission:
+  default: 0
+flags: {}

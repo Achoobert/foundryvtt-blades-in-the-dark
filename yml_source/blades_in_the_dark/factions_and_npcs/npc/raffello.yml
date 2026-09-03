@@ -1,0 +1,48 @@
+_id: mzCgZ2Ppsgz3jfaY
+name: Raffello
+permission:
+  default: 0
+  hp9rhyB0AtTZTutm: 3
+type: npc
+system:
+  name: ''
+  description_short: a master painter
+  description: A master painter obsessed with the unnatural.
+  associated_class: ''
+  associated_faction: ''
+  associated_crew_type: ''
+  notes: ''
+sort: 100001
+flags: {}
+img: icons/svg/mystery-man.svg
+token:
+  flags: {}
+  name: Raffello
+  displayName: 0
+  img: icons/svg/mystery-man.svg
+  tint: null
+  width: 1
+  height: 1
+  scale: 1
+  lockRotation: false
+  rotation: 0
+  vision: false
+  dimSight: 0
+  brightSight: 0
+  dimLight: 0
+  brightLight: 0
+  sightAngle: 360
+  lightAngle: 360
+  lightAlpha: 1
+  lightAnimation:
+    speed: 5
+    intensity: 5
+  actorId: mzCgZ2Ppsgz3jfaY
+  actorLink: false
+  disposition: -1
+  displayBars: 0
+  bar1: {}
+  bar2: {}
+  randomImg: false
+items: []
+effects: []

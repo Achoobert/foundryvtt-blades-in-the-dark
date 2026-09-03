@@ -1,0 +1,6 @@
+# Compendium manifest — compiled by scripts/build-yml-packs.mjs
+name: "crew_upgrade"
+label: "Crew Upgrades"
+type: "Item"
+path: "./packs/crew_upgrades.db"
+banner: "systems/blades68/images/compendium-banners/Doskvol_09.webp"

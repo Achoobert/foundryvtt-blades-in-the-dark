@@ -1,0 +1,18 @@
+_id: b4f57bebc4fb526b
+name: Uncanny Preparation
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Twice per session during a Desperate action, improve your effect or position. Describe a flashback that gives you
+    the advantage now (setup action).
+  class: Vigilantes
+  class_default: Vigilantes
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

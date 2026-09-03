@@ -1,0 +1,11 @@
+name: Interrogation
+content: "<p>The Bluecoats round up one of the PCs to question them about the crew’s crimes. How did they manage to capture you? Either pay them off with 3 coin, or they beat you up (<strong>level 2 harm</strong>) and you tell them what they want to know (<strong>+3 heat</strong>). You can resist each of those consequences separately.</p>\n<p><em>Some players really hate it when their character gets captured! Just tell them </em><em>that this is completely normal for a scoundrel of the underworld. You spend time </em><em>in and out of jail, getting questioned and harassed by the law. It’s not the end </em><em>of the world. But now that you’re here in the interrogation room, what kind of\_ </em><em>person are you? Do you talk? Do you stand up to them? Do you make a deal?</em></p>"
+folder: null
+sort: 0
+permission:
+  default: 0
+  thWDvNEhl7M3mC2d: 3
+flags:
+  core:
+    sourceId: JournalEntry.WtDjTgpX82BdQPJB
+_id: F6TG2C6iSdJohpAI

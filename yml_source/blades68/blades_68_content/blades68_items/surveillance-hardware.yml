@@ -1,0 +1,17 @@
+_id: 96bb7729a5ad2998
+name: Surveillance Hardware
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    The latest espionage equipment, including an ultra-sensitive microphone that can hear at long range or through
+    walls, and tape-feed to record this audio.
+  class: Hull
+  load: '0'
+  additional_info: frame_feature
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

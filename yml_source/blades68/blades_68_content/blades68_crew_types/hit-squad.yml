@@ -1,0 +1,260 @@
+_id: 79b50029de41016c
+name: Hit Squad
+type: crew_type
+img: icons/svg/city.svg
+system:
+  description: Contract Killers, Discreet And Skilled Assassins
+  experience_clues: You executed a successful accident, disappearance, murder, or ransom operation.
+  turfs:
+    '1':
+      name: Friendly Ink Rake
+      value: false
+      description: +1 Rep per score
+      highlight: false
+      connects:
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '2':
+      name: City Records
+      value: false
+      description: +1d engagement for stealth approaches
+      highlight: false
+      connects:
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '3':
+      name: Legendary Target
+      value: false
+      description: Tier 5 target, 15 Rep, 10 stacks (one-off opportunity)
+      highlight: true
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '4':
+      name: Double Contract
+      value: false
+      description: Legendary Target includes second hit, for +10 bonus stacks
+      highlight: true
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '5':
+      name: Cover Identities
+      value: false
+      description: +1d engagement for deception and social approaches
+      highlight: false
+      connects:
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '6':
+      name: Protection Racket
+      value: false
+      description: (Tier roll) - Heat = stacks in downtime
+      highlight: false
+      connects:
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '7':
+      name: Shady Hotel
+      value: false
+      description: +1 scale for your Infiltrator cohorts
+      highlight: false
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '8':
+      name: Detailed Map
+      value: false
+      description: +2d engagement for Legendary Target score
+      highlight: true
+      connects:
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '9':
+      name: Cover Operation
+      value: false
+      description: '-2 Heat per score'
+      highlight: false
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '10':
+      name: Hagfish Farm
+      value: false
+      description: Body disposal, +1d to reduce Heat after killing
+      highlight: false
+      connects:
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '11':
+      name: Elusive Target
+      value: false
+      description: Tier 4 target, +5 bonus Rep (one-off opportunity)
+      highlight: true
+      connects:
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '12':
+      name: Gambling Hall
+      value: false
+      description: (Tier roll) - Heat = stacks in downtime
+      highlight: false
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '13':
+      name: VIP Lounge
+      value: false
+      description: +2 stacks from high-class clients
+      highlight: false
+      connects:
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '14':
+      name: Dispensary
+      value: false
+      description: +1d to healing rolls
+      highlight: false
+      connects:
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '15':
+      name: Informants
+      value: false
+      description: +1d to gather info for scores
+      highlight: false
+      connects:
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '16':
+      name: Dive Bar
+      value: false
+      description: +2 stacks from lower-class clients
+      highlight: false
+      connects:
+        - left
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '17':
+      name: Turf
+      value: false
+      description: Expand hunting grounds and add new preferred operation
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '18':
+      name: Base
+      value: true
+      description: Base
+      highlight: false
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '19':
+      name: Turf
+      value: false
+      description: Expand hunting grounds and add new preferred operation
+      highlight: false
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '20':
+      name: Clock the Routine
+      value: false
+      description: 3 free flashbacks during Ledgendary Target score
+      highlight: true
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

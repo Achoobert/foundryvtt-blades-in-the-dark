@@ -1,0 +1,12 @@
+_id: fKEJOkqoAwinyzrm
+name: Akoros
+permission:
+  default: 0
+type: heritage
+system:
+  description: >-
+    Akoros is the largest and most industrialized land in the Imperium, and is home to the capitol city as well as
+    Duskwall itself. They’re known as a diverse conglomeration of cultures that have grown together in close proximity
+    for centuries, somewhat like Europe.
+sort: 100000
+flags: {}

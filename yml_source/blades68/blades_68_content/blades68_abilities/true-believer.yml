@@ -1,0 +1,18 @@
+_id: c11a770ff009fec9
+name: True Believer
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Twice per score, you may use your conviction to resist a consequence of law-breaking (being arrested or hassled by
+    Bluecoats, etc.) or to push yourself when fighting for your ideology.
+  class: Radical
+  class_default: Radical
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,14 @@
+_id: b6feab5bf4e41c53
+name: Fine snub-nosed handcannon
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: Maybe you're no great shot, but this thing packs a hell of a punch and can be concealed in a pocket.
+  class: Hound
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

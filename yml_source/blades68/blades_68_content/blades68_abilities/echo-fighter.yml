@@ -1,0 +1,18 @@
+_id: 1cfc72b287b188f3
+name: Echo Fighter
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Thanks to special training, you may engage enemies in combat with nothing but your mind. You gain potency in combat
+    vs. the paranormal. You can attempt to read people’s next intentions.
+  class: Veteran
+  class_default: Veteran
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

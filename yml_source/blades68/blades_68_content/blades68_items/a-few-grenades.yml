@@ -1,0 +1,14 @@
+_id: 89be306c17820203
+name: A few grenades
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: They go boom.
+  class: Veteran
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

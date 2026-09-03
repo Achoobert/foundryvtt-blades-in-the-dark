@@ -1,0 +1,42 @@
+_id: 91446e619cd32790
+name: Deathsteaders
+type: faction
+img: icons/svg/city.svg
+system:
+  description: ''
+  type: Fringe
+  tier: '1'
+  goal_1: ''
+  goal_1_clock_max: 0
+  goal_2: ''
+  goal_2_clock_max: 0
+  turf: ''
+  assets: ''
+  quirks: ''
+  notables: ''
+  allies: ''
+  enemies: ''
+  situation: ''
+  goal_clock: 0
+  hold:
+    value: 2
+    max: 2
+    max_default: 2
+    name_default: BITD.Hold
+    name: BITD.Hold
+  status:
+    value:
+      - 0
+    max: 7
+    max_default: 7
+    name_default: BITD.Status
+    name: BITD.Status
+  notes: >-
+    Survivalists, fugitives, and free-thinkers who have left the safety of the Bubble to make a living in the forbidden
+    Deathlands beyond. 
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

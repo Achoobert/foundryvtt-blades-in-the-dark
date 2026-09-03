@@ -1,0 +1,20 @@
+_id: ffdf4d6dddce895c
+name: Echo Safe House
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    The crew has access to a safe house in the resonance field. It can be accessed once per score, from anywhere. The
+    door always returns to the same place it was entered from. Use it as a hiding place, to reequip, repair, or just
+    take a breather. Any PCs who enter gain +1 load. One PC may clear all level 1 harm via emergency medical supplies
+    there. Note that time still passes in the outside world.
+  class: Shadows
+  class_default: Shadows
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,10 @@
+name: Subtle
+permission:
+  default: 0
+type: crew_reputation
+system:
+  description: ''
+folder: null
+sort: 700001
+flags: {}
+_id: DtXIle1LfX4p5oZ0

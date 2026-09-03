@@ -1,0 +1,12 @@
+_id: zCgcGLgPPOKGOXck
+name: (Sl) Mesmerism
+permission:
+  default: 0
+type: ability
+system:
+  description: When  you  Sway  someone,  you  may  cause  them  to  forget that it's happened until they next interact with you.
+  class: Slide
+  price: '1'
+folder: 537uDqf28OmWJoAM
+sort: 600001
+flags: {}

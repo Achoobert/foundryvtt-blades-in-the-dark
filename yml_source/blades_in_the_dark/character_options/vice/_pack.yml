@@ -1,0 +1,6 @@
+# Compendium manifest — compiled by scripts/build-yml-packs.mjs
+name: "vice"
+label: "Vices"
+type: "Item"
+path: "./packs/vices.db"
+banner: "systems/blades68/images/compendium-banners/Doskvol_02.webp"

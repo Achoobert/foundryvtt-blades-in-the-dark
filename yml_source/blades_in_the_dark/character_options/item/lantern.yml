@@ -1,0 +1,11 @@
+_id: SaRZapoF6ja5s7Qo
+name: Lantern
+permission:
+  default: 0
+type: item
+system:
+  class: ''
+  load: '1'
+  description: A simple oil lantern, a fancy electroplasmic lamp, or other light source.
+sort: 1600000
+flags: {}

@@ -1,0 +1,12 @@
+_id: e46lMfe6ayO3qDF5
+name: (Sp) Foresight
+permission:
+  default: 0
+type: ability
+system:
+  description: Two times per score you can assist a teammate without paying stress. Tell us how you prepared for this.
+  class: Spider
+  price: '1'
+folder: io6Cdw11wDXIixI3
+sort: 100001
+flags: {}

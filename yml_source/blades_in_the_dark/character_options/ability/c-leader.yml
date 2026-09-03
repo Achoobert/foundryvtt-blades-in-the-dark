@@ -1,0 +1,14 @@
+_id: 7hooG3QMZrhGlD35
+name: (C) Leader
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    When you Command a cohort in combat, they continue to  fight  when  they  would  otherwise  break (they're  not 
+    taken  out  when they suffer level 3 harm). They gain +1 effect and 1 armor.
+  class: Cutter
+  price: '1'
+folder: cJPDzs27jPdqAVDV
+sort: 400000
+flags: {}

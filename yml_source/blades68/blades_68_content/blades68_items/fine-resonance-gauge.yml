@@ -1,0 +1,16 @@
+_id: d7d8951249e513c9
+name: Fine resonance gauge
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    A handheld device that measures resonance in its vicinity. Can be used to detect paranormal activity and locate
+    resonance entities.
+  class: Paranormalist
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

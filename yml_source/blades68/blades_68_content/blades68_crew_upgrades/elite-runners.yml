@@ -1,0 +1,17 @@
+_id: 77674385ea97e330
+name: Elite Runners
+type: crew_upgrade
+img: icons/svg/item-bag.svg
+system:
+  description: ''
+  class: ''
+  price: '1'
+  purchased: false
+  logic: ''
+  crew_type: ''
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

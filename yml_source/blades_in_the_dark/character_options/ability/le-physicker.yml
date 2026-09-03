@@ -1,0 +1,14 @@
+_id: 3Yf2yt4zUSvnLbzA
+name: (Le) Physicker
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    You can Tinker with bones, blood, and bodily humours to treat wounds or stabilize the dying. You may study a malady
+    or corpse. Everyone in your crew gets +1d to their healing treatment rolls.
+  class: Leech
+  price: '1'
+folder: EorKoKOCKsvC93ZA
+sort: 600001
+flags: {}

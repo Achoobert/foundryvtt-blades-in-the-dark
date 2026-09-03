@@ -1,0 +1,42 @@
+_id: 87d9e613e6d32f61
+name: The Tomorrow Program
+type: faction
+img: icons/svg/city.svg
+system:
+  description: ''
+  type: Underworld
+  tier: '3'
+  goal_1: ''
+  goal_1_clock_max: 0
+  goal_2: ''
+  goal_2_clock_max: 0
+  turf: ''
+  assets: ''
+  quirks: ''
+  notables: ''
+  allies: ''
+  enemies: ''
+  situation: ''
+  goal_clock: 0
+  hold:
+    value: 2
+    max: 2
+    max_default: 2
+    name_default: BITD.Hold
+    name: BITD.Hold
+  status:
+    value:
+      - 0
+    max: 7
+    max_default: 7
+    name_default: BITD.Status
+    name: BITD.Status
+  notes: >-
+    A hedonistic association of notable scientists, writers, artists, performers and dreamers. Lots of parties. Cover
+    for extortion, graft, and murder.
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

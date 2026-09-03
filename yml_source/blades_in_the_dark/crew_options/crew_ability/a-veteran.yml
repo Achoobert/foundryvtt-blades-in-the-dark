@@ -1,0 +1,13 @@
+_id: bWCodHKLdXqTxgx1
+name: (A) Veteran
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: Choose a special ability from another crew.
+  class: Assassins
+  price: '3'
+folder: null
+sort: 800001
+flags: {}

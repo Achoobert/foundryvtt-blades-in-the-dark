@@ -1,0 +1,11 @@
+_id: S1CvKYfGwHFq9yxR
+name: Trade
+permission:
+  default: 0
+type: background
+system:
+  description: A shopkeeper, a merchant, a skilled crafts-person, a shipping agent, etc. A liaison to the Ministry of Preservation.
+folder: YkuVHwuSV9IfsxU0
+sort: 400000
+flags: {}
+img: systems/blades-in-the-dark/styles/assets/icons/Icons8_78.png

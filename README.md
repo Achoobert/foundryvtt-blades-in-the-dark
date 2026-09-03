@@ -32,7 +32,17 @@ If you have questions, please ask them on the #forged-in-the-dark channel of the
 - To see the description of Class, Vice, Background, etc you can just click added item and see all the info in the popup.
 - To add Custom abilities just add a new "Foundry Item" of the corresponding type and fill all the necessary info. Then drag it to the sheet or add via button on a sheet.
 
-I left in the old Blades classes: since 68 is MEANT to be able to cross-play with old playbooks. 
+I left in the old Blades classes: since 68 is MEANT to be able to cross-play with old playbooks.
+
+## Compendium sources
+
+Compendium data lives as lossless YAML under `yml_source/` (mirrors the Foundry sidebar folders). Generated `packs/*.db` files are build artifacts — not tracked in git.
+
+```console
+npm run packs:build
+```
+
+Local `npm run watch` / `npm run dev` rebuild packs from YAML before syncing into Foundry. Release workflows build packs before zipping.
 
 ## Screenshots
 TODO update

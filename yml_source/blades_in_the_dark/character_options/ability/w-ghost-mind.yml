@@ -1,0 +1,12 @@
+_id: bCRW1vrqROytbqWb
+name: (W) Ghost Mind
+permission:
+  default: 0
+type: ability
+system:
+  description: You're always aware of supernatural entities in your presence. Take +1d when you gather info about the supernatural.
+  class: Whisper
+  price: '1'
+folder: 5Sb9YUatUQwtpdMZ
+sort: 200001
+flags: {}

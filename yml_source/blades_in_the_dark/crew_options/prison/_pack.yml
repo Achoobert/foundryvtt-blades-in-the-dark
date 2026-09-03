@@ -1,0 +1,6 @@
+# Compendium manifest — compiled by scripts/build-yml-packs.mjs
+name: "prison"
+label: "Prisons"
+type: "Item"
+path: "./packs/prison.db"
+banner: "systems/blades68/images/compendium-banners/Doskvol_03.webp"

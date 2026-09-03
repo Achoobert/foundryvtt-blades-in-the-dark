@@ -1,0 +1,14 @@
+_id: qw5Nzte5I60PiBbh
+name: (Lu) Expertise
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    Choose one of your action ratings. When you lead a group action using that action, you can suffer only 1 stress at
+    most regardless of the number of failed rolls.
+  class: Lurk
+  price: '1'
+folder: 7gkE4yoqYZiTi9EB
+sort: 500001
+flags: {}

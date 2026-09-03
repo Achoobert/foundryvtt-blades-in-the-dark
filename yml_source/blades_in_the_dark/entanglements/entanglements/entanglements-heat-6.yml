@@ -1,0 +1,84 @@
+_id: ijv20pxjOg36JncA
+name: Entanglements - Heat 6+
+img: icons/svg/d20-grey.svg
+description: If there are two results, the GM picks which entanglement occurs.
+results:
+  - _id: MDwUXspRtpZtqFuQ
+    type: 2
+    text: Flipped
+    img: icons/svg/d20-black.svg
+    collection: blades-in-the-dark.entanglements-journals
+    resultId: NoLY64zJ3lEF5Xia
+    weight: 1
+    range:
+      - 1
+      - 3
+    drawn: false
+    flags: {}
+    rangeL: 1
+    rangeH: 3
+  - _id: vQck9soiQPlrriGS
+    type: 2
+    text: Interrogation
+    img: icons/svg/d20-black.svg
+    collection: blades-in-the-dark.entanglements-journals
+    resultId: F6TG2C6iSdJohpAI
+    weight: 1
+    range:
+      - 1
+      - 3
+    drawn: false
+    flags: {}
+    rangeL: 1
+    rangeH: 3
+  - _id: FPxNPRaG0r98QtMv
+    type: 2
+    text: Demonic Notice
+    img: icons/svg/d20-black.svg
+    collection: blades-in-the-dark.entanglements-journals
+    resultId: BJLd501vCFsJlrCN
+    weight: 1
+    range:
+      - 4
+      - 5
+    drawn: false
+    flags: {}
+    rangeL: 4
+    rangeH: 5
+  - _id: lkevhpV9bsbyblst
+    type: 2
+    text: Show of Force
+    img: icons/svg/d20-black.svg
+    collection: blades-in-the-dark.entanglements-journals
+    resultId: IJ5YyHTcpymRhkLQ
+    weight: 1
+    range:
+      - 4
+      - 5
+    drawn: false
+    flags: {}
+    rangeL: 4
+    rangeH: 5
+  - _id: dKitTISAtsy2MGSw
+    type: 2
+    text: Arrest
+    img: icons/svg/d20-black.svg
+    collection: blades-in-the-dark.entanglements-journals
+    resultId: 36o0ggbWhnUXu7Cy
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    flags: {}
+    rangeL: 6
+    rangeH: 6
+formula: 2d6kl1
+replacement: true
+displayRoll: true
+folder: null
+sort: 0
+permission:
+  default: 0
+  thWDvNEhl7M3mC2d: 3
+flags: {}

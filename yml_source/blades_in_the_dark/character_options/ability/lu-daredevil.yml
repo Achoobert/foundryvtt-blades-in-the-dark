@@ -1,0 +1,14 @@
+_id: ubiQP80zuYu0jkBt
+name: (Lu) Daredevil
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    When you roll a desperate action, you get +1d to your roll if you also take -1d to any resistance rolls against
+    consequences from your action.
+  class: Lurk
+  price: '1'
+folder: 7gkE4yoqYZiTi9EB
+sort: 300001
+flags: {}

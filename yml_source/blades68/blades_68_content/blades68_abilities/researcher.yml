@@ -1,0 +1,18 @@
+_id: 2a451c7662b58032
+name: Researcher
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Twice per score, you may use your research to resist a consequence of fatigue, weakness, or resonance effects, or to
+    push yourself when working with technical skill or handling resonance objects.
+  class: Intellectual
+  class_default: Intellectual
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

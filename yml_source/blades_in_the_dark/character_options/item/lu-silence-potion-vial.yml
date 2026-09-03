@@ -1,0 +1,13 @@
+_id: EIhbi6Udkm5o4x14
+name: (Lu) Silence potion vial
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: item
+system:
+  description: A vial of golden liquid that negates all sound within 10 paces of the drinker for a span of several moments.
+  class: Lurk
+  load: '0'
+folder: null
+sort: 1950000
+flags: {}

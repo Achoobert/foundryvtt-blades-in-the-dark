@@ -1,0 +1,18 @@
+_id: 470fe7a596a5c702
+name: Encyclopedic Knowledge
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    When you push yourself, you can also do one of the following: instantly find a weak point or exploitable pattern in
+    an obstacle—dazzle an audience with your intellect, leaving them confused and distracted.
+  class: Intellectual
+  class_default: Intellectual
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

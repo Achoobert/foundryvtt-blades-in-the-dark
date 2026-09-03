@@ -1,0 +1,15 @@
+_id: HrDTIIO9Zxf5plOW
+name: (Sm) Reavers
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: >-
+    When you go into conflict aboard a vehicle, you gain +1 effect for vehicle damage and speed. Your vehicle gains
+    armor.
+  class: Smugglers
+  price: '1'
+folder: null
+sort: 3900001
+flags: {}

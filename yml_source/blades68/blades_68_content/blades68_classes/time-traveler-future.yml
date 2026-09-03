@@ -1,0 +1,41 @@
+_id: eb8c660f8511b139
+name: Time Traveler Future
+type: class
+img: icons/svg/upgrade.svg
+system:
+  description: A Voyager Visiting This Era on an Important Mission
+  experience_clues: |-
+    You addressed a challenge with fearless conviction or lateral thinking.
+    You struggled with issues stemming from a temporal glitch.
+  base_skills:
+    hunt:
+      - 0
+    study:
+      - 0
+    survey:
+      - 0
+    tinker:
+      - 0
+    finesse:
+      - 0
+    prowl:
+      - 0
+    skirmish:
+      - 0
+    wreck:
+      - 0
+    attune:
+      - 0
+    command:
+      - 0
+    consort:
+      - 0
+    sway:
+      - 0
+  starting_ability: Future Shock
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

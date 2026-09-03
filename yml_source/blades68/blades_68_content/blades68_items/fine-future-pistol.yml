@@ -1,0 +1,14 @@
+_id: d45d6c8406d556c6
+name: Fine future pistol
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: ''
+  class: Time Traveler Future
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,18 @@
+_id: 7e738ac572d10c0c
+name: Here Goes Nothing
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Take 2 Stress to roll your Sway or Consort rating while performing a different action. Use a free flashback to
+    reveal who you convinced to teach you this particular technique or approach.
+  class: Swinger
+  class_default: Swinger
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

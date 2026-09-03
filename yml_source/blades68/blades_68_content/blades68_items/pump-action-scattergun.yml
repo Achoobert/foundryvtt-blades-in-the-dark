@@ -1,0 +1,16 @@
+_id: 1b4e823f2841bd22
+name: Pump-Action Scattergun
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    A simple but very effective firearm that delivers blasts of shot over short distances. Developed for use in the
+    narrow streets and cramped alleyways of modern cities. 
+  class: ''
+  load: '1'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

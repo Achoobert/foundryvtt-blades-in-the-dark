@@ -1,0 +1,14 @@
+_id: 60c1538a90be259b
+name: Force field device
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: ''
+  class: Time Traveler Future
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

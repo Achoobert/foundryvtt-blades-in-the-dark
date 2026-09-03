@@ -1,0 +1,18 @@
+_id: b57ed096e5fea781
+name: Benefactor
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    When you take this ability, the crew immediately receives 4 stacks. Whenever you advance your Tier, it costs half
+    the stacks it normally would. Who’s backing you? Why do they help you?
+  class: ''
+  class_default: ''
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

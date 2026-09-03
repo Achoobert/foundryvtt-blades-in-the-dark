@@ -1,0 +1,18 @@
+_id: 2e683f83955d98f3
+name: Cold Storage
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Every crew member can always find a convenient place to hide a body near to hand. Take 1 Stress to hide the body in
+    the resonance field instead (it will rematerialize after a few hours).
+  class: Hit Squad
+  class_default: Hit Squad
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

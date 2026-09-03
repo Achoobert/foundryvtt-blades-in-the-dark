@@ -1,0 +1,13 @@
+_id: vCfGKc11bAuH6pPx
+name: (H) Electroplasmic ammunition
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: item
+system:
+  description: A bandolier of electroplasmic ammo, especially potent against spirits, but less effective against physical targets.
+  class: Hound
+  load: '1'
+folder: null
+sort: 800000
+flags: {}

@@ -1,0 +1,13 @@
+_id: IJ5YyHTcpymRhkLQ
+name: Show of Force
+content: >-
+  <p>A faction with whom you have a negative status makes a play against your holdings. Give them <strong>1
+  claim</strong> or go to war (drop to -3 status). If you have no claims, lose<strong> 1 hold </strong>instead.</p>
+folder: null
+sort: 0
+permission:
+  default: 0
+  thWDvNEhl7M3mC2d: 3
+flags:
+  core:
+    sourceId: JournalEntry.nagSQyGbXzCv9bCw

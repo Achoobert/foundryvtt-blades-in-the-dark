@@ -1,0 +1,19 @@
+_id: 52c56b76bfc8fdcc
+name: A Room of Your Own
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    You have your own secret little den. You can now put stacks into bank. You have a pet. You can spend a downtime
+    action to look after the pet (describe the lengths you go to), and mark 3 xp in a memory clock (below) of your
+    choice.
+  class: Hull
+  class_default: Hull
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

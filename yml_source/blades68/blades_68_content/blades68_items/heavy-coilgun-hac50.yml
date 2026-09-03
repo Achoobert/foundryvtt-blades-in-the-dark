@@ -1,0 +1,14 @@
+_id: d61ac370939cd25a
+name: Heavy Coilgun (HAC50)
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: A military-grade assault rifle with detachable magazine. Loud and devastating.
+  class: Veteran
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

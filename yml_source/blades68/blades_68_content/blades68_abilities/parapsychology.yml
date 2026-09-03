@@ -1,0 +1,18 @@
+_id: 1e3ad0756cae0103
+name: Parapsychology
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    You're immune to the terror that paranormal entities inflict on sight. Take +1d to resistance rolls with Resolve.
+    Take +1d when you gather info about the paranormal.
+  class: Paranormalist
+  class_default: Paranormalist
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

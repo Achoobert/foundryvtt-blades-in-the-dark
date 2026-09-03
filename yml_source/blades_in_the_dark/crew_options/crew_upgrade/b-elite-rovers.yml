@@ -1,0 +1,15 @@
+_id: xG92KixAzCxlOI5w
+name: (B) Elite Rovers
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: All of your cohorts with the Rovers type get +1d to quality rolls for Rover-related actions.
+  class: Bravos
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 800000
+flags: {}

@@ -1,0 +1,18 @@
+_id: 0b13d9ac14ecd177
+name: Groove Machine
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    You always know where the nearest music is playing and when you start dancing, others feel compelled to join. When
+    you take action while moving it on the dance floor, take +1d and potency.
+  class: Swinger
+  class_default: Swinger
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

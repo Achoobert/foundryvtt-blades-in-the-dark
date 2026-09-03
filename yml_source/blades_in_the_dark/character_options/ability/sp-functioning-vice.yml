@@ -1,0 +1,14 @@
+_id: TTxVIEqlbXvQpFuq
+name: (Sp) Functioning Vice
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    When you indulge your vice, you may adjust the dice outcome by 1 or 2 (up or down). An ally who joins in your vice
+    may do the same.
+  class: Spider
+  price: '1'
+folder: io6Cdw11wDXIixI3
+sort: 400001
+flags: {}

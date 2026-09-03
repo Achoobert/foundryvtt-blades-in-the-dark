@@ -1,0 +1,15 @@
+_id: riPqY00XQQ2nvAPH
+name: (C) Ritual Sanctum in Lair
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: This counts as a sacred and arcane workshop for occult practices and rituals.
+  class: ''
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 1200000
+flags: {}

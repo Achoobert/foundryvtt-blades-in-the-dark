@@ -1,0 +1,17 @@
+_id: MflZCzh24MIdWbFo
+name: (Sm) Smuggler Rigging
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: >-
+    Two of your carried items are perfectly concealed. You could carry 1 load of contraband and a pistol, perfectly
+    concealed, even against a pat down.
+  class: Smugglers
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 2600000
+flags: {}

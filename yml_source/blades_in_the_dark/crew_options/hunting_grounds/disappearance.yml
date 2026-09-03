@@ -1,0 +1,21 @@
+name: Disappearance
+type: hunting_grounds
+_id: ncshGoa5kUWEwSmf
+img: systems/blades-in-the-dark/styles/assets/icons/Icon.7_76.png
+system:
+  description: <p>The victim vanishes without a trace.</p>
+  class: Assassins
+effects: []
+folder: null
+sort: 2100000
+ownership:
+  default: 0
+  B7A33cKMwj3J5fQB: 3
+flags: {}
+_stats:
+  systemId: blades-in-the-dark
+  systemVersion: '4.9'
+  coreVersion: '11.315'
+  createdTime: 1710715062084
+  modifiedTime: 1710727589455
+  lastModifiedBy: B7A33cKMwj3J5fQB

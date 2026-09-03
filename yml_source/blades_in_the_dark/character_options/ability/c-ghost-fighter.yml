@@ -1,0 +1,14 @@
+_id: uaLo32nPUpKp3Yqf
+name: (C) Ghost Fighter
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    You may imbue your hands, melee weapons, or tools with spirit energy. You gain potency in combat vs. the
+    supernatural. You may grapple with spirits to restrain and capture them.
+  class: Cutter
+  price: '1'
+folder: cJPDzs27jPdqAVDV
+sort: 300000
+flags: {}

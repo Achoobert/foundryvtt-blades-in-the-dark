@@ -1,0 +1,18 @@
+_id: 07fa7a062810126b
+name: Commune
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    You may use teamwork with any crew member, regardless of the distance separating you. By taking 1 Stress, your
+    projected thoughts are heard by every crew member as telepathic communication.
+  class: Utopians
+  class_default: Utopians
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

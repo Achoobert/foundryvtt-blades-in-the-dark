@@ -1,0 +1,21 @@
+name: Battle
+type: hunting_grounds
+_id: 1LkMykBsiEDXtXeL
+img: systems/blades-in-the-dark/styles/assets/icons/Icon.1_52.png
+system:
+  description: <p>Defeat an enemy with overwhelming force.</p>
+  class: Bravos
+effects: []
+folder: null
+sort: 200000
+ownership:
+  default: 0
+  B7A33cKMwj3J5fQB: 3
+flags: {}
+_stats:
+  systemId: blades-in-the-dark
+  systemVersion: '4.9'
+  coreVersion: '11.315'
+  createdTime: 1710716369920
+  modifiedTime: 1710727589455
+  lastModifiedBy: B7A33cKMwj3J5fQB

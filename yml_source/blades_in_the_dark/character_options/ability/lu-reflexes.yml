@@ -1,0 +1,12 @@
+_id: rNafmXeBlQ9eDpF9
+name: (Lu) Reflexes
+permission:
+  default: 0
+type: ability
+system:
+  description: When there's a question about who acts first, the answer is you (two characters with Reflexes act simultaneously).
+  class: Lurk
+  price: '1'
+folder: 7gkE4yoqYZiTi9EB
+sort: 700001
+flags: {}

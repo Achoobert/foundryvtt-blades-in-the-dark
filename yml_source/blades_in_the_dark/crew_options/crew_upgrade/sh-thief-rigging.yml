@@ -1,0 +1,17 @@
+_id: 5Ob50uwHdRU2ZWbL
+name: (Sh) Thief Rigging
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: >-
+    You get 2 free load worth of tool or gear items. For example, you could carry burglary gear and tinkering tools for
+    zero load.
+  class: Shadows
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 2100000
+flags: {}

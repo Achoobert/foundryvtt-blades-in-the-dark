@@ -1,0 +1,19 @@
+_id: f1ed7f15df9fe83c
+name: Sympathizers
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    The common citizenry of your home ground, and any turf you hold, are sympathetic to you and your cause. You can
+    consider them allies (status +3). When asked, they will: give you shelter or a place to hide, redirect Bluecoats or
+    other enemies, or give you other aid if they can.
+  class: Militants
+  class_default: Militants
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,14 @@
+_id: 06df1f55ccb347d7
+name: Fine shadow cloak
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: ''
+  class: Time Traveler Past
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

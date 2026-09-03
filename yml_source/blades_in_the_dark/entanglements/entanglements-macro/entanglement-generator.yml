@@ -1,0 +1,140 @@
+name: Entanglement Generator
+type: script
+author: RBqg71FeJGYopvug
+img: icons/magic/nature/root-vines-entwined-leaves.webp
+scope: global
+command: >-
+  const tableHeatA = 'Entanglements - Heat 0-3';  // Entanglements - Heat 0-3
+
+  const tableHeatB = 'Entanglements - Heat 4/5';  // Entanglements - Heat 4/5
+
+  const tableHeatC = 'Entanglements - Heat 6+';   // Entanglements - Heat 6+
+
+  const compendiumTables = 'Entanglements';       // Compendium name 
+
+  const version = '1.2';
+
+  main();
+
+
+  /*
+
+  TODO
+
+  - replace text by journal
+
+
+  source:
+  https://raw.githubusercontent.com/brunocalado/mestre-digital/master/Foundry%20VTT/Macros/Forged%20in%20the%20Dark/bid-entanglement.js
+
+  contributors: brunocalado, LebombJames
+
+  icon: icons/magic/nature/root-vines-entwined-leaves.webp
+
+  */
+    
+  async function main() {
+    
+    playersNames = game.actors.contents.filter((t) => t.type === "crew").map((p=> p.name)); 
+
+    let playerNameList;
+
+    playersNames.map((el) => {      
+      playerNameList += `<option value="${el}">${el}</option>`;      
+    });  
+    
+    new Dialog({
+      title: `Entanglement - v${version}`,
+      content: `
+      <h2>Crew</h2>
+      <p><select id="playerName" style="width: 100%">${playerNameList}</select></p>
+      <br>
+      <p>
+        <input type="checkbox" data-dType="Boolean" id="whisper" checked/>Whisper?
+      </p>
+      `,
+      buttons: {
+        roll: {
+          label: "Change",
+          callback: (html) => {
+            createImageFolder(html);
+          }
+        }, 
+        cancel: {
+          label: "Cancel"
+        }
+      }
+    }).render(true)
+  }
+
+
+  async function createImageFolder(html) {
+    let playerName = html.find("#playerName")[0].value;
+    let whisper = html.find("#whisper")[0].checked;
+
+    let crew = game.actors.getName(playerName).system;
+    let crewHeat = parseInt(crew.heat);
+    let crewWanted = parseInt(crew.wanted);
+
+    let entanglementToUse = '';
+
+    switch (crewHeat) {
+      case 0:
+      case 1:
+      case 2:
+      case 3:
+        entanglementToUse = await drawFromTable(tableHeatA, compendiumTables) 
+      break
+      case 4:
+      case 5:
+        entanglementToUse = await drawFromTable(tableHeatB, compendiumTables) 
+      break
+      case 6:
+      case 7:
+      case 8:
+      case 9:
+        entanglementToUse = await drawFromTable(tableHeatC, compendiumTables) 
+    }
+
+    let rollFormula = `${crewWanted}d6`;
+    if (rollFormula === "0d6") {
+      rollFormula = "2d6kl1";
+    }
+
+    entanglementToUse.formula = rollFormula;
+    
+    if (whisper) {
+      entanglementToUse.draw({rollMode: 'gmroll'});
+    } else {
+      entanglementToUse.draw();
+    }  
+  }
+
+
+  async function drawFromTable(tableName, compendiumName) {
+    let list_compendium = await game.packs.filter(p=>p.documentName==='RollTable');      
+    let inside = await list_compendium.filter( p=>p.metadata.label===compendiumName )[0].getDocuments();      
+    let table = await inside.filter( p=> p.name === tableName )[0];
+    
+    if (!table) {
+      ui.notifications.warn(`Table ${tableName} not found.`, {});
+      return;
+    }
+    return table;
+  }
+flags:
+  core:
+    sourceId: Macro.nlsTrxhKZxLIqHWD
+ownership:
+  default: 0
+  RBqg71FeJGYopvug: 3
+_stats:
+  systemId: blades-in-the-dark
+  systemVersion: '3.00'
+  coreVersion: '10.284'
+  createdTime: 1662217920666
+  modifiedTime: 1662218531055
+  lastModifiedBy: RBqg71FeJGYopvug
+folder: null
+sort: 0
+_id: 3CALhZ7M7GoetRnp

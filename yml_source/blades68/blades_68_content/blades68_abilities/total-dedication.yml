@@ -1,0 +1,18 @@
+_id: d36a0afb9f22a169
+name: Total Dedication
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    When you roll a desperate action, you get +1d to your roll if you also take -1d to any resistance rolls against
+    consequences from your action.
+  class: Radical
+  class_default: Radical
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,6 @@
+# Compendium manifest — compiled by scripts/build-yml-packs.mjs
+name: "faction"
+label: "Factions"
+type: "Item"
+path: "./packs/factions.db"
+banner: "systems/blades68/images/compendium-banners/Doskvol_12.webp"

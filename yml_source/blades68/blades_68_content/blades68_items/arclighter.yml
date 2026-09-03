@@ -1,0 +1,18 @@
+_id: d3fdf6ddbed40fab
+name: Arclighter
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    A handheld tool that carries a small reserve of plasmoleum. A flick of the thumb produces a small arc of crackling
+    energy, and with a twist of the dial it turns into a steady beam of light. Used as a flashlight, cigarette lighter,
+    welding torch, or for anything from supercharging firearm rounds, overloading electronic systems, or even jamming
+    into a knife’s hilt to jury-rig a quick electro-blade.
+  class: ''
+  load: '1'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

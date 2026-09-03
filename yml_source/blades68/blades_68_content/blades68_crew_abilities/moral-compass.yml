@@ -1,0 +1,16 @@
+_id: 3eb246a6d6b39391
+name: Moral Compass
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: 'Each PC gains an additional xp trigger: You fulfilled an obligation at a cost to you or the crew.'
+  class: Vigilantes
+  class_default: Vigilantes
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

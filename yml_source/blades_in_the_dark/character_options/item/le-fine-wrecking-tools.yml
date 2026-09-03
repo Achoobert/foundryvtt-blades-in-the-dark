@@ -1,0 +1,15 @@
+_id: G1X1nU6r9v8aIp4W
+name: (Le) Fine wrecking tools
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: item
+system:
+  description: >-
+    A specialized set of tools for sabotage and destruction. A small, powerful drill. A mallet and steel spikes. A
+    prybar. An electroplasmic battery, clamps, wire. Vials of acid. A spark-torch cutter and fuel tank.
+  class: Leech
+  load: '2'
+folder: null
+sort: 1200000
+flags: {}

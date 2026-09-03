@@ -1,0 +1,16 @@
+_id: e9b44803e84c9c4a
+name: Climbing Gear
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    A large coil of nylon rope. Grappling hooks. A small pouch of chalk dust. A climbing harness with loops and
+    carabiners. A set of steel pitons and a small mallet. Suction cups.
+  class: ''
+  load: '1'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

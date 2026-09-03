@@ -1,0 +1,21 @@
+name: (Hu) Electroplasmic Projectors
+type: ability
+system:
+  description: >-
+    You may release some of your plasmic energy as an electrical shock around you or as a directed beam. You may also
+    use this ability to create a lightning barrier to repel or trap a spirit. Take 1 drain for each level of magnitude.
+  class: Hull
+  price: 1
+  purchased: false
+  class_default: false
+  logic: ''
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+  hp9rhyB0AtTZTutm: 3
+flags:
+  core:
+    sourceId: Item.7UFMkktq0PwkTu68
+_id: o0JCN9Pd7NtLBY6k

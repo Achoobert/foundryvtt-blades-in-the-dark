@@ -1,0 +1,18 @@
+_id: 6ef44f28e1f1b018
+name: Don't Forget the Duffel Bag
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Once per score, the crew can flashback to an Acquire Asset roll with +2d. Both the flashback and the downtime
+    activity are free.
+  class: Shadows
+  class_default: Shadows
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

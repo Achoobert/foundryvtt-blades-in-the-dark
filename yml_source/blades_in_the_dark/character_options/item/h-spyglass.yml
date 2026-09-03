@@ -1,0 +1,13 @@
+_id: Qlfj7bZXmL21iIK6
+name: (H) Spyglass
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: item
+system:
+  description: A brass tube with lenses that allow long-distance vision. Collapsible. May attach to a rifle.
+  class: Hound
+  load: '1'
+folder: null
+sort: 1000000
+flags: {}

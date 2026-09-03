@@ -1,0 +1,18 @@
+_id: 9747695c977d95a3
+name: Revolutionaries
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    When you’re at war (-3 faction status), your crew does not suffer -1 hold and PCs still get two downtime activities,
+    instead of just one.
+  class: Militants
+  class_default: Militants
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

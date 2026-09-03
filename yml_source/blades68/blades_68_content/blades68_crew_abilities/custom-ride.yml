@@ -1,0 +1,18 @@
+_id: fff85af8a858b78b
+name: Custom Ride
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Create one of your vehicles (autopod, autocycle, boat, etc.) as a cohort (use 1-2 vehicle edges and an equal number
+    of flaws). Its Quality is equal to your Tier +1. It includes a driver, if needed.
+  class: Racers
+  class_default: Racers
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

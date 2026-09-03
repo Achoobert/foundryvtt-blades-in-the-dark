@@ -1,0 +1,57 @@
+_id: QzcDnJbWCY1ueVt7
+name: Vampire
+type: class
+img: systems/blades-in-the-dark/styles/assets/icons/Icon.1_19.png
+system:
+  description: A spirit animating an undead body
+  logic: ''
+  experience_clues: You display your dominance or slay without mercy (OVERRIDES DEFAULT EXP CLUES).
+  base_skills:
+    hunt:
+      - 1
+    study:
+      - 0
+    survey:
+      - 0
+    tinker:
+      - 0
+    finesse:
+      - 0
+    prowl:
+      - 1
+    skirmish:
+      - 1
+    wreck:
+      - 0
+    attune:
+      - 1
+    command:
+      - 1
+    consort:
+      - 0
+    sway:
+      - 1
+effects:
+  - _id: mEFqoSXApZBGu1hZ
+    changes:
+      - key: data.acquaintances_label
+        mode: 5
+        value: BITD.DarkServants
+      - key: data.experience_clues
+        mode: 2
+        value: BITD.ExpDisplayedDominance
+    disabled: false
+    duration:
+      startTime: null
+    icon: systems/blades-in-the-dark/styles/assets/icons/Icon.3_13.png
+    label: Vampire
+    origin: Compendium.blades-in-the-dark.class.QzcDnJbWCY1ueVt7
+    transfer: true
+    flags: {}
+    tint: ''
+folder: null
+sort: 200000
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+flags: {}

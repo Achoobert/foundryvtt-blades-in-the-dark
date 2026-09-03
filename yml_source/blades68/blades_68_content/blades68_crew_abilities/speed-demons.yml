@@ -1,0 +1,18 @@
+_id: 9a86fa488eb33917
+name: Speed Demons
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    When you go into conflict aboard a vehicle, you gain increased effect for vehicle damage and speed. If the vehicle
+    has armor, you can use it for your own protection.
+  class: Racers
+  class_default: Racers
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,42 @@
+_id: bd4a61c8031bc27e
+name: Tottle Orlov Arran
+type: faction
+img: icons/svg/city.svg
+system:
+  description: ''
+  type: Corporate & Community
+  tier: '2'
+  goal_1: ''
+  goal_1_clock_max: 0
+  goal_2: ''
+  goal_2_clock_max: 0
+  turf: ''
+  assets: ''
+  quirks: ''
+  notables: ''
+  allies: ''
+  enemies: ''
+  situation: ''
+  goal_clock: 0
+  hold:
+    value: 2
+    max: 2
+    max_default: 2
+    name_default: BITD.Hold
+    name: BITD.Hold
+  status:
+    value:
+      - 0
+    max: 7
+    max_default: 7
+    name_default: BITD.Status
+    name: BITD.Status
+  notes: >-
+    Advertising agency. Won the contract to create all the posters, plasomovision adverts, and radio content for the
+    official Doskvol Citizen’s Advice Bureau (a government propaganda effort). Very well-connected.
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

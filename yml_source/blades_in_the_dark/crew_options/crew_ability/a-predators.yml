@@ -1,0 +1,13 @@
+_id: w6ON3JVCS1gX2OMI
+name: (A) Predators
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: When you use stealth or subterfuge to commit murder, take +1d to the engagement roll.
+  class: Assassins
+  price: '1'
+folder: null
+sort: 600001
+flags: {}

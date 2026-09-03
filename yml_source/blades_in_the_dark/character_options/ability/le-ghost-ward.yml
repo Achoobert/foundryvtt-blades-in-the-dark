@@ -1,0 +1,14 @@
+_id: KhryFnEwDPtPCuEY
+name: (Le) Ghost Ward
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    You know how to Wreck an area with arcane substances and methods so it is either anathema or enticing to spirits
+    (your choice).
+  class: Leech
+  price: '1'
+folder: EorKoKOCKsvC93ZA
+sort: 500001
+flags: {}

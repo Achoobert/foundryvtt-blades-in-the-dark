@@ -1,0 +1,14 @@
+_id: 12deff631a1e9e91
+name: Vial of rare & exotic drug
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: ''
+  class: Vampire
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

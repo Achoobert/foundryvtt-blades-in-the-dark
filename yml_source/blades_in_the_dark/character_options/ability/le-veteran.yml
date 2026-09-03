@@ -1,0 +1,13 @@
+_id: U231oNjcEQjiwW8c
+name: (Le) Veteran
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: ability
+system:
+  description: Choose a special ability from another source.
+  class: Leech
+  price: '3'
+folder: null
+sort: 500001
+flags: {}

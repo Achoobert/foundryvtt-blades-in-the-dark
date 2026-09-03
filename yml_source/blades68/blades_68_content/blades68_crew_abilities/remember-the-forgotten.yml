@@ -1,0 +1,16 @@
+_id: 7efca895ac49a5f8
+name: Remember the Forgotten
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: You can now communicate with the entity who created your Utopian Vision (a “god”?). Tread carefully.
+  class: Utopians
+  class_default: Utopians
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

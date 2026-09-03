@@ -1,0 +1,17 @@
+_id: TAs6VuaYw5KTQ3E3
+name: 'Quality: Weapons'
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: >-
+    Upgrade improves the quality rating of all the PCs' items of that type, beyond the quality established by the crew's
+    Tier and fine items.
+  class: ''
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 2600001
+flags: {}

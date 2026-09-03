@@ -1,0 +1,19 @@
+_id: b3853b01ad6b7cfb
+name: On Retainer
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    You have an expert lawyer representing your crew. Their Quality is equal to crew Tier +2. When you take the Reduce
+    Heat downtime action, you can have your lawyer roll their Quality instead. When you take the rap, your Wanted Level
+    counts as one lower for the purposes of sentencing.
+  class: Dealers
+  class_default: Dealers
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

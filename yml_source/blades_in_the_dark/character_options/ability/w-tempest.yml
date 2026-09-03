@@ -1,0 +1,14 @@
+_id: 5UwC3EZPaWrw3szD
+name: (W) Tempest
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    You can push yourself to do one of the following: unleash a stroke of lightning as a weapon - summon a storm in your
+    immediate vicinity (torrential rain, roaring winds, heavy fog, chilling frost/snow, etc.).
+  class: Whisper
+  price: '1'
+folder: 5Sb9YUatUQwtpdMZ
+sort: 700001
+flags: {}

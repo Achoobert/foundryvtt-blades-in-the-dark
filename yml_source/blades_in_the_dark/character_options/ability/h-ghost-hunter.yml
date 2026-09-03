@@ -1,0 +1,15 @@
+_id: 4kNuvKoOQQzM5jLl
+name: (H) Ghost Hunter
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    Your hunting pet is imbued with spirit energy. It  gains  potency  when  tracking  or  fighting  the  supernatural, 
+    and  gains an arcane ability: ghost-form, mind-link, or arrow-swift. Take this ability again to choose an additional
+    arcane ability for your pet.
+  class: Hound
+  price: '2'
+folder: PaUiEAoDgddaXGEi
+sort: 300001
+flags: {}

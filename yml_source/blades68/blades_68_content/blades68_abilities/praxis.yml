@@ -1,0 +1,18 @@
+_id: 9f5e63b290996913
+name: Praxis
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    If you loudly and visibly destroy a symbolic target during a score, gain +2 result levels to any long-term project
+    rolls related to your revolutionary work during the following personal business phase.
+  class: Radical
+  class_default: Radical
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

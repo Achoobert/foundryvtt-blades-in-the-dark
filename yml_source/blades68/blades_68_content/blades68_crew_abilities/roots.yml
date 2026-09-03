@@ -1,0 +1,18 @@
+_id: 3bbd0c87e5b7dc95
+name: Roots
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    During downtime one of your contacts or cohorts may take a downtime action to acquire an asset, reduce heat, or
+    recover.
+  class: Vigilantes
+  class_default: Vigilantes
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

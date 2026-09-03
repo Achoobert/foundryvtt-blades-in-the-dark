@@ -1,0 +1,12 @@
+_id: CskYi6efFy3OKS0D
+name: (Sl) Like Looking into a Mirror
+permission:
+  default: 0
+type: ability
+system:
+  description: You can always tell when someone is lying to you.
+  class: Slide
+  price: '1'
+folder: 537uDqf28OmWJoAM
+sort: 400001
+flags: {}

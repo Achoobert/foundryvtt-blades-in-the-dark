@@ -1,0 +1,12 @@
+_id: WRzLNozCfzFLg0d6
+name: Tycheros
+permission:
+  default: 0
+type: heritage
+system:
+  description: >-
+    If you want to be weird, you can be from Tycheros. It’s a semi-mythical place, far away beyond the northern Void
+    Sea. Everyone says that the people there are part-demon. If you choose Tycherosi heritage, also create a demonic
+    telltale(like black shark eyes, feathers instead of hair, etc.) that marks your character.
+sort: 600000
+flags: {}

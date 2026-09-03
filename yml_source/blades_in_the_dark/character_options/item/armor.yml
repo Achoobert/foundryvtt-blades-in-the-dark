@@ -1,0 +1,11 @@
+_id: ukmU5W2Ya9EJr4J0
+name: Armor
+permission:
+  default: 0
+type: item
+system:
+  class: ''
+  load: '2'
+  description: A thick leather tunic plus reinforced gloves and boots.
+sort: 700000
+flags: {}

@@ -1,0 +1,14 @@
+_id: 97TVuvrGMilTIMKO
+name: (W) Strange Methods
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    When you invent or craft a creation with arcane features, take +1 result level to your roll. You begin with one
+    arcane design already known.
+  class: Whisper
+  price: '1'
+folder: 5Sb9YUatUQwtpdMZ
+sort: 600001
+flags: {}

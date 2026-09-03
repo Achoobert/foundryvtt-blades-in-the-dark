@@ -1,0 +1,16 @@
+_id: c0c6861856b2c777
+name: First One's Free
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: You can give away your product to build Rep during downtime. 1 Rep costs 1 unit.
+  class: Dealers
+  class_default: Dealers
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

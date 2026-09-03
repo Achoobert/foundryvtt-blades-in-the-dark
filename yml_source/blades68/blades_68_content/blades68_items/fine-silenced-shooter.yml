@@ -1,0 +1,14 @@
+_id: 97dd53468551bc96
+name: Fine silenced shooter
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: A finely-made semi-automatic handgun with a modest calibre. Quiet as a whisper.
+  class: Operative
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

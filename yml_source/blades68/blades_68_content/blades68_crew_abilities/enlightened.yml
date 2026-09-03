@@ -1,0 +1,18 @@
+_id: aea25b31851375d0
+name: Enlightened
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    You get +1d to resistance rolls against paranormal threats and consequences. You get +1d to healing rolls when you
+    have paranormal harm.
+  class: Utopians
+  class_default: Utopians
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

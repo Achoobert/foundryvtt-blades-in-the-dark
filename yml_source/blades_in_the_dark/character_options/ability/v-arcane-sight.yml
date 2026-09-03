@@ -1,0 +1,21 @@
+name: (V) Arcane Sight
+type: ability
+system:
+  description: >-
+    Take 1 stress to sense beyond human limits. "Hear" a subject's true thoughts or feelings, see in pitch darkness,
+    sense the presence of invisible things, intuit the location of a hidden object, etc.
+  class: Vampire
+  price: 1
+  purchased: false
+  class_default: false
+  logic: ''
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+  hp9rhyB0AtTZTutm: 3
+flags:
+  core:
+    sourceId: Item.Ize6XkrCZHZjim44
+_id: QaqGrExPP08LCZsk

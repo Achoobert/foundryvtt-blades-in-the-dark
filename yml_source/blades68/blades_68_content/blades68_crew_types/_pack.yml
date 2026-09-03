@@ -1,0 +1,5 @@
+# Compendium manifest — compiled by scripts/build-yml-packs.mjs
+name: "blades68_crew_types"
+label: "Blades '68 Crew Types"
+type: "Item"
+path: "./packs/blades68_crew_types.db"

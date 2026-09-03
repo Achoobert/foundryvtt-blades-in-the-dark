@@ -1,0 +1,14 @@
+_id: 2f3e944eeae0d200
+name: Fine sniper rifle
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: A high-powered sniper rifle complete with silencer. Deadly at long range, unwieldy in close quarters
+  class: Operative
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,17 @@
+_id: 95f079fe22226836
+name: Vigilantes attire (2 free load of weapons or supplies)
+type: crew_upgrade
+img: icons/svg/item-bag.svg
+system:
+  description: ''
+  class: ''
+  price: '1'
+  purchased: false
+  logic: ''
+  crew_type: Vigilantes
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

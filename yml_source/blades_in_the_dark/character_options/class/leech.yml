@@ -1,0 +1,56 @@
+_id: 8jExf4Zqad6e3bvn
+name: Leech
+type: class
+img: systems/blades-in-the-dark/styles/assets/icons/Icons8_64.png
+system:
+  description: A saboteur and technician
+  logic: ''
+  experience_clues: You addressed a challenge with technical skill or mayhem.
+  base_skills:
+    hunt:
+      - 0
+    study:
+      - 0
+    survey:
+      - 0
+    tinker:
+      - 2
+    finesse:
+      - 0
+    prowl:
+      - 0
+    skirmish:
+      - 0
+    wreck:
+      - 1
+    attune:
+      - 0
+    command:
+      - 0
+    consort:
+      - 0
+    sway:
+      - 0
+effects:
+  - _id: N4jYP0USRceDlCC1
+    changes:
+      - key: data.acquaintances_label
+        mode: 5
+        value: BITD.CleverFriends
+      - key: data.experience_clues
+        mode: 2
+        value: BITD.ExpChallengeTechnical
+    disabled: false
+    duration:
+      startTime: null
+    icon: systems/blades-in-the-dark/styles/assets/icons/Icon.3_13.png
+    label: Leech
+    origin: Compendium.blades-in-the-dark.class.8jExf4Zqad6e3bvn
+    transfer: true
+    flags: {}
+    tint: ''
+folder: null
+sort: 400000
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,18 @@
+_id: 99a12e62794fa930
+name: Learn the Hard Way
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Whenever you take harm, clear an amount of Stress equal to the harm level, and it counts as a successful gather
+    information roll (with a level of detail equal to the harm level). The GM will tell you what you learn.
+  class: Hound
+  class_default: Hound
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -14,7 +14,6 @@ const WATCH_PATHS = [
   'images',
   'themes',
   'assets',
-  'packs-source',
   'yml_source',
   'system.json',
   'template.json',
@@ -41,12 +40,11 @@ function rel(filePath) {
 }
 
 let timer;
-let pending = { packs: false, yml: false, quench: false, sync: false };
+let pending = { yml: false, quench: false, sync: false };
 let running = false;
 
 function schedule(filePath) {
   const r = rel(filePath);
-  if (r === 'packs-source' || r.startsWith('packs-source/')) pending.packs = true;
   if (r === 'yml_source' || r.startsWith('yml_source/')) pending.yml = true;
   if (r === 'tests/quench' || r.startsWith('tests/quench/')) pending.quench = true;
   else pending.sync = true;
@@ -70,16 +68,14 @@ async function flush() {
   }
 
   const job = { ...pending };
-  pending = { packs: false, yml: false, quench: false, sync: false };
-  if (!job.packs && !job.yml && !job.quench && !job.sync) return;
+  pending = { yml: false, quench: false, sync: false };
+  if (!job.yml && !job.quench && !job.sync) return;
 
   running = true;
-  // Each step runs independently: a failure in one (e.g. packs:pack with no
-  // packs-source/ yet) must not skip the others, or dev:sync silently stops
-  // pushing changes to the Foundry data dir.
-  if (job.packs) await runSafe('packs:pack');
+  // Each step runs independently: a failure in one must not skip the others,
+  // or dev:sync silently stops pushing changes to the Foundry data dir.
   // Must precede dev:sync so freshly compiled packs/ get copied out.
-  if (job.yml) await runSafe('packs:yml');
+  if (job.yml) await runSafe('packs:build');
   if (job.sync) await runSafe('dev:sync');
   if (job.quench) await runSafe('test:quench:sync');
   running = false;
@@ -88,7 +84,6 @@ async function flush() {
 console.log('Running initial build + sync...');
 await run('build:css');
 pending = {
-  packs: existsSync(path.join(ROOT, 'packs-source')),
   yml: existsSync(path.join(ROOT, 'yml_source')),
   quench: true,
   sync: true,

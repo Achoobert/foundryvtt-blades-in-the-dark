@@ -1,0 +1,16 @@
+_id: cd6f33244fcad0f8
+name: Payment in Kind
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: You can use units to purchase crew upgrades. 1 crew upgrade costs 5 units (so a new cohort would cost 10 units).
+  class: Dealers
+  class_default: Dealers
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,16 @@
+_id: e49f5deb0966aefc
+name: Paranormal Implements
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    A resonance gauge for monitoring resonance field activity. Infrared thermometer. Echo frequency scanner. A small
+    mirror. A vial of ultraplasm. A portable echo containment unit. A resonance disruptor. Safety goggles and gloves. 
+  class: ''
+  load: '1'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

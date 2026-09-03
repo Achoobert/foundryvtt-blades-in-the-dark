@@ -1,0 +1,18 @@
+_id: 381a4218d0ff2550
+name: Misdirection
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    At the end of a score, you may sacrifice half the rep gained to make another faction lose status with your target
+    instead of your crew. How do you pin it on someone else?
+  class: Vigilantes
+  class_default: Vigilantes
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

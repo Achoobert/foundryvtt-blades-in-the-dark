@@ -1,0 +1,17 @@
+_id: 7895651c163e8130
+name: Multifaceted (+1 key/deadlock)
+type: crew_upgrade
+img: icons/svg/item-bag.svg
+system:
+  description: ''
+  class: ''
+  price: '3'
+  purchased: false
+  logic: ''
+  crew_type: Shadows
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,12 @@
+_id: sOennuura7lMn9qm
+name: (H) Tough as Nails
+permission:
+  default: 0
+type: ability
+system:
+  description: Penalties from harm are one level less severe (though level 4 harm is still fatal).
+  class: Hound
+  price: '1'
+folder: PaUiEAoDgddaXGEi
+sort: 600001
+flags: {}

@@ -1,0 +1,18 @@
+_id: 83da9c2195ddb348
+name: Synchronized Watches
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    You may use assists or setup actions with any crew member, regardless of the distance separating you. When you
+    perform a group action, you may count multiple 6s from different rolls as a critical success.
+  class: Shadows
+  class_default: Shadows
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

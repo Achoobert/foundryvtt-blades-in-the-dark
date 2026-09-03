@@ -1,0 +1,14 @@
+_id: e50e4c227b030e67
+name: Gadgets
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: ' You can create gadgets in a flashback and track their load here. If they''re simple, just the flashback may be enough. More ambitious gadgets might require you spend a downtime action crafting them (additional downtime actions cost 1 stack).'
+  class: Intellectual
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

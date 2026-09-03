@@ -1,0 +1,14 @@
+_id: Zaqqsd7hyClYnxB9
+name: (C) Chosen
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: Each PC may add +1 action rating to Attune, Study, or Sway (up to a max rating of 3).
+  class: Cult
+  price: '1'
+folder: null
+sort: 100001
+flags: {}
+img: icons/svg/mystery-man.svg

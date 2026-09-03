@@ -1,0 +1,14 @@
+_id: cyYStjHgqaxobB1y
+name: (Sl) Subterfuge
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    You may expend your special armor to resist a consequence from suspicion or persuasion, or to push yourself for
+    subterfuge.
+  class: Slide
+  price: '1'
+folder: 537uDqf28OmWJoAM
+sort: 700001
+flags: {}

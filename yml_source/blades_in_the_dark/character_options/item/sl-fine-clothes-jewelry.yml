@@ -1,0 +1,15 @@
+_id: BUDE4R2WgPiqQhMj
+name: (Sl) Fine clothes & jewelry
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: item
+system:
+  description: >-
+    An outfit that appears to be of such fine make as to pass you off as a wealthy noble. [0 load] If you’re carrying
+    this item as a second outfit to change into, it counts as 2 load.
+  class: Slide
+  load: '2'
+folder: null
+sort: 2000000
+flags: {}

@@ -1,0 +1,13 @@
+_id: gmBKOxd6IsJEMEzL
+name: (Br) Door Kickers
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: When you execute an assault plan, take +1d to the engagement roll.
+  class: Bravos
+  price: '1'
+folder: null
+sort: 1100001
+flags: {}

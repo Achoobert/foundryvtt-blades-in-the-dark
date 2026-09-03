@@ -1,0 +1,15 @@
+_id: lcn7iHQ06CnCdsvu
+name: (A) Elite Thugs
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: All of your cohorts with the Thugs type get +1d to quality rolls for Thug-related actions.
+  class: Assassins
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 400000
+flags: {}

@@ -1,0 +1,20 @@
+name: Arrest
+content: >-
+  <p>An Inspector presents a case file of evidence to a magistrate, to begin prosecution of your crew. The Bluecoats
+  send a detail to arrest you (a gang at least equal in scale to your <strong>wanted level</strong>). Pay them off with
+  <strong>coin </strong>equal to your <strong>wanted level +3</strong>, hand someone over for arrest (this clears your
+  <strong>heat</strong>), or try to evade capture.</p>
+
+  <p><em>A truncheon bangs on the shutters of the window. “Alright then! Come on out </em><em>and let’s go quietly now!”
+  It sounds like Sergeant Klellan. When you peek out, </em><em>you see a detail of about twenty Bluecoats, all geared up
+  for a fight. Klellan </em><em>mumbles under his breath, so only you inside can hear: “Or perhaps I have </em><em>the
+  wrong address?” He clears his throat and waits for some coin to appear.</em></p>
+folder: null
+sort: 0
+permission:
+  default: 0
+  thWDvNEhl7M3mC2d: 3
+flags:
+  core:
+    sourceId: JournalEntry.WRuCjNaFeQAugpvY
+_id: 36o0ggbWhnUXu7Cy

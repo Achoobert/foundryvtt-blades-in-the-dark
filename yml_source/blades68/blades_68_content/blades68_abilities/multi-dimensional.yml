@@ -1,0 +1,19 @@
+_id: c91dc73f260fcb9d
+name: Multi-Dimensional
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Unmoored in time, you can tap into the knowledge and experiences of yourself from alternate timelines. Attune to
+    instantly "remember" a new skill or experience (e.g. piloting an airship, speaking another language, knowing how to
+    relate to wealthy aristocrats).
+  class: ''
+  class_default: ''
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

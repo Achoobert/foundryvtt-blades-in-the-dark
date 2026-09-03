@@ -1,0 +1,17 @@
+_id: eb08b1046e89974b
+name: Complicated (+1 key/deadlock)
+type: crew_upgrade
+img: icons/svg/item-bag.svg
+system:
+  description: ''
+  class: ''
+  price: '3'
+  purchased: false
+  logic: ''
+  crew_type: ''
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

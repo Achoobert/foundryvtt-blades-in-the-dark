@@ -1,0 +1,20 @@
+_id: 0778a573e952c058
+name: Escape Velocity
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    One of the crew’s vehicles is fitted with a device that activates at a specific speed. This requires filling an
+    8-segment acceleration clock during the score. When the clock is filled and the vehicle hits the target speed,
+    choose an effect: break the laws of gravity—create a tear in reality—travel into the resonance field— travel
+    backward or forward through time.
+  class: Racers
+  class_default: Racers
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

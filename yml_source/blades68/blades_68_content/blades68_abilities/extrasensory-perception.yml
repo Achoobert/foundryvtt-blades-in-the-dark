@@ -1,0 +1,18 @@
+_id: 7886b9f9fae406f0
+name: Extrasensory Perception
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Twice per score, you may use your sixth sense to resist a paranormal consequence, or to push yourself when you deal
+    with paranormal forces.
+  class: Paranormalist
+  class_default: Paranormalist
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

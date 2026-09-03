@@ -1,0 +1,13 @@
+_id: LyopnfFOOZO7u07I
+name: (Lu) Dark-sight goggles
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: item
+system:
+  description: An arcane device that allows the wearer to see in pitch darkness as if it were well-lit.
+  class: Lurk
+  load: '1'
+folder: null
+sort: 1900000
+flags: {}

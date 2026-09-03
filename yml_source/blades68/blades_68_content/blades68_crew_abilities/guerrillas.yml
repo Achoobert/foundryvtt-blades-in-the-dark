@@ -1,0 +1,18 @@
+_id: 99758129da903eca
+name: Guerrillas
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    When the target of a score is two or more Tier higher than you, take no penalty to the engagement roll, and gain +2
+    Rep after the score (whether you were successful or not).
+  class: Militants
+  class_default: Militants
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

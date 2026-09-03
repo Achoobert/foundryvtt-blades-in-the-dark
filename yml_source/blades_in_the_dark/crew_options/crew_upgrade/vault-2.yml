@@ -1,0 +1,55 @@
+_id: RmjU5DHgecia43Cf
+name: Vault 2
+type: crew_upgrade
+img: icons/svg/item-bag.svg
+system:
+  description: Extend the Vault to additional +8 coins
+  class: ''
+  price: '1'
+  logic: ''
+  activation:
+    type: ''
+    cost: 0
+    condition: ''
+  duration:
+    value: null
+    units: ''
+  target:
+    value: null
+    width: null
+    units: ''
+    type: ''
+  range:
+    value: null
+    long: null
+    units: ''
+  uses:
+    value: 0
+    max: 0
+    per: null
+  consume:
+    type: ''
+    target: null
+    amount: null
+  crew_type: ''
+effects:
+  - _id: MhVO2diegBN1QVOI
+    changes:
+      - key: data.vault.max
+        mode: 2
+        value: '8'
+    disabled: false
+    duration:
+      startTime: null
+    icon: systems/blades-in-the-dark/styles/assets/icons/Icon.3_13.png
+    label: ''
+    origin: Compendium.blades-in-the-dark.crew_upgrade.RmjU5DHgecia43Cf
+    transfer: true
+    flags: {}
+    tint: null
+folder: null
+sort: 200001
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+flags: {}

@@ -1,0 +1,6 @@
+# Compendium manifest — compiled by scripts/build-yml-packs.mjs
+name: "background"
+label: "Backgrounds"
+type: "Item"
+path: "./packs/backgrounds.db"
+banner: "systems/blades68/images/compendium-banners/Doskvol_04.webp"

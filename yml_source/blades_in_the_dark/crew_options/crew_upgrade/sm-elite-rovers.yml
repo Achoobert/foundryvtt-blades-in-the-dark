@@ -1,0 +1,16 @@
+_id: AJlZ3S3gYOrbRrCS
+name: (Sm) Elite Rovers
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: All of your cohorts with the Rovers type get +1d to quality rolls for Rover-related actions.
+  class: Smugglers
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 2900000
+flags: {}
+img: icons/svg/mystery-man.svg

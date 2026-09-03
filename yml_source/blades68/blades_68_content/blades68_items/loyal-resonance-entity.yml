@@ -1,0 +1,16 @@
+_id: 1583182b3eb53a48
+name: Loyal resonance entity
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    How did you come by this entity, and why do they help you? Are they the echo of a human or... something else? Cohort
+    (Expert: Paranormal Assistant).
+  class: Paranormalist
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,18 @@
+_id: 082e0591b02da6aa
+name: First Rate
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Your merchandise is exquisite. Gain potency when you Sway or Consort with those hooked on your product. When you
+    deal with a crew or faction, the GM will tell you who among them is already hooked (one, a few, many, or all).
+  class: Dealers
+  class_default: Dealers
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,14 @@
+_id: iRMpss4mzoC4WNFp
+name: (W) Compel
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    You can Attune to the ghost field to force a nearby ghost to appear and obey a command you give it. You are not
+    supernaturally terrified by a ghost you summon or compel (though your allies may be).
+  class: Whisper
+  price: '1'
+folder: 5Sb9YUatUQwtpdMZ
+sort: 100001
+flags: {}

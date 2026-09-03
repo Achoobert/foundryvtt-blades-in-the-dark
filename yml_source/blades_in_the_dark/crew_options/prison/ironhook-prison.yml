@@ -1,0 +1,127 @@
+_id: d76b1ce9f3344170
+name: Ironhook Prison
+type: prison
+img: icons/svg/city.svg
+system:
+  description: >-
+    A rusting relic of centuries past, where many scoundrels spend the bulk of their lives. In danger of being replaced
+    by the Lusk Reform Technique.
+  turfs:
+    '1':
+      name: Smuggling
+      value: false
+      description: +2 load in prison, & can carry stacks, +2d to Doing Time
+      highlight: false
+      connects:
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '2':
+      name: Contraband
+      value: false
+      description: Can now Indulge Vice inside prison, +1d to Doing Time
+      highlight: false
+      connects:
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '3':
+      name: Cell Block Control
+      value: false
+      description: No more Survival rolls, +2d to Doing Time rolls
+      highlight: false
+      connects:
+        - left
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '4':
+      name: Prison
+      value: true
+      description: base
+      highlight: false
+      connects:
+        - top
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '5':
+      name: Hardcase
+      value: false
+      description: Mark turf box on crew’s Rep tracker
+      highlight: false
+      connects:
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '6':
+      name: Outside Claim
+      value: false
+      description: Take a claim for the crew
+      highlight: false
+      connects:
+        - left
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '7':
+      name: Guard Payoff
+      value: false
+      description: +1d to all rolls inside prison, +1d to Doing Time
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '8':
+      name: Smuggling
+      value: false
+      description: +2 load in prison, & can carry stacks, +1d to Doing Time
+      highlight: false
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '9':
+      name: Parloe Infulence
+      value: false
+      description: Wanted Level counts as one lower for sentence
+      highlight: false
+      connects:
+        - left
+      connected:
+        - false
+        - false
+        - false
+        - false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

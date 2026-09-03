@@ -1,0 +1,16 @@
+_id: 9da221cb6b55ef76
+name: Fine concealed shooter
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    A semi-automatic handgun with a modest calibre. It’s very difficult to detect on your person, even if you’re
+    searched.
+  class: Swinger
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

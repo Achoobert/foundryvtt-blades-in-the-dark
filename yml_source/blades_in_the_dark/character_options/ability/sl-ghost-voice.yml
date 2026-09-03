@@ -1,0 +1,14 @@
+_id: K327OtKAa3T8NweW
+name: (Sl) Ghost Voice
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    You know the secret method to interact with a ghost or demon as if it was a normal human, regardless of how wild or
+    feral it appears. You gain potency when communicating with the supernatural.
+  class: Slide
+  price: '1'
+folder: 537uDqf28OmWJoAM
+sort: 300001
+flags: {}

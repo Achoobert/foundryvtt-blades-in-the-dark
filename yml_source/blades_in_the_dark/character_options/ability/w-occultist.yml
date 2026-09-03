@@ -1,0 +1,14 @@
+_id: owJ82qqEbO4u8wGv
+name: (W) Occultist
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    You know the secret ways to Consort with ancient powers, forgotten gods or demons. Once you've consorted with one,
+    you get +1d to command cultists who worship it.
+  class: Whisper
+  price: '1'
+folder: 5Sb9YUatUQwtpdMZ
+sort: 400001
+flags: {}

@@ -1,0 +1,41 @@
+_id: 7137e89ef69c99d3
+name: Vampire
+type: class
+img: icons/svg/upgrade.svg
+system:
+  description: A Resonance Echo Animating An Undying Body
+  experience_clues: |-
+    You displayed your dominance or slayed without mercy.
+    You struggled with issues stemming from a deadlock or stricture.
+  base_skills:
+    hunt:
+      - 1
+    study:
+      - 0
+    survey:
+      - 0
+    tinker:
+      - 0
+    finesse:
+      - 0
+    prowl:
+      - 1
+    skirmish:
+      - 0
+    wreck:
+      - 0
+    attune:
+      - 1
+    command:
+      - 0
+    consort:
+      - 0
+    sway:
+      - 1
+  starting_ability: Vampire
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

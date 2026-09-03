@@ -1,0 +1,24 @@
+name: (G) Possess
+type: ability
+system:
+  description: >-
+    You may attune to the ghost field in order to take control of a living body. When your control is challenged, you
+    must re-attune (risking electroplasmic harm) or leave the body. Your control is challenged when: you consume spirit
+    energy from the host—when arcane powers act against you—when the host's will is driven to desperation. You may
+    easily and indefinitely possess a hull or hollow which has been ritually prepared for you (change your playbook to
+    Hull or Vampire, respectively).
+  class: Ghost
+  price: 1
+  purchased: false
+  class_default: false
+  logic: ''
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+  hp9rhyB0AtTZTutm: 3
+flags:
+  core:
+    sourceId: Item.kePdYkIUMW8G6yjH
+_id: QSWYPeoTIwrOxwXW

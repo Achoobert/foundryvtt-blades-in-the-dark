@@ -1,0 +1,16 @@
+_id: 028303727bfbbc64
+name: Experimental laser cannon
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    A plasmoleum-fueled device that generates a continuous beam of electroplasmic radiation. A dangerous and potentially
+    unstable weapon that will incinerate pretty much anything it's pointed at.
+  class: Intellectual
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,13 @@
+_id: VooDJLbTO8C2jS9X
+name: (Sl) A cane-sword
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: item
+system:
+  description: A slim sword and its sheath, disguised as a noble’s cane. The disguise will fool a cursory inspection.
+  class: Slide
+  load: '1'
+folder: null
+sort: 2500000
+flags: {}

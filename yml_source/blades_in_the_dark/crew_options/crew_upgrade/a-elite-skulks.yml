@@ -1,0 +1,15 @@
+_id: 0ZkRqMJWSDzjUoPp
+name: (A) Elite Skulks
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: All of your cohorts with the Skulks type get +1d to quality rolls for Skulk-related actions.
+  class: Assassins
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 300000
+flags: {}

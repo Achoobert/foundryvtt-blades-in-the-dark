@@ -1,0 +1,18 @@
+_id: a3ee420cb00f1945
+name: War Machine
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    When you push yourself, you can also do one of the following: sweep and secure a large area single-handedly and
+    without pausing—engage an improbable number of enemies in a ballet of violence.
+  class: Veteran
+  class_default: Veteran
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

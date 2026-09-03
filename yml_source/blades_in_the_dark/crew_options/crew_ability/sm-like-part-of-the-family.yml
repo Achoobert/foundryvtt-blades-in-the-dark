@@ -1,0 +1,15 @@
+_id: zLhqCYAMPrT1SAA0
+name: (Sm) Like Part of the Family
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: >-
+    Create one of your vehicles as a cohort (use the vehicle edges and flaws, below). Its quality is equal to your Tier
+    +1.
+  class: Smugglers
+  price: '1'
+folder: null
+sort: 3400001
+flags: {}

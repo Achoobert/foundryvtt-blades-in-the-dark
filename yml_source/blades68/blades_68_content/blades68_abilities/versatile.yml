@@ -1,0 +1,16 @@
+_id: a4569f9d3a204ff9
+name: Versatile
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: Choose a special ability from another source (can be taken more than once).
+  class: ''
+  class_default: ''
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

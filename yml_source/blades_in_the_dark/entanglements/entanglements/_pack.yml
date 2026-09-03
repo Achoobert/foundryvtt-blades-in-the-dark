@@ -1,0 +1,6 @@
+# Compendium manifest — compiled by scripts/build-yml-packs.mjs
+name: "entanglements"
+label: "Entanglements"
+type: "RollTable"
+path: "./packs/entanglements.db"
+banner: "systems/blades68/images/compendium-banners/Doskvol_14.webp"

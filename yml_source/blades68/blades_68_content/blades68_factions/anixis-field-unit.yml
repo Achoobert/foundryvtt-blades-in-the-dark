@@ -1,0 +1,43 @@
+_id: eed4a69fdae04d77
+name: Anixis Field Unit
+type: faction
+img: icons/svg/city.svg
+system:
+  description: ''
+  type: Institutions
+  tier: '2'
+  goal_1: ''
+  goal_1_clock_max: 0
+  goal_2: ''
+  goal_2_clock_max: 0
+  turf: ''
+  assets: ''
+  quirks: ''
+  notables: ''
+  allies: ''
+  enemies: ''
+  situation: ''
+  goal_clock: 0
+  hold:
+    value: 2
+    max: 2
+    max_default: 2
+    name_default: BITD.Hold
+    name: BITD.Hold
+  status:
+    value:
+      - 0
+    max: 7
+    max_default: 7
+    name_default: BITD.Status
+    name: BITD.Status
+  notes: >-
+    Newly independent in the wake of Unity War III, Iruvia has entered an isolationist period. Their intelligence agency
+    (Anixis) maintains a small field unit in Doskvol to monitor the other spy agencies and advance Iruvian interests
+    where possible.  
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

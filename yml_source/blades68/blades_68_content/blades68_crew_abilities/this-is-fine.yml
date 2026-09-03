@@ -1,0 +1,18 @@
+_id: da0cb2811825a0fa
+name: This Is Fine
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    If every PC works together (group action), you can summon a denizen of your Utopian Vision into this reality: a
+    Class V Resonance Entity.
+  class: Utopians
+  class_default: Utopians
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

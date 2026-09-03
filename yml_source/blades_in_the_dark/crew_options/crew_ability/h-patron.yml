@@ -1,0 +1,13 @@
+_id: gWltDanFwdoZHgPF
+name: (H) Patron
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: When you advance your Tier, it costs half the coin it normally would. Who is your patron? Why do they help you?
+  class: Hawkers
+  price: '1'
+folder: null
+sort: 2400001
+flags: {}

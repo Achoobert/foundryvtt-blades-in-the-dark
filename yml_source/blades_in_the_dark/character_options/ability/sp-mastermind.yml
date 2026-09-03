@@ -1,0 +1,14 @@
+_id: 3VQkC6YZfnO7nFRm
+name: (Sp) Mastermind
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    You may expend your special armor to protect a teammate, or to push yourself when you gather information or work on
+    a long-term project.
+  class: Spider
+  price: '1'
+folder: io6Cdw11wDXIixI3
+sort: 700001
+flags: {}
