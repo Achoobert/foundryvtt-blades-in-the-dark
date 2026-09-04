@@ -134,13 +134,24 @@ export class BladesActorSheet extends BladesSheet {
         };
         sheetData.playbookUnique = selectedClass ? (PLAYBOOK_UNIQUE[selectedClass.name] ?? null) : null;
 
-        const abilityResult = await this._buildCatalog("ability", selectedClass);
-        sheetData.abilityCatalog = abilityResult.catalog;
-        sheetData.otherAbilities = abilityResult.other;
-        sheetData.abilityShortList = abilityResult.catalog
-            .filter(a => a.ownedCount > 0)
-            .map(a => a.name)
-            .concat(abilityResult.other.map(i => BladesHelpers.trimClassFromName(i.name)))
+        // Special Abilities: only what the actor actually owns, regardless of class -
+        // the full class ability catalog is no longer shown as an inline checklist (use
+        // the "Add Ability" compendium picker instead). Abilities with a uses.max > 0 get
+        // per-use tracking checkboxes, similar to the Loadout slot checkboxes.
+        const ownedAbilities = this.actor.items.filter(i => i.type === "ability");
+        sheetData.otherAbilities = ownedAbilities.map(i => {
+            const usesMax = Math.max(0, parseInt(i.system?.uses?.max) || 0);
+            return {
+                _id: i.id,
+                name: i.name,
+                system: i.system,
+                description: BladesHelpers.stripHtml(i.system?.description || ""),
+                usesMax,
+                usesIndexes: Array.from({ length: usesMax }, (_, idx) => idx + 1)
+            };
+        });
+        sheetData.abilityShortList = ownedAbilities
+            .map(i => BladesHelpers.trimClassFromName(i.name))
             .join(" - ");
 
         const itemResult = await this._buildCatalog("item", selectedClass, { slotsField: "num_available" });
@@ -345,6 +356,17 @@ export class BladesActorSheet extends BladesSheet {
             const row = ev.currentTarget.closest('.other-item');
             if (!row) return;
             await this.actor.deleteEmbeddedDocuments("Item", [row.dataset.itemId]);
+        });
+
+        // Ability use tracking: independent checkboxes per uses.max slot, reconciled by
+        // count (like the Loadout slot checkboxes) rather than by which box was clicked.
+        html.find('.ability-uses-toggle').change(async (ev) => {
+            const row = ev.currentTarget.closest('.ability-uses');
+            if (!row) return;
+            const item = this.actor.items.get(ev.currentTarget.dataset.itemId);
+            if (!item) return;
+            const checkedCount = row.querySelectorAll('.ability-uses-toggle:checked').length;
+            await item.update({ "system.uses.value": checkedCount });
         });
 
     }

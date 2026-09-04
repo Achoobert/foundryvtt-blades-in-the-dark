@@ -370,6 +370,10 @@
         "value": [0],
         "max": 0
       },
+      "gambits": {
+        "value": 0,
+        "max": 0
+      },
       "turf": {
         "descriptions": [],
         "max": 6,

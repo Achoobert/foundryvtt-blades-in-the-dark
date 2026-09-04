@@ -381,39 +381,22 @@ $hover-brightness: 0.8;
       color: $gray;
     }
 
-    .ability-catalog {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-
-      .ability-catalog-item {
-        display: flex;
-        align-items: baseline;
-        gap: 6px;
-        margin-bottom: 6px;
-
-        input[type="checkbox"] {
-          // todo
-            @include toothradio(15px, 25px, "assets/blades68/dice_bg_black.png", "assets/blades68/dice_bg.png");
-          flex-shrink: 0;
-          position: relative;
-          top: 2px;
-        }
-
-        .ability-name {
-          font-weight: bold;
-          text-transform: uppercase;
-          margin-right: 4px;
-        }
-
-        .ability-description {
-          font-size: 13px;
-        }
-      }
-    }
-
     .other-abilities {
       margin-top: 10px;
+
+      .item {
+        align-items: center;
+
+        .ability-uses {
+          display: flex;
+          gap: 2px;
+          flex-shrink: 0;
+
+          input[type="checkbox"] {
+            margin: 0;
+          }
+        }
+      }
     }
   }
 

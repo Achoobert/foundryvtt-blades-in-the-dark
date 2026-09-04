@@ -90,12 +90,15 @@ export class BladesActor extends Actor {
       return Math.max(0, Math.min(Math.floor(numeric), 10));
     })();
 
-    // get crew tier info from character sheet if available
+    // get crew tier/gambits info from character sheet if available
     let current_tier = 0;
+    let current_gambits = 0;
     try {
       const crewActor = this._getCrewActor();
       const parsedTier = Number(crewActor?.system?.tier);
       current_tier = Number.isFinite(parsedTier) ? parsedTier : 0;
+      const parsedGambits = Number(crewActor?.system?.gambits?.value);
+      current_gambits = Number.isFinite(parsedGambits) ? parsedGambits : 0;
     } catch (error) {
       console.warn("No Crew is attached to the Actor.");
       console.error(error);
@@ -168,7 +171,7 @@ export class BladesActor extends Actor {
           <legend>${game.i18n.localize("BITD.RollOptions")}</legend>
           <ul style="margin:0; padding-left:1.2em;">
             <li>${game.i18n.localize("BITD.RollOptionAssist")}</li>
-            <li>${game.i18n.localize("BITD.RollOptionGambit")}</li>
+            ${current_gambits > 0 ? `<li>${game.i18n.localize("BITD.RollOptionGambit")}</li>` : ""}
             <li>${game.i18n.localize("BITD.RollOptionPush")}</li>
             <li>${game.i18n.localize("BITD.RollOptionDevilsBargain")}</li>
             <li>${game.i18n.localize("BITD.RollOptionGroupAction")}</li>

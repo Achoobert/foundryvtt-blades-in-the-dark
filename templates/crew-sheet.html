@@ -135,6 +135,18 @@
       </div>
       {{/if}}
 
+      {{!-- Gambits --}}
+      <div id="crew-{{_id}}-gambits" class="crew-coins-vault">
+        <div class="stripe">
+          <b>{{localize "BITD.Gambits"}}</b>
+        </div>
+        <div class="flex-horizontal" style="align-items:center; gap:2px;">
+          <input type="number" id="crew-{{_id}}-gambits-value" name="system.gambits.value" value="{{system.gambits.value}}" min="0" style="width:2.5em;">
+          <span>/</span>
+          <input type="number" id="crew-{{_id}}-gambits-max" name="system.gambits.max" value="{{system.gambits.max}}" min="0" style="width:2.5em;">
+        </div>
+      </div>
+
     </div>
 
     {{!-- Heat/Wanted --}}

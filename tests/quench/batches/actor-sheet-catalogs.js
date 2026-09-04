@@ -31,77 +31,14 @@ export default function register(quench) {
         await tracker.cleanup();
       });
 
-      describe('Special Abilities checklist', function () {
-        it('lists only the equipped class\'s abilities, and checking one adds the matching owned item', async function () {
-          this.timeout(10000);
+      describe('Special Abilities list', function () {
+        it('shows only abilities the actor actually owns, regardless of class', async function () {
           requireSystemActive();
 
           const className = `Quench Class ${foundry.utils.randomID()}`;
           const classItem = tracker.track(await Item.create({ name: className, type: 'class' }));
-          const abilitySource = tracker.track(
-            await Item.create({
-              name: `(${className}) Test Ability`,
-              type: 'ability',
-              system: { class: className, description: 'A test ability.' }
-            })
-          );
-          // An ability belonging to a different class must never show up in the catalog.
-          tracker.track(
-            await Item.create({
-              name: '(Other Class) Unrelated Ability',
-              type: 'ability',
-              system: { class: 'Some Other Class' }
-            })
-          );
 
           const actor = tracker.track(await Actor.create({ name: 'Quench Abilities PC', type: 'character' }));
-          await actor.createEmbeddedDocuments('Item', [classItem.toObject()]);
-
-          const sheet = actor.sheet;
-          await sheet._render(true);
-          try {
-            const data = await sheet.getData();
-            assert.lengthOf(data.abilityCatalog, 1, 'catalog should only contain the equipped class\'s ability');
-            assert.equal(data.abilityCatalog[0].name, 'Test Ability');
-            assert.equal(data.abilityCatalog[0].ownedCount, 0);
-
-            // A checkbox's change handler is bound at the render that produced it; toggling
-            // ownership re-renders the sheet (fresh DOM, freshly-bound listeners), so each step
-            // re-queries the live element instead of reusing a reference from a prior render.
-            const abilityCheckbox = () => sheet.element.find('.special-abilities-panel .catalog-toggle').get(0);
-            const ownsAbility = () => actor.items.some((i) => i.type === 'ability' && i.name === abilitySource.name);
-
-            let checkbox = abilityCheckbox();
-            assert.isOk(checkbox, 'the ability checkbox should be rendered');
-            assert.isFalse(checkbox.checked);
-
-            checkbox.checked = true;
-            await fireChange(checkbox, ownsAbility);
-            assert.isTrue(
-              actor.items.some((i) => i.type === 'ability' && i.name === abilitySource.name),
-              'checking the box should create the owned ability item'
-            );
-
-            checkbox = abilityCheckbox();
-            checkbox.checked = false;
-            await fireChange(checkbox, () => !ownsAbility());
-            assert.isFalse(
-              actor.items.some((i) => i.type === 'ability' && i.name === abilitySource.name),
-              'unchecking the box should remove the owned ability item'
-            );
-          } finally {
-            await sheet.close();
-          }
-        });
-
-        it("keeps abilities the actor owns outside the equipped class's catalog visible as Other Abilities", async function () {
-          this.timeout(10000);
-          requireSystemActive();
-
-          const className = `Quench Class ${foundry.utils.randomID()}`;
-          const classItem = tracker.track(await Item.create({ name: className, type: 'class' }));
-
-          const actor = tracker.track(await Actor.create({ name: 'Quench Veteran Pick PC', type: 'character' }));
           await actor.createEmbeddedDocuments('Item', [
             classItem.toObject(),
             { name: '(Some Other Class) Borrowed Ability', type: 'ability', system: { class: 'Some Other Class' } }
@@ -111,9 +48,37 @@ export default function register(quench) {
           await sheet._render(true);
           try {
             const data = await sheet.getData();
-            assert.lengthOf(data.abilityCatalog, 0);
             assert.lengthOf(data.otherAbilities, 1);
             assert.equal(data.otherAbilities[0].name, '(Some Other Class) Borrowed Ability');
+            assert.isEmpty(sheet.element.find('.special-abilities-panel .ability-catalog'));
+          } finally {
+            await sheet.close();
+          }
+        });
+
+        it('tracks ability uses with independent checkboxes reconciled by count', async function () {
+          this.timeout(10000);
+          requireSystemActive();
+
+          const actor = tracker.track(await Actor.create({ name: 'Quench Ability Uses PC', type: 'character' }));
+          const [ability] = await actor.createEmbeddedDocuments('Item', [
+            { name: 'Limited Use Ability', type: 'ability', system: { uses: { value: 0, max: 3 } } }
+          ]);
+
+          const sheet = actor.sheet;
+          await sheet._render(true);
+          try {
+            const data = await sheet.getData();
+            assert.equal(data.otherAbilities[0].usesMax, 3);
+
+            const usesBoxes = () => sheet.element.find(`.other-abilities [data-item-id="${ability.id}"] .ability-uses-toggle`);
+            assert.lengthOf(usesBoxes(), 3, 'should render one checkbox per uses.max slot');
+
+            const boxes = usesBoxes().toArray();
+            boxes[0].checked = true;
+            boxes[1].checked = true;
+            await fireChange(boxes[1], () => ability.system.uses.value === 2);
+            assert.equal(ability.system.uses.value, 2, 'checked count should be written to system.uses.value');
           } finally {
             await sheet.close();
           }

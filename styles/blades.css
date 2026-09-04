@@ -1961,75 +1961,19 @@
   font-style: italic;
   color: #999;
 }
-.blades68.actor.pc * .special-abilities-panel .ability-catalog {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.blades68.actor.pc * .special-abilities-panel .ability-catalog .ability-catalog-item {
-  display: flex;
-  align-items: baseline;
-  gap: 6px;
-  margin-bottom: 6px;
-}
-.blades68.actor.pc * .special-abilities-panel .ability-catalog .ability-catalog-item input[type=checkbox] {
-  display: flex;
-}
-.blades68.actor.pc * .special-abilities-panel .ability-catalog .ability-catalog-item input[type=checkbox] label {
-  height: 25px;
-  width: 15px;
-  background-image: url("assets/blades68/dice_bg.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  margin-right: 5px;
-}
-.blades68.actor.pc * .special-abilities-panel .ability-catalog .ability-catalog-item input[type=checkbox] label:last-of-type {
-  margin-right: 0px;
-}
-.blades68.actor.pc * .special-abilities-panel .ability-catalog .ability-catalog-item input[type=checkbox] label[for$="-0"] {
-  width: auto;
-  height: auto;
-  background-image: none !important;
-  color: #EEEFFF;
-}
-.blades68.actor.pc * .special-abilities-panel .ability-catalog .ability-catalog-item input[type=checkbox] label[for$="-0"] i {
-  margin-top: 4px;
-}
-.blades68.actor.pc * .special-abilities-panel .ability-catalog .ability-catalog-item input[type=checkbox] label {
-  transition: filter 0.1s;
-  cursor: pointer;
-}
-.blades68.actor.pc * .special-abilities-panel .ability-catalog .ability-catalog-item input[type=checkbox] label:hover {
-  filter: brightness(0.8);
-  opacity: 0.9;
-}
-.blades68.actor.pc * .special-abilities-panel .ability-catalog .ability-catalog-item input[type=checkbox] {
-  /* Hide the browser's default checkbox */
-}
-.blades68.actor.pc * .special-abilities-panel .ability-catalog .ability-catalog-item input[type=checkbox] input {
-  display: none;
-}
-.blades68.actor.pc * .special-abilities-panel .ability-catalog .ability-catalog-item input[type=checkbox] input:checked ~ label {
-  background-image: url("assets/blades68/dice_bg_black.png");
-}
-.blades68.actor.pc * .special-abilities-panel .ability-catalog .ability-catalog-item input[type=checkbox] input:checked + label {
-  background-image: url("assets/blades68/dice_bg.png");
-}
-.blades68.actor.pc * .special-abilities-panel .ability-catalog .ability-catalog-item input[type=checkbox] {
-  flex-shrink: 0;
-  position: relative;
-  top: 2px;
-}
-.blades68.actor.pc * .special-abilities-panel .ability-catalog .ability-catalog-item .ability-name {
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-right: 4px;
-}
-.blades68.actor.pc * .special-abilities-panel .ability-catalog .ability-catalog-item .ability-description {
-  font-size: 13px;
-}
 .blades68.actor.pc * .special-abilities-panel .other-abilities {
   margin-top: 10px;
+}
+.blades68.actor.pc * .special-abilities-panel .other-abilities .item {
+  align-items: center;
+}
+.blades68.actor.pc * .special-abilities-panel .other-abilities .item .ability-uses {
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+}
+.blades68.actor.pc * .special-abilities-panel .other-abilities .item .ability-uses input[type=checkbox] {
+  margin: 0;
 }
 .blades68.actor.pc * .items-panel .section-header .load-fraction {
   white-space: nowrap;
