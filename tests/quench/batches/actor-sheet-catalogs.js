@@ -189,6 +189,30 @@ export default function register(quench) {
             await sheet.close();
           }
         });
+
+        it('only counts items with system.equipped true toward system.loadout', async function () {
+          requireSystemActive();
+
+          const actor = tracker.track(await Actor.create({ name: 'Quench Load Sum PC', type: 'character' }));
+          await actor.createEmbeddedDocuments('Item', [
+            { name: 'Carried Sword', type: 'item', system: { load: 3, equipped: true } },
+            { name: 'Stashed Anchor', type: 'item', system: { load: 5, equipped: false } },
+            { name: 'Unset Equip Item', type: 'item', system: { load: 2 } }
+          ]);
+
+          const sheet = actor.sheet;
+          await sheet._render(true);
+          try {
+            const data = await sheet.getData();
+            assert.equal(
+              data.system.loadout,
+              3,
+              'only the equipped item\'s load should count toward system.loadout'
+            );
+          } finally {
+            await sheet.close();
+          }
+        });
       });
 
       describe('Keys & Deadlocks', function () {

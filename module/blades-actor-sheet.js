@@ -36,7 +36,7 @@ export class BladesActorSheet extends BladesSheet {
         // Calculate Load
         let loadout = 0;
         sheetData.items.forEach(i => {
-            loadout += (i.type === "item") ? parseInt(i.system.load) : 0
+            loadout += (i.type === "item" && i.system.equipped) ? parseInt(i.system.load) : 0
         });
 
         //Sanity Check
@@ -118,6 +118,21 @@ export class BladesActorSheet extends BladesSheet {
         // (Veteran picks, homebrew additions, or no class equipped yet).
         const selectedClass = this.actor.items.find(i => i.type === "class") ?? null;
         sheetData.selectedClass = selectedClass;
+
+        const PLAYBOOK_UNIQUE = {
+            "Hound": "hound",
+            "Hull": "hull",
+            "Intellectual": "intellectual",
+            "Operative": "operative",
+            "Paranormalist": "paranormalist",
+            "Radical": "radical",
+            "Swinger": "swinger",
+            "Veteran": "veteran",
+            "Vampire": "vampire",
+            "Time Traveler Future": "time_traveler",
+            "Time Traveler Past": "time_traveler",
+        };
+        sheetData.playbookUnique = selectedClass ? (PLAYBOOK_UNIQUE[selectedClass.name] ?? null) : null;
 
         const abilityResult = await this._buildCatalog("ability", selectedClass);
         sheetData.abilityCatalog = abilityResult.catalog;

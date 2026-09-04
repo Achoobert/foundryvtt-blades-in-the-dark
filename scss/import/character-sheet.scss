@@ -574,4 +574,403 @@ $hover-brightness: 0.8;
     }
   }
 
+    .special-playbook-section {
+      .unique-data {
+        font-size: 13px;
+      }
+  
+      .unique-card {
+        border: 1px solid $lightgray;
+        border-radius: 6px;
+        background: #f7f7f7;
+        margin-bottom: 8px;
+        overflow: hidden;
+      }
+  
+      .unique-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 10px;
+        background: #e4e4e4;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 13px;
+  
+        &.accent {
+          background: #c45a1a;
+          color: #fff;
+        }
+  
+        .unique-card-tag,
+        .unique-card-rule {
+          font-weight: normal;
+          text-transform: none;
+          color: #555;
+          font-size: 11px;
+        }
+  
+        &.accent .unique-card-tag {
+          color: #ffe8d6;
+        }
+      }
+  
+      .unique-card-body {
+        padding: 8px 10px;
+        background: #fff;
+      }
+  
+      .unique-blurb {
+        margin: 0 0 8px;
+        font-size: 12px;
+        line-height: 1.35;
+  
+        &.italic {
+          font-style: italic;
+        }
+      }
+  
+      .field-under {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        min-width: 0;
+  
+        input[type="text"],
+        textarea {
+          border: none;
+          border-bottom: 1px solid $gray;
+          border-radius: 0;
+          background: transparent;
+          width: 100%;
+          padding: 2px 0;
+        }
+  
+        label {
+          font-size: 10px;
+          font-weight: bold;
+          text-transform: uppercase;
+          color: #444;
+        }
+  
+        &.wide {
+          grid-column: 1 / -1;
+        }
+  
+        &.grow {
+          flex: 1;
+        }
+      }
+  
+      .field-abilities {
+        grid-column: 1 / -1;
+  
+        label {
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 11px;
+        }
+  
+        textarea {
+          width: 100%;
+          border: 1px solid $lightgray;
+          min-height: 40px;
+        }
+      }
+  
+      .cohort-status-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: flex-end;
+        margin-bottom: 8px;
+  
+        .status-pill {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          font-size: 11px;
+          font-weight: bold;
+          text-transform: uppercase;
+  
+          input[type="checkbox"] {
+            width: 12px;
+            height: 22px;
+            appearance: none;
+            border: 1px solid $gray;
+            border-radius: 8px;
+            background: #fff;
+            cursor: pointer;
+  
+            &:checked {
+              background: $almost_black;
+            }
+          }
+  
+          input[type="number"] {
+            width: 28px;
+            text-align: center;
+            border: 1px solid $gray;
+            border-radius: 8px;
+            height: 22px;
+            padding: 0;
+          }
+        }
+      }
+  
+      .cohort-fields {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 12px;
+      }
+  
+      .cohort-top-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: flex-end;
+        margin-bottom: 10px;
+  
+        .field-under {
+          flex: 1;
+          min-width: 100px;
+        }
+      }
+  
+      .type-columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-top: 6px;
+      }
+  
+      .type-heading {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 11px;
+        margin-bottom: 4px;
+      }
+  
+      .radio-line {
+        display: flex;
+        gap: 6px;
+        align-items: flex-start;
+        margin-bottom: 4px;
+        font-size: 12px;
+        line-height: 1.3;
+  
+        input {
+          margin-top: 2px;
+          flex-shrink: 0;
+        }
+      }
+  
+      .memory-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-bottom: 10px;
+      }
+  
+      .memory-box {
+        position: relative;
+        border: 1px solid $lightgray;
+        border-radius: 4px;
+        padding: 8px;
+        padding-right: 70px;
+        min-height: 110px;
+        background: #fafafa;
+  
+        .memory-prompt {
+          font-weight: bold;
+          font-size: 12px;
+          margin-bottom: 4px;
+        }
+  
+        .memory-clock {
+          position: absolute;
+          top: 6px;
+          right: 6px;
+          transform: scale(0.55);
+          transform-origin: top right;
+        }
+  
+        textarea {
+          width: 100%;
+          border: none;
+          background: transparent;
+          resize: vertical;
+          min-height: 48px;
+        }
+  
+        .memory-footer {
+          margin: 4px 0 0;
+          font-size: 10px;
+          color: #666;
+          font-style: italic;
+        }
+      }
+  
+      .backing-faction-body {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 10px;
+        align-items: start;
+  
+        .unique-blurb {
+          grid-column: 1 / -1;
+        }
+  
+        .backing-fields {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 8px 12px;
+        }
+  
+        .failure-clock {
+          text-align: center;
+  
+          .failure-label {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 11px;
+            margin-top: 4px;
+          }
+        }
+      }
+  
+      .explosives-body {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 16px;
+      }
+  
+      .bandoliers {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-right: 12px;
+        border-right: 1px solid $lightgray;
+      }
+  
+      .bandolier-row {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-weight: bold;
+        font-size: 12px;
+  
+        input[type="checkbox"] {
+          width: 16px;
+          height: 16px;
+          border-radius: 3px;
+        }
+      }
+  
+      .explosive-list ul {
+        columns: 3;
+        margin: 0;
+        padding-left: 16px;
+        font-size: 12px;
+  
+        li {
+          margin-bottom: 2px;
+          list-style: disc;
+        }
+      }
+  
+      .veteran-body {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 12px;
+  
+        .veteran-fields {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+  
+      .strictures-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+  
+        li {
+          margin-bottom: 6px;
+  
+          label {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+            font-size: 12px;
+            line-height: 1.35;
+  
+            input {
+              margin-top: 2px;
+              flex-shrink: 0;
+              width: 14px;
+              height: 14px;
+              border-radius: 50%;
+              appearance: none;
+              border: 1.5px solid $almost_black;
+              cursor: pointer;
+  
+              &:checked {
+                background: $almost_black;
+              }
+            }
+          }
+        }
+      }
+  
+      .mission-block {
+        border-top: 1px solid $lightgray;
+        padding-top: 8px;
+        margin-top: 8px;
+  
+        .mission-title {
+          display: flex;
+          gap: 6px;
+          align-items: center;
+          text-transform: uppercase;
+          margin-bottom: 4px;
+        }
+      }
+  
+      .mission-details {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+        margin-top: 6px;
+      }
+  
+      .mission-detail {
+        border-left: 1px solid $lightgray;
+        padding-left: 6px;
+  
+        &:first-child {
+          border-left: none;
+          padding-left: 0;
+        }
+  
+        label {
+          display: flex;
+          gap: 4px;
+          align-items: flex-start;
+          font-size: 11px;
+          font-weight: bold;
+          margin-bottom: 4px;
+          line-height: 1.25;
+        }
+  
+        input[type="text"] {
+          width: 100%;
+          border: none;
+          border-bottom: 1px solid $gray;
+          background: transparent;
+        }
+      }
+    }
 }

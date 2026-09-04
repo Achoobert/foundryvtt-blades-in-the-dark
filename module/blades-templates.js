@@ -18,6 +18,7 @@ export const preloadHandlebarsTemplates = async function() {
     "systems/blades68/templates/parts/cohort-block.html",
     "systems/blades68/templates/parts/factions.html",
     "systems/blades68/templates/parts/active-effects.html",
+    "systems/blades68/templates/parts/unique-data.html",
   ];
 
   // Load the template parts
