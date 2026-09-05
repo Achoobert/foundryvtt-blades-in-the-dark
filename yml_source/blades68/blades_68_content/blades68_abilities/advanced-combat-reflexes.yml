@@ -1,0 +1,18 @@
+_id: 78153460bedd0a58
+name: Advanced Combat Reflexes
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Cybernetic implants and futuristic combat training let you react to threats in a fraction of a second and even dodge
+    bullets. Your bare hands count as a fine weapon. When there's a question about who acts first, the answer is you.
+  class: Time Traveler Future
+  class_default: Time Traveler Future
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

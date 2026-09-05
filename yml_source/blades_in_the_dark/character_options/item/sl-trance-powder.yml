@@ -1,0 +1,15 @@
+_id: 7lJxYzAdnYCEhi1X
+name: (Sl) Trance powder
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: item
+system:
+  description: >-
+    A dose of the popular drug, which induces an altered mental state. The victim of this powder is not fully
+    unconscious, but rather retreats into a calm, suggestible mental state, similar to hypnotism.
+  class: Slide
+  load: '0'
+folder: null
+sort: 2400000
+flags: {}

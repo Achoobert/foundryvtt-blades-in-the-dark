@@ -1,0 +1,13 @@
+_id: E2qeBJPNpuJ0d6E0
+name: (H) Veteran
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: Choose a special ability from another crew.
+  class: Hawkers
+  price: '2'
+folder: null
+sort: 2500001
+flags: {}

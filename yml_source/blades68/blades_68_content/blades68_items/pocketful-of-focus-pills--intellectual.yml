@@ -1,0 +1,18 @@
+_id: 8ae3a34d82310f65
+name: Pocketful of focus pills
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    For when you need steady hands, an alert mind, and laser-like concentration. Highly addictive; tick a 4-segment
+    addiction clock when used (this can be resisted). If the clock fills, you no longer get any benefit from the pills
+    but have to take them every score anyway or suffer the moderate harm 'withdrawal symptoms'. Once this harm is taken,
+    reset the addiction clock.
+  class: Intellectual
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

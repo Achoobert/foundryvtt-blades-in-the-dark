@@ -1,0 +1,15 @@
+_id: lZOLVqcSD2GcZkca
+name: (Sp) Blueprints
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: item
+system:
+  description: >-
+    A folio of useful architectural drawings and city plans. Feel free to specify which plans you’re carrying when you
+    choose this item.
+  class: Spider
+  load: '1'
+folder: null
+sort: 2800000
+flags: {}

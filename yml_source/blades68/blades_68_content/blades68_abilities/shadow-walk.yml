@@ -1,0 +1,16 @@
+_id: e85b2562b8c1a873
+name: Shadow Walk
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: Take 1 Instability to teleport anywhere you can see.
+  class: Time Traveler Past
+  class_default: Time Traveler Past
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

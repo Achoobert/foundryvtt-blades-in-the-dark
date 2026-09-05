@@ -1,0 +1,19 @@
+_id: c11b7776ffa671ff
+name: Pamphleteer
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    You can publish revolutionary literature as a 4-segment long-term project. Name each work. Once complete, a
+    published work can tick another long-term project clock related to the revolution, once per downtime (maximum of
+    four such works may be in effective circulation). If you die or get imprisoned, each work adds two ticks.
+  class: Radical
+  class_default: Radical
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

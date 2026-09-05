@@ -1,0 +1,15 @@
+_id: Q0o6LC5gQC2TXogb
+name: (Sh) Elite Skulks
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: All of your cohorts with the Skulks type get +1d to quality rolls for Skulk-related actions.
+  class: Shadows
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 2400000
+flags: {}

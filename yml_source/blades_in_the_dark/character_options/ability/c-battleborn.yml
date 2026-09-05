@@ -1,0 +1,12 @@
+_id: LL4ALumWoSfHBuEC
+name: (C) Battleborn
+permission:
+  default: 0
+type: ability
+system:
+  description: You may expend your special armor to reduce harm from an attack in combat or to push yourself during a fight.
+  class: Cutter
+  price: '1'
+folder: cJPDzs27jPdqAVDV
+sort: 100000
+flags: {}

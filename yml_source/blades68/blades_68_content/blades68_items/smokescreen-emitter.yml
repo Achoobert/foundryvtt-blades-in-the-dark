@@ -1,0 +1,15 @@
+_id: a5ad13fb1af72a76
+name: Smokescreen Emitter
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: An emergency system that can exude a dark, acrid cloud of smoke — enough to fill a large room.
+  class: Hull
+  load: '0'
+  additional_info: frame_feature
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,13 @@
+_id: 0tsOjJEyof58I0st
+name: (Sh) Pack Rats
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: Your lair is a jumble of stolen items. When you roll to acquire an asset, take +1d.
+  class: Shadows
+  price: '1'
+folder: null
+sort: 2800001
+flags: {}

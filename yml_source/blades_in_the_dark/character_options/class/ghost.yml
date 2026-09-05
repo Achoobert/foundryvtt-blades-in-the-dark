@@ -1,0 +1,61 @@
+_id: GjmMFKjGfUaoDiTr
+name: Ghost
+type: class
+img: systems/blades-in-the-dark/styles/assets/icons/Icon.6_18.png
+system:
+  description: A disembodied spirit, craving vengeance
+  logic: |-
+    [
+    {"attribute":"data.stress.name","operator":"attribute_change","value":"BITD.Drain","requirement":""},
+    {"attribute":"data.trauma.name","operator":"attribute_change","value":"BITD.Gloom","requirement":""}
+    ]
+  experience_clues: You exact vengeance upon those you deem deserving - You express your outrage or anger.
+  base_skills:
+    hunt:
+      - 1
+    study:
+      - 0
+    survey:
+      - 0
+    tinker:
+      - 0
+    finesse:
+      - 0
+    prowl:
+      - 1
+    skirmish:
+      - 0
+    wreck:
+      - 0
+    attune:
+      - 1
+    command:
+      - 0
+    consort:
+      - 0
+    sway:
+      - 0
+effects:
+  - _id: C1OuwtxoYPfQfacD
+    changes:
+      - key: data.acquaintances_label
+        mode: 5
+        value: BITD.EnemiesRivals
+      - key: data.experience_clues
+        mode: 5
+        value: '["BITD.ExpStruggledNeedGloom", "BITD.ExpExpressedAnger", "BITD.ExpExactedVengeance"]'
+    disabled: false
+    duration:
+      startTime: null
+    icon: systems/blades-in-the-dark/styles/assets/icons/Icon.3_13.png
+    label: Ghost
+    origin: Compendium.blades-in-the-dark.class.GjmMFKjGfUaoDiTr
+    transfer: true
+    flags: {}
+    tint: ''
+folder: null
+sort: 100000
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+flags: {}

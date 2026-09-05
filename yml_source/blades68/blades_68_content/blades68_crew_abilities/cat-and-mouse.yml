@@ -1,0 +1,18 @@
+_id: 42da55bdaacc1319
+name: Cat and Mouse
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    The GM will tell you about any special Mandates investigating your crew, and put their clocks on the table from now
+    on. You get +2d to the engagement roll against any raids (Mandates or otherwise).
+  class: Dealers
+  class_default: Dealers
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,17 @@
+_id: 47d6a3454cabd912
+name: Dealer rigging (1 carried item is concealed, 0 load)
+type: crew_upgrade
+img: icons/svg/item-bag.svg
+system:
+  description: ''
+  class: ''
+  price: '1'
+  purchased: false
+  logic: ''
+  crew_type: Dealers
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

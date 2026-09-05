@@ -1,0 +1,16 @@
+_id: 5fe2100a30f1d9f5
+name: Quantum Displacement
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: Take 1 Instability to teleport anywhere you can see.
+  class: Time Traveler Future
+  class_default: Time Traveler Future
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

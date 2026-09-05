@@ -1,0 +1,21 @@
+name: Acquisition
+type: hunting_grounds
+_id: qlldHIVyJfvjsTcT
+img: systems/blades-in-the-dark/styles/assets/icons/Icons8_06.png
+system:
+  description: <p>Procue an arcane artifact and attune it to your god.</p>
+  class: Cult
+effects: []
+folder: null
+sort: 2200000
+ownership:
+  default: 0
+  B7A33cKMwj3J5fQB: 3
+flags: {}
+_stats:
+  systemId: blades-in-the-dark
+  systemVersion: '4.9'
+  coreVersion: '11.315'
+  createdTime: 1710718803510
+  modifiedTime: 1710727589455
+  lastModifiedBy: B7A33cKMwj3J5fQB

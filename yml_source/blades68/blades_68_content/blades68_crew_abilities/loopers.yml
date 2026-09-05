@@ -1,0 +1,21 @@
+_id: ea4ac7646289bd37
+name: Loopers
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Your crew is caught in an anomaly, and regularly experiences time loops where events are replayed. Usually you don’t
+    retain memory between loops, but you can jump loops with some effort. Take 4 Stress after any action roll to roll it
+    again, and take the best result between the two rolls. The second roll uses the exact same number of dice (pushes,
+    assists, etc.). You can choose to do this after the GM has announced the consequences, but not after any resistance
+    rolls.
+  class: Hit Squad
+  class_default: Hit Squad
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

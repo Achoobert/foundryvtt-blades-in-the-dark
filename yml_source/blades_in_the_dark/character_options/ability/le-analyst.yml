@@ -1,0 +1,14 @@
+_id: 26BF64gJyZVZeQFZ
+name: (Le) Analyst
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    During downtime, you get two ticks to distribute among any long term project clocks that involve investigation or
+    learning a new formula or design plan.
+  class: Leech
+  price: '1'
+folder: EorKoKOCKsvC93ZA
+sort: 200001
+flags: {}

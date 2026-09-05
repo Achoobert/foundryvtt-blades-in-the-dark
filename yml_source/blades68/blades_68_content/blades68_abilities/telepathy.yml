@@ -1,0 +1,18 @@
+_id: 51fd2dfdd81cf175
+name: Telepathy
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Take 1 Stress to sense beyond human limits. Read a subject's true thoughts or feelings, see in pitch darkness, sense
+    the presence of invisible things, intuit the location of a hidden object, etc.
+  class: Vampire
+  class_default: Vampire
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

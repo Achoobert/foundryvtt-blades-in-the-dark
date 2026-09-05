@@ -1,0 +1,5 @@
+# Compendium manifest — compiled by scripts/build-yml-packs.mjs
+name: "blades68_abilities"
+label: "Blades '68 Abilities"
+type: "Item"
+path: "./packs/blades68_abilities.db"

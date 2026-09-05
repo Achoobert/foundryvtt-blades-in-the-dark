@@ -1,0 +1,18 @@
+_id: 78bcd2894e5612e5
+name: Wetwork
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    When you push yourself, you can also do one of the following: make an improbable shot at extreme distance or with
+    extreme speed—perform a feat of athletics that verges on the superhuman.
+  class: Operative
+  class_default: Operative
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

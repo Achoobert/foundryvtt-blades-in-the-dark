@@ -1,0 +1,15 @@
+_id: uGqoSkx6AaYSei5y
+name: (Le) Gadgets
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: item
+system:
+  description: >-
+    You may create gadgets during downtime by Tinkering with tools and materials. See Gadgets, page 227. Track the load
+    for each gadget you deploy during an operation.
+  class: Leech
+  load: '1'
+folder: null
+sort: 1500000
+flags: {}

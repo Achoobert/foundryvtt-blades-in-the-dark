@@ -1,0 +1,6 @@
+# Compendium manifest — compiled by scripts/build-yml-packs.mjs
+name: "hunting_grounds"
+label: "Hunting Grounds"
+type: "Item"
+path: "./packs/hunting_grounds.db"
+banner: "systems/blades68/images/compendium-banners/Doskvol_11.webp"

@@ -1,0 +1,15 @@
+_id: 8GKa0g1BIuFOtTiv
+name: Boat House 1
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: 'You have a boat, a dock on a waterway, and a small shack to store boating supplies. '
+  class: ''
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 300001
+flags: {}

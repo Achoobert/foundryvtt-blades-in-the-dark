@@ -1,0 +1,14 @@
+_id: 8163cdb95d86083c
+name: Fine two-seat autopod
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: The latest model. Is it built for racing, impressing, or surprising your enemies?
+  class: Swinger
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,17 @@
+_id: HxQTdQUfRoUtvh8O
+name: Secure Lair 1
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: >-
+    Your lair has locks, alarms, and traps to thwart intruders. You might roll your crew's Tier if these measures are
+    ever put to the test, to see how well they thwart an intruder.
+  class: ''
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 1500001
+flags: {}

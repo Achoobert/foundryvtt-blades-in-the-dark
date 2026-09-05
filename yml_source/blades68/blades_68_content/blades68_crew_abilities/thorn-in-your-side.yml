@@ -1,0 +1,16 @@
+_id: caea1fe0cded8c7d
+name: Thorn in your Side
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: When you use Stealth or Assault plans against a higher Tier faction, your Tier counts as +1.
+  class: Vigilantes
+  class_default: Vigilantes
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

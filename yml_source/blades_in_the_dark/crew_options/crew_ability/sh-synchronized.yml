@@ -1,0 +1,13 @@
+_id: z5hcLPa9wuiVpEW9
+name: (Sh) Synchronized
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: When you perform a group action, you may count multiple 6s from different rolls as a critical success.
+  class: Shadows
+  price: '1'
+folder: null
+sort: 3200001
+flags: {}

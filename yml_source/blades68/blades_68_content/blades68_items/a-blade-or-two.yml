@@ -1,0 +1,16 @@
+_id: e65f75e4d1d930b2
+name: A Blade or Two
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Perhaps you carry a butterfly knife. Or a big military-issue combat knife. Or a heavy butcher’s cleaver. Or a
+    machete.
+  class: ''
+  load: '1'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

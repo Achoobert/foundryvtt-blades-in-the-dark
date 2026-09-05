@@ -1,0 +1,12 @@
+_id: TiL4AssY9Ryty6f9
+name: The Dagger Isles
+permission:
+  default: 0
+type: heritage
+system:
+  description: >-
+    If you want to be a rootless wanderer you could be from the Dagger Isles. People there often grow up on ships and
+    travel a lot before settling down. They’re known as corsairs and merchants who live without lightning barriers -
+    dealing with spirits in other ways.
+sort: 200000
+flags: {}

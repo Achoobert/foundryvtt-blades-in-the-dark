@@ -1,0 +1,13 @@
+_id: mSAITlEaeR2hPC22
+name: (Sh) Patron
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: When you advance your Tier, it costs half the coin it normally would. Who is your patron? Why do they help you?
+  class: Shadows
+  price: '1'
+folder: null
+sort: 2900001
+flags: {}

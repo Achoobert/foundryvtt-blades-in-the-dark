@@ -1,0 +1,16 @@
+_id: S5B8EgJXHl2qEVIf
+name: (Sh) Elite Rooks
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: All of your cohorts with the Rooks type get +1d to quality rolls for Rook-related actions.
+  class: Shadows
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 2200000
+flags: {}
+img: icons/svg/mystery-man.svg

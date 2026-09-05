@@ -1,0 +1,16 @@
+_id: 70fde22f10d15124
+name: Sleepy Time
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: Everyone on the crew adds tranquilizer rounds (0 load, compatible with any firearm) to their playbook items.
+  class: Shadows
+  class_default: Shadows
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

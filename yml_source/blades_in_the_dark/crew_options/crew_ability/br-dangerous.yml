@@ -1,0 +1,13 @@
+_id: xF68ksoiDKfJBtUX
+name: (Br) Dangerous
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: Each PC may add +1 action rating to Hunt, Skirmish, or Wreck (up to a max rating of 3).
+  class: Bravos
+  price: '1'
+folder: null
+sort: 900001
+flags: {}

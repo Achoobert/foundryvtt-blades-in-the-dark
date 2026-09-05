@@ -1,0 +1,21 @@
+name: Burglary
+type: hunting_grounds
+_id: sm2PdktTxwvcsjMm
+img: systems/blades-in-the-dark/styles/assets/icons/Icon.5_77.png
+system:
+  description: <p>Theft by breaking and entering.</p>
+  class: Shadows
+effects: []
+folder: null
+sort: 2300000
+ownership:
+  default: 0
+  B7A33cKMwj3J5fQB: 3
+flags: {}
+_stats:
+  systemId: blades-in-the-dark
+  systemVersion: '4.9'
+  coreVersion: '11.315'
+  createdTime: 1710723957756
+  modifiedTime: 1710727680226
+  lastModifiedBy: B7A33cKMwj3J5fQB

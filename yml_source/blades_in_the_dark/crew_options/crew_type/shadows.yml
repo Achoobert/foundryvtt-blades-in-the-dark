@@ -1,0 +1,129 @@
+_id: KDB0e8FotyrNliTH
+name: Shadows
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_type
+system:
+  description: Thieves, Spies and Saboteurs
+  experience_clues: |-
+    - Execute a successful espionage, sabotage, or theft operation.
+    - Contend with challenges above your current station.
+    - Bolster your crew's reputation or develop a new one.
+    - Express the goals, drives, inner conflict, or essential nature of the crew.
+  turfs:
+    '1':
+      name: Interrogation Chamber
+      value: false
+      description: +1d to Command and Sway on site
+      connects:
+        - right
+        - bottom
+    '2':
+      name: BITD.Turf
+      value: false
+      description: ''
+      connects:
+        - left
+        - right
+    '3':
+      name: Loyal Fence
+      value: false
+      description: +2 coin for burglary or robbery
+      connects:
+        - left
+        - bottom
+    '4':
+      name: Gambling Den
+      value: false
+      description: (Tier roll) - Heat = coin in downtime
+      connects:
+        - right
+        - bottom
+    '5':
+      name: Tavern
+      value: false
+      description: +1d to Consort and Sway on site
+      connects:
+        - left
+        - bottom
+    '6':
+      name: Drug Den
+      value: false
+      description: (Tier roll) - Heat = coin in downtime
+      connects:
+        - top
+        - right
+        - bottom
+    '7':
+      name: Informants
+      value: false
+      description: +1d gather info for scores
+      connects:
+        - left
+        - right
+        - bottom
+    '8':
+      name: BITD.Lair
+      value: 1
+      description: ''
+      connects:
+        - left
+        - top
+        - right
+        - bottom
+    '9':
+      name: BITD.Turf
+      value: false
+      description: ''
+      connects:
+        - left
+        - top
+        - right
+    '10':
+      name: Lookouts
+      value: false
+      description: +1d to Survey or Hunt on your turf
+      connects:
+        - left
+        - top
+        - bottom
+    '11':
+      name: Hagfish Farm
+      value: false
+      description: Body disposal, +1d to reduce Heat after killing
+      connects:
+        - top
+        - right
+    '12':
+      name: Infirmary
+      value: false
+      description: +1d to healing rolls
+      connects:
+        - left
+        - top
+    '13':
+      name: Covert Drops
+      value: false
+      description: +2 coin for espionage or sabotage
+      connects:
+        - top
+        - right
+    '14':
+      name: BITD.Turf
+      value: false
+      description: ''
+      connects:
+        - left
+        - right
+    '15':
+      name: Secret Pathways
+      value: false
+      description: +1d engagement for stealth plans
+      connects:
+        - left
+        - top
+folder: null
+sort: 400001
+flags: {}
+img: systems/blades-in-the-dark/styles/assets/icons/Icon.6_10.png

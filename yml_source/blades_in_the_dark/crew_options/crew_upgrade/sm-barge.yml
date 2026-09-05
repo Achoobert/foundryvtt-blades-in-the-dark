@@ -1,0 +1,15 @@
+_id: Hvze1Jd8Fbp43jdm
+name: (Sm) Barge
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: ' Add mobility to your lair. You can move it to a new location as a downtime activity.'
+  class: Smugglers
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 3000000
+flags: {}

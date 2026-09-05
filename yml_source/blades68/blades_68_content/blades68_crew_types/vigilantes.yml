@@ -1,0 +1,179 @@
+_id: 26deee592795db53
+name: Vigilantes
+type: crew_type
+img: icons/svg/city.svg
+system:
+  description: Deluded Avengers
+  experience_clues: Interfere with criminal scores, protect citizens, or antagonize the law.
+  turfs:
+    '1':
+      name: Fierce Allies
+      value: false
+      description: All your experts are loyal
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '2':
+      name: Local Heroes
+      value: false
+      description: +1d to indulge vice
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '3':
+      name: Publicity
+      value: false
+      description: +2 rep on takedown scores
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '4':
+      name: Hidden Paths
+      value: false
+      description: +1d to Prowl back to your lair
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '5':
+      name: Catacombs
+      value: false
+      description: +1d to Study or Tinker on site
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '6':
+      name: Defiant Citizens
+      value: false
+      description: Large gang who will fight for you
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '7':
+      name: Turf
+      value: false
+      description: ''
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '8':
+      name: Base
+      value: true
+      description: Base
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '9':
+      name: Turf
+      value: false
+      description: ''
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '10':
+      name: Informant
+      value: false
+      description: ''
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '11':
+      name: Above the Law
+      value: false
+      description: ''
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '12':
+      name: Bluecoat Informants
+      value: false
+      description: ''
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '13':
+      name: Lookouts
+      value: false
+      description: ''
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '14':
+      name: The Hookup
+      value: false
+      description: ''
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '15':
+      name: Doskvols's most wanted
+      value: false
+      description: ''
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

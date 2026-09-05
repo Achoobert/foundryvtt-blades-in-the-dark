@@ -1,0 +1,16 @@
+_id: 8JDdtSmTRBMWq66d
+name: (B) Elite Thugs
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: All of your cohorts with the Thugs type get +1d to quality rolls for Thug-related actions.
+  class: Bravos
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 900000
+flags: {}
+img: icons/svg/mystery-man.svg

@@ -1,0 +1,54 @@
+name: Lylandra
+type: npc
+img: icons/svg/mystery-man.svg
+system:
+  name: ''
+  description_short: a consort
+  description: ''
+  associated_class: Vampire
+  associated_faction: ''
+  associated_crew_type: ''
+  notes: ''
+token:
+  name: Lylandra
+  displayName: 0
+  actorLink: false
+  width: 1
+  height: 1
+  scale: 1
+  mirrorX: false
+  mirrorY: false
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  vision: false
+  dimSight: 0
+  brightSight: 0
+  dimLight: 0
+  brightLight: 0
+  sightAngle: 0
+  lightAngle: 0
+  lightAlpha: 0.25
+  lightAnimation:
+    speed: 5
+    intensity: 5
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: null
+  bar2:
+    attribute: null
+  flags: {}
+  randomImg: false
+  img: icons/svg/mystery-man.svg
+items: []
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+  hp9rhyB0AtTZTutm: 3
+flags:
+  core:
+    sourceId: Actor.IHzskQ4S3kxm9At4
+_id: nNjGWOnDjqIxrE9Z

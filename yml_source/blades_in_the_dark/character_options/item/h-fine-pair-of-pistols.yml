@@ -1,0 +1,15 @@
+_id: 1HFCRcguQS4pS7xR
+name: (H) Fine pair of pistols
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: item
+system:
+  description: >-
+    A matched pair of handguns, made for greater accuracy, with double barrels that allow for two shots before
+    reloading.
+  class: Hound
+  load: '1'
+folder: null
+sort: 600000
+flags: {}

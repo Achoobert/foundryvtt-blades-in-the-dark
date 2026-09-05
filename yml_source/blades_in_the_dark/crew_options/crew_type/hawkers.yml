@@ -1,0 +1,125 @@
+_id: sXlemqVvMPOZJbTQ
+name: Hawkers
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_type
+system:
+  description: Vice dealers
+  experience_clues: |-
+    - Acquire product supply, execute clandestine/covert sales, or secure new territory.
+    - Contend with challenges above your current station.
+    - Bolster your crew's reputation or develop a new one.
+    - Express the goals, drives, inner conflict, or essential nature of the crew.
+  turfs:
+    '1':
+      name: BITD.Turf
+      value: false
+      description: ''
+      connects:
+        - right
+        - bottom
+    '2':
+      name: Personal Clothier
+      value: false
+      description: +1d engagement roll for social plans
+      connects:
+        - left
+        - bottom
+    '3':
+      name: Local Graft
+      value: false
+      description: +2 coin for show of force or socialize
+      connects:
+        - bottom
+    '4':
+      name: Lookouts
+      value: false
+      description: +1d to Survey or Hunt on your turn
+      connects:
+        - right
+        - bottom
+    '5':
+      name: Informants
+      value: false
+      description: +1d gather info for scores
+      connects:
+        - left
+        - bottom
+    '6':
+      name: BITD.Turf
+      value: false
+      description: ''
+      connects:
+        - top
+        - bottom
+    '7':
+      name: BITD.Turf
+      value: false
+      description: ''
+      connects:
+        - top
+        - right
+        - bottom
+    '8':
+      name: BITD.Lair
+      value: 1
+      description: ''
+      connects:
+        - left
+        - top
+        - right
+        - bottom
+    '9':
+      name: BITD.Turf
+      value: false
+      description: ''
+      connects:
+        - left
+        - top
+        - right
+        - bottom
+    '10':
+      name: Luxury Venue
+      value: false
+      description: +1d to Consort and Sway on site
+      connects:
+        - left
+        - top
+    '11':
+      name: Foreign Market
+      value: false
+      description: (Tier roll) - Heat = coin in downtime
+      connects:
+        - top
+        - right
+    '12':
+      name: Vice Den
+      value: false
+      description: (Tier roll) - Heat = coin in downtime
+      connects:
+        - left
+        - top
+    '13':
+      name: Surplus Caches
+      value: false
+      description: +2 coin for product sale or supply
+      connects:
+        - top
+    '14':
+      name: Cover Operation
+      value: false
+      description: '-2 heat per score'
+      connects:
+        - top
+        - right
+    '15':
+      name: Cover Identities
+      value: false
+      description: +!d engagement for deception and transport plans
+      connects:
+        - left
+folder: null
+sort: 300001
+flags: {}
+img: systems/blades-in-the-dark/styles/assets/icons/Icon.7_83.png

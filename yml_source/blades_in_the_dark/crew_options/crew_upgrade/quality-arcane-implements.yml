@@ -1,0 +1,17 @@
+_id: H8U7U0hWhbsl5F2r
+name: 'Quality: Arcane Implements'
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: >-
+    Upgrade improves the quality rating of all the PCs' items of that type, beyond the quality established by the crew's
+    Tier and fine items.
+  class: ''
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 2300001
+flags: {}

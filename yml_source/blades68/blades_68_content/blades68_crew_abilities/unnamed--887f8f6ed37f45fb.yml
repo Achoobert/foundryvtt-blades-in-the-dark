@@ -1,0 +1,16 @@
+_id: 887f8f6ed37f45fb
+name: '-------'
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: 'ONCE YOU HAVE DESCENDED TO THE FINAL CIRCLE, YOU MAY CHOOSE:'
+  class: Utopians
+  class_default: Utopians
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

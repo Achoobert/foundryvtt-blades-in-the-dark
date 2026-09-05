@@ -1,0 +1,17 @@
+_id: 84e76b7867bfb851
+name: Irregulars (Experts gain +1d to Gather Information)
+type: crew_upgrade
+img: icons/svg/item-bag.svg
+system:
+  description: ''
+  class: ''
+  price: '1'
+  purchased: false
+  logic: ''
+  crew_type: Vigilantes
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

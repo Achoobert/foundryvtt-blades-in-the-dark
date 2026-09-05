@@ -1,0 +1,18 @@
+_id: a76d127ebfdc7871
+name: Chameleons
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Take +1d to the engagement roll for stealth or deception approaches. When you subdue someone and don their outfit,
+    the disguise has increased effect.
+  class: Hit Squad
+  class_default: Hit Squad
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,18 @@
+_id: 118493f358e75ab9
+name: Echo Walker
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Pay 2 Stress to step into the resonance field and disappear. Reappear at a moment of your choice, wherever you want
+    (you have to be able to move there physically). When you reappear you are so cold (level 1 harm, can be resisted).
+  class: Operative
+  class_default: Operative
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

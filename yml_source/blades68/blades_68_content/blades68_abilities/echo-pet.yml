@@ -1,0 +1,19 @@
+_id: f7a2506744787dec
+name: Echo Pet
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Your pet is imbued with anomalous resonance. It gains potency when tracking or fighting the paranormal, and gains a
+    paranormal ability: time-glitching, mind-link, or mirror-field. Take this ability again to choose an additional
+    paranormal ability for your pet.
+  class: Hound
+  class_default: Hound
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

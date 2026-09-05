@@ -1,0 +1,14 @@
+_id: 18aeda91c579ba4b
+name: Silenced Shooter
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: A semi-automatic handgun with a modest calibre. Quiet as a whisper.
+  class: ''
+  load: '1'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

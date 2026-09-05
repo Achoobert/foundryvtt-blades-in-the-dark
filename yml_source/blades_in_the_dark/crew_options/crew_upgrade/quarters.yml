@@ -1,0 +1,17 @@
+_id: iNFH3FyfEjxX4LUb
+name: Quarters
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: >-
+    Your lair includes living quarters for the crew. Without this upgrade, each PC sleeps elsewhere, and is vulnerable
+    when they do so.
+  class: ''
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 1400001
+flags: {}

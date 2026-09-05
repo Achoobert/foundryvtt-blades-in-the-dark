@@ -1,0 +1,10 @@
+name: Serene
+permission:
+  default: 0
+type: crew_reputation
+system:
+  description: ''
+folder: null
+sort: 800001
+flags: {}
+_id: 9SxjN70BavgAwmRT

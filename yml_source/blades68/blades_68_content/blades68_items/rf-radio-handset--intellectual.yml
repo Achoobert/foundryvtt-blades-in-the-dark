@@ -1,0 +1,14 @@
+_id: 7e694cd9e9fbbade
+name: RF radio handset
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: A resonance field radio. A small handheld unit tuned to a secure frequency.
+  class: Intellectual
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,16 @@
+_id: 47e5d2109320ed81
+name: Pocketful of go-go pills
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Xantara Pharm's finest uppers, for when you need pure, explosive energy. You'll run your mouth (what do you say that
+    you didn't mean to?), and take the passing harm 'jittery' when they wear off (these consequences can be resisted).
+  class: Veteran
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

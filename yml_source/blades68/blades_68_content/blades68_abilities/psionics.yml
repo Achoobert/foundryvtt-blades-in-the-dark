@@ -1,0 +1,18 @@
+_id: dcf8f4170edc4b5e
+name: Psionics
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    When you push yourself, you can also do one of the following: communicate without words—view another location
+    clairvoyantly—temporarily increase your strength and speed—mentally interface with technology.
+  class: Time Traveler Future
+  class_default: Time Traveler Future
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

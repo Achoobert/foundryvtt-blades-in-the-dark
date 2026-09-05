@@ -1,0 +1,16 @@
+_id: 2894c8b21196157f
+name: Retractable Arsenal
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: Your items are built into your frame and may recess beneath panels out of sight. Your frame can now carry +2 load.
+  class: Hull
+  class_default: Hull
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

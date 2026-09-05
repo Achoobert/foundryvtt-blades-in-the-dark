@@ -1,0 +1,40 @@
+_id: e0da05bd5ed17dbf
+name: Radical
+type: class
+img: icons/svg/upgrade.svg
+system:
+  description: An Agitator — Incendiary In Every Sense
+  experience_clues: You addressed a challenge with persuasion or mayhem.
+  special_resource: Conviction
+  base_skills:
+    hunt:
+      - 0
+    study:
+      - 0
+    survey:
+      - 0
+    tinker:
+      - 0
+    finesse:
+      - 0
+    prowl:
+      - 0
+    skirmish:
+      - 0
+    wreck:
+      - 2
+    attune:
+      - 0
+    command:
+      - 0
+    consort:
+      - 0
+    sway:
+      - 1
+  starting_ability: True Believer
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

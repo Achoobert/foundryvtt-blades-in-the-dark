@@ -1,0 +1,23 @@
+_id: 50c59ee72d694ed1
+name: Resonance Echo
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    You are now a psychedelic being of swirling multicolored vapor that resembles your living body and clothes. You may
+    weakly interact with the physical world and vice versa. You're vulnerable to paranormal powers and electroplasmic
+    effects. You move about by floating and may fly swiftly without tiring. You may slowly flow through small openings
+    as a vapor. You change the temperature around you and are mind-bending for the living to behold. You are affected by
+    spiritbane charms (take 2 Drain to overcome the repulsion), but not many people still carry these. You have less
+    effect under the light of bluetime. Whenever you would take Stress, take Drain instead. When you would deadlock a
+    key, choose an echo irregularity instead.
+  class: Ghost
+  class_default: Ghost
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

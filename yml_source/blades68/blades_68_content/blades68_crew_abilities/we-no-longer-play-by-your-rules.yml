@@ -1,0 +1,16 @@
+_id: fb2c9807757f4f19
+name: We No Longer Play By Your Rules
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: When you take this advance, immediately pick two more advances.
+  class: Utopians
+  class_default: Utopians
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

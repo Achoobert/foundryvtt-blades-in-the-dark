@@ -1,0 +1,16 @@
+_id: 0cace355accc36cd
+name: Take the Shot
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: When any PC takes the decisive action to eliminate a key target, they get +1d.
+  class: Hit Squad
+  class_default: Hit Squad
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

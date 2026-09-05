@@ -1,0 +1,17 @@
+_id: yuiTW23NDa1wsZvV
+name: (A) Ironhook Contacts
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: >-
+    Your Tier is effectively +1 higher in prison. This counts for any Tier-related element in prison, including the
+    incarceration roll. See page 148 of the Manual for details.
+  class: Assassins
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 200000
+flags: {}

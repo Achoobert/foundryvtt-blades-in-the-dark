@@ -1,0 +1,14 @@
+_id: vbIWDdNIEa6dpP7D
+name: (Sp) Weaving the Web
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    You gain +1d to Consort when you gather information on a target for a score. You get +1d to the engagement roll for
+    that operation.
+  class: Spider
+  price: '1'
+folder: io6Cdw11wDXIixI3
+sort: 800001
+flags: {}

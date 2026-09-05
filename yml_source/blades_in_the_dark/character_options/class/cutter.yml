@@ -1,0 +1,56 @@
+_id: tEob41rtEbHcswNM
+name: Cutter
+type: class
+img: systems/blades-in-the-dark/styles/assets/icons/Icon.2_43.png
+system:
+  description: A dangerous & intimidating fighter
+  logic: ''
+  experience_clues: You addressed a challenge with violence or coercion.
+  base_skills:
+    hunt:
+      - 0
+    study:
+      - 0
+    survey:
+      - 0
+    tinker:
+      - 0
+    finesse:
+      - 0
+    prowl:
+      - 0
+    skirmish:
+      - 2
+    wreck:
+      - 0
+    attune:
+      - 0
+    command:
+      - 1
+    consort:
+      - 0
+    sway:
+      - 0
+effects:
+  - _id: y3J5ijkSzvxh6KYp
+    changes:
+      - key: data.acquaintances_label
+        mode: 5
+        value: BITD.DangerousFriends
+      - key: data.experience_clues
+        mode: 2
+        value: BITD.ExpChallengeViolence
+    disabled: false
+    duration:
+      startTime: null
+    icon: systems/blades-in-the-dark/styles/assets/icons/Icon.3_13.png
+    label: Cutter
+    origin: Compendium.blades-in-the-dark.class.tEob41rtEbHcswNM
+    transfer: true
+    flags: {}
+    tint: ''
+folder: null
+sort: 300000
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,15 @@
+_id: OS1hwBOSULX56QcK
+name: (H) The Good Stuff
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: >-
+    Your merchandise is exquisite. The product quality is equal to your Tier+2. When you deal with a crew or faction,
+    the GM will tell you who among them is hooked on your product (one, a few, many, or all).
+  class: Hawkers
+  price: '1'
+folder: null
+sort: 2000001
+flags: {}

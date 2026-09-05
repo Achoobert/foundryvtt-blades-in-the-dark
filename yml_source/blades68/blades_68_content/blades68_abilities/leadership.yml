@@ -1,0 +1,18 @@
+_id: 5ff891c2ab086bb6
+name: Leadership
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    When you Command a cohort in combat, they continue to fight when they would otherwise break (they're not taken out
+    when they suffer level 3 harm). They gain increased effect and 1 armor.
+  class: Veteran
+  class_default: Veteran
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

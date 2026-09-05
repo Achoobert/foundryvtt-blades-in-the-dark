@@ -1,0 +1,21 @@
+_id: 35076a3889e4dffb
+name: Bring Them In
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    As long as you’re not currently fighting them (e.g. you’re at war), you can turn even the most bitter of enemies
+    into family. This requires a long-term project—6 segments to turn them into a crew contact, 10 segments to turn them
+    into a cohort or PC (your choice). If they become a PC, create them as normal, with bonus action dots and abilities
+    each equal to their Tier, and any deadlocks at the GM’s discretion. Their faction’s relationship to your crew does
+    not change.
+  class: Racers
+  class_default: Racers
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

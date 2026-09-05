@@ -1,0 +1,17 @@
+_id: y0J5HT4aTsJs0AhP
+name: Mastery
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: >-
+    Your crew has access to master level training. You may advance your PCs' action ratings to 4 (until you unlock this
+    upgrade, PC action ratings are capped at 3).
+  class: ''
+  price: '4'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 1200001
+flags: {}

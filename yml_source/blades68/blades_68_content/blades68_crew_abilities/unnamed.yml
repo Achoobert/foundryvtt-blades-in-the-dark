@@ -1,0 +1,16 @@
+_id: c1d5204087dd8009
+name: '-------'
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: 'ONCE YOU HAVE DESCENDED TO THE SECOND CIRCLE, YOU MAY CHOOSE:'
+  class: Utopians
+  class_default: Utopians
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

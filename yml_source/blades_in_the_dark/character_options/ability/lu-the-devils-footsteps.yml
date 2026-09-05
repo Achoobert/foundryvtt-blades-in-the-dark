@@ -1,0 +1,14 @@
+_id: YYyzA49gE764951G
+name: (Lu) The Devil's Footsteps
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    When you push yourself, choose one of the following additional benefits: perform a feat of athletics that verges on
+    the superhuman—maneuver to confuse your enemies so they mistakenly attack each other.
+  class: Lurk
+  price: '1'
+folder: 7gkE4yoqYZiTi9EB
+sort: 400001
+flags: {}

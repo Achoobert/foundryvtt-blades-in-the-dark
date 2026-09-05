@@ -1,0 +1,12 @@
+_id: GFcTs25hSqVfPccB
+name: (C) Savage
+permission:
+  default: 0
+type: ability
+system:
+  description: When you unleash physical violence, it's especially frightening. When you Command a frightened target, take +1d.
+  class: Cutter
+  price: '1'
+folder: cJPDzs27jPdqAVDV
+sort: 700000
+flags: {}

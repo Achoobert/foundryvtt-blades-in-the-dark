@@ -1,0 +1,21 @@
+name: (G) Manifest
+type: ability
+system:
+  description: >-
+    Take 1 drain to flow through the electroplasmic pathways of the ghost field in order to instantly travel to any
+    place you knew intimately in life, or to answer the summoning call of a compel.
+  class: Ghost
+  price: 1
+  purchased: false
+  class_default: false
+  logic: ''
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+  hp9rhyB0AtTZTutm: 3
+flags:
+  core:
+    sourceId: Item.dcrDrqxzi8keun41
+_id: mTiBUryD2MJ2XR6K

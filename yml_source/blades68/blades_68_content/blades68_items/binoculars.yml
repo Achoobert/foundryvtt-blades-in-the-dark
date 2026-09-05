@@ -1,0 +1,14 @@
+_id: 7d41ee54da7cc873
+name: Binoculars
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: See distant objects with greater clarity and detail. Amazing.
+  class: Hound
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

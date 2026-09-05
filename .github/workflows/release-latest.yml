@@ -30,6 +30,18 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Compendium Packs
+        run: npm run packs:build
+
       # Stamp only the minor segment for this rolling build.
       # Repo system.json stays put (e.g. 6.1.2). Artifact version is
       # major.(minor + run_number).0 so each push is newer for Foundry

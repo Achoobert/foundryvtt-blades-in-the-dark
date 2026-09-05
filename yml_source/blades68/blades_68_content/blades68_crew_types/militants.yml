@@ -1,0 +1,262 @@
+_id: ff4cda32b6be43a2
+name: Militants
+type: crew_type
+img: icons/svg/city.svg
+system:
+  description: Activists Pushing For Revolutionary Change
+  experience_clues: You executed a successful assassination, demonstration, sabotage, or battle operation.
+  turfs:
+    '1':
+      name: Secret Caches
+      value: false
+      description: Stockpiles give you +1d to Acquire Asset rolls
+      highlight: false
+      connects:
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '2':
+      name: Popular Support
+      value: false
+      description: +1d engagement for stealth approaches
+      highlight: false
+      connects:
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '3':
+      name: Critical Strike
+      value: false
+      description: Tier 5 target, target drops 2 Tiers
+      highlight: true
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '4':
+      name: Expropriation
+      value: false
+      description: Critical Strike score includes +10 bonus stacks
+      highlight: true
+      connects:
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '5':
+      name: Hostel
+      value: false
+      description: +1 scale for your Muscle cohorts
+      highlight: false
+      connects:
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '6':
+      name: Catalyst Action
+      value: false
+      description: Tier 4 target, creates new Tier 2 faction (+2 status)
+      highlight: true
+      connects:
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '7':
+      name: Turf
+      value: false
+      description: Add new preferred operation
+      highlight: false
+      connects:
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '8':
+      name: Key Conspirator
+      value: false
+      description: +2d engagement for Critical Strike score
+      highlight: true
+      connects:
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '9':
+      name: Turf
+      value: false
+      description: Add new preferred operation
+      highlight: false
+      connects:
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '10':
+      name: '"Interview Room"'
+      value: false
+      description: +1d to Command and Sway on-site
+      highlight: false
+      connects:
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '11':
+      name: Informants
+      value: false
+      description: +1d to gather info for scores
+      highlight: false
+      connects:
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '12':
+      name: Grassroot Support
+      value: false
+      description: New faction from Catalyst Action score will be +3 status
+      highlight: true
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '13':
+      name: Donations
+      value: false
+      description: +2 stacks for battle or demonstration
+      highlight: false
+      connects:
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '14':
+      name: Dispensary
+      value: false
+      description: +1d to healing rolls
+      highlight: false
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '15':
+      name: Social Clubs
+      value: false
+      description: (Tier roll) - Heat = stacks in downtime
+      highlight: false
+      connects:
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '16':
+      name: Covert Funding
+      value: false
+      description: +2 stacks for sabotage or assassination
+      highlight: false
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '17':
+      name: Turf
+      value: false
+      description: Add new preferred operation
+      highlight: false
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '18':
+      name: Base
+      value: true
+      description: Base
+      highlight: false
+      connects:
+        - top
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '19':
+      name: Turf
+      value: false
+      description: Add new preferred operation
+      highlight: false
+      connects:
+        - left
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '20':
+      name: Meeting Hall
+      value: false
+      description: +1d to Consort and Sway on-site
+      highlight: false
+      connects:
+        - top
+      connected:
+        - false
+        - false
+        - false
+        - false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

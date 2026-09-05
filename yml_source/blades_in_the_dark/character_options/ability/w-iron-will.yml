@@ -1,0 +1,14 @@
+_id: BW4k9Qr3AGw6sEut
+name: (W) Iron Will
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    You're immune to the terror that some supernatural entities inflict on sight. Take +1d to resistance rolls with
+    Resolve.
+  class: Whisper
+  price: '1'
+folder: 5Sb9YUatUQwtpdMZ
+sort: 300001
+flags: {}

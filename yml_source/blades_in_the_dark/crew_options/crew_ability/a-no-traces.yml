@@ -1,0 +1,15 @@
+_id: syMWyyNaxlkCFC62
+name: (A) No Traces
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: >-
+    When you keep an operation quiet or make it look like an accident, you get half the rep value of the target (round
+    up) instead of zero. When you end downtime with zero heat, take +1 rep.
+  class: Assassins
+  price: '1'
+folder: null
+sort: 400001
+flags: {}

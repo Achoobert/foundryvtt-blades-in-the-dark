@@ -1,0 +1,20 @@
+name: (V) Veteran
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: Choose a special ability from another source.
+  class: Vampire
+  price: '3'
+  purchased: false
+  class_default: false
+  logic: ''
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+  hp9rhyB0AtTZTutm: 3
+flags:
+  core:
+    sourceId: Compendium.blades-in-the-dark.ability.z1H8ntG0PE1PGRSB
+_id: 5GWUOpwSE7jIBbVv

@@ -1,0 +1,5 @@
+# Compendium manifest — compiled by scripts/build-yml-packs.mjs
+name: "blades68_macros"
+label: "Blades '68 Macros"
+type: "Macro"
+path: "./packs/blades68_macros.db"

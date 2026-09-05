@@ -1,0 +1,6 @@
+# Compendium manifest — compiled by scripts/build-yml-packs.mjs
+name: "entanglements-journals"
+label: "Entanglements Journals"
+type: "JournalEntry"
+path: "./packs/entanglements-journals.db"
+banner: "systems/blades68/images/compendium-banners/Doskvol_15.webp"

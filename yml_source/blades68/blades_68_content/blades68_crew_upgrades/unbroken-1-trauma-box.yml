@@ -1,0 +1,17 @@
+_id: 057bad4c6edda3b8
+name: Unbroken (+1 trauma box)
+type: crew_upgrade
+img: icons/svg/item-bag.svg
+system:
+  description: ''
+  class: ''
+  price: '3'
+  purchased: false
+  logic: ''
+  crew_type: Vigilantes
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

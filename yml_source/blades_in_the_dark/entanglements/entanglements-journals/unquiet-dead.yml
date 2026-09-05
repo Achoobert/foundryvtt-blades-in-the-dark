@@ -1,0 +1,16 @@
+name: Unquiet Dead
+content: >-
+  <p>A rogue spirit is drawn to you—perhaps it’s a past victim? Acquire the services of a Whisper or Rail Jack to
+  attempt to destroy or banish it, or deal with it yourself.</p>
+
+  <p><em>They can hire an NPC by using the acquire asset downtime activity (see page </em><em>153). Roll the NPC’s
+  quality level as a fortune roll to see how well they deal </em><em>with the spirit.</em></p>
+folder: null
+sort: 0
+permission:
+  default: 0
+  thWDvNEhl7M3mC2d: 3
+flags:
+  core:
+    sourceId: JournalEntry.K1wg10vMiU0bOSsb
+_id: dR9zBnrjy4AyA9Ru

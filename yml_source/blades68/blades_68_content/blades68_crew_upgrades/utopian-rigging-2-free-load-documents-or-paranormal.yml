@@ -1,0 +1,17 @@
+_id: db5bd9cea68496b9
+name: Utopian rigging (2 free load documents or paranormal)
+type: crew_upgrade
+img: icons/svg/item-bag.svg
+system:
+  description: ''
+  class: ''
+  price: '1'
+  purchased: false
+  logic: ''
+  crew_type: Utopians
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

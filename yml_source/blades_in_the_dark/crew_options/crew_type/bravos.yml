@@ -1,0 +1,131 @@
+_id: g92o7T62qcrsuIOF
+name: Bravos
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_type
+system:
+  description: Mercenaries Thugs & Killers
+  experience_clues: |-
+    - Execute a successful battle, extortion, sabotage, or smash & grab operation.
+    - Contend with challenges above your current station.
+    - Bolster your crew's reputation or develop a new one.
+    - Express the goals, drives, inner conflict, or essential nature of the crew.
+  turfs:
+    '1':
+      name: Barracks
+      value: false
+      description: +1 scale for your Thug cohorts
+      connects:
+        - right
+        - bottom
+    '2':
+      name: BITD.Turf
+      value: false
+      description: ''
+      connects:
+        - left
+        - right
+    '3':
+      name: Terrorized Citizens
+      value: false
+      description: +2 coin for battle or extortion
+      connects:
+        - left
+        - bottom
+    '4':
+      name: Informants
+      value: false
+      description: +1d gather info for scores
+      connects:
+        - right
+        - bottom
+    '5':
+      name: Protection Racket
+      value: false
+      description: (Tier roll) - Heat = coin in downtime
+      connects:
+        - left
+        - bottom
+    '6':
+      name: Fighting Pits
+      value: false
+      description: (Tier roll) - Heat = coin in downtime
+      connects:
+        - top
+        - right
+        - bottom
+    '7':
+      name: BITD.Turf
+      value: false
+      description: ''
+      connects:
+        - left
+        - right
+        - bottom
+    '8':
+      name: BITD.Lair
+      value: 1
+      description: ''
+      connects:
+        - left
+        - top
+        - right
+        - bottom
+    '9':
+      name: BITD.Turf
+      value: false
+      description: ''
+      connects:
+        - left
+        - top
+        - right
+        - bottom
+    '10':
+      name: BITD.Turf
+      value: false
+      description: ''
+      connects:
+        - left
+        - top
+        - bottom
+    '11':
+      name: Infirmary
+      value: false
+      description: +1d to healing rolls
+      connects:
+        - top
+        - right
+    '12':
+      name: Bluecoat Intimidation
+      value: false
+      description: '-2 heat per score'
+      connects:
+        - left
+        - top
+    '13':
+      name: Street Fence
+      value: false
+      description: +2 coin for lower-class targets
+      connects:
+        - top
+        - right
+    '14':
+      name: Warehouses
+      value: false
+      description: Stockpiles give you +1d to acquire assets
+      connects:
+        - left
+        - top
+        - right
+    '15':
+      name: Bluecoat Confederates
+      value: false
+      description: +1d engagement for assault plans
+      connects:
+        - left
+        - top
+folder: null
+sort: 200001
+flags: {}
+img: systems/blades-in-the-dark/styles/assets/icons/Icon.3_31.png

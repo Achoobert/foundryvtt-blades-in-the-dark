@@ -1,0 +1,19 @@
+_id: 1b3012a3e9ffd9af
+name: Smooth
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Twice per score, you may use your mojo to resist a consequence of suspicion or social faux pas, or to push yourself
+    when talking your way out of a tight spot or driving under pressure.
+  class: Swinger
+  class_default: Swinger
+  price: '1'
+  uses: 2
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

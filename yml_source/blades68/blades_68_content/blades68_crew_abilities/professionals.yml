@@ -1,0 +1,18 @@
+_id: 118b8702a92dc42a
+name: Professionals
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    When you keep an operation quiet or make it look like an accident, you get half the Rep value of the target (round
+    up) instead of zero. When you end downtime with zero Heat, take +1 Rep.
+  class: Hit Squad
+  class_default: Hit Squad
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

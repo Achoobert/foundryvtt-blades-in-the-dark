@@ -1,0 +1,13 @@
+_id: iEEy7nDuUgakkf3Y
+name: (Br) Fiends
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: Fear is as good as respect. You may count each wanted level as if it was turf.
+  class: Bravos
+  price: '1'
+folder: null
+sort: 1200001
+flags: {}

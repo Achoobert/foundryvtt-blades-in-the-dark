@@ -1,0 +1,14 @@
+_id: 98d35451f4fbfb34
+name: Hipflask of the good stuff
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: Numb pain, clean wounds, or bond with new friends. What's engraved on the outside?
+  class: Hound
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

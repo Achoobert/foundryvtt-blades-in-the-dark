@@ -1,0 +1,13 @@
+_id: WOKB7CIXLSD7uUlw
+name: (Le) Fine tinkering tools
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: item
+system:
+  description: A finely crafted set of tools for detailed mechanist work. A jeweler’s loupe. Measuring devices.
+  class: Leech
+  load: '1'
+folder: null
+sort: 1100000
+flags: {}

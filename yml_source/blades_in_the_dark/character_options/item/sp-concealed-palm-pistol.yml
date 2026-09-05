@@ -1,0 +1,15 @@
+_id: SrqBiTjm95OckpQs
+name: (Sp) Concealed palm pistol
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: item
+system:
+  description: >-
+    A small firearm with a weak charge, easily concealed in a sleeve or waistcoat. This pistol has extremely limited
+    range; only a few feet. It’s very difficult to detect on your person, even if you’re searched.
+  class: Spider
+  load: '0'
+folder: null
+sort: 3000000
+flags: {}

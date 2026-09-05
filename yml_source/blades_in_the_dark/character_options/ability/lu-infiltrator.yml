@@ -1,0 +1,12 @@
+_id: omm65Xz4wqJVE0Th
+name: (Lu) Infiltrator
+permission:
+  default: 0
+type: ability
+system:
+  description: You are not affected by quality or Tier when you bypass security measures.
+  class: Lurk
+  price: '1'
+folder: 7gkE4yoqYZiTi9EB
+sort: 100001
+flags: {}

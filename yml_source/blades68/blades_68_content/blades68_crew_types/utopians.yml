@@ -1,0 +1,302 @@
+_id: d659f5ff76008842
+name: Utopians
+type: crew_type
+img: icons/svg/city.svg
+system:
+  description: A NEW AGE CULT DEDICATED TO AN UNSETTLING VISION OF THE FUTURE
+  experience_clues: You advanced the realization of your Utopian Vision.
+  turf_headers:
+    '1':
+      name: First Circle
+      subheader: Choose two truths of the Vision
+      unlock: ''
+      select: 2
+      options:
+        - Free
+        - Egalitarian
+        - Abundant
+        - Beautiful
+        - Serene
+        - Radiant
+        - Natural
+      selected: []
+      units: 0
+      value: false
+      units_filled: 0
+    '2':
+      name: Second Circle
+      subheader: Learn a new truth of the Vision
+      unlock: 'Threshold of Gold: Circle unlocks when the crew has earned 20 stacks total'
+      select: 2
+      options:
+        - Shifting
+        - Sweltering
+        - Lustful
+        - Unsettling
+        - Future
+        - Past
+        - Alien
+      selected: []
+      units: 0
+      value: false
+      units_filled: 0
+    '3':
+      name: Third Circle
+      subheader: Learn a new truth of the Vision
+      unlock: 'Threshold of Blood: Circle unlocks when the crew has also ended at least 10 lives'
+      select: 1
+      options:
+        - Psychedelic
+        - Inhuman
+        - Violent
+        - Future
+        - Past
+        - Tempestuous
+      selected: []
+      units: 0
+      value: false
+      units_filled: 0
+    '4':
+      name: Final Circle
+      subheader: Learn a new truth of the Vision
+      unlock: 'Threshold of Power: Unlocks when the crew reaches Tier 3 and created a major anomaly.'
+      select: 1
+      options:
+        - Fiery
+        - Frozen
+        - Terrifying
+        - Cruel
+        - Monstrous
+        - Capricious
+        - Inhuman
+      selected: []
+      units: 0
+      value: false
+      units_filled: 0
+  turfs:
+    '1':
+      name: Wellness Class
+      value: false
+      description: (Tier roll) - Heat = stacks in downtime
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '2':
+      name: Turf
+      value: false
+      description: ''
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '3':
+      name: Base
+      value: true
+      description: Base
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '4':
+      name: Turf
+      value: false
+      description: ''
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '5':
+      name: Luxury Retreat
+      value: false
+      description: ''
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '6':
+      name: Donations
+      value: false
+      description: +2 stacks for paranormal operations
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '7':
+      name: Turf
+      value: false
+      description: ''
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '8':
+      name: Temple
+      value: false
+      description: +1d to Command and Sway on-site
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '9':
+      name: Turf
+      value: false
+      description: ''
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '10':
+      name: Natural Healer
+      value: false
+      description: +1d to healing rolls
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '11':
+      name: Abandoned Lab
+      value: false
+      description: ''
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '12':
+      name: Ancient Altar
+      value: false
+      description: ''
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '13':
+      name: Reality Shift
+      value: false
+      description: Tier 4 target, creates new major anomaly
+      highlight: true
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '14':
+      name: Ancient Tower
+      value: false
+      description: +1d to Consort w/ resonance entities on-site
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '15':
+      name: Ancient Gate
+      value: false
+      description: Safe passage out of the Bubble
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '16':
+      name: Ancient Tomes
+      value: false
+      description: +2d engagement for Reality Tear score
+      highlight: true
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '17':
+      name: Notable Skeptic
+      value: false
+      description: Successful Reality Tear score includes +4 Rep
+      highlight: true
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '18':
+      name: Reality Tear
+      value: false
+      description: Tier 5 target, creates new mega anomaly
+      highlight: true
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '19':
+      name: Interested Party
+      value: false
+      description: Reality Tear score includes +6 bonus stacks
+      highlight: true
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '20':
+      name: Figurehead
+      value: false
+      description: NPC can take the fall to remove 3 Wanted Levels
+      highlight: false
+      connects: []
+      connected:
+        - false
+        - false
+        - false
+        - false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

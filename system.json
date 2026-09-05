@@ -213,6 +213,13 @@
       "type": "Item"
     },
     {
+      "name": "blades68_heritages",
+      "label": "Blades '68 Heritages",
+      "system": "blades68",
+      "path": "./packs/blades68_heritages.db",
+      "type": "Item"
+    },
+    {
       "name": "blades68_abilities",
       "label": "Blades '68 Abilities",
       "system": "blades68",
@@ -309,6 +316,7 @@
       "sorting": "m",
       "packs": [
         "blades68_classes",
+        "blades68_heritages",
         "blades68_abilities",
         "blades68_items",
         "blades68_crew_types",

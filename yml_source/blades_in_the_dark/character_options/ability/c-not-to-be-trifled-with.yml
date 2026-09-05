@@ -1,0 +1,14 @@
+_id: Fa3urOZnQj2dhups
+name: (C) Not to be Trifled With
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    You can push yourself to do one of the following: perform a feat of physical force that verges on the
+    superhuman—engage a small gang on equal footing in close combat.
+  class: Cutter
+  price: '1'
+folder: cJPDzs27jPdqAVDV
+sort: 600000
+flags: {}

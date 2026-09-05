@@ -1,0 +1,17 @@
+_id: 0f213d6155eee6d6
+name: Awakened (+1 key/deadlock)
+type: crew_upgrade
+img: icons/svg/item-bag.svg
+system:
+  description: ''
+  class: ''
+  price: '3'
+  purchased: false
+  logic: ''
+  crew_type: Utopians
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

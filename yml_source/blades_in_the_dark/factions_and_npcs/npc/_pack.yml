@@ -1,0 +1,6 @@
+# Compendium manifest — compiled by scripts/build-yml-packs.mjs
+name: "npc"
+label: "NPCs"
+type: "Actor"
+path: "./packs/npcs.db"
+banner: "systems/blades68/images/compendium-banners/Doskvol_13.webp"

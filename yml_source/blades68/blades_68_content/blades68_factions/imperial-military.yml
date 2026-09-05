@@ -1,0 +1,44 @@
+_id: bd1e5673eef9e362
+name: Imperial Military
+type: faction
+img: icons/svg/city.svg
+system:
+  description: ''
+  type: Institutions
+  tier: '6'
+  goal_1: ''
+  goal_1_clock_max: 0
+  goal_2: ''
+  goal_2_clock_max: 0
+  turf: ''
+  assets: ''
+  quirks: ''
+  notables: ''
+  allies: ''
+  enemies: ''
+  situation: ''
+  goal_clock: 0
+  hold:
+    value: 2
+    max: 2
+    max_default: 2
+    name_default: BITD.Hold
+    name: BITD.Hold
+  status:
+    value:
+      - 0
+    max: 7
+    max_default: 7
+    name_default: BITD.Status
+    name: BITD.Status
+  notes: >-
+    Although the  Age of Consensus is a “time of peace”, the Imperium is always at war. Garrisons are posted at Gaddoc
+    Monorail Station, aboard the naval destroyer Nightcastle, and at the Premiere’s stronghold (about 1000 troops in
+    total). The military also runs a training camp east of Doskvol for fresh conscripts, along with a prison for
+    draft-dodgers and deserters. 
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

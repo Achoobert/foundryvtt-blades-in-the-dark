@@ -1,0 +1,18 @@
+_id: a5f6faca2da6af26
+name: Yeah, Baby
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    When you agree to an NPC’s proposal, even though it complicates the crew’s goals, everyone else on the crew marks 1
+    xp while you clear 3 Stress.
+  class: Swinger
+  class_default: Swinger
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

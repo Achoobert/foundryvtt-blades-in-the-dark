@@ -1,0 +1,11 @@
+_id: 7q2RhjaBzYBoWmMa
+name: Law
+permission:
+  default: 0
+type: background
+system:
+  description: An advocate or barrister, a Bluecoat or inspector (or even Spirit Warden), a prison guard from Ironhook, etc.
+folder: YkuVHwuSV9IfsxU0
+sort: 300000
+flags: {}
+img: systems/blades-in-the-dark/styles/assets/icons/Icons8_74.png

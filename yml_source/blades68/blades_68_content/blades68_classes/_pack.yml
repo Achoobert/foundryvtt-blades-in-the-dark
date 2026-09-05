@@ -1,0 +1,5 @@
+# Compendium manifest — compiled by scripts/build-yml-packs.mjs
+name: "blades68_classes"
+label: "Blades '68 Playbooks"
+type: "Item"
+path: "./packs/blades68_classes.db"

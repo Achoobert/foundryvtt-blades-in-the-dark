@@ -1,0 +1,19 @@
+_id: f400c709afc58b9e
+name: Dead Drop
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    You have access to a bound resonance entity who will leave up to 2 load of items anywhere you need them. The
+    flashback to requesting the item(s) is free, and they’re left anywhere you choose. You can also flashback to an
+    Acquire Asset roll for the items as a free downtime activity.
+  class: Operative
+  class_default: Operative
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

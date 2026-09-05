@@ -1,0 +1,18 @@
+_id: 4b3ec691714e8097
+name: Polemicist
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    When you push yourself, you can also do one of the following: whip a crowd into a righteous fury—shame a powerful
+    figure into silence or retreat.
+  class: Radical
+  class_default: Radical
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

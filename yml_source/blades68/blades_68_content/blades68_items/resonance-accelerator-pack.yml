@@ -1,0 +1,17 @@
+_id: c2e7c0ba493154b6
+name: Resonance accelerator pack
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    A handheld particle-thrower connected to a backpack-sized resonance accelerator. Blasts a stream of highly focused,
+    polarized electroplasmic energy. Suitable for grappling with a resonance entity and dragging it into a containment
+    unit.
+  class: Paranormalist
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

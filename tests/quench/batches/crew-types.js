@@ -6,7 +6,7 @@ import { BladesHelpers } from '/systems/blades68/module/blades-helpers.js';
 const EXPECTED_SHADOWS_CONNECTS = {
   1: ['right', 'bottom'],
   2: ['left', 'right', 'bottom'],
-  3: ['left', 'right'],
+  3: ['left'],
   4: ['left', 'top', 'right'],
   5: ['left', 'bottom'],
   6: ['top', 'right'],

@@ -1,0 +1,56 @@
+_id: zOg14xy8ZEku6bNq
+name: Whisper
+type: class
+img: systems/blades-in-the-dark/styles/assets/icons/Icon.6_88.png
+system:
+  description: An Arcane adept and channeler
+  logic: ''
+  experience_clues: You addressed a challenge with knowledge or arcane power.
+  base_skills:
+    hunt:
+      - 0
+    study:
+      - 1
+    survey:
+      - 0
+    tinker:
+      - 0
+    finesse:
+      - 0
+    prowl:
+      - 0
+    skirmish:
+      - 0
+    wreck:
+      - 0
+    attune:
+      - 2
+    command:
+      - 0
+    consort:
+      - 0
+    sway:
+      - 0
+effects:
+  - _id: IYpODw0CDIJni6vS
+    changes:
+      - key: data.acquaintances_label
+        mode: 5
+        value: BITD.StrangeFriends
+      - key: data.experience_clues
+        mode: 2
+        value: BITD.ExpChallengeKnowledge
+    disabled: false
+    duration:
+      startTime: null
+    icon: systems/blades-in-the-dark/styles/assets/icons/Icon.3_13.png
+    label: Whisper
+    origin: Compendium.blades-in-the-dark.class.zOg14xy8ZEku6bNq
+    transfer: true
+    flags: {}
+    tint: null
+folder: null
+sort: 200000
+permission:
+  default: 0
+flags: {}

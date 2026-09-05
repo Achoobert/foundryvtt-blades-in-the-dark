@@ -1,0 +1,100 @@
+/*
+ * General Styles
+ * Cleaned out things that don't appear to apply to the character sheet, and exist in other, separated SCSS files.
+ * Some things *might* be missing, but at a glance, everything looks to be in order.
+ */
+
+& * {
+  .name-alias{
+
+    img.portrait{
+      max-width: 200px;
+      max-height: 200px;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  .tab[data-tab]{
+    display: none;
+    &.active{
+      display: block;
+    }
+  }
+
+  form {
+    &.actor-sheet {
+      padding: 20px;
+    }
+  }
+
+  // Stress and Trauma
+
+  .big-teeth-section {
+
+    border-top: 3px solid $almost_black;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0px;
+    margin-top: 10px;
+
+    > * {
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0px;
+    }
+
+    // Stress
+    .big-teeth {
+        @include toothradio(17px, 40px, "assets/blades68/stresspill_empty.png", "assets/blades68/stresspill_filled.png");
+    }
+
+    /* Trauma */
+    .small-teeth-container {
+
+      .small-teeth-wrap {
+        @include toothradio(17px, 40px, "assets/blades68/stresspill_empty.png", "assets/blades68/stresspill_empty.png", false);
+        flex-direction: column;
+
+        .small-teeth {
+          display: flex;
+          flex-direction: row;
+        }
+      }
+    }
+
+    .trauma-list {
+      @include check_underscore();
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+  }
+
+  .character-stress {
+    label {
+      &[for$="-0"] {
+        margin-right: 0px;
+      }
+    }
+  }
+
+  //Abilitiers and loadout
+  .abilities, .loadout {
+    .item-name {
+      width: 100px;
+    }
+    .item-body {
+      width: auto;
+    }
+    .item-description {
+      width: 260px;
+    }
+  }
+}

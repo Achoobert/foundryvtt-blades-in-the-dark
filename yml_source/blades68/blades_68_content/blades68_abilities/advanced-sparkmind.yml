@@ -1,0 +1,16 @@
+_id: dde6bacca54f5b2d
+name: Advanced Sparkmind
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: Choose an additional type, or add an edge, or remove a flaw.
+  class: Intellectual
+  class_default: Intellectual
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

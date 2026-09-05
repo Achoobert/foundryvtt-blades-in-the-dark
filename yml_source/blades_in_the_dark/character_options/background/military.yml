@@ -1,0 +1,11 @@
+_id: ex7Mqv42SKZrfUL0
+name: Military
+permission:
+  default: 0
+type: background
+system:
+  description: An Imperial or Skovlander soldier, a mercenary, an intelligence operative, a strategist, a training instructor, etc.
+folder: YkuVHwuSV9IfsxU0
+sort: 500000
+flags: {}
+img: systems/blades-in-the-dark/styles/assets/icons/Icon.2_67.png

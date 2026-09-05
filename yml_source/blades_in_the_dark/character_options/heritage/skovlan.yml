@@ -1,0 +1,13 @@
+_id: Tk61Y7K84GgQpqPz
+name: Skovlan
+permission:
+  default: 0
+type: heritage
+system:
+  description: >-
+    If you want to be from a marginalized people, you could be from Skovlan, the island kingdom just across the sea from
+    Doskvol. Skovlan was last to be brought under Imperial rule, over the course of the 36-year Unity War (which ended
+    only a few years ago). Many Skovlander refugees who lost their homes and jobs in the destruction of the war have
+    come to Doskvol seeking new opportunities.
+sort: 500000
+flags: {}

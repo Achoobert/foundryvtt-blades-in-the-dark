@@ -1,0 +1,6 @@
+# Compendium manifest — compiled by scripts/build-yml-packs.mjs
+name: "crew_reputation"
+label: "Crew Reputation"
+type: "Item"
+path: "./packs/crew_reputation.db"
+banner: "systems/blades68/images/compendium-banners/Doskvol_07.webp"

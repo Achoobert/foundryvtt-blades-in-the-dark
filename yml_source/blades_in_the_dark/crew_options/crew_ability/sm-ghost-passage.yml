@@ -1,0 +1,15 @@
+_id: FCqzJGlU7KqxvcLH
+name: (Sm) Ghost Passage
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: >-
+    From harsh experience or occult ritual, all crew members become immune to possession by spirits, but may choose to
+    "carry" a second ghost as a passenger within their body.
+  class: Smugglers
+  price: '1'
+folder: null
+sort: 3600001
+flags: {}

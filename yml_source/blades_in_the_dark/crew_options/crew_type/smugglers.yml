@@ -1,0 +1,127 @@
+_id: WV5R1gcd0eRWY7dk
+name: Smugglers
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_type
+system:
+  description: Supplies of illicit goods
+  experience_clues: |-
+    - Execute a successful smuggling or acquire new clients or contraband sources.
+    - Contend with challenges above your current station.
+    - Bolster your crew's reputation or develop a new one.
+    - Express the goals, drives, inner conflict, or essential nature of the crew.
+  turfs:
+    '1':
+      name: BITD.Turf
+      value: false
+      description: ''
+      connects:
+        - right
+        - bottom
+    '2':
+      name: Side Business
+      value: false
+      description: (Tier roll) - Heat = coin in downtime
+      connects:
+        - left
+        - bottom
+    '3':
+      name: Luxury Fence
+      value: false
+      description: +2 coin for high-class targets
+      connects:
+        - bottom
+    '4':
+      name: Vice Den
+      value: false
+      description: (Tier roll) - Heat = coin in downtime
+      connects:
+        - right
+        - bottom
+    '5':
+      name: Tavern
+      value: false
+      description: +1d to Consort and Sway on site
+      connects:
+        - left
+        - bottom
+    '6':
+      name: Ancient Gate
+      value: false
+      description: Safe passage in Deathlands
+      connects:
+        - top
+        - bottom
+    '7':
+      name: BITD.Turf
+      value: false
+      description: ''
+      connects:
+        - top
+        - right
+        - bottom
+    '8':
+      name: BITD.Lair
+      value: 1
+      description: ''
+      connects:
+        - left
+        - top
+        - right
+        - bottom
+    '9':
+      name: BITD.Turf
+      value: false
+      description: ''
+      connects:
+        - left
+        - top
+        - right
+        - bottom
+    '10':
+      name: BITD.Turf
+      value: false
+      description: ''
+      connects:
+        - left
+        - top
+        - bottom
+    '11':
+      name: Secret Routes
+      value: false
+      description: +1d engagement for transport plans
+      connects:
+        - top
+        - right
+    '12':
+      name: Informants
+      value: false
+      description: +1d gather info for scores
+      connects:
+        - left
+        - top
+    '13':
+      name: Fleet
+      value: false
+      description: Your cohorts have their own vehicles
+      connects:
+        - top
+    '14':
+      name: Cover Operation
+      value: false
+      description: '-2 Heat per score'
+      connects:
+        - top
+        - right
+    '15':
+      name: Warehouse
+      value: false
+      description: Stockpiles give you +1d to acquire assets
+      connects:
+        - left
+        - top
+folder: null
+sort: 500001
+flags: {}
+img: systems/blades-in-the-dark/styles/assets/icons/Icon.6_46.png

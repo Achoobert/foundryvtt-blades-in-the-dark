@@ -1,0 +1,15 @@
+_id: yPUb0V9U1uUUlGzK
+name: Boat House 2
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: Improves the boat with armor and more cargo capacity.
+  class: ''
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 400001
+flags: {}

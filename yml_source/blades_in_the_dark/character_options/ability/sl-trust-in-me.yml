@@ -1,0 +1,12 @@
+_id: vqMYvzn0jw6Iwy9U
+name: (Sl) Trust in Me
+permission:
+  default: 0
+type: ability
+system:
+  description: You  get  +1d  vs.  a  target  with  whom  you  have  an  intimate relationship.
+  class: Slide
+  price: '1'
+folder: 537uDqf28OmWJoAM
+sort: 800001
+flags: {}

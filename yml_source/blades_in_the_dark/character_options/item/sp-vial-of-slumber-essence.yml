@@ -1,0 +1,15 @@
+_id: Z53LkQDQgjBithXX
+name: (Sp) Vial of slumber essence
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: item
+system:
+  description: >-
+    A dose of slumber essence sufficient to put someone to sleep for an hour. The victim’s sleep isn’t supernatural, but
+    it is deep - they can be roused with some effort.
+  class: Spider
+  load: '0'
+folder: null
+sort: 2900000
+flags: {}

@@ -1,0 +1,13 @@
+_id: R41SLHgLaq8TJa6N
+name: (Sh) Second Story
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: When you execute a clandestine infiltration, you get +1d to the engagement roll.
+  class: Shadows
+  price: '1'
+folder: null
+sort: 3000001
+flags: {}

@@ -1,0 +1,16 @@
+_id: 2d06921261838112
+name: Burglary Gear
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    A set of lockpicks. A small pry-bar. Cannister of lubricant to silence squeaky hinges. A spool of high-tensile wire
+    and a set of powerful magnets. A small pouch of fine sand. A glasscutter.
+  class: ''
+  load: '1'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

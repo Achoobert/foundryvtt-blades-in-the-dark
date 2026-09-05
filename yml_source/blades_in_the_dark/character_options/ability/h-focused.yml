@@ -1,0 +1,14 @@
+_id: ehNEPCtVCr4hbqBm
+name: (H) Focused
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    You may expend your special armor to resist a consequence of surprise or mental harm (fear, confusion, losing track
+    of someone) or to push yourself for ranged combat or tracking.
+  class: Hound
+  price: '1'
+folder: PaUiEAoDgddaXGEi
+sort: 200001
+flags: {}

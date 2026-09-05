@@ -1,0 +1,18 @@
+_id: a1cfeeeb973124f2
+name: Walking Arsenal
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Your load limit is always 2 higher than normal (5 for a Quiet approach, 8 for Loud). Pull out another 1-load gun at
+    any time, no matter how many you’ve already used. Each additional gun of its type (after the first) is 0 load.
+  class: Veteran
+  class_default: Veteran
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

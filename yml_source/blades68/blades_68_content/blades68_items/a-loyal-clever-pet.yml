@@ -1,0 +1,16 @@
+_id: 5245c2efe16495d4
+name: A loyal, clever pet
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Companion might be a better word - a hunter. They never let you down (except when they do). Did you choose them, or
+    did they choose you?
+  class: Hound
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

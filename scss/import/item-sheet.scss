@@ -31,3 +31,13 @@
 .item-class-label {
   margin-bottom: 10px;
 }
+
+// Same icon-visibility fix as general-styles.scss, applied to the item
+// sheet's own header portrait/icon-picker image (`data-edit="img"`),
+// which uses the same default-icon values and would otherwise disappear
+// against the sheet background when the icon art is a white/light shape.
+.sheet-header img {
+  background-color: $almost_black;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4);
+}

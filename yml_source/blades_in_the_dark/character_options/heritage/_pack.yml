@@ -1,0 +1,6 @@
+# Compendium manifest — compiled by scripts/build-yml-packs.mjs
+name: "heritage"
+label: "Heritages"
+type: "Item"
+path: "./packs/heritages.db"
+banner: "systems/blades68/images/compendium-banners/Doskvol_01.webp"

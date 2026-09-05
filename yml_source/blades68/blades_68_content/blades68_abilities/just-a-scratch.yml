@@ -1,0 +1,18 @@
+_id: 1dd61bdfddd9f785
+name: Just a Scratch
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Harm doesn’t slow you down during a score, and never factors into effect (level 4 harm is still fatal, and you still
+    roll for harm complications). You gain potency when you Consort with someone who has caused you to mark harm.
+  class: Hound
+  class_default: Hound
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

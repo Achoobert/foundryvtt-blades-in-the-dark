@@ -1,0 +1,13 @@
+_id: JiugpK6F8JuCSNLk
+name: (Sm) Renegades
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: Each PC may add +1 action rating to Finesse, Prowl or Skirmish (up to a max rating of 3).
+  class: Smugglers
+  price: '1'
+folder: null
+sort: 4000001
+flags: {}

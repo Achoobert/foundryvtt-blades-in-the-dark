@@ -1,0 +1,5 @@
+# Compendium manifest — compiled by scripts/build-yml-packs.mjs
+name: "blades68_heritages"
+label: "Blades '68 Heritages"
+type: "Item"
+path: "./packs/blades68_heritages.db"

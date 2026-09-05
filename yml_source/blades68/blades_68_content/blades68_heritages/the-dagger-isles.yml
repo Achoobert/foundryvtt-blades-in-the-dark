@@ -1,0 +1,24 @@
+_id: qAlMKdXOkLT6Ivhx
+name: The Dagger Isles
+type: heritage
+img: icons/svg/village.svg
+system:
+  description: |-
+    <p>A tropical archipelago covered in dense jungle growth. The Dagger Isles are a region of small nation-states known as banyans. The Imperium and the USC fight many of their proxy wars via the Dagger Isles, covertly supporting revolutionary and counterrevolutionary groups, and sending in troops to tip the balance when needed. Some of the banyans are little more than puppet regimes as a result, but others remain (as they have always been) independent and self-determining. They fight tooth and nail against this Imperial interference.</p>
+    <p><strong>Examples:</strong></p>
+    <ul>
+      <li>Bonewalkers devoted to the intertwining realms of life and death</li>
+      <li>Lhan Lhaban merchants</li>
+      <li>Biringan revolutionaries</li>
+      <li>Refugees</li>
+      <li>Melamatine shadow puppeteers</li>
+      <li>Fishing trawler crew</li>
+      <li>Members of an island commune</li>
+      <li>Couriers</li>
+    </ul>
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

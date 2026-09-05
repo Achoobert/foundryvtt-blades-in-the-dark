@@ -1,0 +1,13 @@
+_id: dIHGklAa8b0OVxyj
+name: (Sh) Veteran
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: Choose a special ability from another crew.
+  class: Shadows
+  price: '2'
+folder: null
+sort: 3300001
+flags: {}

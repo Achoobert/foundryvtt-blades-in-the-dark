@@ -90,12 +90,15 @@ export class BladesActor extends Actor {
       return Math.max(0, Math.min(Math.floor(numeric), 10));
     })();
 
-    // get crew tier info from character sheet if available
+    // get crew tier/gambits info from character sheet if available
     let current_tier = 0;
+    let current_gambits = 0;
     try {
       const crewActor = this._getCrewActor();
       const parsedTier = Number(crewActor?.system?.tier);
       current_tier = Number.isFinite(parsedTier) ? parsedTier : 0;
+      const parsedGambits = Number(crewActor?.system?.gambits?.value);
+      current_gambits = Number.isFinite(parsedGambits) ? parsedGambits : 0;
     } catch (error) {
       console.warn("No Crew is attached to the Actor.");
       console.error(error);
@@ -126,7 +129,7 @@ export class BladesActor extends Actor {
       if (game.settings.get("blades68", "ThreatRoll")) {
         content += `
           <div style="display:grid; grid-template-columns:auto auto auto; gap:0.5em 1em; align-items:center;">
-            <label><input type="radio" id="threatRoll" name="rollSelection" value="threatRoll" checked=true> ${game.i18n.localize("BITD.ThreatRoll")}</label>
+            <label><input type="radio" id="threatRoll" name="rollSelection" value="threatRoll"> ${game.i18n.localize("BITD.ThreatRoll")}</label>
             <span><label>${game.i18n.localize("BITD.Position")}:</label> <select id="pos2" name="pos2"><option value="risky" selected>${game.i18n.localize("BITD.PositionRisky")}</option><option value="desperate">${game.i18n.localize("BITD.PositionDesperate")}</option></select></span>
             <span><label>${game.i18n.localize("BITD.ExtraThreats")}:</label> <select id="extraThreats" name="extraThreats">${Array(
               6,
@@ -136,24 +139,13 @@ export class BladesActor extends Actor {
               .join("")}</select></span>
           </div>`;
       }
-      // Row 3: Other roll types
+      // Row 3: Other roll types (skill-click popup only offers Action Roll, Gather
+      // Information, and Acquire Asset — Fortune/Indulge Vice/Engagement are triggered
+      // from their own dedicated entry points, not from clicking a skill on the sheet)
       content += `
           <div style="display:grid; grid-template-columns:auto auto auto; column-gap:0.5em; row-gap:0.4em; align-items:center;">
-            <label><input type="radio" id="fortune" name="rollSelection" value="fortune"> ${game.i18n.localize("BITD.Fortune")}</label>
-            <span style="grid-column:2 / 4;"></span>
             <label><input type="radio" id="gatherInfo" name="rollSelection" value="gatherInfo"> ${game.i18n.localize("BITD.GatherInformation")}</label>
             <span style="grid-column:2 / 4;"></span>
-            <label><input type="radio" id="indulgeVice" name="rollSelection" value="indulgeVice"> ${game.i18n.localize("BITD.IndulgeVice")}</label>
-            <span style="grid-column:2 / 4;"></span>
-            <label><input type="radio" id="engagement" name="rollSelection" value="engagement"> ${game.i18n.localize("BITD.Engagement")}</label>
-            <label style="margin:0; justify-self:end; white-space:nowrap;">${game.i18n.localize("BITD.RollNumberOfDice")}:</label>
-            <select id="qty" name="qty" style="width:auto; min-width:4.5em; justify-self:start;">${Array.from(
-              { length: 11 },
-              (_, i) => {
-                const selected = i === sanitizedDefaultDice ? " selected" : "";
-                return `<option value="${i}"${selected}>${i}d</option>`;
-              },
-            ).join("")}</select>
             <label><input type="radio" id="acquireAsset" name="rollSelection" value="acquireAsset"> ${game.i18n.localize("BITD.AcquireAsset")}</label>
             <label style="margin:0; justify-self:end; white-space:nowrap;">${game.i18n.localize("BITD.CrewTier")}:</label>
             <select id="tier" name="tier" style="width:auto; min-width:4.5em; justify-self:start;"><option value="${current_tier}" selected disabled hidden>${current_tier}</option>${Array(
@@ -168,7 +160,7 @@ export class BladesActor extends Actor {
           <legend>${game.i18n.localize("BITD.RollOptions")}</legend>
           <ul style="margin:0; padding-left:1.2em;">
             <li>${game.i18n.localize("BITD.RollOptionAssist")}</li>
-            <li>${game.i18n.localize("BITD.RollOptionGambit")}</li>
+            ${current_gambits > 0 ? `<li>${game.i18n.localize("BITD.RollOptionGambit")}</li>` : ""}
             <li>${game.i18n.localize("BITD.RollOptionPush")}</li>
             <li>${game.i18n.localize("BITD.RollOptionDevilsBargain")}</li>
             <li>${game.i18n.localize("BITD.RollOptionGroupAction")}</li>
@@ -177,6 +169,19 @@ export class BladesActor extends Actor {
         </fieldset>
             `;
     } else {
+      if (BladesHelpers.isAttributeAttribute(attribute_name)) {
+        content += `
+            <fieldset class="roll-options-reminder" style="margin-top:0.5em;">
+              <legend>${game.i18n.localize("BITD.Resistance")}</legend>
+              <p style="margin:0;">${game.i18n.localize("BITD.RollOptionResist")}</p>
+            </fieldset>`;
+      } else if (attribute_name === "BITD.Vice") {
+        content += `
+            <fieldset class="roll-options-reminder" style="margin-top:0.5em;">
+              <legend>${game.i18n.localize("BITD.IndulgeVice")}</legend>
+              <p style="margin:0;">${game.i18n.localize("BITD.RollOptionIndulgeVice")}</p>
+            </fieldset>`;
+      }
       content += `
             <input  id="pos" name="pos" type="hidden" value="">
 			<input  id="pos2" name="pos2" type="hidden" value="">
@@ -254,7 +259,7 @@ export class BladesActor extends Actor {
         );
         break;
       case "indulgeVice":
-        await bladesRoll(viceDiceAmount, "BITD.Vice", "", "", note, stress);
+        await bladesRoll(viceDiceAmount, "BITD.Vice", "", "", note, stress, undefined, this);
         break;
       case "engagement": {
         const engagementDice =

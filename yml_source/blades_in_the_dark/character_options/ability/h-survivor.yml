@@ -1,0 +1,14 @@
+_id: 0IDmKmW3AiaNEBpE
+name: (H) Survivor
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    From  hard  won  experience  or  occult  ritual,  you  are  immune to the poisonous miasma of the deathlands and are
+    able to subsist on the strange flora and fauna there. You get +1 stress box.
+  class: Hound
+  price: '1'
+folder: PaUiEAoDgddaXGEi
+sort: 500001
+flags: {}

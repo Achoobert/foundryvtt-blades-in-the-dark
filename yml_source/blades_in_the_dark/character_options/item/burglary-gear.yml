@@ -1,0 +1,13 @@
+_id: gCFkqHGH9KGiGcGn
+name: Burglary Gear
+permission:
+  default: 0
+type: item
+system:
+  class: ''
+  load: '1'
+  description: >-
+    A set of lockpicks. A small pry-bar. Vials of oil to silence squeaky hinges. A coil of wire and fishing hooks. A
+    small pouch of fine sand.
+sort: 900000
+flags: {}

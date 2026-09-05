@@ -1,0 +1,16 @@
+_id: 404641565b1ef523
+name: Avengers
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: Each PC may add +1 action rating to Hunt, Prowl, or Command (up to a max rating of 3).
+  class: Vigilantes
+  class_default: Vigilantes
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

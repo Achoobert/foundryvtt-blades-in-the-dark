@@ -1,0 +1,24 @@
+_id: ba130202fb948705
+name: Possess
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    You may Attune to the resonance field in order to take control of a living body. When your control is challenged,
+    you must re-Attune (risking electroplasmic harm) or leave the body. Your control is challenged when: you consume
+    resonance energy from the host—when paranormal powers act against you—when the host's will is driven to desperation.
+    You may easily and indefinitely possess a hollow or hull that has been prepared for you. If it's a hollow, switch to
+    the Vampire playbook. If hull, switch to the Hull playbook, keeping your previous action ratings. Immediately take
+    one Hull trait, and fill two memory clocks (choose from your previous character's special abilities instead of
+    rolling randomly). To remember more than what those two clocks give you will require filling more memory clocks, as
+    usual.
+  class: Ghost
+  class_default: Ghost
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

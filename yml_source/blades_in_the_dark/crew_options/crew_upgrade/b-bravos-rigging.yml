@@ -1,0 +1,17 @@
+_id: aXtp6j9qGCAekHnz
+name: (B) Bravos Rigging
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: >-
+    You get 2 free load worth of weapon or armor items. For example, you could carry a sword & pistol or wear normal
+    armor for zero load.
+  class: Bravos
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 600000
+flags: {}

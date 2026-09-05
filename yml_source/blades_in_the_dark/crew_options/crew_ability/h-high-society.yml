@@ -1,0 +1,13 @@
+_id: WLPCiDRKffxD1QzC
+name: (H) High Society
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: It's all about who you know. Take -1 heat during downtime and +1d to gather info about the city's elite.
+  class: Hawkers
+  price: '1'
+folder: null
+sort: 2200001
+flags: {}

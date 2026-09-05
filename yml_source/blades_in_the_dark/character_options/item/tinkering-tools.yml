@@ -1,0 +1,11 @@
+_id: y1tNdNOesmsYbJkv
+name: Tinkering Tools
+permission:
+  default: 0
+type: item
+system:
+  class: ''
+  load: '1'
+  description: 'An assortment for detailed mechanist work: jeweler’s loupe, tweezers, a small hammer, pliers, screwdriver, etc.'
+sort: 1500000
+flags: {}

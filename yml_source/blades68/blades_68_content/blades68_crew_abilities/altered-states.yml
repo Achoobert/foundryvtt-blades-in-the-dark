@@ -1,0 +1,18 @@
+_id: cefbd1ea2a961b22
+name: Altered States
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Each PC gains an additional vice: Ritual Hedonism. When you indulge this vice, you don't overindulge if you clear
+    excess Stress. In addition, your ecstatic visions of the future mean you can perform one flashback for free.
+  class: Utopians
+  class_default: Utopians
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,21 @@
+name: (Hu) Interface
+type: ability
+system:
+  description: >-
+    You may attune to the local electroplasmic power field to control it or something connected to it (including another
+    hull).
+  class: Hull
+  price: 1
+  purchased: false
+  class_default: false
+  logic: ''
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+  hp9rhyB0AtTZTutm: 3
+flags:
+  core:
+    sourceId: Item.9nLCT5rZdSeM2PR1
+_id: 7DcuxZBdsoDn7Mgo

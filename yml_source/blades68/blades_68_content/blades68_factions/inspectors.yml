@@ -1,0 +1,42 @@
+_id: 15af4e7b0ae30743
+name: Inspectors
+type: faction
+img: icons/svg/city.svg
+system:
+  description: ''
+  type: Institutions
+  tier: '3'
+  goal_1: ''
+  goal_1_clock_max: 0
+  goal_2: ''
+  goal_2_clock_max: 0
+  turf: ''
+  assets: ''
+  quirks: ''
+  notables: ''
+  allies: ''
+  enemies: ''
+  situation: ''
+  goal_clock: 0
+  hold:
+    value: 2
+    max: 2
+    max_default: 2
+    name_default: BITD.Hold
+    name: BITD.Hold
+  status:
+    value:
+      - 0
+    max: 7
+    max_default: 7
+    name_default: BITD.Status
+    name: BITD.Status
+  notes: >-
+    The criminal investigators of the City Watch. They have a reputation for ethics and integrity (no one likes them).
+    They present evidence for prosecutions to the city magistrates.
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

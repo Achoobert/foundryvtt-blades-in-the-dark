@@ -1,0 +1,18 @@
+_id: 12dbf29f9444565f
+name: Fellow Travelers
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    In any scene with more than one NPC, ask the GM which of them are sympathetic to your cause. It’s always at least
+    one, but often a few, many, or sometimes all of them.
+  class: Radical
+  class_default: Radical
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

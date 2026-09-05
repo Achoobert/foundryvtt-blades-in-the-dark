@@ -1,0 +1,50 @@
+_id: KG95VCcn6jbRAbnL
+name: (V) Undead
+type: ability
+system:
+  description: >-
+    You are a spirit which animates an undead body. Your trauma is maxed out. Choose four trauma conditions which
+    reflect your vampiric nature. Arcane attacks are potent against you. If you suffer fatal harm or trauma, your undead
+    spirit is overwhelmed. You take level 3 harm: "Incapacitated" until you feed enough to recover. If you suffer arcane
+    harm while in this state, you are destroyed utterly. Your XP tracks are longer (you now advance more slowly). You
+    have more stress boxes.
+  class: Vampire
+  price: '1'
+  purchased: false
+  class_default: true
+  logic: ''
+effects:
+  - _id: ron5Vdsnb8WcFrPC
+    changes:
+      - key: data.experience_max
+        mode: 5
+        value: '10'
+      - key: data.attributes.insight.exp_max
+        mode: 5
+        value: '8'
+      - key: data.attributes.prowess.exp_max
+        mode: 5
+        value: '8'
+      - key: data.attributes.resolve.exp_max
+        mode: 5
+        value: '8'
+      - key: data.stress.max
+        mode: 5
+        value: '12'
+    disabled: false
+    duration:
+      startTime: null
+    icon: systems/blades-in-the-dark/styles/assets/icons/Icon.3_13.png
+    label: Undead
+    origin: Item.tjZrc7AAYU8eGPWv
+    transfer: true
+    flags: {}
+    tint: null
+folder: null
+sort: 0
+permission:
+  default: 0
+  hp9rhyB0AtTZTutm: 3
+flags:
+  core:
+    sourceId: Item.tjZrc7AAYU8eGPWv

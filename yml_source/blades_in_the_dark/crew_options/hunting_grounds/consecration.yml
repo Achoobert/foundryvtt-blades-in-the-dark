@@ -1,0 +1,21 @@
+name: Consecration
+type: hunting_grounds
+_id: X860Vmu1pIwy7FCD
+img: systems/blades-in-the-dark/styles/assets/icons/Icon.5_14.png
+system:
+  description: <p>Anoint a place for your deity.</p>
+  class: Cult
+effects: []
+folder: null
+sort: 1500000
+ownership:
+  default: 0
+  B7A33cKMwj3J5fQB: 3
+flags: {}
+_stats:
+  systemId: blades-in-the-dark
+  systemVersion: '4.9'
+  coreVersion: '11.315'
+  createdTime: 1710719016293
+  modifiedTime: 1710727623733
+  lastModifiedBy: B7A33cKMwj3J5fQB

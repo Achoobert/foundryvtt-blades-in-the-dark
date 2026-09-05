@@ -1,0 +1,14 @@
+_id: c49ef74e8ae3ffb6
+name: RF radio handset
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: A resonance field radio. A small handheld unit tuned to a secure frequency.
+  class: Swinger
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,19 @@
+_id: 4df81bc14938a57a
+name: Double Agent
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    You gain a second backing faction of your choice immediately. You get +2d when working on long-term projects to
+    influence any of your backing factions. How long have you been secretly building this relationship? Does your first
+    backing faction know about it?
+  class: Operative
+  class_default: Operative
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

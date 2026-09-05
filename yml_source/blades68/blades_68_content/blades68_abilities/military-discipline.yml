@@ -1,0 +1,19 @@
+_id: 9880cdcabc0a7899
+name: Military Discipline
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Twice per score, you may use your training to resist harm from an attack in combat or to push yourself during a
+    fight.
+  class: Veteran
+  class_default: Veteran
+  price: '1'
+  uses: 2
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

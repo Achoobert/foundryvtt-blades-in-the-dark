@@ -1,0 +1,42 @@
+_id: 247b5f0ae3526c70
+name: The Blackjacks
+type: faction
+img: icons/svg/city.svg
+system:
+  description: ''
+  type: Underworld
+  tier: '2'
+  goal_1: ''
+  goal_1_clock_max: 0
+  goal_2: ''
+  goal_2_clock_max: 0
+  turf: ''
+  assets: ''
+  quirks: ''
+  notables: ''
+  allies: ''
+  enemies: ''
+  situation: ''
+  goal_clock: 0
+  hold:
+    value: 1
+    max: 2
+    max_default: 2
+    name_default: BITD.Hold
+    name: BITD.Hold
+  status:
+    value:
+      - 0
+    max: 7
+    max_default: 7
+    name_default: BITD.Status
+    name: BITD.Status
+  notes: >-
+    The remnants of the former union of ghostlands train guards, who turned to crime when their services were replaced
+    by robotic hulls. Paranormal specialists and underworld muscle for hire.
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

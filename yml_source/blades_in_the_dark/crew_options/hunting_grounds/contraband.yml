@@ -1,0 +1,21 @@
+name: Contraband
+type: hunting_grounds
+_id: hkzPaOTdox1R2txf
+img: systems/blades-in-the-dark/styles/assets/icons/Icon.5_22.png
+system:
+  description: <p>High-tax luxuries, drugs, banned art, etc.</p>
+  class: Smugglers
+effects: []
+folder: null
+sort: 1900000
+ownership:
+  default: 0
+  B7A33cKMwj3J5fQB: 3
+flags: {}
+_stats:
+  systemId: blades-in-the-dark
+  systemVersion: '4.9'
+  coreVersion: '11.315'
+  createdTime: 1710725104703
+  modifiedTime: 1710727589455
+  lastModifiedBy: B7A33cKMwj3J5fQB

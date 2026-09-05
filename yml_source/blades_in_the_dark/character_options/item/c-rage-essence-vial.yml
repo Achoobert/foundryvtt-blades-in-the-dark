@@ -1,0 +1,15 @@
+_id: jlTZ3wZdiAxxgqva
+name: (C) Rage essence vial
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: item
+system:
+  description: >-
+    A single dose, which greatly enhances the user’s strength, resistance to pain, and irrational aggression for the
+    span of several minutes.
+  class: Cutter
+  load: '0'
+folder: null
+sort: 500000
+flags: {}

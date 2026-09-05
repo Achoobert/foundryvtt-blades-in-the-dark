@@ -1,0 +1,6 @@
+# Compendium manifest — compiled by scripts/build-yml-packs.mjs
+name: "item"
+label: "Items"
+type: "Item"
+path: "./packs/items.db"
+banner: "systems/blades68/images/compendium-banners/Doskvol_05.webp"

@@ -1,0 +1,16 @@
+_id: dc4916bea924a0eb
+name: Tiny tracking device
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    A small tracking device (adhesive and/or magnetic) and a handheld gadget that show the device's current location.
+    Works reliably up to a distance of two city districts away.
+  class: Operative
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

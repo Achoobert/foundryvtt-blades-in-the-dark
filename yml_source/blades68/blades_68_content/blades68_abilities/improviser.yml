@@ -1,0 +1,18 @@
+_id: d9ac3574fd5c9ff3
+name: Improviser
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    When you push yourself, you can also do one of the following: claim to be anyone and others will consider the
+    possibility, no matter how outlandish—plunge blindly in an unexpected direction and find a new path.
+  class: Swinger
+  class_default: Swinger
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

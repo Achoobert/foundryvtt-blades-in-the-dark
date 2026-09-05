@@ -1,0 +1,14 @@
+_id: aea80a8fb5f911a7
+name: Fine plasma blade
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: ''
+  class: Time Traveler Future
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

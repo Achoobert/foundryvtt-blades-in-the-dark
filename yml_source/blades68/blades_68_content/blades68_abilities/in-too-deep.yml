@@ -1,0 +1,18 @@
+_id: 4fb3124d3b62795d
+name: In Too Deep
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Once per score, you can Consort with an NPC to form an intimate bond. If you have such a bond with someone involved
+    in a score, you get +1d and potency to any actions dealing with them.
+  class: Hound
+  class_default: Hound
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

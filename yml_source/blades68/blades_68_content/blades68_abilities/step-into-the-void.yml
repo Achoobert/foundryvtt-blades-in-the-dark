@@ -1,0 +1,19 @@
+_id: 26e20834c24922bb
+name: Step into the Void
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Take 2 Instability to step out of this timeline for a few minutes, disappearing instantly before reappearing in the
+    same place. Take 1 Instability for each additional feature: it lasts for up to an hour rather than a few minutes—you
+    reappear in a visible location of your choice—you also take anyone you're touching.
+  class: Time Traveler Past
+  class_default: Time Traveler Past
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

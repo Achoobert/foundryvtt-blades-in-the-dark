@@ -1,0 +1,15 @@
+_id: pa6vypwtKmF06yz9
+name: 'Training: Prowess'
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: If you have a Training upgrade, you earn 2 xp (instead of 1) when you train a given xp track during downtime
+  class: ''
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 1800001
+flags: {}

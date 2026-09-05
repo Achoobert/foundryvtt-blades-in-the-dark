@@ -1,0 +1,16 @@
+_id: ce86608fb115059a
+name: Electro-Blade
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    A broad, heavy blade with a plasmoleum-powered device built into the hilt. If the sharpened edge doesn’t finish
+    them, the explosive release of electricity will. 
+  class: ''
+  load: '1'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

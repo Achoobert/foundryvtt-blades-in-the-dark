@@ -1,0 +1,17 @@
+_id: 5ddad6e8884c5487
+name: Psychic amplification device
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    An experimental piece of equipment that focuses the wearer's paranormal abilities. Also affords some measure of
+    protection against paranormal assault. What does yours look like; is it a helmet, a circlet, a glove or gauntlet, or
+    something else? Did you invent it yourself, or acquire it some other way?
+  class: Paranormalist
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,14 @@
+_id: v53AgGx9HbOAmBbM
+name: (Le) Alchemist
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    When you invent or craft a creation with alchemicalfeatures, take +1 result level to your roll. You begin with one
+    special formula already known.
+  class: Leech
+  price: '1'
+folder: EorKoKOCKsvC93ZA
+sort: 100001
+flags: {}

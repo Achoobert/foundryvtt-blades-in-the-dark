@@ -1,0 +1,21 @@
+_id: e75d048a2178c6fe
+name: Echo Projection
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Pay 2 Stress to become a radiant being of crackling energy. While in this mode, you count as wearing armor, your
+    physical attacks gain potency, and you can push yourself to shoot arcs of electroplasmic lightning. The projection
+    drops at the end of the scene (or pay 2 Stress to continue for another scene). When you drop the projection, take
+    the level 2 harm Drained and the GM will tick a clock of their choice (you may resist these consequences). If you
+    take this ability a second time, the GM will not tick a clock.
+  class: Paranormalist
+  class_default: Paranormalist
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

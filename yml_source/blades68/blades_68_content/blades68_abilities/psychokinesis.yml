@@ -1,0 +1,18 @@
+_id: 7f99d879955fd4bb
+name: Psychokinesis
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    When you push yourself, you can also do one of the following: levitate for a short time—violently push or pull
+    objects through the air.
+  class: Paranormalist
+  class_default: Paranormalist
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

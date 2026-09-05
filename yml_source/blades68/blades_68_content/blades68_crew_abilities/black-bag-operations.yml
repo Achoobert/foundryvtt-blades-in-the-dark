@@ -1,0 +1,20 @@
+_id: 5fdc1d9d5fe4349f
+name: Black Bag Operations
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    When you execute a clandestine infiltration, you get +1d to the engagement roll. You may attempt to install
+    surveillance equipment during a score on any faction’s turf. So long as the wire remains in place, take +1d on any
+    future gather information rolls related to that faction. The GM may make a fortune roll with the faction’s Tier to
+    see if they notice the bug and remove it during personal business.
+  class: Shadows
+  class_default: Shadows
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

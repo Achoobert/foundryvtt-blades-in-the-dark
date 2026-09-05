@@ -1,0 +1,17 @@
+_id: 5vnIVLr82Kni8xBg
+name: (B) Ironhook Contacts
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: >-
+    Your Tier is effectively +1 higher in prison. This counts for any Tier-related element in prison, including the
+    incarceration roll.
+  class: Bravos
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 700000
+flags: {}

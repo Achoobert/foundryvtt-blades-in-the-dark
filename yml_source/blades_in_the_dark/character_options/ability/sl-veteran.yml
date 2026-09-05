@@ -1,0 +1,13 @@
+_id: RaXmsXtqQUVFnnn3
+name: (Sl) Veteran
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: ability
+system:
+  description: Choose a special ability from another source.
+  class: Slide
+  price: '3'
+folder: null
+sort: 300001
+flags: {}

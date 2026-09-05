@@ -1,0 +1,15 @@
+_id: d566f6a37b3fe8ea
+name: Advanced Visual Sensors
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: Your eyes can switch to various visual modes, including night vision, heat vision, and ultra-zoom.
+  class: Hull
+  load: '0'
+  additional_info: frame_feature
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

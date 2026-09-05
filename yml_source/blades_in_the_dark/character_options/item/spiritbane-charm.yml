@@ -1,0 +1,13 @@
+_id: DVvua5rp9ldL5JZh
+name: Spiritbane Charm
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: item
+system:
+  description: A small arcane trinket that ghosts prefer to avoid.
+  class: ''
+  load: '0'
+folder: null
+sort: 100001
+flags: {}

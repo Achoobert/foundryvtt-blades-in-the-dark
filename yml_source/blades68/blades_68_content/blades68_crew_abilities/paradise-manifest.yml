@@ -1,0 +1,20 @@
+_id: 05586c5464dce6d4
+name: Paradise Manifest
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    When you take this advance, your base and the area around transforms into a small fragment of your utopia, manifest
+    in this reality. Take +2d to the engagement roll for any raids. All crew members gain potency when acting in the
+    base and its surrounds, and all downtime actions conducted in the base get +1 result level. This will attract
+    significant attention from Section 6 and other high-Tier factions.
+  class: Utopians
+  class_default: Utopians
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,19 @@
+_id: 2b03f1c035115344
+name: Field Testing
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    You can prepare a special cut of your product for use during a score. Choose an effect: healing (clear level 1
+    harm), exhilarating (clear 1 Stress), calming (social potency), enlightening (increase result level on gather
+    information). Each costs 1 unit of product, takes 1 load, and is consumed after use.
+  class: Dealers
+  class_default: Dealers
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

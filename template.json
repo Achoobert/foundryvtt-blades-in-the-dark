@@ -196,6 +196,150 @@
             }
           }
         }
+      },
+      "unique-data": {
+        "hound": {
+          "name": "",
+          "edges": "",
+          "flaws": "",
+          "type": "",
+          "abilities": "",
+          "weak": false,
+          "impaired": false,
+          "broken": false,
+          "armor": 0
+        },
+        "hull": {
+          "memories": {
+            "name_heritage": {
+              "text": "",
+              "clock": 0
+            },
+            "unfinished": {
+              "text": "",
+              "clock": 0
+            },
+            "background_love": {
+              "text": "",
+              "clock": 0
+            },
+            "crime": {
+              "text": "",
+              "clock": 0
+            }
+          }
+        },
+        "intellectual": {
+          "sparkmind": {
+            "name": "",
+            "edges": "",
+            "flaws": "",
+            "abilities": "",
+            "function": "",
+            "housing": "",
+            "weak": false,
+            "impaired": false,
+            "broken": false
+          }
+        },
+        "operative": {
+          "backing_faction": {
+            "faction": "",
+            "personal_mission": "",
+            "prestige_ability": "",
+            "failure": 0
+          }
+        },
+        "paranormalist": {
+          "resonance": {
+            "name": "",
+            "edges": "",
+            "flaws": "",
+            "type": "Paranormal assistant",
+            "abilities": "",
+            "weak": false,
+            "impaired": false,
+            "broken": false,
+            "armor": 0
+          }
+        },
+        "radical": {
+          "explosives": {
+            "bandolier1": {
+              "slot1": false,
+              "slot2": false,
+              "slot3": false
+            },
+            "bandolier2": {
+              "slot1": false,
+              "slot2": false,
+              "slot3": false
+            }
+          }
+        },
+        "swinger": {
+          "autopod": {
+            "name": "",
+            "style": "",
+            "type": "",
+            "weak": false,
+            "impaired": false,
+            "broken": false
+          }
+        },
+        "veteran": {
+          "damage": "",
+          "helps": ""
+        },
+        "vampire": {
+          "strictures": {
+            "dayfire": true,
+            "slumber": false,
+            "forbidden": false,
+            "repelled": false,
+            "bestial": false,
+            "bound": false
+          }
+        },
+        "time_traveler": {
+          "mission": "",
+          "prevent": {
+            "detail1": {
+              "done": false,
+              "text": ""
+            },
+            "detail2": {
+              "done": false,
+              "text": ""
+            },
+            "detail3": {
+              "done": false,
+              "text": ""
+            },
+            "detail4": {
+              "done": false,
+              "text": ""
+            }
+          },
+          "chase": {
+            "detail1": {
+              "done": false,
+              "text": ""
+            },
+            "detail2": {
+              "done": false,
+              "text": ""
+            },
+            "detail3": {
+              "done": false,
+              "text": ""
+            },
+            "detail4": {
+              "done": false,
+              "text": ""
+            }
+          }
+        }
       }
     },
     "crew": {
@@ -224,6 +368,10 @@
       },
       "vault": {
         "value": [0],
+        "max": 0
+      },
+      "gambits": {
+        "value": 0,
         "max": 0
       },
       "turf": {
@@ -296,6 +444,9 @@
         "description": "",
         "class": "",
         "price": 1,
+        "uses": 0,
+        "uses_text": "",
+        "uses_used": 0,
         "purchased": false,
         "class_default": false
       },
@@ -351,6 +502,7 @@
       "enemies": "",
       "situation": "",
       "goal_clock": 0,
+      "prestige_ability": "",
       "notes": "",
       "hold": {
         "value": [1],
@@ -372,8 +524,10 @@
       "class": "",
       "load": 0,
       "uses": 1,
+      "uses_used": 0,
       "additional_info": "",
       "equipped": false,
+      "bonus_equipped": false,
       "num_available": 1
     },
     "class": {

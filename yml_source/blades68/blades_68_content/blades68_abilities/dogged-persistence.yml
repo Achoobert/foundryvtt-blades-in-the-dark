@@ -1,0 +1,19 @@
+_id: 3878dfd22f05afef
+name: Dogged Persistence
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Twice per score, you may use your tenacity to resist a consequence of exhaustion or mental harm (fear, confusion,
+    losing track of someone) or to push yourself for influencing someone or searching for clues.
+  class: Hound
+  class_default: Hound
+  price: '1'
+  uses: 2
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

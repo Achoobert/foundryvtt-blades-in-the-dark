@@ -1,0 +1,107 @@
+& * {
+  @import "../coins.scss";
+
+  // Trait line: Heritage - Background - Vice - Class - Crew, shown as one
+  // bullet-separated underlined line instead of stacked blocks.
+  .trait-line {
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-bottom: 1px solid $almost_black;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+    justify-content: flex-start;
+
+    .item-block {
+      align-items: baseline;
+      margin-right: 0;
+
+      .subheader-item {
+        min-width: fit-content;
+      }
+
+      &:not(:last-child)::after {
+        content: "\2022";
+        margin: 0 6px;
+        color: $gray;
+      }
+
+      .item-class-label {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .look-line {
+    margin-bottom: 4px;
+
+    input {
+      width: 100%;
+      font-style: italic;
+      border: 0;
+      background: none;
+    }
+  }
+
+  .ability-short-list {
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+
+  // Attributes: a horizontal row of the three Insight/Prowess/Resolve blocks
+  // (instead of the narrow single-column sidebar layout).
+  .attributes-row {
+    .attributes {
+      flex-direction: row;
+      width: auto;
+      gap: 10px;
+
+      .attribute {
+        flex: 1;
+      }
+    }
+  }
+
+  // Section headers shared by the Special Abilities / Items / Clever Friends / XP panels
+  .section-block {
+    margin-bottom: 10px;
+
+    .section-header {
+      text-transform: uppercase;
+      background-color: $almost_black;
+      color: $almost_white;
+      position: relative;
+      padding: 4px 10px;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      gap: 8px;
+      margin-bottom: 4px;
+
+      span:first-child {
+        flex-grow: 1;
+      }
+
+      a {
+        color: $almost_white;
+      }
+    }
+
+    .section-body {
+      padding: 4px 2px;
+    }
+  }
+
+  .playbook-columns {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 10px;
+    align-items: start;
+    margin-top: 10px;
+
+    .col-abilities,
+    .col-notes {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

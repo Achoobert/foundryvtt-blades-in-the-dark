@@ -1,0 +1,14 @@
+_id: OIAtGUPHlE5wfHZo
+name: (C) Vigorous
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    You recover from harm faster. Permanently fill in one of your healing clock segments. Take +1d to healing treatment
+    rolls.
+  class: Cutter
+  price: '1'
+folder: cJPDzs27jPdqAVDV
+sort: 800000
+flags: {}

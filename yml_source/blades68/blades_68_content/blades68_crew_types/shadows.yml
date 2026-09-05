@@ -1,0 +1,281 @@
+_id: 445c8d46655c3a4c
+name: Shadows
+type: crew_type
+img: icons/svg/city.svg
+system:
+  description: COVERT SPECIALISTS, EXPERTS IN HEISTS AND ESPIONAGE
+  experience_clues: You executed a surveillance, heist, subterfuge, or cleanup operation.
+  turfs:
+    '1':
+      name: Cover Identities
+      value: false
+      description: +1d engagement for deception and social approaches
+      highlight: false
+      connects:
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '2':
+      name: Turf
+      value: false
+      description: Expand hunting grounds and add new preferred operation
+      highlight: false
+      connects:
+        - left
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '3':
+      name: Checkmate
+      value: false
+      description: Tier 5 target, 30 stacks, complete any clock (one-off opportunity)
+      highlight: true
+      connects:
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '4':
+      name: Inside Mark
+      value: false
+      description: Target for Checkmate counts as -1 Tier for that score
+      highlight: true
+      connects:
+        - left
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '5':
+      name: Secret Pathways
+      value: false
+      description: +1d engagement for stealth plans
+      highlight: false
+      connects:
+        - left
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '6':
+      name: Paid-Off Bluecoats
+      value: false
+      description: '-2 Heat per score'
+      highlight: false
+      connects:
+        - top
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '7':
+      name: Interested Party
+      value: false
+      description: Checkmate score earns +10 bonus stacks
+      highlight: true
+      connects:
+        - top
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '8':
+      name: Slush Fund
+      value: false
+      description: +1d to Acquire Asset rolls
+      highlight: false
+      connects:
+        - left
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '9':
+      name: Cover Story
+      value: false
+      description: +2d engagement for Checkmate score
+      highlight: true
+      connects:
+        - left
+        - top
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '10':
+      name: Luxury Venue
+      value: false
+      description: +1d to Consort and Sway on-site
+      highlight: false
+      connects:
+        - left
+        - top
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '11':
+      name: Critical Move
+      value: false
+      description: Tier 4 target, 15 stacks, +4 ticks on any clock (one-off opportunity)
+      highlight: true
+      connects:
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '12':
+      name: High-Stakes Game
+      value: false
+      description: (Tier roll) - Heat = stacks in downtime
+      highlight: false
+      connects:
+        - left
+        - top
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '13':
+      name: Informants
+      value: false
+      description: +1d to gather info for scores
+      highlight: false
+      connects:
+        - left
+        - top
+        - right
+        - bottom
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '14':
+      name: Turf
+      value: false
+      description: Expand hunting grounds and add new preferred operation
+      highlight: false
+      connects:
+        - left
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '15':
+      name: Dispensary
+      value: false
+      description: +1d to healing rolls
+      highlight: false
+      connects:
+        - left
+        - top
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '16':
+      name: Turf
+      value: false
+      description: Expand hunting grounds and add new preferred operation
+      highlight: false
+      connects:
+        - top
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '17':
+      name: Specialist Fence
+      value: false
+      description: +2 stacks for heists or subterfuge
+      highlight: false
+      connects:
+        - left
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '18':
+      name: Base
+      value: true
+      description: Base of Operations
+      highlight: false
+      connects:
+        - left
+        - top
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '19':
+      name: Covert Fixer
+      value: false
+      description: +2 stacks for surveillance or sabatauge
+      highlight: false
+      connects:
+        - left
+        - right
+      connected:
+        - false
+        - false
+        - false
+        - false
+    '20':
+      name: Lounge bar
+      value: false
+      description: Tier roll - heat = stacks in downtime
+      highlight: false
+      connects:
+        - left
+        - top
+      connected:
+        - false
+        - false
+        - false
+        - false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

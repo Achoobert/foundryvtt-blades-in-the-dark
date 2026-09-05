@@ -1,0 +1,190 @@
+name: trouble_engine
+type: folder
+_id: w2vkKNFHobUVeB7H
+color: '#75844c'
+---
+name: Crew Trouble Heat 0-3
+_id: yvEk9GTSB9udwv1z
+folder: w2vkKNFHobUVeB7H
+description: 'If their Wanted Level is zero, roll two dice and keep the lowest result. This will tell you whether there’s no new trouble, a new light trouble, or a new heavy trouble. '
+results:
+  - type: text
+    name: 'None'
+  - type: text
+    name: 'None'
+  - type: text
+    name: 'Light Trouble'
+  - type: text
+    name: 'Heavy Trouble'
+---
+name: Crew Trouble Heat 4-5
+_id: yvEk9GTSB9udwv1z
+folder: w2vkKNFHobUVeB7H
+description: ''
+results:
+  - type: text
+    name: 'None'
+  - type: text
+    name: 'Light Trouble'
+  - type: text
+    name: 'Heavy Trouble'
+  - type: text
+    name: 'Heavy Trouble'
+
+---
+name: Crew Trouble Heat 6+
+_id: yvEk9GTSB9udwv1z
+folder: w2vkKNFHobUVeB7H
+description: ''
+results:
+  - type: text
+    name: 'Light Trouble'
+  - type: text
+    name: 'Light Trouble'
+  - type: text
+    name: 'Heavy Trouble'
+  - type: text
+    name: 'Heavy Trouble'
+
+---
+name: Light Crew Troubles
+_id: yvEk9GTSB9udwv1z
+folder: w2vkKNFHobUVeB7H
+description: ''
+results:
+  - type: text
+    name: 'Wrong Place, Wrong Time'
+    description: 'Friend found badly beaten.'
+  - type: text
+    name: 'Friendly Favor'
+    description: 'Friend asks for help with a problem.'
+  - type: text
+    name: 'Gang Trouble'
+    description: 'One of your gangs causes trouble.'
+  - type: text
+    name: 'Shakedown'
+    description: 'An acquaintance is forced to spill what they know.'
+  - type: text
+    name: 'Debt (ongoing)'
+    description: 'A PC or one of their close friends is in the hole.'
+  - type: text
+    name: 'Things Get Weird'
+    description: 'A Class VI Metadimensional Entity approaches the crew.'
+  - type: text
+    name: 'Asking Around'
+    description: 'Someone’s asking about you.'
+  - type: text
+    name: 'Thieving Bastards'
+    description: 'Thieves target the crew’s base.'
+  - type: text
+    name: 'Under Investigation (ongoing)'
+    description: 'The crew is under surveillance.'
+  - type: text
+    name: 'Interrogation'
+    description: 'One of the PCs is taken in for questioning.'
+  - type: text
+    name: 'Patrols (ongoing)'
+    description: 'The local district suffers regular patrols.'
+  - type: text
+    name: 'Rattling the Cage'
+    description: 'An unfriendly faction sends a gang to make trouble.'
+---
+name: Heavy Crew Troubles
+_id: yvEk9GTSB9udwv1z
+folder: w2vkKNFHobUVeB7H
+description: ''
+results:
+  - type: text
+    name: 'Flipped' 
+    description: 'One of your contacts switches allegiance.'
+  - type: text
+    name: 'Challenged Claim'
+    description: 'Another faction makes a move against one of the crew’s claims.'
+  - type: text
+    name: 'Invasion'
+    description: 'An outside faction invades the local district.'
+  - type: text
+    name: 'Show of Force'
+    description: 'An enemy faction makes a play against the crew.'
+  - type: text
+    name: 'Assassination'
+    description: 'An enemy faction makes a lethal move against your crew.'
+  - type: text
+    name: 'Arrest'
+    description: 'The Bluecoats send a detail to arrest you.'
+---
+name: Local Trouble
+_id: yvEk9GTSB9udwv1z
+folder: w2vkKNFHobUVeB7H
+description: ''
+results:
+  - type: text
+    name: '
+1-3 Light Trouble
+4/5 None, but take -1d to this roll next time
+6 None
+Critical A festival or celebration takes place in the local district, and any
+PC who wishes to take part clears 1 Stress
+---
+name: Light Local Troubles
+_id: yvEk9GTSB9udwv1z
+folder: w2vkKNFHobUVeB7H
+description: ''
+results:
+  - type: text
+    name: 'Local Unrest (ongoing)'
+    description: 'The mood in the local district worsens noticeably.'
+  - type: text
+    name: 'Patrols (ongoing)'
+    description: 'A faction starts regular patrols on the local district.'
+  - type: text
+    name: 'No-Go Zone (ongoing)'
+    description: 'A portion of the city is divided by a barrier or blockade.'
+  - type: text
+    name: 'Paranormal Activity (ongoing)'
+    description: 'One or more resonance echoes are haunting the local district.'
+  - type: text
+    name: 'Disappearance (ongoing)'
+    description: 'Someone goes missing.'
+  - type: text
+    name: 'Protests (ongoing)'
+    description: 'A section of the community begins to protest.'
+  - type: text
+    name: 'Disaster'
+    description: 'A storm, a fire, a flood, an anomaly tear, etc.'
+  - type: text
+    name: 'Resource Crisis (ongoing)'
+    description: 'Something the district needs is suddenly inaccessible.'
+  - type: text
+    name: 'Sharks in the Water (ongoing)'
+    description: 'A predatory faction begins hunting in the local district.'
+  - type: text
+    name: 'Denounced (ongoing)'
+    description: 'Loud voices in the local district rail against the PC crew.'
+  - type: text
+    name: 'Public Outrage (ongoing)'
+    description: 'A contact or friend does something controversial.'
+  - type: text
+    name: 'Vandalism (ongoing)'
+    description: 'Windows get broken, walls get defaced, fires are started.'
+---
+name: Escalations
+_id: yvEk9GTSB9udwv1z
+folder: w2vkKNFHobUVeB7H
+description: ''
+results:
+  - type: text
+    name: 'The trouble draws the attention of the law: take 1 Heat.'
+    description: 'The trouble draws the attention of the law: take 1 Heat.'
+  - type: text
+    name: 'The crew lose face: forfeit 1 Rep.'
+    description: 'The crew lose face: forfeit 1 Rep.'
+  - type: text
+    name: 'Reduce a faction status by 1.'
+    description: 'Reduce a faction status by 1.'
+  - type: text
+    name: 'Tick a relevant faction clock.'
+    description: 'Tick a relevant faction clock.'
+  - type: text
+    name: 'Increase the magnitude of the ongoing trouble.'
+    description: 'Increase the magnitude of the ongoing trouble.'

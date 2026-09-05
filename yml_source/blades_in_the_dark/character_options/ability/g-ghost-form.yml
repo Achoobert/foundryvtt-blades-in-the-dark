@@ -1,0 +1,45 @@
+_id: 1Fr9lhCxrxeuDORM
+name: (G) Ghost Form
+type: ability
+system:
+  description: >-
+    You are now a concentration of electroplasmic vapor which resembles your living body and clothes. You may weakly
+    interact with the physical world and vice versa. You're vulnerable to arcane powers and electroplasmic effects. You
+    move about by floating and may fly swiftly without tiring. You may slowly flow through small openings as a vapor.
+    You chill the area around you and are terrifying for the living to behold. You are affected by spiritbane charms
+    (take 2 drain to overcome the repulsion). Whenever you would take stress, take drain instead. When you would take
+    trauma, take gloom instead.
+  class: Ghost
+  price: 1
+  purchased: false
+  class_default: true
+  logic: ''
+effects:
+  - _id: s09FPx1P0xT9I56U
+    changes:
+      - key: data.stress.name
+        mode: 5
+        value: BITD.Drain
+      - key: data.trauma.name
+        mode: 5
+        value: BITD.Gloom
+      - key: data.trauma.options
+        mode: 5
+        value: '["chaotic", "destructive", "furious", "obsessive", "territorial", "savage"]'
+    disabled: false
+    duration:
+      startTime: null
+    icon: systems/blades-in-the-dark/styles/assets/icons/Icon.3_13.png
+    label: Ghost Form
+    origin: Item.gVmekhH5C3fudC3m
+    transfer: true
+    flags: {}
+    tint: null
+folder: null
+sort: 0
+permission:
+  default: 0
+  hp9rhyB0AtTZTutm: 3
+flags:
+  core:
+    sourceId: Item.gVmekhH5C3fudC3m

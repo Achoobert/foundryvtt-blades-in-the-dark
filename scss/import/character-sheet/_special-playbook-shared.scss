@@ -1,0 +1,107 @@
+& * {
+  .special-playbook-section {
+      .unique-data {
+        font-size: 13px;
+      }
+  
+      .unique-card {
+        border: 1px solid $lightgray;
+        border-radius: 6px;
+        background: #f7f7f7;
+        margin-bottom: 8px;
+        overflow: hidden;
+      }
+  
+      .unique-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 10px;
+        background: #e4e4e4;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 13px;
+  
+        &.accent {
+          background: #c45a1a;
+          color: #fff;
+        }
+  
+        .unique-card-tag,
+        .unique-card-rule {
+          font-weight: normal;
+          text-transform: none;
+          color: #555;
+          font-size: 11px;
+        }
+  
+        &.accent .unique-card-tag {
+          color: #ffe8d6;
+        }
+      }
+  
+      .unique-card-body {
+        padding: 8px 10px;
+        background: #fff;
+      }
+  
+      .unique-blurb {
+        margin: 0 0 8px;
+        font-size: 12px;
+        line-height: 1.35;
+  
+        &.italic {
+          font-style: italic;
+        }
+      }
+  
+      .field-under {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        min-width: 0;
+  
+        input[type="text"],
+        textarea {
+          border: none;
+          border-bottom: 1px solid $gray;
+          border-radius: 0;
+          background: transparent;
+          width: 100%;
+          padding: 2px 0;
+        }
+  
+        label {
+          font-size: 10px;
+          font-weight: bold;
+          text-transform: uppercase;
+          color: #444;
+        }
+  
+        &.wide {
+          grid-column: 1 / -1;
+        }
+  
+        &.grow {
+          flex: 1;
+        }
+      }
+  
+      .field-abilities {
+        grid-column: 1 / -1;
+  
+        label {
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 11px;
+        }
+  
+        textarea {
+          width: 100%;
+          border: 1px solid $lightgray;
+          min-height: 40px;
+        }
+      }
+  }
+}

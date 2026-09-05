@@ -1,0 +1,14 @@
+_id: 56t1bRDXIxGDJhKd
+name: (Le) Venomous
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    Choose a drug or poison (from your bandolier stock) to which you have become immune. You can push yourself to
+    secrete it through your skin or saliva or exhale it as a vapor.
+  class: Leech
+  price: '1'
+folder: EorKoKOCKsvC93ZA
+sort: 800001
+flags: {}

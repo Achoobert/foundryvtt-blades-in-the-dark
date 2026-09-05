@@ -1,0 +1,125 @@
+_id: ORP0DFYT11tZG2bn
+name: Assassins
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_type
+system:
+  description: Murderers for Hire
+  experience_clues: |-
+    - Execute a successful accident, disappearance, murder, or ransom operation.
+    - Contend with challenges above your current station.
+    - Bolster your crew's reputation or develop a new one.
+    - Express the goals, drives, inner conflict, or essential nature of the crew.
+  turfs:
+    '1':
+      name: Training Rooms
+      value: false
+      description: +1 scale for your Skulks cohorts
+      connects:
+        - right
+        - bottom
+    '2':
+      name: Vice Den
+      value: false
+      description: (Tier roll) - Heat = coin in downtime
+      connects:
+        - left
+        - bottom
+    '3':
+      name: Fixer
+      value: false
+      description: +2 coins for lower class targets
+      connects:
+        - bottom
+    '4':
+      name: Informants
+      value: false
+      description: +1d gather info for scores
+      connects:
+        - right
+        - bottom
+    '5':
+      name: Hagfish Farm
+      value: false
+      description: Body disposal, +1d to reduce heat after killing
+      connects:
+        - left
+        - bottom
+    '6':
+      name: Victim Trophies
+      value: false
+      description: +1rep per score
+      connects:
+        - top
+        - bottom
+    '7':
+      name: BITD.Turf
+      value: false
+      description: ''
+      connects:
+        - top
+        - right
+        - bottom
+    '8':
+      name: BITD.Lair
+      value: 1
+      description: ''
+      connects:
+        - left
+        - top
+        - right
+        - bottom
+    '9':
+      name: BITD.Turf
+      value: false
+      description: ''
+      connects:
+        - left
+        - top
+        - right
+    '10':
+      name: Cover Operation
+      value: false
+      description: '-2 heat per score'
+      connects:
+        - left
+        - top
+        - bottom
+    '11':
+      name: Protection Racket
+      value: false
+      description: (Tier roll) - Heat = coin in downtime
+      connects:
+        - top
+        - right
+    '12':
+      name: Infirmary
+      value: false
+      description: +1d to healing rolls
+      connects:
+        - left
+        - top
+    '13':
+      name: Envoy
+      value: false
+      description: +2 coin for high-class targets
+      connects:
+        - top
+    '14':
+      name: Cover Identities
+      value: false
+      description: +1d engagement for deception and social plans
+      connects:
+        - right
+    '15':
+      name: City Records
+      value: false
+      description: +1d engagement for stealth plans
+      connects:
+        - left
+        - top
+folder: null
+sort: 100001
+flags: {}
+img: systems/blades-in-the-dark/styles/assets/icons/Icon.2_32.png

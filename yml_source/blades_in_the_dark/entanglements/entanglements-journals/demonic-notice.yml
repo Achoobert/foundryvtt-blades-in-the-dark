@@ -1,0 +1,13 @@
+name: Demonic Notice
+content: >-
+  <p>A demon approaches the crew with a dark offer. Accept their bargain, hide until it loses interest (forfeit<strong>
+  3 rep</strong>), or deal with it another way.</p>
+folder: null
+sort: 0
+permission:
+  default: 0
+  thWDvNEhl7M3mC2d: 3
+flags:
+  core:
+    sourceId: JournalEntry.cxGl35wCdByk8N9x
+_id: BJLd501vCFsJlrCN

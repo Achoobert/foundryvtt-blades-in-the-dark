@@ -1,0 +1,13 @@
+_id: MOZAojcYM92lrDcK
+name: A Large Weapon
+permission:
+  default: 0
+type: item
+system:
+  class: ''
+  load: '2'
+  description: >-
+    A weapon meant for two hands. A battle-axe, greatsword, warhammer, or pole-arm. A hunting rifle. A blunderbuss. A
+    bow or crossbow.
+sort: 500000
+flags: {}

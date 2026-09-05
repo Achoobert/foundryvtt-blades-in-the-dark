@@ -2,6 +2,7 @@ import {BladesSheet} from "./blades-sheet.js";
 import {BladesActiveEffect} from "./blades-active-effect.js";
 import {BladesHelpers} from "./blades-helpers.js";
 import { enrichHTML } from "./compat.js";
+import { simpleRollPopup } from "./blades-roll.js";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -36,7 +37,9 @@ export class BladesActorSheet extends BladesSheet {
         // Calculate Load
         let loadout = 0;
         sheetData.items.forEach(i => {
-            loadout += (i.type === "item") ? parseInt(i.system.load) : 0
+            if (i.type !== "item") return;
+            if (i.system.equipped) loadout += parseInt(i.system.load) || 0;
+            if (i.system.bonus_equipped) loadout += parseInt(i.system.load) || 0;
         });
 
         //Sanity Check
@@ -119,23 +122,66 @@ export class BladesActorSheet extends BladesSheet {
         const selectedClass = this.actor.items.find(i => i.type === "class") ?? null;
         sheetData.selectedClass = selectedClass;
 
-        const abilityResult = await this._buildCatalog("ability", selectedClass);
-        sheetData.abilityCatalog = abilityResult.catalog;
-        sheetData.otherAbilities = abilityResult.other;
-        sheetData.abilityShortList = abilityResult.catalog
-            .filter(a => a.ownedCount > 0)
-            .map(a => a.name)
-            .concat(abilityResult.other.map(i => BladesHelpers.trimClassFromName(i.name)))
+        const PLAYBOOK_UNIQUE = {
+            "Hound": "hound",
+            "Hull": "hull",
+            "Intellectual": "intellectual",
+            "Operative": "operative",
+            "Paranormalist": "paranormalist",
+            "Radical": "radical",
+            "Swinger": "swinger",
+            "Veteran": "veteran",
+            "Vampire": "vampire",
+            "Time Traveler Future": "time_traveler",
+            "Time Traveler Past": "time_traveler",
+        };
+        sheetData.playbookUnique = selectedClass ? (PLAYBOOK_UNIQUE[selectedClass.name] ?? null) : null;
+
+        // Special Abilities: only what the actor actually owns, regardless of class -
+        // the full class ability catalog is no longer shown as an inline checklist (use
+        // the "Add Ability" compendium picker instead). Abilities with uses > 0 get
+        // per-use tracking checkboxes inline on the name line (uses_text is optional label).
+        const ownedAbilities = this.actor.items.filter(i => i.type === "ability");
+        sheetData.otherAbilities = ownedAbilities.map(i => {
+            const usesMax = Math.max(0, parseInt(i.system?.uses) || 0);
+            const usesUsed = Math.max(0, parseInt(i.system?.uses_used) || 0);
+            const usesText = (i.system?.uses_text || "").trim();
+            return {
+                _id: i.id,
+                name: i.name,
+                system: i.system,
+                description: BladesHelpers.stripHtml(i.system?.description || ""),
+                usesMax,
+                usesUsed,
+                usesText,
+                usesIndexes: Array.from({ length: usesMax }, (_, idx) => idx + 1)
+            };
+        });
+        sheetData.abilityShortList = ownedAbilities
+            .map(i => BladesHelpers.trimClassFromName(i.name))
             .join(" - ");
 
         const itemResult = await this._buildCatalog("item", selectedClass, { slotsField: "num_available" });
         sheetData.itemCatalog = itemResult.catalog;
-        sheetData.otherItems = itemResult.other.map(i => ({
-            _id: i.id,
-            name: i.name,
-            system: i.system,
-            description: BladesHelpers.stripHtml(i.system?.description || "")
-        }));
+        // Other Items: the first checkbox marks the item as equipped/carried (and is what
+        // counts against Load); if the item has more than one use (e.g. a gun with 3 shots),
+        // up to 2 additional checkboxes track uses spent, independent of Load. An item with
+        // num_available > 1 (e.g. carrying a second copy) also gets a bonus checkbox that
+        // counts its Load a second time, independent of the main equip/use boxes.
+        sheetData.otherItems = itemResult.other.map(i => {
+            const usesMax = Math.min(3, Math.max(1, parseInt(i.system?.uses) || 1));
+            const numAvailable = Math.max(1, parseInt(i.system?.num_available) || 1);
+            return {
+                _id: i.id,
+                name: i.name,
+                system: i.system,
+                description: BladesHelpers.stripHtml(i.system?.description || ""),
+                extraUseIndexes: Array.from({ length: usesMax - 1 }, (_, idx) => idx + 1),
+                usesSpent: Math.max(0, parseInt(i.system?.uses_used) || 0),
+                hasBonus: numAvailable > 1,
+                bonusLabel: `x${numAvailable}`
+            };
+        });
 
         return sheetData;
     }
@@ -254,6 +300,11 @@ export class BladesActorSheet extends BladesSheet {
             BladesHelpers.addCustomContact(this.actor);
         });
 
+        // Quick-access roll popup (Fortune / Gather Info / Engagement / Indulge Vice / Acquire Asset)
+        html.find('.roll-quick-popup').click(async () => {
+            await simpleRollPopup();
+        });
+
         // Add a Key
         html.find('.add-key-popup').click(() => {
             BladesHelpers.addKeyPopup(this.actor);
@@ -325,11 +376,43 @@ export class BladesActorSheet extends BladesSheet {
             await item.update({ "system.equipped": ev.currentTarget.checked });
         });
 
+        // Item use tracking (e.g. shots left in a gun): independent checkboxes reconciled by
+        // count, same pattern as ability-uses-toggle. Spending a use never affects Load - only
+        // the equip checkbox above does that.
+        html.find('.item-use-toggle').change(async (ev) => {
+            const row = ev.currentTarget.closest('.item-uses');
+            if (!row) return;
+            const item = this.actor.items.get(ev.currentTarget.dataset.itemId);
+            if (!item) return;
+            const checkedCount = row.querySelectorAll('.item-use-toggle:checked').length;
+            await item.update({ "system.uses_used": checkedCount });
+        });
+
+        // Bonus checkbox for a second carried copy (num_available > 1): an independent toggle
+        // that counts the item's Load a second time when checked.
+        html.find('.item-bonus-toggle').change(async (ev) => {
+            const itemId = ev.currentTarget.dataset.itemId;
+            const item = this.actor.items.get(itemId);
+            if (!item) return;
+            await item.update({ "system.bonus_equipped": ev.currentTarget.checked });
+        });
+
         // Remove an owned item that falls outside the class catalog.
         html.find('.other-item-delete').click(async (ev) => {
             const row = ev.currentTarget.closest('.other-item');
             if (!row) return;
             await this.actor.deleteEmbeddedDocuments("Item", [row.dataset.itemId]);
+        });
+
+        // Ability use tracking: independent checkboxes per system.uses slot, reconciled by
+        // count (like the Loadout slot checkboxes) rather than by which box was clicked.
+        html.find('.ability-uses-toggle').change(async (ev) => {
+            const row = ev.currentTarget.closest('.ability-uses');
+            if (!row) return;
+            const item = this.actor.items.get(ev.currentTarget.dataset.itemId);
+            if (!item) return;
+            const checkedCount = row.querySelectorAll('.ability-uses-toggle:checked').length;
+            await item.update({ "system.uses_used": checkedCount });
         });
 
     }

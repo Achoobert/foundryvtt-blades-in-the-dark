@@ -1,0 +1,18 @@
+_id: e5d50489e035a52e
+name: Always Hustling
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Every personal business phase, mark +1 bank, and you may give yourself or another crew member +1 downtime action.
+    What’s your side hustle?
+  class: Swinger
+  class_default: Swinger
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

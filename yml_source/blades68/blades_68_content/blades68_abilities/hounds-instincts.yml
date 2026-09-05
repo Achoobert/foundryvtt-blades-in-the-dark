@@ -1,0 +1,18 @@
+_id: c49553d0854f76a8
+name: Hound's Instincts
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    When you push yourself, you can also do one of the following: figure out where to go next, even with zero leads—make
+    someone stop and listen to you for a few moments, no matter how unlikely it is.
+  class: Hound
+  class_default: Hound
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

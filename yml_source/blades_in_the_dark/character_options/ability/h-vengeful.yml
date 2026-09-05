@@ -1,0 +1,14 @@
+_id: eVTVGgTOhaqSpCca
+name: (H) Vengeful
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    You gain an additional xp trigger: You got payback against someone who harmed you or someone you care about. If your
+    crew helped you get payback, also mark crew xp.
+  class: Hound
+  price: '1'
+folder: PaUiEAoDgddaXGEi
+sort: 700001
+flags: {}

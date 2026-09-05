@@ -1,0 +1,18 @@
+_id: 338710833305ad2c
+name: Manifest
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Take 1 Drain to flow through the electroplasmic pathways of the resonance field in order to instantly travel to any
+    place you knew intimately in life, or to answer the summoning call when compelled.
+  class: Ghost
+  class_default: Ghost
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

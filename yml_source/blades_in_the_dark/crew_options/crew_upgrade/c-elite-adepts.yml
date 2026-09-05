@@ -1,0 +1,15 @@
+_id: uk7hZWs9FTvwjgUN
+name: (C) Elite Adepts
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: All of your cohorts with the Adepts type get +1d to quality rolls for Adept-related actions.
+  class: Cult
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 1300000
+flags: {}

@@ -1,0 +1,14 @@
+_id: 6ab7341b1b515bb6
+name: Spiritbane charm
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: ''
+  class: Vampire
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

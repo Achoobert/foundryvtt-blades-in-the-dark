@@ -1,0 +1,17 @@
+_id: 94c967b3395e954d
+name: Deep (+1 key/deadlock)
+type: crew_upgrade
+img: icons/svg/item-bag.svg
+system:
+  description: ''
+  class: ''
+  price: '3'
+  purchased: false
+  logic: ''
+  crew_type: Hit Squad
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

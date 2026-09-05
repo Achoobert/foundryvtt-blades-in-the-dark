@@ -1,0 +1,15 @@
+_id: TzwUn0dCHX1GIO4b
+name: (Sm) Vehicle 2
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: The Vehicle gets Armor.
+  class: Smugglers
+  price: '2'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 3200000
+flags: {}

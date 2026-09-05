@@ -1,0 +1,21 @@
+name: Sale
+type: hunting_grounds
+_id: 2UUqMnwJRcWYv6lY
+img: systems/blades-in-the-dark/styles/assets/icons/Icons8_89.png
+system:
+  description: <p>A significant transcation with a special buyer of illicit product.</p>
+  class: Hawkers
+effects: []
+folder: null
+sort: 400000
+ownership:
+  default: 0
+  B7A33cKMwj3J5fQB: 3
+flags: {}
+_stats:
+  systemId: blades-in-the-dark
+  systemVersion: '4.9'
+  coreVersion: '11.315'
+  createdTime: 1710720550284
+  modifiedTime: 1710727663999
+  lastModifiedBy: B7A33cKMwj3J5fQB

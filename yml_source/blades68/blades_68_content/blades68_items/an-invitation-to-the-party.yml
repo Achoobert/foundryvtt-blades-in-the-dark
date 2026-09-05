@@ -1,0 +1,14 @@
+_id: 02c747a14208163f
+name: An invitation to the party
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: Everybody knows it's not a party if you're not invited.
+  class: Swinger
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

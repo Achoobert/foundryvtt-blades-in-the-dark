@@ -1,0 +1,13 @@
+_id: 0hEDZqN4V1adHrZo
+name: (W) Spirit bottles (2)
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: item
+system:
+  description: An arcane device used to trap a spirit. A metal and crystalline cylinder, the size of a loaf of bread.
+  class: Whisper
+  load: '1'
+folder: null
+sort: 3300000
+flags: {}

@@ -1,0 +1,18 @@
+_id: 0f38a844fddddb00
+name: Mentalist
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    You can deduce trivial details about anyone. Study them to reveal their current intentions as well as a deep desire
+    they’re keeping secret or didn’t even know they had; gain +1d and potency when acting on this information.
+  class: Intellectual
+  class_default: Intellectual
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

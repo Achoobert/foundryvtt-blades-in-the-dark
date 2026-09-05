@@ -1,0 +1,15 @@
+_id: AY5o0P6XfyR9zQi4
+name: (Sh) Ghost Echoes
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: >-
+    From weird experience or occult ritual, all crew members gain the ability to see and interact with the ghostly
+    structures, streets, and objects within the echo of Doskvol that exists in the ghost field.
+  class: Shadows
+  price: '1'
+folder: null
+sort: 2700001
+flags: {}

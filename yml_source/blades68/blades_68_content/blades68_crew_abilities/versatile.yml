@@ -1,0 +1,16 @@
+_id: a49d0ffc67c5d161
+name: Versatile
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: Choose a special ability from another crew (can be taken more than once).
+  class: ''
+  class_default: ''
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,15 @@
+_id: DsRbKI3ZVcVAFLi9
+name: (H) Composed
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: Each PC gets +1 stress box.
+  class: Hawkers
+  price: '3'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 2000000
+flags: {}

@@ -1,0 +1,21 @@
+name: Espionage
+type: hunting_grounds
+_id: 2Aj3aqMWqqACv4KU
+img: systems/blades-in-the-dark/styles/assets/icons/Icon.7_75.png
+system:
+  description: <p>Obtain secret information by covert or clandestine means.</p>
+  class: Shadows
+effects: []
+folder: null
+sort: 300000
+ownership:
+  default: 0
+  B7A33cKMwj3J5fQB: 3
+flags: {}
+_stats:
+  systemId: blades-in-the-dark
+  systemVersion: '4.9'
+  coreVersion: '11.315'
+  createdTime: 1710724105704
+  modifiedTime: 1710727688204
+  lastModifiedBy: B7A33cKMwj3J5fQB

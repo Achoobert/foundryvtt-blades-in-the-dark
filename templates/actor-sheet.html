@@ -32,7 +32,7 @@
             {{/times_from}}
       
             {{/multiboxes}}
-      
+
           </div>
         </div>
       </div>
@@ -64,6 +64,12 @@
     </div>
 
   </section>
+
+  <div class="quick-roll-actions flex-horizontal">
+    <a class="roll-quick-popup rollable-text" data-tooltip="{{localize 'BITD.RollSomeDice'}}">
+      <i class="fas fa-dice"></i> {{localize "BITD.RollSomeDice"}}
+    </a>
+  </div>
 
   <div class="header_subline">
   {{!-- Trait line: Heritage - Background - Vice - Class - Crew, spanning the full header width --}}
@@ -275,7 +281,7 @@
       {{#if blades68}}
       <div id="character-{{_id}}-keys-container" class="keys-container section-block">
         <header class="keys-header">
-          <span class="keys-side">{{localize "BITD.Keys"}}</span>
+          <span class="keys-side" data-tooltip="{{localize 'BITD.KeysExplanation'}}">{{localize "BITD.Keys"}}</span>
           <a class="add-key-popup" data-tooltip="{{localize 'BITD.AddKey'}}"><i class="fas fa-plus-square"></i></a>
           <span class="header-spacer"></span>
           <span class="deadlocks-side">{{localize "BITD.Deadlocks"}}</span>
@@ -359,31 +365,23 @@
         </header>
 
         <div class="section-body">
-          {{#if abilityCatalog.length}}
-          <ul class="ability-catalog check-list">
-            {{#each abilityCatalog as |ability index|}}
-            <li class="ability-catalog-item catalog-item" data-item-type="ability" data-item-name="{{ability.name}}" data-source-id="{{ability.id}}">
-              <input type="checkbox" class="catalog-toggle"
-                     id="character-{{../_id}}-ability-catalog-{{index}}"
-                     {{#if ability.ownedCount}}checked{{/if}}>
-              <label for="character-{{../_id}}-ability-catalog-{{index}}">
-                <span class="ability-name">{{ability.name}}:</span>
-                <span class="ability-description">{{ability.description}}</span>
-              </label>
-            </li>
-            {{/each}}
-          </ul>
-          {{else}}
-          <p class="hint">{{localize "BITD.NoClassSelected"}}</p>
-          {{/if}}
-
           {{#if otherAbilities.length}}
           <div class="other-abilities">
-            {{#if abilityCatalog.length}}<div class="black-label">{{localize "BITD.OtherAbilities"}}</div>{{/if}}
             {{#each otherAbilities as |item id|}}
             <div class="item flex-horizontal compact" data-item-id="{{item._id}}">
-              <div class="item-body flex-horizontal">
-                <b><div class="item-name">{{item.name}}</div></b>
+              <div class="item-body flex-vertical">
+                <div class="item-name-row">
+                  <b class="item-name">{{item.name}}{{#if item.usesMax}}:{{/if}}</b>
+                  {{#if item.usesMax}}
+                  {{#if item.usesText}}<span class="ability-uses-text">{{item.usesText}}</span>{{/if}}
+                  <span class="ability-uses">
+                    {{#each item.usesIndexes as |useNum useIdx|}}
+                    <input type="checkbox" class="ability-uses-toggle" id="character-{{../../_id}}-ability-{{../_id}}-uses-{{useIdx}}"
+                           data-item-id="{{../_id}}" {{#if (lteq useNum ../usesUsed)}}checked{{/if}}>
+                    {{/each}}
+                  </span>
+                  {{/if}}
+                </div>
                 <div class="item-description">{{{item.system.description}}}</div>
               </div>
               <a class="item-control item-delete" style="max-width: 10px !important;" style="max-width: 10px !important;"
@@ -393,8 +391,15 @@
             </div>
             {{/each}}
           </div>
+          {{else}}
+          <p class="hint">{{localize "BITD.NoAbilitiesAdded"}}</p>
           {{/if}}
         </div>
+        {{#if playbookUnique}}
+        <div class="section-body special-playbook-section">
+          {{> "systems/blades68/templates/parts/unique-data.html"}}
+        </div>
+        {{/if}}
       </section>
 
     </div>
@@ -436,9 +441,20 @@
             <ul class="item-catalog check-list">
               {{#each otherItems as |item id|}}
               <li class="item-catalog-item catalog-item other-item" data-item-id="{{item._id}}" data-tooltip="{{item.description}}">
-                <input type="checkbox" class="item-equipped-toggle" id="character-{{../_id}}-other-item-{{item._id}}"
-                       data-item-id="{{item._id}}" {{#if item.system.equipped}}checked{{/if}}>
+                <span class="item-uses">
+                  <input type="checkbox" class="item-equipped-toggle" id="character-{{../_id}}-other-item-{{item._id}}"
+                         data-item-id="{{item._id}}" {{#if item.system.equipped}}checked{{/if}}>
+                  {{#each item.extraUseIndexes as |useNum useIdx|}}
+                  <input type="checkbox" class="item-use-toggle" id="character-{{../../_id}}-other-item-{{../_id}}-use-{{useIdx}}"
+                         data-item-id="{{../_id}}" {{#if (lteq useNum ../usesSpent)}}checked{{/if}}>
+                  {{/each}}
+                </span>
                 <label for="character-{{../_id}}-other-item-{{item._id}}">{{item.name}}</label>
+                {{#if item.hasBonus}}
+                <input type="checkbox" class="item-bonus-toggle" id="character-{{../_id}}-other-item-{{item._id}}-bonus"
+                       data-item-id="{{item._id}}" {{#if item.system.bonus_equipped}}checked{{/if}}>
+                <label class="item-bonus-label" for="character-{{../_id}}-other-item-{{item._id}}-bonus">{{item.bonusLabel}}</label>
+                {{/if}}
                 <a class="item-control other-item-delete" data-tooltip="{{localize 'BITD.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
               </li>
               {{/each}}
@@ -476,25 +492,25 @@
         </div>
       </section>
 
-      <section class="xp-panel section-block" data-section-key="xp">
-        <header class="section-header">
-          <span>{{localize "BITD.XP"}}</span>
-        </header>
-        <div class="section-body">
-          <ul>
-            <li>{{localize "BITD.ClassExpClue1"}}</li>
-            <p>{{localize "BITD.ClassExpClueDescription"}}</p>
-            {{#if selectedClass.system.experience_clues}}
-            <li>{{{selectedClass.system.experience_clues}}}</li>
-            {{/if}}
-            <li>{{localize "BITD.ClassExpClue2"}}</li>
-            <li>{{localize "BITD.ClassExpClue3"}}</li>
-          </ul>
-        </div>
-      </section>
-
     </div>
 
+  </section>
+
+  <section class="xp-panel section-block" data-section-key="xp">
+    <header class="section-header">
+      <span>{{localize "BITD.XP"}}</span>
+    </header>
+    <div class="section-body">
+      <ul>
+        <li>{{{localize "BITD.ClassExpClue1"}}}</li>
+        <li>{{{localize "BITD.ClassExpClue2"}}}</li>
+        <p>{{localize "BITD.ClassExpClueDescription"}}</p>
+        {{#if selectedClass.system.experience_clues}}
+        <li><i>{{{selectedClass.system.experience_clues}}}</i></li>
+        {{/if}}
+        <li><i>{{{localize "BITD.ClassExpClue3"}}}</i></li>
+      </ul>
+    </div>
   </section>
 
   {{!-- Secondary tabs: free-form Notes, Active Effects, full item list --}}

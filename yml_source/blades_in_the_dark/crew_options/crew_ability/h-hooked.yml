@@ -1,0 +1,13 @@
+_id: lU3qfE0CS33D3Ire
+name: (H) Hooked
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: Your gang members use your product. Add the savage,unreliable, or wild flaw to your gangs to give them +1 quality.
+  class: Hawkers
+  price: '1'
+folder: null
+sort: 2300001
+flags: {}

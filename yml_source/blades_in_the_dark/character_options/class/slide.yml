@@ -1,0 +1,56 @@
+_id: YUGDdyADj0PTBVcP
+name: Slide
+type: class
+img: systems/blades-in-the-dark/styles/assets/icons/Icon.3_39.png
+system:
+  description: A subtle manipulator and spy
+  logic: ''
+  experience_clues: You addressed a challenge with deception or influence.
+  base_skills:
+    hunt:
+      - 0
+    study:
+      - 0
+    survey:
+      - 0
+    tinker:
+      - 0
+    finesse:
+      - 0
+    prowl:
+      - 0
+    skirmish:
+      - 0
+    wreck:
+      - 0
+    attune:
+      - 0
+    command:
+      - 0
+    consort:
+      - 1
+    sway:
+      - 2
+effects:
+  - _id: S1Pt0TEkvFsGZn2Z
+    changes:
+      - key: data.acquaintances_label
+        mode: 5
+        value: BITD.SlyFriends
+      - key: data.experience_clues
+        mode: 2
+        value: BITD.ExpChallengeDeception
+    disabled: false
+    duration:
+      startTime: null
+    icon: systems/blades-in-the-dark/styles/assets/icons/Icon.3_13.png
+    label: Slide
+    origin: Compendium.blades-in-the-dark.class.YUGDdyADj0PTBVcP
+    transfer: true
+    flags: {}
+    tint: null
+folder: null
+sort: 600000
+permission:
+  default: 0
+flags: {}

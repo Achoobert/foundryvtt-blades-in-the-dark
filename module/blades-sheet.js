@@ -224,12 +224,17 @@ export class BladesSheet extends BaseActorSheet {
       for (const item of group) {
         const trimmedName = BladesHelpers.trimClassFromName(item.name);
         const description = BladesHelpers.stripHtml(item.system?.description || "");
+        const escapedDescription = foundry.utils.escapeHTML(description);
+        const descriptionHtml = description
+          ? `<div class="item-description">${escapedDescription}</div>`
+          : "";
 
         items_html += `
           <div class="item-block">
             <input id="select-item-${item._id}" type="${input_type}" name="select_items" value="${item._id}">
-            <label for="select-item-${item._id}" title="${description}">
-              ${game.i18n.localize(trimmedName)}
+            <label for="select-item-${item._id}" title="${escapedDescription}">
+              <div class="item-name">${game.i18n.localize(trimmedName)}</div>
+              ${descriptionHtml}
             </label>
           </div>`;
       }

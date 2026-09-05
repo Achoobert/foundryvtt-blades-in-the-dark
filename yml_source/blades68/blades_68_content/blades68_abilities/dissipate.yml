@@ -1,0 +1,19 @@
+_id: f3e9bb76e730abc5
+name: Dissipate
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    You can disperse the vapor of your ghostly form in order to pass through solid objects for a moment. Take 1 Drain
+    when you dissipate, plus 1 Drain for each feature: It lasts longer (a minute—an hour—a day)—you also become
+    invisible—anything that passes through your form becomes dangerously electrified or frozen.
+  class: Ghost
+  class_default: Ghost
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,18 @@
+_id: c8ec39e3998f2b16
+name: Terrible Power
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Take 1 Stress to perform a feat of superhuman strength or speed (run faster than an autopod, bend steel with bare
+    hands, leap onto the roof of a building, etc.). This factors into effect.
+  class: Vampire
+  class_default: Vampire
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

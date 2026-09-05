@@ -1,0 +1,17 @@
+_id: 97311521dd935b77
+name: Elite Hustlers
+type: crew_upgrade
+img: icons/svg/item-bag.svg
+system:
+  description: ''
+  class: ''
+  price: '1'
+  purchased: false
+  logic: ''
+  crew_type: ''
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

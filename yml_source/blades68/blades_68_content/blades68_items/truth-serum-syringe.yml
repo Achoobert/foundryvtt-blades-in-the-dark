@@ -1,0 +1,16 @@
+_id: f9a034f22dae4155
+name: Truth serum syringe
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Delivers one dose of a truth serum. The victim becomes delirious and suggestible for up to an hour, open to
+    answering all sorts of questions.
+  class: Operative
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

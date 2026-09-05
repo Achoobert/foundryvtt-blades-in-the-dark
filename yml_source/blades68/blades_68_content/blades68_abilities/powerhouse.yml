@@ -1,0 +1,18 @@
+_id: 252711bd1689c9a9
+name: Powerhouse
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Take 1 Drain to perform a feat of extreme strength or speed (run faster than an autopod, rend metal with your hands,
+    etc.). This factors into effect.
+  class: Hull
+  class_default: Hull
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

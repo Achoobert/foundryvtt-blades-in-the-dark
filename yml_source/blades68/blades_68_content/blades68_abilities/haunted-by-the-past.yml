@@ -1,0 +1,20 @@
+_id: 2cd29d5c1b9a107b
+name: Haunted by the Past
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    You are a visitor from the past, here on an important mission. Your mind starts muddled from the time travel
+    process. Every time you fill your playbook xp, you gain clarity—choose a new Time Traveler trait and an ability from
+    one of the Blades in the Dark playbooks, and take another temporal glitch, and note down a new detail of your
+    mission. You burn brightly but briefly. Make the most of your time here.
+  class: Time Traveler Past
+  class_default: Time Traveler Past
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

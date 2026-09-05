@@ -1,0 +1,15 @@
+_id: TUB6DXpLFJFKKWd0
+name: (Br) Blood Brothers
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: >-
+    When you fight alongside your cohorts in combat, they get +1d for teamwork rolls (setup and group actions). All of
+    your cohorts get the Thugs type for free (if they're already Thugs, add another type).
+  class: Bravos
+  price: '1'
+folder: null
+sort: 1000001
+flags: {}

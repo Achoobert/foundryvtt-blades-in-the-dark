@@ -1,0 +1,21 @@
+name: (V) A Void in the Echo
+type: ability
+system:
+  description: >-
+    You are invisible to spirits and may not be harmed by them. Take 2 stress to cause living things to avert their gaze
+    and fail to observe you for a few moments.
+  class: Vampire
+  price: 1
+  purchased: false
+  class_default: false
+  logic: ''
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+  hp9rhyB0AtTZTutm: 3
+flags:
+  core:
+    sourceId: Item.izVTIEHEajHmXyp0
+_id: 2FsIWx3Zl7nqa5tX

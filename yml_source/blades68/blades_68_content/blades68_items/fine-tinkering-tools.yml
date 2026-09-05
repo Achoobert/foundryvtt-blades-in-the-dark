@@ -1,0 +1,17 @@
+_id: f535f95896d1eb01
+name: Fine tinkering tools
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Tools and spare parts for messing with electronics and mechanisms. A wrench, drill, and spanner. Tweezers, pliers,
+    precision screwdrivers. A soldering iron. A second wrench. Oscilloscope, circuit tester, and heat sink. Jumper
+    wires. Magnifying loupe. 
+  class: Intellectual
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,13 @@
+_id: RSVMhP1X0A5sxDYd
+name: (Br) Forged In The Fire
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_ability
+system:
+  description: Each PC has been toughened by cruel experience. You get +1d to resistance rolls.
+  class: Bravos
+  price: '1'
+folder: null
+sort: 1300001
+flags: {}

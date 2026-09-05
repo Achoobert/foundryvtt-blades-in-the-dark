@@ -1,0 +1,33 @@
+name: (Hu) Compartments
+type: ability
+system:
+  description: Your items are built-in to your frame and may recess beneath panels out of sight. Your frame can now carry +2 load.
+  class: Hull
+  price: 1
+  purchased: false
+  class_default: false
+  logic: ''
+effects:
+  - _id: A8tnAf75orjXExQO
+    changes:
+      - key: data.base_max_load
+        mode: 2
+        value: '2'
+    disabled: false
+    duration:
+      startTime: null
+    icon: systems/blades-in-the-dark/styles/assets/icons/Icon.3_13.png
+    label: Compartments
+    origin: Item.5goOpDb9pPrONuRS
+    transfer: true
+    flags: {}
+    tint: null
+folder: null
+sort: 0
+permission:
+  default: 0
+  hp9rhyB0AtTZTutm: 3
+flags:
+  core:
+    sourceId: Item.5goOpDb9pPrONuRS
+_id: 997TgTTEonCWV3Sq

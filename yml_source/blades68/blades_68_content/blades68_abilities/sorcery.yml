@@ -1,0 +1,18 @@
+_id: a57131471171b234
+name: Sorcery
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    When you push yourself, you can also do one of the following: communicate without words—view another location
+    clairvoyantly—temporarily increase your strength and speed—supernaturally interface with electroplasmic technology.
+  class: Time Traveler Past
+  class_default: Time Traveler Past
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

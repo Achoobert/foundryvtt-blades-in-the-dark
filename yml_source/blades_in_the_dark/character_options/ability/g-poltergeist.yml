@@ -1,0 +1,22 @@
+name: (G) Poltergeist
+type: ability
+system:
+  description: >-
+    Take 1 drain to strongly interact with the physical world for a few moments (as if you had a normal body). Extend
+    the reach and magnitude of your interaction to include telekinetic force and electroplasmic discharges by taking
+    more drain (2-6).
+  class: Ghost
+  price: 1
+  purchased: false
+  class_default: false
+  logic: ''
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+  hp9rhyB0AtTZTutm: 3
+flags:
+  core:
+    sourceId: Item.8Plv2mwO3CxdEBIx
+_id: iUzWw5fsheEIbAfQ

@@ -1,0 +1,18 @@
+_id: 5e66a3e155afd6ba
+name: On the Side of the Oppressed
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    You loudly and openly oppose the Bluecoats and their authoritarianism. You may count each Wanted Level as if it were
+    turf.
+  class: Militants
+  class_default: Militants
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

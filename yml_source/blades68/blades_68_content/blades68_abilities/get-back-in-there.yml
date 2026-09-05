@@ -1,0 +1,18 @@
+_id: a8beba648c02055b
+name: Get Back In There
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    You were subject to experimental procedures designed to increase the shelf life of frontline soldiers. Permanently
+    fill in one of your healing clock segments. Take +1d to healing treatment rolls.
+  class: Veteran
+  class_default: Veteran
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

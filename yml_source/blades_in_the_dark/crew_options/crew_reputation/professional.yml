@@ -1,0 +1,10 @@
+name: Professional
+permission:
+  default: 0
+type: crew_reputation
+system:
+  description: ''
+folder: null
+sort: 500001
+flags: {}
+_id: TKcQBfHL9c7AZDm6

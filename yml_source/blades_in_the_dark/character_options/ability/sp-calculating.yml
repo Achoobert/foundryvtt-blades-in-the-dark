@@ -1,0 +1,14 @@
+_id: TDhvP6fV6PnTSrvC
+name: (Sp) Calculating
+permission:
+  default: 0
+type: ability
+system:
+  description: >-
+    Due  to  your  careful  planning,  during  downtime, you may give yourself or another crew member +1 downtime
+    action.
+  class: Spider
+  price: '1'
+folder: io6Cdw11wDXIixI3
+sort: 200001
+flags: {}

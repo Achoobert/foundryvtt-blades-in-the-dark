@@ -1,0 +1,24 @@
+_id: kM7i5aGLJ1l6z9a1
+name: Tycheros
+type: heritage
+img: icons/svg/village.svg
+system:
+  description: |-
+    <p>Tycheros is connected to the rest of the Shattered Isles by a Void Gate, a portal-like device that allows rail lines to pass through the resonance field. Tycherosi are rudely called "Visitors," and sometimes treated like space aliens. Any talk of demon blood is, of course, a relic of the superstitious past. If you choose Tycherosi heritage, also create an alien telltale that marks your character (e.g. green or blue skin, a large cranium, antennae, scales, claws, glowing eyes, webbed feet, gills, metallic skin, etc.).</p>
+    <p><strong>Examples:</strong></p>
+    <ul>
+      <li>Scientists</li>
+      <li>Confessors</li>
+      <li>Paranormal scholars</li>
+      <li>Steelhands</li>
+      <li>Diplomats</li>
+      <li>Political exiles</li>
+      <li>Bookstore owners</li>
+      <li>Translators</li>
+    </ul>
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

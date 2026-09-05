@@ -1,0 +1,15 @@
+_id: PxM18PdfZjFB3JYm
+name: Carriage House 2
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: Improves the carriage with armor and larger, swifter goats.
+  class: ''
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 600001
+flags: {}

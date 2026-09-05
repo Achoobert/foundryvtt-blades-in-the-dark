@@ -1,0 +1,20 @@
+_id: 76e185f56701b3f1
+name: Automaton
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    You are a soul powering a robotic body. You have human-like strength and senses, by default. Your frame has built-in
+    armor (this doesn't count for your load). Your former human feelings, interests, and connections are almost entirely
+    gone (you start with no keys). You may be repaired if damaged or destroyed. Whenever you would take Stress, take
+    Drain instead. Choose two frame features.
+  class: Hull
+  class_default: Hull
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

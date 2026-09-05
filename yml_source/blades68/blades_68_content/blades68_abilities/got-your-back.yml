@@ -1,0 +1,16 @@
+_id: 63aa3c62419a0552
+name: Got Your Back
+type: ability
+img: icons/svg/item-bag.svg
+system:
+  description: When you protect a teammate, clear 1 Stress and take +1d to any resistance rolls.
+  class: Veteran
+  class_default: Veteran
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

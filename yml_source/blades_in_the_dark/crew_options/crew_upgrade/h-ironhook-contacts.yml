@@ -1,0 +1,18 @@
+_id: vpHqPrZdM7Eas4gf
+name: (H) Ironhook Contacts
+permission:
+  default: 0
+  BwbqQh8sHfeKmUax: 3
+type: crew_upgrade
+system:
+  description: >-
+    Your Tier is effectively +1 higher in prison. This counts for any Tier-related element in prison, including the
+    incarceration roll. See page 148 of the Manual for details.
+  class: Hawkers
+  price: '1'
+  logic: ''
+  crew_type: ''
+folder: null
+sort: 1700000
+flags: {}
+img: icons/svg/mystery-man.svg

@@ -1,0 +1,19 @@
+_id: c56bdaef781d2344
+name: Mutual Aid
+type: crew_ability
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    You can lend support to one allied faction, and their Tier counts as one higher as long as you do. Your crew gets
+    one free downtime action to work one of that faction’s long-term project clocks, if you wish. You can switch support
+    once per downtime.
+  class: Militants
+  class_default: Militants
+  price: '1'
+  purchased: false
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

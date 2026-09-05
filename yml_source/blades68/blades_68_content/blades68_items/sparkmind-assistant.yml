@@ -1,0 +1,16 @@
+_id: decc5ac279a0a9b7
+name: Sparkmind assistant
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    Sparkminds are a form of artificial intelligence, utilizing a matrix of circuits and chips to harness the raw
+    intellect of a resonance entity. Where did you get yours? Did you invent it, steal it, or something else? 
+  class: Intellectual
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

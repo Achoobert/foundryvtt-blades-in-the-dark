@@ -1,0 +1,14 @@
+_id: 6a2c9401cd6fbed1
+name: Nondescript change of clothes
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: An outfit of perfectly ordinary cut, for blending in with the crowd of whatever district you're in.
+  class: Radical
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

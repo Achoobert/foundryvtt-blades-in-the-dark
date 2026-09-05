@@ -1,0 +1,16 @@
+_id: 7ad59a8e8d1604be
+name: Fine echo containment unit
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    A device used to hold a single resonance entity for containment and safe transport. Designed for Class I - IV
+    resonance entities. Not advised for Class V or above.
+  class: Paranormalist
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

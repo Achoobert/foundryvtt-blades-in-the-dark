@@ -1,0 +1,16 @@
+_id: 3e6edf3fa33067e7
+name: Pocketful of sleeping pills
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: >-
+    If someone takes a few of these pills they'll quickly fall unconscious for at least an hour. The victim’s sleep
+    isn’t paranormal, but it is deep — they can only be roused with some effort.
+  class: Swinger
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

@@ -1,0 +1,14 @@
+_id: 20e1116d8fd192ed
+name: Holo-projector
+type: item
+img: icons/svg/item-bag.svg
+system:
+  description: ''
+  class: Time Traveler Future
+  load: '0'
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}
