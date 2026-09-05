@@ -9,6 +9,7 @@ system:
     downtime, you automatically refill your bandoliers, so long as you have reasonable access to a supplier or workshop.
   class: Radical
   load: '0'
+  uses: 3
 effects: []
 folder: null
 sort: 0

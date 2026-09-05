@@ -9,6 +9,7 @@ system:
     unit.
   class: Paranormalist
   load: '0'
+  uses: 2
 effects: []
 folder: null
 sort: 0

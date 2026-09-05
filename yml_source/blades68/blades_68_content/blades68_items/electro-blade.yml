@@ -8,6 +8,7 @@ system:
     them, the explosive release of electricity will. 
   class: ''
   load: '1'
+  uses: 2
 effects: []
 folder: null
 sort: 0

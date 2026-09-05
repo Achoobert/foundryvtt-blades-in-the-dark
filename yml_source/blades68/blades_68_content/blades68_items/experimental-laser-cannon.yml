@@ -8,6 +8,7 @@ system:
     unstable weapon that will incinerate pretty much anything it's pointed at.
   class: Intellectual
   load: '0'
+  uses: 2
 effects: []
 folder: null
 sort: 0

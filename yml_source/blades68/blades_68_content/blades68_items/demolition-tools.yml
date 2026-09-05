@@ -8,6 +8,7 @@ system:
     blowtorch.
   class: ''
   load: '1'
+  uses: 2
 effects: []
 folder: null
 sort: 0

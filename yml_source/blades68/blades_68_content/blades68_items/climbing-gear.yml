@@ -8,6 +8,7 @@ system:
     carabiners. A set of steel pitons and a small mallet. Suction cups.
   class: ''
   load: '1'
+  uses: 2
 effects: []
 folder: null
 sort: 0

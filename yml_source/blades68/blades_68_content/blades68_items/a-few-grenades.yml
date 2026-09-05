@@ -6,6 +6,7 @@ system:
   description: They go boom.
   class: Veteran
   load: '0'
+  uses: 3
 effects: []
 folder: null
 sort: 0

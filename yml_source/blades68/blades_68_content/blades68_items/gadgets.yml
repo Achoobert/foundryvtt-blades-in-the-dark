@@ -6,6 +6,7 @@ system:
   description: ' You can create gadgets in a flashback and track their load here. If they''re simple, just the flashback may be enough. More ambitious gadgets might require you spend a downtime action crafting them (additional downtime actions cost 1 stack).'
   class: Intellectual
   load: '0'
+  uses: 3
 effects: []
 folder: null
 sort: 0

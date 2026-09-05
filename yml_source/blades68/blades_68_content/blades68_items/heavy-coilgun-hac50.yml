@@ -6,6 +6,7 @@ system:
   description: A military-grade assault rifle with detachable magazine. Loud and devastating.
   class: Veteran
   load: '0'
+  uses: 2
 effects: []
 folder: null
 sort: 0

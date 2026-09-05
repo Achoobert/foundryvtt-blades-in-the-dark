@@ -6,6 +6,7 @@ system:
   description: A high-powered sniper rifle complete with silencer. Deadly at long range, unwieldy in close quarters
   class: Operative
   load: '0'
+  uses: 2
 effects: []
 folder: null
 sort: 0

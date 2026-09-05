@@ -6,6 +6,7 @@ system:
   description: A heavy, large-bore handgun that hits like a sledgehammer. Loud. Slow to reload.
   class: ''
   load: '1'
+  uses: 3
 effects: []
 folder: null
 sort: 0
