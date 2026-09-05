@@ -10,6 +10,8 @@ system:
   class: Operative
   class_default: Operative
   price: '1'
+  uses: 1
+  uses_text: 'Cover blown'
   purchased: false
 effects: []
 folder: null

@@ -9,6 +9,7 @@ system:
   class: Intellectual
   class_default: Intellectual
   price: '1'
+  uses: 2
   purchased: false
 effects: []
 folder: null

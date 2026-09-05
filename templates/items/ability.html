@@ -15,6 +15,12 @@
       <input id="ability-price" type="text" name="system.price" value="{{system.price}}" placeholder="{{localize 'BITD.AbilityPrice'}}">
       <label class="label-stripe">{{localize "BITD.AbilityClass"}}</label>
       <input id="ability-class" type="text" name="system.class" value="{{system.class}}" placeholder="{{localize 'BITD.AbilityClass'}}">
+      <label class="label-stripe">{{localize "BITD.AbilityUses"}}</label>
+      <input id="ability-uses" type="number" name="system.uses" value="{{system.uses}}" data-dtype="Number" min="0"
+        placeholder="0">
+      <label class="label-stripe">{{localize "BITD.AbilityUsesText"}}</label>
+      <input id="ability-uses-text" type="text" name="system.uses_text" value="{{system.uses_text}}"
+        placeholder="{{localize 'BITD.AbilityUsesText'}}">
       {{#if isGM}}
        <!-- <div class="label-stripe">{{localize "BITD.Logic"}}</div>
         <textarea name="system.logic">{{{system.logic}}}</textarea> -->

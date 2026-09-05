@@ -62,7 +62,7 @@ export default function register(quench) {
 
           const actor = tracker.track(await Actor.create({ name: 'Quench Ability Uses PC', type: 'character' }));
           const [ability] = await actor.createEmbeddedDocuments('Item', [
-            { name: 'Limited Use Ability', type: 'ability', system: { uses: { value: 0, max: 3 } } }
+            { name: 'Limited Use Ability', type: 'ability', system: { uses: 3, uses_text: '', uses_used: 0 } }
           ]);
 
           const sheet = actor.sheet;
@@ -72,13 +72,13 @@ export default function register(quench) {
             assert.equal(data.otherAbilities[0].usesMax, 3);
 
             const usesBoxes = () => sheet.element.find(`.other-abilities [data-item-id="${ability.id}"] .ability-uses-toggle`);
-            assert.lengthOf(usesBoxes(), 3, 'should render one checkbox per uses.max slot');
+            assert.lengthOf(usesBoxes(), 3, 'should render one checkbox per uses slot');
 
             const boxes = usesBoxes().toArray();
             boxes[0].checked = true;
             boxes[1].checked = true;
-            await fireChange(boxes[1], () => ability.system.uses.value === 2);
-            assert.equal(ability.system.uses.value, 2, 'checked count should be written to system.uses.value');
+            await fireChange(boxes[1], () => ability.system.uses_used === 2);
+            assert.equal(ability.system.uses_used, 2, 'checked count should be written to system.uses_used');
           } finally {
             await sheet.close();
           }

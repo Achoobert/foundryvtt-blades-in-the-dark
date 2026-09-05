@@ -9,6 +9,7 @@ system:
   class: Swinger
   class_default: Swinger
   price: '1'
+  uses: 2
   purchased: false
 effects: []
 folder: null

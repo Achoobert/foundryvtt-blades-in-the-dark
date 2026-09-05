@@ -444,6 +444,9 @@
         "description": "",
         "class": "",
         "price": 1,
+        "uses": 0,
+        "uses_text": "",
+        "uses_used": 0,
         "purchased": false,
         "class_default": false
       },
@@ -499,6 +502,7 @@
       "enemies": "",
       "situation": "",
       "goal_clock": 0,
+      "prestige_ability": "",
       "notes": "",
       "hold": {
         "value": [1],
@@ -520,8 +524,10 @@
       "class": "",
       "load": 0,
       "uses": 1,
+      "uses_used": 0,
       "additional_info": "",
       "equipped": false,
+      "bonus_equipped": false,
       "num_available": 1
     },
     "class": {

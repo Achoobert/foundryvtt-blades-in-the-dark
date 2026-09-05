@@ -369,17 +369,19 @@
           <div class="other-abilities">
             {{#each otherAbilities as |item id|}}
             <div class="item flex-horizontal compact" data-item-id="{{item._id}}">
-              {{#if item.usesMax}}
-              <span class="ability-uses">
-                {{#each item.usesIndexes as |useNum useIdx|}}
-                <input type="checkbox" class="ability-uses-toggle"
-                       id="character-{{../../_id}}-ability-{{../_id}}-uses-{{useIdx}}"
-                       data-item-id="{{../_id}}" {{#if (lteq useNum ../system.uses.value)}}checked{{/if}}>
-                {{/each}}
-              </span>
-              {{/if}}
-              <div class="item-body flex-horizontal">
-                <b><div class="item-name">{{item.name}}</div></b>
+              <div class="item-body flex-vertical">
+                <div class="item-name-row">
+                  <b class="item-name">{{item.name}}{{#if item.usesMax}}:{{/if}}</b>
+                  {{#if item.usesMax}}
+                  {{#if item.usesText}}<span class="ability-uses-text">{{item.usesText}}</span>{{/if}}
+                  <span class="ability-uses">
+                    {{#each item.usesIndexes as |useNum useIdx|}}
+                    <input type="checkbox" class="ability-uses-toggle" id="character-{{../../_id}}-ability-{{../_id}}-uses-{{useIdx}}"
+                           data-item-id="{{../_id}}" {{#if (lteq useNum ../usesUsed)}}checked{{/if}}>
+                    {{/each}}
+                  </span>
+                  {{/if}}
+                </div>
                 <div class="item-description">{{{item.system.description}}}</div>
               </div>
               <a class="item-control item-delete" style="max-width: 10px !important;" style="max-width: 10px !important;"
@@ -439,9 +441,20 @@
             <ul class="item-catalog check-list">
               {{#each otherItems as |item id|}}
               <li class="item-catalog-item catalog-item other-item" data-item-id="{{item._id}}" data-tooltip="{{item.description}}">
-                <input type="checkbox" class="item-equipped-toggle" id="character-{{../_id}}-other-item-{{item._id}}"
-                       data-item-id="{{item._id}}" {{#if item.system.equipped}}checked{{/if}}>
+                <span class="item-uses">
+                  <input type="checkbox" class="item-equipped-toggle" id="character-{{../_id}}-other-item-{{item._id}}"
+                         data-item-id="{{item._id}}" {{#if item.system.equipped}}checked{{/if}}>
+                  {{#each item.extraUseIndexes as |useNum useIdx|}}
+                  <input type="checkbox" class="item-use-toggle" id="character-{{../../_id}}-other-item-{{../_id}}-use-{{useIdx}}"
+                         data-item-id="{{../_id}}" {{#if (lteq useNum ../usesSpent)}}checked{{/if}}>
+                  {{/each}}
+                </span>
                 <label for="character-{{../_id}}-other-item-{{item._id}}">{{item.name}}</label>
+                {{#if item.hasBonus}}
+                <input type="checkbox" class="item-bonus-toggle" id="character-{{../_id}}-other-item-{{item._id}}-bonus"
+                       data-item-id="{{item._id}}" {{#if item.system.bonus_equipped}}checked{{/if}}>
+                <label class="item-bonus-label" for="character-{{../_id}}-other-item-{{item._id}}-bonus">{{item.bonusLabel}}</label>
+                {{/if}}
                 <a class="item-control other-item-delete" data-tooltip="{{localize 'BITD.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
               </li>
               {{/each}}

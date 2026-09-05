@@ -1976,12 +1976,27 @@
   margin-top: 10px;
 }
 .blades68.actor.pc * .special-abilities-panel .other-abilities .item {
+  align-items: flex-start;
+}
+.blades68.actor.pc * .special-abilities-panel .other-abilities .item .item-name-row {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  gap: 4px 6px;
+  margin-bottom: 2px;
+}
+.blades68.actor.pc * .special-abilities-panel .other-abilities .item .item-name-row .item-name {
+  margin: 0;
+}
+.blades68.actor.pc * .special-abilities-panel .other-abilities .item .item-name-row .ability-uses-text {
+  font-size: 13px;
+  font-weight: normal;
 }
 .blades68.actor.pc * .special-abilities-panel .other-abilities .item .ability-uses {
   display: flex;
   gap: 2px;
   flex-shrink: 0;
+  align-items: center;
 }
 .blades68.actor.pc * .special-abilities-panel .other-abilities .item .ability-uses input[type=checkbox] {
   margin: 0;
@@ -2000,11 +2015,14 @@
   gap: 6px;
   margin-bottom: 3px;
 }
-.blades68.actor.pc * .items-panel .item-catalog .item-catalog-item .item-slots {
+.blades68.actor.pc * .items-panel .item-catalog .item-catalog-item .item-slots,
+.blades68.actor.pc * .items-panel .item-catalog .item-catalog-item .item-uses {
   display: flex;
   gap: 2px;
+  flex-shrink: 0;
 }
-.blades68.actor.pc * .items-panel .item-catalog .item-catalog-item .item-slots input[type=checkbox] {
+.blades68.actor.pc * .items-panel .item-catalog .item-catalog-item .item-slots input[type=checkbox],
+.blades68.actor.pc * .items-panel .item-catalog .item-catalog-item .item-uses input[type=checkbox] {
   margin: 0;
 }
 .blades68.actor.pc * .items-panel .item-catalog .item-catalog-item label {
@@ -2012,6 +2030,15 @@
 }
 .blades68.actor.pc * .items-panel .other-items .item-catalog-item label {
   flex-grow: 1;
+}
+.blades68.actor.pc * .items-panel .other-items .item-catalog-item .item-bonus-toggle {
+  margin: 0;
+  flex-shrink: 0;
+}
+.blades68.actor.pc * .items-panel .other-items .item-catalog-item .item-bonus-label {
+  flex-grow: 0;
+  font-size: 12px;
+  white-space: nowrap;
 }
 .blades68.actor.pc * .items-panel .other-items .item-catalog-item .other-item-delete {
   opacity: 0.6;

@@ -217,6 +217,8 @@
   "BITD.ExpClues": "Exp Clues",
   "BITD.AbilityPrice": "Ability Price",
   "BITD.AbilityClass": "Ability Class",
+  "BITD.AbilityUses": "Uses",
+  "BITD.AbilityUsesText": "Uses Label",
   "BITD.Information": "Information",
   "BITD.CohortType": "Cohort Type",
   "BITD.GangType": "Gang Type",

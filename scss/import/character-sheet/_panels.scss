@@ -9,12 +9,30 @@
       margin-top: 10px;
 
       .item {
-        align-items: center;
+        align-items: flex-start;
+        
+          .item-name-row {
+            display: flex;
+            flex-wrap: wrap;
+          align-items: center;
+          gap: 4px 6px;
+            margin-bottom: 2px;
+          
+            .item-name {
+              margin: 0;
+            }
+          
+            .ability-uses-text {
+              font-size: 13px;
+              font-weight: normal;
+            }
+          }
 
         .ability-uses {
           display: flex;
           gap: 2px;
           flex-shrink: 0;
+          align-items: center;
 
           input[type="checkbox"] {
             margin: 0;
@@ -42,9 +60,11 @@
         gap: 6px;
         margin-bottom: 3px;
 
-        .item-slots {
+        .item-slots,
+        .item-uses {
           display: flex;
           gap: 2px;
+          flex-shrink: 0;
 
           input[type="checkbox"] {
             margin: 0;
@@ -61,6 +81,17 @@
       .item-catalog-item {
         label {
           flex-grow: 1;
+        }
+
+        .item-bonus-toggle {
+          margin: 0;
+          flex-shrink: 0;
+        }
+
+        .item-bonus-label {
+          flex-grow: 0;
+          font-size: 12px;
+          white-space: nowrap;
         }
 
         .other-item-delete {
