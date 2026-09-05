@@ -51,6 +51,14 @@ function findFormElement(html) {
  * @param {string} [options.okIcon="fas fa-check"]
  * @param {string} [options.cancelIcon="fas fa-times"]
  * @param {"ok"|"cancel"} [options.defaultButton="ok"]
+ * @param {boolean} [options.hideOkButton=false] - Keep the "ok" button wired
+ * up (so its callback still serializes the form) but visually hide it. Use
+ * this when the dialog content provides its own submit controls and calls
+ * the `submit` function passed to `onRender` instead of a footer button.
+ * @param {(form: HTMLElement, submit: () => void) => void} [options.onRender]
+ * - Called once the dialog's DOM is available, with the `<form>` element and
+ * a `submit()` helper that triggers the same resolution the (possibly
+ * hidden) "ok" button would.
  * @param {Object} [options.window]
  * @param {Object} [options.dialog]
  * @returns {Promise<object|undefined>} Serialized form values or `undefined`
@@ -64,6 +72,8 @@ export async function openFormDialog({
   okIcon = "fas fa-check",
   cancelIcon = "fas fa-times",
   defaultButton = "ok",
+  hideOkButton = false,
+  onRender,
   window: windowOptions = {},
   dialog: legacyDialogOptions = {},
 } = {}) {
@@ -97,6 +107,18 @@ export async function openFormDialog({
         icon: cancelIcon,
         default: defaultButton === "cancel",
         callback: () => undefined,
+      });
+    }
+
+    if (hideOkButton || typeof onRender === "function") {
+      Hooks.once("renderDialogV2", (app, html) => {
+        const root = html instanceof HTMLElement ? html : (html?.[0] ?? app.element);
+        const form = root?.querySelector?.("form") ?? root;
+        const okButton = app.element?.querySelector?.('[data-action="ok"]');
+        if (hideOkButton && okButton) okButton.style.display = "none";
+        if (typeof onRender === "function") {
+          onRender(form, () => okButton?.click());
+        }
       });
     }
 
@@ -148,6 +170,15 @@ export async function openFormDialog({
         content,
         buttons,
         default: defaultKey,
+        render: (html) => {
+          const rootElement = html?.[0] ?? html;
+          const okButton = rootElement?.querySelector?.(".dialog-buttons .ok, button.ok");
+          if (hideOkButton && okButton) okButton.style.display = "none";
+          if (typeof onRender === "function") {
+            const form = findFormElement(html) ?? rootElement;
+            onRender(form, () => okButton?.click());
+          }
+        },
         close: () => finish(undefined),
       },
       legacyDialogOptions

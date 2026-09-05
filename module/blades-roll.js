@@ -134,11 +134,17 @@ async function showChatRollMessage(r, zeromode, attribute_name = "", position = 
 
     let effect_localize = '';
     switch (effect) {
+      case 'zero':
+        effect_localize = 'BITD.EffectZero'
+        break;
       case 'limited':
         effect_localize = 'BITD.EffectLimited'
         break;
       case 'great':
         effect_localize = 'BITD.EffectGreat'
+        break;
+      case 'extreme':
+        effect_localize = 'BITD.EffectExtreme'
         break;
       case 'standard':
       default:
@@ -404,10 +410,10 @@ export async function simpleRollPopup() {
             <span style="grid-column:2 / 4;"></span>
             <label><input type="radio" id="indulgeVice" name="rollSelection" value="indulgeVice"> ${game.i18n.localize("BITD.IndulgeVice")}</label>
             <label style="margin:0; justify-self:end; white-space:nowrap;">${game.i18n.localize('BITD.Stress')}:</label>
-            <select id="stress" name="stress" style="width:auto; min-width:4.5em; justify-self:start;"><option value="${current_stress}" selected disabled hidden>${current_stress}</option>${Array(11).fill().map((item, i) => `<option value="${i}">${i}</option>`).join('')}</select>
+            <select id="stress" name="stress" class="disabled" style="width:auto; min-width:4.5em; justify-self:start;"><option value="${current_stress}" selected disabled hidden>${current_stress}</option>${Array(11).fill().map((item, i) => `<option value="${i}">${i}</option>`).join('')}</select>
             <label><input type="radio" id="acquireAsset" name="rollSelection" value="acquireAsset"> ${game.i18n.localize("BITD.AcquireAsset")}</label>
             <label style="margin:0; justify-self:end; white-space:nowrap;">${game.i18n.localize('BITD.CrewTier')}:</label>
-            <select id="tier" name="tier" style="width:auto; min-width:4.5em; justify-self:start;"><option value="${current_tier}" selected disabled hidden>${current_tier}</option>${Array(5).fill().map((item, i) => `<option value="${i}">${i}</option>`).join('')}</select>
+            <select id="tier" name="tier" class="disabled" style="width:auto; min-width:4.5em; justify-self:start;"><option value="${current_tier}" selected disabled hidden>${current_tier}</option>${Array(5).fill().map((item, i) => `<option value="${i}">${i}</option>`).join('')}</select>
           </div>
         </fieldset>
         <div className="form-group">

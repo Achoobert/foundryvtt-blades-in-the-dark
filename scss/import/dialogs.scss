@@ -86,3 +86,67 @@
     }
   }
 }
+
+// Roll dialog (see BladesActor#rollAttributePopup).
+// Note: DialogV2 drops our <form class="bitd-roll-dialog"> the same way it
+// drops .items-to-add above (nested forms aren't allowed), so these rules
+// target the content classes directly rather than scoping under the form.
+.bitd-inline-roll {
+  justify-self: start;
+}
+
+.bitd-pos-fx-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+
+  th, td {
+    padding: 0.2em 0.35em;
+  }
+
+  thead th {
+    font-weight: bold;
+  }
+
+  tbody th {
+    text-align: left;
+    font-weight: bold;
+    padding-right: 0.6em;
+    white-space: nowrap;
+  }
+
+  tbody tr:nth-child(odd) {
+    background: rgba(128, 128, 128, 0.08);
+  }
+}
+
+.bitd-roll-cell {
+  width: 2.2em;
+  height: 2.2em;
+  border-radius: 50%;
+  border: 1px solid $darkgray;
+  background: $lightgray;
+  color: transparent;
+  cursor: pointer;
+  font-size: 0.65em;
+  line-height: 1;
+  position: relative;
+
+  &.is-default {
+    background: $darkgray;
+  }
+
+  &:hover {
+    background: $almost_black;
+    color: $almost_white;
+  }
+
+  &::before {
+    content: attr(data-roll-label);
+    opacity: 0;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}

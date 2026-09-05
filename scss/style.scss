@@ -55,3 +55,11 @@ $hover-brightness: 0.8;
 @import 'import/dialogs.scss';
 @import 'import/pause.scss';
 //@import 'import/tooltip.scss';
+
+@keyframes bitd-stress-vibrate {
+  0%, 100% { transform: translate(0, 0); }
+  20% { transform: translate(-2px, 1px); }
+  40% { transform: translate(2px, -1px); }
+  60% { transform: translate(-2px, -1px); }
+  80% { transform: translate(2px, 1px); }
+}

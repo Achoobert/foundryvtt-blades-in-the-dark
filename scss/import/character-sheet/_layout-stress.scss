@@ -82,6 +82,10 @@
       &[for$="-0"] {
         margin-right: 0px;
       }
+
+      &.bitd-stress-pulse {
+        animation: bitd-stress-vibrate 0.3s linear infinite;
+      }
     }
   }
 

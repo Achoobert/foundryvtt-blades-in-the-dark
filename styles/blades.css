@@ -1543,6 +1543,9 @@
 .blades68.actor.pc * .character-stress label[for$="-0"] {
   margin-right: 0px;
 }
+.blades68.actor.pc * .character-stress label.bitd-stress-pulse {
+  animation: bitd-stress-vibrate 0.3s linear infinite;
+}
 .blades68.actor.pc * .abilities .item-name, .blades68.actor.pc * .loadout .item-name {
   width: 100px;
 }
@@ -2714,6 +2717,58 @@
   visibility: visible;
 }
 
+.bitd-inline-roll {
+  justify-self: start;
+}
+
+.bitd-pos-fx-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+.bitd-pos-fx-table th, .bitd-pos-fx-table td {
+  padding: 0.2em 0.35em;
+}
+.bitd-pos-fx-table thead th {
+  font-weight: bold;
+}
+.bitd-pos-fx-table tbody th {
+  text-align: left;
+  font-weight: bold;
+  padding-right: 0.6em;
+  white-space: nowrap;
+}
+.bitd-pos-fx-table tbody tr:nth-child(odd) {
+  background: rgba(128, 128, 128, 0.08);
+}
+
+.bitd-roll-cell {
+  width: 2.2em;
+  height: 2.2em;
+  border-radius: 50%;
+  border: 1px solid #666;
+  background: #bbb;
+  color: transparent;
+  cursor: pointer;
+  font-size: 0.65em;
+  line-height: 1;
+  position: relative;
+}
+.bitd-roll-cell.is-default {
+  background: #666;
+}
+.bitd-roll-cell:hover {
+  background: #191813;
+  color: #EEEFFF;
+}
+.bitd-roll-cell::before {
+  content: attr(data-roll-label);
+  opacity: 0;
+}
+.bitd-roll-cell:hover::before {
+  opacity: 1;
+}
+
 #pause img,
 #pause #pause-icon {
   animation: none;
@@ -2721,4 +2776,22 @@
   max-width: 400px;
   height: auto;
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.75));
+}
+
+@keyframes bitd-stress-vibrate {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-2px, 1px);
+  }
+  40% {
+    transform: translate(2px, -1px);
+  }
+  60% {
+    transform: translate(-2px, -1px);
+  }
+  80% {
+    transform: translate(2px, 1px);
+  }
 }

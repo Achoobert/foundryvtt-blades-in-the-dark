@@ -104,6 +104,8 @@ export class BladesActor extends Actor {
       console.error(error);
     }
 
+    const actionRollEnabled = game.settings.get("blades68", "ActionRoll");
+
     let content = `
         <form class="bitd-roll-dialog">
           <div class="form-group">
@@ -117,18 +119,18 @@ export class BladesActor extends Actor {
         <fieldset class="form-group" style="display:grid; gap:0.5em;">
           <legend>Roll Types</legend>`;
       // Row 1: Action Roll (if enabled)
-      if (game.settings.get("blades68", "ActionRoll")) {
+      if (actionRollEnabled) {
         content += `
-          <div style="display:grid; grid-template-columns:auto auto auto; gap:0.5em 1em; align-items:center;">
+          <div style="display:grid; grid-template-columns:auto; gap:0.5em 1em; align-items:center;">
             <label><input type="radio" id="actionRoll" name="rollSelection" value="actionRoll" checked=true> ${game.i18n.localize("BITD.ActionRoll")}</label>
-            <span><label>${game.i18n.localize("BITD.Position")}:</label> <select id="pos" name="pos"><option value="controlled">${game.i18n.localize("BITD.PositionControlled")}</option><option value="risky" selected>${game.i18n.localize("BITD.PositionRisky")}</option><option value="desperate">${game.i18n.localize("BITD.PositionDesperate")}</option></select></span>
-            <span><label>${game.i18n.localize("BITD.Effect")}:</label> <select id="fx" name="fx"><option value="limited">${game.i18n.localize("BITD.EffectLimited")}</option><option value="standard" selected>${game.i18n.localize("BITD.EffectStandard")}</option><option value="great">${game.i18n.localize("BITD.EffectGreat")}</option></select></span>
+            <input type="hidden" id="pos" name="pos" value="risky">
+            <input type="hidden" id="fx" name="fx" value="standard">
           </div>`;
       }
       // Row 2: Threat Roll (if enabled)
       if (game.settings.get("blades68", "ThreatRoll")) {
         content += `
-          <div style="display:grid; grid-template-columns:auto auto auto; gap:0.5em 1em; align-items:center;">
+          <div style="display:grid; grid-template-columns:auto auto auto auto; gap:0.5em 1em; align-items:center;">
             <label><input type="radio" id="threatRoll" name="rollSelection" value="threatRoll"> ${game.i18n.localize("BITD.ThreatRoll")}</label>
             <span><label>${game.i18n.localize("BITD.Position")}:</label> <select id="pos2" name="pos2"><option value="risky" selected>${game.i18n.localize("BITD.PositionRisky")}</option><option value="desperate">${game.i18n.localize("BITD.PositionDesperate")}</option></select></span>
             <span><label>${game.i18n.localize("BITD.ExtraThreats")}:</label> <select id="extraThreats" name="extraThreats">${Array(
@@ -137,15 +139,17 @@ export class BladesActor extends Actor {
               .fill()
               .map((item, i) => `<option value="${i}">${i}</option>`)
               .join("")}</select></span>
+            <button type="button" class="bitd-inline-roll" data-roll-for="threatRoll">${game.i18n.localize("BITD.Roll")}</button>
           </div>`;
       }
       // Row 3: Other roll types (skill-click popup only offers Action Roll, Gather
       // Information, and Acquire Asset — Fortune/Indulge Vice/Engagement are triggered
       // from their own dedicated entry points, not from clicking a skill on the sheet)
       content += `
-          <div style="display:grid; grid-template-columns:auto auto auto; column-gap:0.5em; row-gap:0.4em; align-items:center;">
+          <div style="display:grid; grid-template-columns:auto auto auto auto; column-gap:0.5em; row-gap:0.4em; align-items:center;">
             <label><input type="radio" id="gatherInfo" name="rollSelection" value="gatherInfo"> ${game.i18n.localize("BITD.GatherInformation")}</label>
             <span style="grid-column:2 / 4;"></span>
+            <button type="button" class="bitd-inline-roll" data-roll-for="gatherInfo">${game.i18n.localize("BITD.Roll")}</button>
             <label><input type="radio" id="acquireAsset" name="rollSelection" value="acquireAsset"> ${game.i18n.localize("BITD.AcquireAsset")}</label>
             <label style="margin:0; justify-self:end; white-space:nowrap;">${game.i18n.localize("BITD.CrewTier")}:</label>
             <select id="tier" name="tier" style="width:auto; min-width:4.5em; justify-self:start;"><option value="${current_tier}" selected disabled hidden>${current_tier}</option>${Array(
@@ -154,19 +158,21 @@ export class BladesActor extends Actor {
               .fill()
               .map((item, i) => `<option value="${i}">${i}</option>`)
               .join("")}</select>
+            <button type="button" class="bitd-inline-roll" data-roll-for="acquireAsset">${game.i18n.localize("BITD.Roll")}</button>
           </div>
         </fieldset>
-        <fieldset class="roll-options-reminder" style="margin-top:0.5em;">
+        <fieldset class="roll-options-toggles" style="margin-top:0.5em;">
           <legend>${game.i18n.localize("BITD.RollOptions")}</legend>
-          <ul style="margin:0; padding-left:1.2em;">
-            <li>${game.i18n.localize("BITD.RollOptionAssist")}</li>
-            ${current_gambits > 0 ? `<li>${game.i18n.localize("BITD.RollOptionGambit")}</li>` : ""}
-            <li>${game.i18n.localize("BITD.RollOptionPush")}</li>
-            <li>${game.i18n.localize("BITD.RollOptionDevilsBargain")}</li>
-            <li>${game.i18n.localize("BITD.RollOptionGroupAction")}</li>
-            <li>${game.i18n.localize("BITD.RollOptionSetupAction")}</li>
-          </ul>
+          <div style="display:grid; gap:0.3em;">
+            <label><input type="checkbox" id="opt-assist" name="optAssist" value="1"> ${game.i18n.localize("BITD.RollOptionAssist")}</label>
+            ${current_gambits > 0 ? `<label><input type="checkbox" id="opt-gambit" name="optGambit" value="1"> ${game.i18n.localize("BITD.RollOptionGambit")}</label>` : ""}
+            <label><input type="checkbox" id="opt-push" name="optPush" value="1"> ${game.i18n.localize("BITD.RollOptionPush")}</label>
+            <label><input type="checkbox" id="opt-devils-bargain" name="optDevilsBargain" value="1"> ${game.i18n.localize("BITD.RollOptionDevilsBargain")}</label>
+            <label><input type="checkbox" id="opt-group-action" name="optGroupAction" value="1"> ${game.i18n.localize("BITD.RollOptionGroupAction")}</label>
+            <label><input type="checkbox" id="opt-setup-action" name="optSetupAction" value="1"> ${game.i18n.localize("BITD.RollOptionSetupAction")}</label>
+          </div>
         </fieldset>
+        ${actionRollEnabled ? this._buildPositionEffectTable() : ""}
             `;
     } else {
       if (BladesHelpers.isAttributeAttribute(attribute_name)) {
@@ -199,19 +205,56 @@ export class BladesActor extends Actor {
       content,
       okLabel: game.i18n.localize("BITD.Roll"),
       cancelLabel: game.i18n.localize("Close"),
-      defaultButton: "ok",
+      defaultButton: "cancel",
+      hideOkButton: actionRollEnabled && BladesHelpers.isAttributeAction(attribute_name),
+      onRender: (form, submit) => this._wireRollDialog(form, submit),
     });
 
     if (!dialogResult) {
       return;
     }
 
-    const modifier = Number(dialogResult.mod ?? 0) || 0;
-    const note = dialogResult.note ?? "";
+    const optionNotes = [];
+    let bonusDice = 0;
+    if (dialogResult.optAssist) {
+      bonusDice += 1;
+      optionNotes.push(game.i18n.localize("BITD.RollOptionAssistShort"));
+    }
+    if (dialogResult.optGambit) {
+      bonusDice += 1;
+      optionNotes.push(game.i18n.localize("BITD.RollOptionGambitShort"));
+    }
+    if (dialogResult.optPush) {
+      bonusDice += 1;
+      optionNotes.push(game.i18n.localize("BITD.RollOptionPushShort"));
+    }
+    if (dialogResult.optDevilsBargain) {
+      bonusDice += 1;
+      optionNotes.push(game.i18n.localize("BITD.RollOptionDevilsBargainShort"));
+    }
+    if (dialogResult.optGroupAction) {
+      optionNotes.push(game.i18n.localize("BITD.RollOptionGroupActionShort"));
+    }
+    if (dialogResult.optSetupAction) {
+      optionNotes.push(game.i18n.localize("BITD.RollOptionSetupActionShort"));
+    }
+
+    const modifier = (Number(dialogResult.mod ?? 0) || 0) + bonusDice;
+    let note = dialogResult.note ?? "";
+    if (optionNotes.length) {
+      note = note ? `${note} (${optionNotes.join(", ")})` : optionNotes.join(", ");
+    }
     const rollData = this.getRollData();
     const actionDiceAmount = rollData.dice_amount[attribute_name] + modifier;
     const viceDiceAmount = rollData.dice_amount["BITD.Vice"] + modifier;
     const stress = Number(this.system.stress.value) || 0;
+
+    if (dialogResult.optGambit) {
+      await this._spendGambit();
+    }
+    if (dialogResult.optPush) {
+      await this._applyPushYourselfStress();
+    }
 
     if (!BladesHelpers.isAttributeAction(attribute_name)) {
       await this.rollAttribute(attribute_name, modifier, "", "", note);
@@ -290,6 +333,177 @@ export class BladesActor extends Actor {
           note,
         );
         break;
+    }
+  }
+
+  /* -------------------------------------------- */
+
+  /**
+   * Builds the Position x Effect grid that replaces the old dropdowns for
+   * Action Rolls. Clicking a cell both picks that position/effect and
+   * immediately submits the dialog (see {@link _wireRollDialog}).
+   */
+  _buildPositionEffectTable() {
+    const positions = [
+      ["controlled", "BITD.PositionControlled"],
+      ["risky", "BITD.PositionRisky"],
+      ["desperate", "BITD.PositionDesperate"],
+    ];
+    const effects = [
+      ["zero", "BITD.EffectZero"],
+      ["limited", "BITD.EffectLimited"],
+      ["standard", "BITD.EffectStandard"],
+      ["great", "BITD.EffectGreat"],
+      ["extreme", "BITD.EffectExtreme"],
+    ];
+    const rollLabel = game.i18n.localize("BITD.Roll");
+
+    const headerCells = effects
+      .map(([, key]) => `<th>${game.i18n.localize(key)}</th>`)
+      .join("");
+
+    const bodyRows = positions
+      .map(([posValue, posKey]) => {
+        const cells = effects
+          .map(([fxValue, fxKey]) => {
+            const isDefault = posValue === "risky" && fxValue === "standard";
+            return `<td><button type="button" class="bitd-roll-cell${isDefault ? " is-default" : ""}" data-position="${posValue}" data-effect="${fxValue}" data-roll-label="${rollLabel}" title="${rollLabel} — ${game.i18n.localize(posKey)} / ${game.i18n.localize(fxKey)}"></button></td>`;
+          })
+          .join("");
+        return `<tr><th>${game.i18n.localize(posKey)}</th>${cells}</tr>`;
+      })
+      .join("");
+
+    return `
+        <fieldset class="bitd-pos-fx-fieldset" style="margin-top:0.5em;">
+          <legend>${game.i18n.localize("BITD.Position")} / ${game.i18n.localize("BITD.Effect")}</legend>
+          <table class="bitd-pos-fx-table">
+            <thead><tr><th></th>${headerCells}</tr></thead>
+            <tbody>${bodyRows}</tbody>
+          </table>
+        </fieldset>`;
+  }
+
+  /* -------------------------------------------- */
+
+  /**
+   * Wires up the interactive bits of the roll dialog that a plain HTML
+   * string can't attach handlers to: clicking a Position/Effect cell submits
+   * the dialog directly (there is no separate Roll button), the per-row
+   * inline Roll buttons submit for roll types the table doesn't cover, and
+   * Push Yourself / Devil's Bargain gray each other out since they can't be
+   * combined.
+   */
+  _wireRollDialog(form, submit) {
+    const posInput = form.querySelector("#pos");
+    const fxInput = form.querySelector("#fx");
+    const actionRadio = form.querySelector("#actionRoll");
+
+    form.querySelectorAll(".bitd-roll-cell").forEach((cell) => {
+      cell.addEventListener("click", () => {
+        if (posInput) posInput.value = cell.dataset.position;
+        if (fxInput) fxInput.value = cell.dataset.effect;
+        if (actionRadio) actionRadio.checked = true;
+        submit();
+      });
+    });
+
+    form.querySelectorAll("[data-roll-for]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const radio = form.querySelector(`[name="rollSelection"][value="${button.dataset.rollFor}"]`);
+        if (radio) radio.checked = true;
+        submit();
+      });
+    });
+
+    const pushCheckbox = form.querySelector("#opt-push");
+    const devilsBargainCheckbox = form.querySelector("#opt-devils-bargain");
+    if (pushCheckbox && devilsBargainCheckbox) {
+      pushCheckbox.addEventListener("change", () => {
+        devilsBargainCheckbox.disabled = pushCheckbox.checked;
+        if (pushCheckbox.checked) devilsBargainCheckbox.checked = false;
+      });
+      devilsBargainCheckbox.addEventListener("change", () => {
+        pushCheckbox.disabled = devilsBargainCheckbox.checked;
+        if (devilsBargainCheckbox.checked) pushCheckbox.checked = false;
+      });
+    }
+  }
+
+  /* -------------------------------------------- */
+
+  /**
+   * Spends one Gambit from the linked Crew, if any is available.
+   */
+  async _spendGambit() {
+    const crewActor = this._getCrewActor();
+    const current = Number(crewActor?.system?.gambits?.value);
+    if (!crewActor || !Number.isFinite(current) || current <= 0) return;
+    await crewActor.update({ "system.gambits.value": current - 1 });
+  }
+
+  /* -------------------------------------------- */
+
+  /**
+   * Applies the 2 stress cost of Pushing Yourself and briefly vibrates the
+   * newly filled stress boxes on the character's open sheet.
+   */
+  async _applyPushYourselfStress() {
+    const current = Number(this.system.stress.value) || 0;
+    const max = Number(this.system.stress.max) || 9;
+    const next = Math.min(current + 2, max);
+    if (next === current) return;
+
+    await this.update({ "system.stress.value": next });
+
+    // The stress update re-renders the open sheet, which would replace the
+    // stress box elements and wipe a pulse class added immediately. Wait for
+    // that render (or give up after a short timeout, e.g. no sheet is open)
+    // before touching the DOM.
+    await this._awaitNextSheetRender();
+    this._pulseStressBoxes(current, next);
+  }
+
+  /**
+   * Resolves once this actor's open sheet next re-renders, or after a short
+   * timeout if it doesn't (e.g. the sheet isn't currently open).
+   */
+  _awaitNextSheetRender(timeoutMs = 300) {
+    const sheetClassName = this.sheet?.constructor?.name;
+    if (!sheetClassName) return Promise.resolve();
+
+    return new Promise((resolve) => {
+      let done = false;
+      const hookName = `render${sheetClassName}`;
+      const finish = () => {
+        if (done) return;
+        done = true;
+        Hooks.off(hookName, hookId);
+        resolve();
+      };
+      const hookId = Hooks.on(hookName, (app) => {
+        if (app.object?.id === this.id) finish();
+      });
+      setTimeout(finish, timeoutMs);
+    });
+  }
+
+  /**
+   * Adds a brief vibrate animation (removed after 3s) to the stress boxes
+   * between `fromValue` (exclusive) and `toValue` (inclusive) on this
+   * actor's currently rendered sheet, if any.
+   */
+  _pulseStressBoxes(fromValue, toValue) {
+    const sheetElement = this.sheet?.rendered ? this.sheet.element : null;
+    if (!sheetElement) return;
+    const root = sheetElement.jquery ? sheetElement[0] : sheetElement;
+    if (!root) return;
+
+    for (let i = fromValue + 1; i <= toValue; i++) {
+      const label = root.querySelector(`label[for="character-${this.id}-stress-${i}"]`);
+      if (!label) continue;
+      label.classList.add("bitd-stress-pulse");
+      setTimeout(() => label.classList.remove("bitd-stress-pulse"), 3000);
     }
   }
 
