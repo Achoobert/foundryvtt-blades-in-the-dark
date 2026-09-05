@@ -1,0 +1,136 @@
+& * {
+  .special-playbook-section {
+      .explosives-body {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 16px;
+      }
+  
+      .bandoliers {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-right: 12px;
+        border-right: 1px solid $lightgray;
+      }
+  
+      .bandolier-row {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-weight: bold;
+        font-size: 12px;
+  
+        input[type="checkbox"] {
+          width: 16px;
+          height: 16px;
+          border-radius: 3px;
+        }
+      }
+  
+      .explosive-list ul {
+        columns: 3;
+        margin: 0;
+        padding-left: 16px;
+        font-size: 12px;
+  
+        li {
+          margin-bottom: 2px;
+          list-style: disc;
+        }
+      }
+  
+      .veteran-body {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 12px;
+  
+        .veteran-fields {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+  
+      .strictures-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+  
+        li {
+          margin-bottom: 6px;
+  
+          label {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+            font-size: 12px;
+            line-height: 1.35;
+  
+            input {
+              margin-top: 2px;
+              flex-shrink: 0;
+              width: 14px;
+              height: 14px;
+              border-radius: 50%;
+              appearance: none;
+              border: 1.5px solid $almost_black;
+              cursor: pointer;
+  
+              &:checked {
+                background: $almost_black;
+              }
+            }
+          }
+        }
+      }
+  
+      .mission-block {
+        border-top: 1px solid $lightgray;
+        padding-top: 8px;
+        margin-top: 8px;
+  
+        .mission-title {
+          display: flex;
+          gap: 6px;
+          align-items: center;
+          text-transform: uppercase;
+          margin-bottom: 4px;
+        }
+      }
+  
+      .mission-details {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+        margin-top: 6px;
+      }
+  
+      .mission-detail {
+        border-left: 1px solid $lightgray;
+        padding-left: 6px;
+  
+        &:first-child {
+          border-left: none;
+          padding-left: 0;
+        }
+  
+        label {
+          display: flex;
+          gap: 4px;
+          align-items: flex-start;
+          font-size: 11px;
+          font-weight: bold;
+          margin-bottom: 4px;
+          line-height: 1.25;
+        }
+  
+        input[type="text"] {
+          width: 100%;
+          border: none;
+          border-bottom: 1px solid $gray;
+          background: transparent;
+        }
+      }
+  }
+}

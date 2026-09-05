@@ -1,0 +1,25 @@
+_id: sSWkj0RWmVMI4XZ4
+name: Severos
+type: heritage
+img: icons/svg/village.svg
+system:
+  description: |-
+    <p>A land of windswept plains. Severos was the first to join the Imperium, and although it is now an "independent protectorate," the tendrils of Akoros are deeply embedded. The ruling class send their children to Akorosi schools, and Akorosi corporations extract the profit from the nation's factories and farms. There is a movement for radical egalitarianism and redistribution of wealth, particularly in the south.</p>
+    <p><strong>Examples:</strong></p>
+    <ul>
+      <li>Bastion Elders</li>
+      <li>Irondale factory workers</li>
+      <li>Railworkers</li>
+      <li>Butchers</li>
+      <li>Tailors</li>
+      <li>Taxi drivers</li>
+      <li>Dry cleaners</li>
+      <li>Severosi government bureaucrats</li>
+      <li>Refugees</li>
+    </ul>
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

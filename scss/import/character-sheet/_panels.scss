@@ -1,0 +1,90 @@
+& * {
+  .special-abilities-panel {
+    .hint {
+      font-style: italic;
+      color: $gray;
+    }
+
+    .other-abilities {
+      margin-top: 10px;
+
+      .item {
+        align-items: center;
+
+        .ability-uses {
+          display: flex;
+          gap: 2px;
+          flex-shrink: 0;
+
+          input[type="checkbox"] {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .items-panel {
+    .section-header {
+      .load-fraction {
+        white-space: nowrap;
+      }
+    }
+
+    .item-catalog {
+      list-style: none;
+      margin: 0 0 6px 0;
+      padding: 0;
+
+      .item-catalog-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 3px;
+
+        .item-slots {
+          display: flex;
+          gap: 2px;
+
+          input[type="checkbox"] {
+            margin: 0;
+          }
+        }
+
+        label {
+          font-size: 13px;
+        }
+      }
+    }
+
+    .other-items {
+      .item-catalog-item {
+        label {
+          flex-grow: 1;
+        }
+
+        .other-item-delete {
+          opacity: 0.6;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  // Compact freeform item rows (Other Abilities / Other Items): smaller icon buttons
+  // so the delete/chat controls don't dominate the row.
+  .item.compact {
+    .item-body img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .item-control {
+      font-size: 11px;
+      margin-left: 4px;
+    }
+  }
+}

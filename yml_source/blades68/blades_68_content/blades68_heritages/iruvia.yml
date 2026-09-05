@@ -1,0 +1,25 @@
+_id: cVx7HXJf32XWn5X5
+name: Iruvia
+type: heritage
+img: icons/svg/village.svg
+system:
+  description: |-
+    <p>A major world power, occupying the desert region to the south. Iruvia was the first nation to secede from the Imperium, and later fought to support the secession of Skovlan. That war ended with the creation of the Null Zone, wiping out both South Point in Akoros and Bright Harbor in Iruvia. Since then, Iruvia has entered an isolationist period, allowing a small amount of trade with the outside world via Mistport and the Dagger Isles.</p>
+    <p><strong>Examples:</strong></p>
+    <ul>
+      <li>City Guardians</li>
+      <li>Political exiles</li>
+      <li>Diplomats</li>
+      <li>Business magnates</li>
+      <li>Couriers</li>
+      <li>Water Bearers</li>
+      <li>Performers</li>
+      <li>Restaurant owners</li>
+      <li>Teachers</li>
+    </ul>
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

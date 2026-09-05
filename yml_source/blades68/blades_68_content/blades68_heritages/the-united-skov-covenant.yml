@@ -1,0 +1,26 @@
+_id: ovt0YOGPk6Y5aeVr
+name: The United Skov Covenant
+type: heritage
+img: icons/svg/village.svg
+system:
+  description: |-
+    <p>Skovlan finally achieved independence with Unity War III, forming the United Skov Covenant. Local communities elect ruling covens, who send delegates to the High Coven in Lockport. Despite dealing with the legacy of centuries of colonization, as well as the intergenerational physical and mental trauma caused by leviathan blood processing, Skovlan has quickly established itself as a world power. The USC works tirelessly to overtake its nemesis, Akoros. Doskvol has a large population of first-, second-, and third-generation Skovs; they struggle with oppression, distrust, and conflicting loyalties.</p>
+    <p><strong>Examples:</strong></p>
+    <ul>
+      <li>Midwives</li>
+      <li>Whispers</li>
+      <li>Blackvale Coven</li>
+      <li>Revolutionaries</li>
+      <li>Exiled Imperial collaborators</li>
+      <li>Dockhands</li>
+      <li>Shipbreakers</li>
+      <li>Miners</li>
+      <li>Laundry workers</li>
+      <li>Musicians</li>
+    </ul>
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

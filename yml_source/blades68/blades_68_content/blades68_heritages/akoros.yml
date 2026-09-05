@@ -1,0 +1,24 @@
+_id: qrKSwExk0L5NHEkh
+name: Akoros
+type: heritage
+img: icons/svg/village.svg
+system:
+  description: |-
+    <p>Formerly the heart of the Imperium; now the Imperium consists of little else. The people are a conglomeration of cultures that have grown together in close proximity for centuries, along with many diverse immigrant communities.</p>
+    <p><strong>Examples:</strong></p>
+    <ul>
+      <li>Government civil servants</li>
+      <li>Union-strong factory workers in Coalridge</li>
+      <li>Farmers in Barrowcleft</li>
+      <li>Clergy within the Church of Ecstasy</li>
+      <li>Academics working in Charterhall University</li>
+      <li>A proud line of Rail Jacks fallen on hard times</li>
+      <li>Office workers</li>
+      <li>The model Age of Consensus family</li>
+    </ul>
+effects: []
+folder: null
+sort: 0
+permission:
+  default: 0
+flags: {}

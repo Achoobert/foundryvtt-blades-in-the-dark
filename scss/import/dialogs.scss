@@ -42,6 +42,28 @@
     }
   }
 
+  .item-block label {
+    display: block;
+  }
+
+  // Mirror the .item-description look used for already-added items
+  // (see templates/parts/factions.html) so candidates in the picker
+  // read the same way once you can tell them apart by more than name.
+  .item-description {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 0.9em;
+    opacity: 0.85;
+    text-align: justify;
+
+    // Clamp very long descriptions to a short excerpt; full text is
+    // still available via the label's title tooltip.
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
  //Tooltip.
   .tooltip {
 

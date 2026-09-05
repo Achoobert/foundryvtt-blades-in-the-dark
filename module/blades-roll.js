@@ -8,14 +8,14 @@ import { openFormDialog } from "./lib/dialog-compat.js";
  * @param {string} position
  * @param {string} effect
  */
-export async function bladesRoll(dice_amount, attribute_name = "", position = "risky", effect = "standard", note = "", current_stress, current_crew_tier) {
+export async function bladesRoll(dice_amount, attribute_name = "", position = "risky", effect = "standard", note = "", current_stress, current_crew_tier, actor) {
 
   // ChatMessage.getSpeaker(controlledToken)
   let zeromode = false;
 
   if ( dice_amount < 0 ) { dice_amount = 0; }
   if ( dice_amount === 0 ) { zeromode = true; dice_amount = 2; }
-  
+
   //if using Threat Rolls, increase dice pool by number of extra threats after establishing zeromode
 	//Threat Roll comes in as 'effect' and number of Extra dice from threats is coming in as 'current_stress'
 	if (effect === 'BITD.ThreatRoll') {dice_amount = Number(dice_amount)+Number(current_stress);}
@@ -24,7 +24,7 @@ export async function bladesRoll(dice_amount, attribute_name = "", position = "r
 
 	// show 3d Dice so Nice if enabled
 	await r.evaluate();
-	await showChatRollMessage(r, zeromode, attribute_name, position, effect, note, current_stress, current_crew_tier);
+	await showChatRollMessage(r, zeromode, attribute_name, position, effect, note, current_stress, current_crew_tier, actor);
 
 }
 
@@ -37,7 +37,7 @@ export async function bladesRoll(dice_amount, attribute_name = "", position = "r
  * @param {string} position
  * @param {string} effect
  */
-async function showChatRollMessage(r, zeromode, attribute_name = "", position = "", effect = "", note = "", current_stress, current_crew_tier) {
+async function showChatRollMessage(r, zeromode, attribute_name = "", position = "", effect = "", note = "", current_stress, current_crew_tier, actor) {
   let speaker = ChatMessage.getSpeaker();
   let rolls = (r.terms)[0].results;
   let attribute_label = BladesHelpers.getRollLabel(attribute_name);
@@ -159,12 +159,19 @@ async function showChatRollMessage(r, zeromode, attribute_name = "", position = 
   // Check for Indugle Vice roll
   else if (attribute_name == 'BITD.Vice') {
     let clear_stress = getBladesRollVice(rolls, zeromode);
+    let stress_remaining;
 
     if (current_stress - clear_stress >= 0) {
       roll_status = "success";
+      stress_remaining = current_stress - clear_stress;
     } else {
       roll_status = "failure";
       clear_stress = current_stress;
+      stress_remaining = 0;
+    }
+
+    if (actor) {
+      await actor.update({"system.stress.value": stress_remaining});
     }
 
     result = await renderTemplate("systems/blades68/templates/chat/vice-roll.html", {rolls: rolls, zeromode: zeromode, method: method, roll_status: roll_status, attribute_label: attribute_label, clear_stress: clear_stress, note: note, edge: edge});
@@ -355,9 +362,10 @@ export async function simpleRollPopup() {
 	//get stress and tier from selected token
 	let current_stress = 0;
 	let current_tier = 0;
+	let target_actor = null;
 	let selected_tokens = canvas.tokens.controlled;
 	if (selected_tokens.length >0) {
-		let target_actor = game.actors.get(selected_tokens[0].document.actorId);
+		target_actor = game.actors.get(selected_tokens[0].document.actorId);
 		if (target_actor.type == "character") {
 			current_stress = parseInt(target_actor.system.stress.value);
 			try {
@@ -434,7 +442,7 @@ export async function simpleRollPopup() {
       await bladesRoll(diceQty,"BITD.Engagement","","",note,"");
       break;
     case 'indulgeVice':
-      await bladesRoll(diceQty,"BITD.Vice","","",note,stress);
+      await bladesRoll(diceQty,"BITD.Vice","","",note,stress,undefined,target_actor);
       break;
     case 'acquireAsset':
 	  diceQty = diceQty + tier;

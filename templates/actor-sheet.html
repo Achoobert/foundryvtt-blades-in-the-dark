@@ -32,7 +32,7 @@
             {{/times_from}}
       
             {{/multiboxes}}
-      
+
           </div>
         </div>
       </div>
@@ -64,6 +64,12 @@
     </div>
 
   </section>
+
+  <div class="quick-roll-actions flex-horizontal">
+    <a class="roll-quick-popup rollable-text" data-tooltip="{{localize 'BITD.RollSomeDice'}}">
+      <i class="fas fa-dice"></i> {{localize "BITD.RollSomeDice"}}
+    </a>
+  </div>
 
   <div class="header_subline">
   {{!-- Trait line: Heritage - Background - Vice - Class - Crew, spanning the full header width --}}
@@ -275,7 +281,7 @@
       {{#if blades68}}
       <div id="character-{{_id}}-keys-container" class="keys-container section-block">
         <header class="keys-header">
-          <span class="keys-side">{{localize "BITD.Keys"}}</span>
+          <span class="keys-side" data-tooltip="{{localize 'BITD.KeysExplanation'}}">{{localize "BITD.Keys"}}</span>
           <a class="add-key-popup" data-tooltip="{{localize 'BITD.AddKey'}}"><i class="fas fa-plus-square"></i></a>
           <span class="header-spacer"></span>
           <span class="deadlocks-side">{{localize "BITD.Deadlocks"}}</span>

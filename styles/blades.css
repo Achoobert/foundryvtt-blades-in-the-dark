@@ -236,6 +236,17 @@
 .blades68 #loadout .item-control {
   max-width: 10px;
 }
+.blades68 #loadout .item,
+.blades68 #loadout .item-body {
+  align-items: center;
+}
+.blades68 .item-body img,
+.blades68 .open-friend img,
+.blades68 .item-image {
+  background-color: #191813;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4);
+}
 .blades68 td {
   padding: 5px;
 }
@@ -2493,6 +2504,11 @@
 .blades68.item.sheet .item-class-label {
   margin-bottom: 10px;
 }
+.blades68.item.sheet .sheet-header img {
+  background-color: #191813;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4);
+}
 .blades68.blades68-theme {
   /*
    * Blades '68 theme.
@@ -2641,6 +2657,20 @@
 .add-items-list input[type=radio]:checked + label,
 .add-items-list input[type=checkbox]:checked + label {
   font-weight: bold;
+}
+.add-items-list .item-block label {
+  display: block;
+}
+.add-items-list .item-description {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 0.9em;
+  opacity: 0.85;
+  text-align: justify;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .add-items-list .tooltip .tooltiptext {
   visibility: hidden;

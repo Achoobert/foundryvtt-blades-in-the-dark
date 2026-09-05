@@ -2,6 +2,7 @@ import {BladesSheet} from "./blades-sheet.js";
 import {BladesActiveEffect} from "./blades-active-effect.js";
 import {BladesHelpers} from "./blades-helpers.js";
 import { enrichHTML } from "./compat.js";
+import { simpleRollPopup } from "./blades-roll.js";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -278,6 +279,11 @@ export class BladesActorSheet extends BladesSheet {
         // Add custom contact
         html.find('.add-custom-contact').click(() => {
             BladesHelpers.addCustomContact(this.actor);
+        });
+
+        // Quick-access roll popup (Fortune / Gather Info / Engagement / Indulge Vice / Acquire Asset)
+        html.find('.roll-quick-popup').click(async () => {
+            await simpleRollPopup();
         });
 
         // Add a Key

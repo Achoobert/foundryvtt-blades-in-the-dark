@@ -1,0 +1,67 @@
+& * {
+  // Abilities
+  .abilities {
+    .label-stripe {
+      p:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  // Loadout
+  .loadout {
+    .item-add-popup {
+      // todo
+      margin-left: 10px;
+      cursor: pointer;
+      display: flex;
+    }
+  }
+
+  // Experience teeth
+  .teeth-experience {
+    @include toothradio(15px, 25px, "assets/blades68/stresspill_empty.png", "assets/blades68/stresspill_filled.png");
+    position: absolute;
+    top: 0px;
+    right: 10px;
+  }
+
+  .harm-armor {
+
+    display: flex;
+
+    // Harm
+    .character-harm {
+
+      width: 100%;
+
+      table {
+        width: 100%;
+
+        th {
+          background-color: $almost_black;
+          color: $almost_white;
+        }
+
+        input[type="text"] {
+          width: 100%;
+        }
+      }
+    }
+
+    // Clock
+    .character-health-clock {
+      margin: 0 auto;
+      @include clock(4, 88);
+    }
+
+    .character-armor-uses {
+
+      div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+}

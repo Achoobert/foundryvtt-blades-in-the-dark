@@ -170,6 +170,30 @@ i {
   .item-control {
     max-width: 10px;
   }
+  // Faction list rows: keep the (now larger) faction art vertically
+  // centered against the name/description text instead of stretching.
+  .item,
+  .item-body {
+    align-items: center;
+  }
+}
+
+// Icon visibility fix (generic, applies to every sheet icon).
+//
+// Many Foundry-core placeholder icons used as default `img` values for
+// generated Blades '68 content (e.g. icons/svg/item-bag.svg, city.svg,
+// upgrade.svg, direction.svg, book.svg) are solid white shapes on a
+// transparent background. Rendered as bare <img> tags on this system's
+// light/parchment sheet backgrounds they become invisible ("white icon on
+// white background"). Give every inline item icon a small neutral dark
+// backdrop + border so both light and dark artwork stay legible, no
+// matter which icon a given item happens to use.
+.item-body img,
+.open-friend img,
+.item-image {
+  background-color: $almost_black;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4);
 }
 td {
   padding: 5px;
